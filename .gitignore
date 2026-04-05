@@ -1,0 +1,45 @@
+.env
+.env.*
+!.env.example
+
+# Local runtimes, caches, and machine state
+.venv/
+.cache/
+.build/
+data/
+logs/
+context_portal/
+.codex/
+.codex-tasks/
+.claude/
+.history/
+.vscode/
+
+# OS / Python noise
+.DS_Store
+**/.DS_Store
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Vendored runtime artifacts: keep source, drop local installs and model payloads
+vendor/**/.git/
+vendor/**/.venv/
+vendor/**/node_modules/
+vendor/**/__pycache__/
+vendor/**/xcuserdata/
+vendor/**/.user_id
+vendor/**/*.dylib
+vendor/**/*.so
+vendor/**/*.pt
+vendor/**/*.pdiparams
+vendor/**/*.pdmodel
+vendor/**/*.onnx
+vendor/**/weights/
+vendor/**/runs/
+vendor/**/datasets/
+vendor/**/models/
+vendor/mcp/imagesorcery-mcp/mobileclip_blt.ts
+vendor/ocr/macOCR/ocr_binary

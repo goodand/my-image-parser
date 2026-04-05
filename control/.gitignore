@@ -1,0 +1,46 @@
+# macOS / Python noise
+.DS_Store
+**/.DS_Store
+**/__pycache__/
+**/*.py[cod]
+
+# Local app state
+user_decisions/.obsidian/
+
+# Generated execution outputs
+project_domain/runs/
+project_agent_ops/runs/
+team/runs/
+user_decisions/runs/
+
+# Local indexes and registries with absolute paths / machine state
+project_domain/registry/
+project_agent_ops/registry/
+team/registry/
+user_decisions/registry/
+
+# Local-only agent exchange artifacts
+project_agent_ops/resources/handoffs/
+project_agent_ops/resources/tools_inventory/
+
+# Staging areas for removal, not source-of-truth content
+project_domain/archive/component_split_ocr/
+project_domain/archive/intermediates/
+project_domain/archive/logs/
+project_domain/archive/object_isolation/
+project_domain/archive/pending_delete/
+project_domain/archive/pptx_extract/
+project_agent_ops/archive/logs/
+project_agent_ops/archive/pending_delete/
+team/archive/pending_delete/
+user_decisions/archive/pending_delete/
+
+# Private or bulky local input assets
+project_domain/resources/assets/added_screenshots/
+project_domain/resources/assets/pptx_inputs/
+project_domain/resources/assets/caption_experiment/extracted_media/
+project_domain/resources/context_packages/
+project_domain/resources/cross_validation/
+project_domain/resources/imported_fourarm/
+project_domain/resources/pptx_jobs/
+user_decisions/resources/assets/review_support_img/

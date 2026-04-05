@@ -1,0 +1,41 @@
+# Reference snippet for this workspace.
+# Replace <REPO_ROOT> with the absolute path to this repository.
+# Replace <CODEX_HOME> with your local Codex home directory if needed.
+# Actual active global config commonly lives at:
+# <CODEX_HOME>/config.toml
+
+# Core profile for this repository:
+# - cv-mcp
+# - filesystem
+# - exiftool
+#
+# Optional orchestration profile:
+# - agent-task-manager
+# - conport
+
+[mcp_servers.cv-mcp]
+command = "/bin/bash"
+args = ["<REPO_ROOT>/scripts/mcp/start-cv-mcp.sh"]
+
+[mcp_servers.exiftool]
+command = "/bin/bash"
+args = ["<REPO_ROOT>/scripts/mcp/start-exiftool-mcp.sh"]
+
+[mcp_servers.canva]
+url = "https://mcp.canva.com/mcp"
+
+[mcp_servers.agent-task-manager]
+command = "/bin/bash"
+args = ["<REPO_ROOT>/scripts/mcp/start-agent-task-manager-mcp.sh"]
+
+[mcp_servers.conport]
+command = "/bin/bash"
+args = ["<REPO_ROOT>/scripts/mcp/start-conport-mcp.sh"]
+
+[mcp_servers.filesystem]
+command = "/bin/bash"
+args = ["<REPO_ROOT>/scripts/mcp/start-filesystem-mcp.sh"]
+
+[mcp_servers.tigaweb-image-edit-sample-mcp]
+command = "/bin/bash"
+args = ["<REPO_ROOT>/scripts/mcp/start-tigaweb-image-edit-sample-mcp.sh"]
