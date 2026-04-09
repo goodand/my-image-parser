@@ -30,15 +30,15 @@ Verify that the local OpenAI caption runner can consume the new full-image stand
 - image:
   - `control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png`
 - context package:
-  - `/private/tmp/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json`
+  - `<TMP_DIR>/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json`
 
 ## Live Command
 
 ```bash
 python3 scripts/caption_images_openai.py \
   --image control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png \
-  --context-package-json /private/tmp/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json \
-  --output /tmp/context_injected_caption_smoke_v2.json
+  --context-package-json <TMP_DIR>/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json \
+  --output <TMP_DIR>/context_injected_caption_smoke_v2.json
 ```
 
 ## Observed Result

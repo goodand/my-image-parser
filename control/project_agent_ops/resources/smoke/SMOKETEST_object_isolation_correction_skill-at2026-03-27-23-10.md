@@ -36,9 +36,9 @@ Verify that the workspace skill can build a bounded correction packet for object
 ## Smoke Outputs
 
 - markdown packet:
-  - `/tmp/object-isolation-correction-smoke/CORRECTION_smoke.md`
+  - `<TMP_DIR>/object-isolation-correction-smoke/CORRECTION_smoke.md`
 - json packet:
-  - `/tmp/object-isolation-correction-smoke/CORRECTION_smoke.json`
+  - `<TMP_DIR>/object-isolation-correction-smoke/CORRECTION_smoke.json`
 
 ## Result Summary
 

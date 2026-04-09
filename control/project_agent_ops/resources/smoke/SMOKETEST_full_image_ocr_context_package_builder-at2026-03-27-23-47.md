@@ -39,7 +39,7 @@ Verify that the new full-image standalone OCR context-package builder can:
 ## Sandboxed Run
 
 - output root:
-  - `/private/tmp/full-image-ocr-context-smoke`
+  - `<TMP_DIR>/full-image-ocr-context-smoke`
 - observed result:
   - builder completed structurally
   - `ocr_status = error`
@@ -55,13 +55,13 @@ Interpretation:
 ## Unsandboxed Run
 
 - output root:
-  - `/private/tmp/full-image-ocr-context-smoke-unsandboxed`
+  - `<TMP_DIR>/full-image-ocr-context-smoke-unsandboxed`
 - manifest:
-  - `/private/tmp/full-image-ocr-context-smoke-unsandboxed/manifest.jsonl`
+  - `<TMP_DIR>/full-image-ocr-context-smoke-unsandboxed/manifest.jsonl`
 - context package:
-  - `/private/tmp/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.md`
+  - `<TMP_DIR>/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.md`
 - OCR result:
-  - `/private/tmp/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/OCR_RESULT.json`
+  - `<TMP_DIR>/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/OCR_RESULT.json`
 
 Observed result:
 

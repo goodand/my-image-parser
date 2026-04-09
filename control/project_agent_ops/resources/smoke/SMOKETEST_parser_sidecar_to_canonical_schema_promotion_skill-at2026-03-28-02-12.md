@@ -9,8 +9,8 @@ Verify that the promoted skill-local wrapper can convert one bounded raw parser 
 ```bash
 python3 skills/parser-sidecar-to-canonical-schema-promotion/scripts/promote_parser_sidecar_to_canonical_schema.py \
   --raw-sidecar-json control/project_domain/resources/manifests/phase0_paddleocr_table_parse_raw_at2026_03_28.json \
-  --normalized-output-json /tmp/phase0_paddleocr_table_parse_normalized_skill_smoke_at2026_03_28.json \
-  --output-json /tmp/parser_sidecar_to_canonical_schema_skill_smoke_at2026_03_28.json
+  --normalized-output-json <TMP_DIR>/phase0_paddleocr_table_parse_normalized_skill_smoke_at2026_03_28.json \
+  --output-json <TMP_DIR>/parser_sidecar_to_canonical_schema_skill_smoke_at2026_03_28.json
 ```
 
 ## Result
@@ -29,9 +29,9 @@ python3 skills/parser-sidecar-to-canonical-schema-promotion/scripts/promote_pars
 - raw sidecar input:
   - `control/project_domain/resources/manifests/phase0_paddleocr_table_parse_raw_at2026_03_28.json`
 - normalized smoke output:
-  - `/private/tmp/phase0_paddleocr_table_parse_normalized_skill_smoke_at2026_03_28.json`
+  - `<TMP_DIR>/phase0_paddleocr_table_parse_normalized_skill_smoke_at2026_03_28.json`
 - promotion result output:
-  - `/private/tmp/parser_sidecar_to_canonical_schema_skill_smoke_at2026_03_28.json`
+  - `<TMP_DIR>/parser_sidecar_to_canonical_schema_skill_smoke_at2026_03_28.json`
 
 ## Interpretation
 
