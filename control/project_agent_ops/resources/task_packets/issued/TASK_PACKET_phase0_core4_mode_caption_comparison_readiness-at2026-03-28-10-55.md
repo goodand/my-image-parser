@@ -6,8 +6,8 @@ Make the current master-plan-level `core 4-mode caption comparison` comparison-r
 
 ## Canonical Targets
 
-- [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
-- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
+- [MASTER_PLAN_presentation_image_pipeline.md](../../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](../../../../project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
 
 ## Current State Summary
 
@@ -23,15 +23,15 @@ Still incomplete:
 
 ## Required Inputs
 
-- [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
-- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
-- [SPEC_full_image_standalone_ocr_context_package_baseline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_full_image_standalone_ocr_context_package_baseline.md)
-- [REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md)
-- [REPORT_phase0_full_image_context_rerun_smoke-at2026-03-28-09-19.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase0_full_image_context_rerun_smoke-at2026-03-28-09-19.md)
-- [REPORT_phase0_table_parser_smoke-at2026-03-28-01-19.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase0_table_parser_smoke-at2026-03-28-01-19.md)
-- [REPORT_phase0_table_parser_comparison-at2026-03-28-10-20.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase0_table_parser_comparison-at2026-03-28-10-20.md)
-- [table_branch_wrapper_lib.py](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/table_branch_wrapper_lib.py)
-- [table_merge_candidate_lib.py](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/table_merge_candidate_lib.py)
+- [MASTER_PLAN_presentation_image_pipeline.md](../../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](../../../../project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
+- [SPEC_full_image_standalone_ocr_context_package_baseline.md](../../../../project_domain/resources/specs/prose/SPEC_full_image_standalone_ocr_context_package_baseline.md)
+- [REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md](../../../../project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md)
+- [REPORT_phase0_full_image_context_rerun_smoke-at2026-03-28-09-19.md](../../../../project_domain/resources/reports/REPORT_phase0_full_image_context_rerun_smoke-at2026-03-28-09-19.md)
+- [REPORT_phase0_table_parser_smoke-at2026-03-28-01-19.md](../../../../project_domain/resources/reports/REPORT_phase0_table_parser_smoke-at2026-03-28-01-19.md)
+- [REPORT_phase0_table_parser_comparison-at2026-03-28-10-20.md](../../../../project_domain/resources/reports/REPORT_phase0_table_parser_comparison-at2026-03-28-10-20.md)
+- [table_branch_wrapper_lib.py](../../../../../scripts/table_branch_wrapper_lib.py)
+- [table_merge_candidate_lib.py](../../../../../scripts/table_merge_candidate_lib.py)
 
 ## Required Rules
 

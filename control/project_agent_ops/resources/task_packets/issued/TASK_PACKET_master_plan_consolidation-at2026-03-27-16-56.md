@@ -6,30 +6,30 @@ Consolidate the current presentation-image pipeline master plan by integrating t
 
 ## Canonical Target
 
-- [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+- [MASTER_PLAN_presentation_image_pipeline.md](../../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 
 ## In-Scope Inputs
 
 ### Active Drafts
 
-- [PLAN_canva_presentation_image_mapping_data_flow-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_canva_presentation_image_mapping_data_flow-at2026-03-27-15-29.md)
-- [PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md)
-- [PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md)
-- [PLAN_image_obsidian_style_parsing-at2026-03-27-15-27.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_image_obsidian_style_parsing-at2026-03-27-15-27.md)
-- [PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md)
-- [PLAN_presentation_image_mapping_extension-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_presentation_image_mapping_extension-at2026-03-27-15-29.md)
-- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
+- [PLAN_canva_presentation_image_mapping_data_flow-at2026-03-27-15-29.md](../../../../project_domain/resources/master_plans/drafts/PLAN_canva_presentation_image_mapping_data_flow-at2026-03-27-15-29.md)
+- [PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md](../../../../project_domain/resources/master_plans/drafts/PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md)
+- [PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md](../../../../project_domain/resources/master_plans/drafts/PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md)
+- [PLAN_image_obsidian_style_parsing-at2026-03-27-15-27.md](../../../../project_domain/resources/master_plans/drafts/PLAN_image_obsidian_style_parsing-at2026-03-27-15-27.md)
+- [PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md](../../../../project_domain/resources/master_plans/drafts/PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md)
+- [PLAN_presentation_image_mapping_extension-at2026-03-27-15-29.md](../../../../project_domain/resources/master_plans/drafts/PLAN_presentation_image_mapping_extension-at2026-03-27-15-29.md)
+- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](../../../../project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
 
 ### Supporting Contracts And Rules
 
-- [presentation_image_pipeline_spec.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/presentation_image_pipeline_spec.json)
-- [RULES_workspace_structure.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_workspace_structure.md)
-- [RULES_filename_and_linting.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_filename_and_linting.md)
+- [presentation_image_pipeline_spec.json](../../../../project_domain/resources/specs/contracts/presentation_image_pipeline_spec.json)
+- [RULES_workspace_structure.md](../../../../team/resources/rules/RULES_workspace_structure.md)
+- [RULES_filename_and_linting.md](../../../../team/resources/rules/RULES_filename_and_linting.md)
 
 ### External Indexed References
 
-- [external_reference_index.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/external_reference_index.json)
-- [REFERENCE_external_reference_triage.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_external_reference_triage.md)
+- External reference index (local/private registry): `<LOCAL_AGENT_REGISTRY>/external_reference_index.json`
+- [REFERENCE_external_reference_triage.md](../../../../project_domain/resources/references/REFERENCE_external_reference_triage.md)
 
 ## Required Rules
 
@@ -65,14 +65,14 @@ Consolidate the current presentation-image pipeline master plan by integrating t
 
 ### Required
 
-- Updated [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+- Updated [MASTER_PLAN_presentation_image_pipeline.md](../../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 
 ### Recommended
 
 - Short consolidation report under:
   - `control/project_domain/resources/reports/`
 - If draft roles changed, update:
-  - [domain_artifact_index.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/registry/domain_artifact_index.json)
+  - Domain artifact index (local/private registry): `<LOCAL_DOMAIN_REGISTRY>/domain_artifact_index.json`
 
 ## Done Definition
 
