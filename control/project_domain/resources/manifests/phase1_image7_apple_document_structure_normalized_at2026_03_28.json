@@ -1,0 +1,251 @@
+{
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 24,
+  "table_id": "t1",
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+  "source_slide_usages": [
+    {
+      "slide": 24,
+      "occurrence": 1
+    }
+  ],
+  "parser_backend": "apple_vision_recognize_documents_request",
+  "normalization_mode": "documents[0].tables[0].cells",
+  "rows": [
+    {
+      "row_index": 0,
+      "cells": [
+        {
+          "cell_id": "t1_r0_c0",
+          "col_index": 0,
+          "text": "지표",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.033333,
+            0.755056,
+            0.532,
+            0.166292
+          ],
+          "confidence": 0.11781
+        },
+        {
+          "cell_id": "t1_r0_c1",
+          "col_index": 1,
+          "text": "WORST → BEST",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.565333,
+            0.755056,
+            0.261333,
+            0.166292
+          ],
+          "confidence": 0.578452
+        },
+        {
+          "cell_id": "t1_r0_c2",
+          "col_index": 2,
+          "text": "개선율",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.826667,
+            0.755056,
+            0.14,
+            0.166292
+          ],
+          "confidence": 0.082742
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "cells": [
+        {
+          "cell_id": "t1_r1_c0",
+          "col_index": 0,
+          "text": "CC (Context Coherence)",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.033333,
+            0.580449,
+            0.532,
+            0.174607
+          ],
+          "confidence": 0.483951
+        },
+        {
+          "cell_id": "t1_r1_c1",
+          "col_index": 1,
+          "text": "0.012 → 0.094",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.565333,
+            0.580449,
+            0.261333,
+            0.174607
+          ],
+          "confidence": 0.69583
+        },
+        {
+          "cell_id": "t1_r1_c2",
+          "col_index": 2,
+          "text": "+683%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.826667,
+            0.580449,
+            0.14,
+            0.174607
+          ],
+          "confidence": 0.574913
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "cells": [
+        {
+          "cell_id": "t1_r2_c0",
+          "col_index": 0,
+          "text": "IC (Information Concentration)",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.033333,
+            0.414157,
+            0.532,
+            0.166292
+          ],
+          "confidence": 0.644507
+        },
+        {
+          "cell_id": "t1_r2_c1",
+          "col_index": 1,
+          "text": "0.179 → 0.687",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.565333,
+            0.414157,
+            0.261333,
+            0.166292
+          ],
+          "confidence": 0.691378
+        },
+        {
+          "cell_id": "t1_r2_c2",
+          "col_index": 2,
+          "text": "+284%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.826667,
+            0.414157,
+            0.14,
+            0.166292
+          ],
+          "confidence": 0.580725
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "cells": [
+        {
+          "cell_id": "t1_r3_c0",
+          "col_index": 0,
+          "text": "CR@10 (Chunk Recall)",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.033333,
+            0.247865,
+            0.532,
+            0.166292
+          ],
+          "confidence": 0.40772
+        },
+        {
+          "cell_id": "t1_r3_c1",
+          "col_index": 1,
+          "text": "0.143 → 0.514",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.565333,
+            0.247865,
+            0.261333,
+            0.166292
+          ],
+          "confidence": 0.68989
+        },
+        {
+          "cell_id": "t1_r3_c2",
+          "col_index": 2,
+          "text": "+259%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.826667,
+            0.247865,
+            0.14,
+            0.166292
+          ],
+          "confidence": 0.561483
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "cells": [
+        {
+          "cell_id": "t1_r4_c0",
+          "col_index": 0,
+          "text": "MRR (Mean Reciprocal Rank)",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.033333,
+            0.089888,
+            0.532,
+            0.157978
+          ],
+          "confidence": 0.438837
+        },
+        {
+          "cell_id": "t1_r4_c1",
+          "col_index": 1,
+          "text": "0.211 → 0.622",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.565333,
+            0.089888,
+            0.261333,
+            0.157978
+          ],
+          "confidence": 0.692548
+        },
+        {
+          "cell_id": "t1_r4_c2",
+          "col_index": 2,
+          "text": "+195%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.826667,
+            0.089888,
+            0.14,
+            0.157978
+          ],
+          "confidence": 0.574664
+        }
+      ]
+    }
+  ]
+}

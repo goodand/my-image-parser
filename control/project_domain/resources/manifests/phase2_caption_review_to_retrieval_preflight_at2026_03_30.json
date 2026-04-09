@@ -1,0 +1,83 @@
+{
+  "schema_version": "phase2_review_to_retrieval_preflight.v1",
+  "used_truth_source": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json",
+  "machine_truth_mode": "manifest",
+  "machine_truth_manifest_only": true,
+  "image_count": 9,
+  "image_ids": [
+    "image11",
+    "image7",
+    "image8",
+    "image10",
+    "image12",
+    "image13",
+    "image14",
+    "image9",
+    "image15"
+  ],
+  "active_default_baseline": "full_image_baseline",
+  "comparison_winner_candidates": {
+    "image11": "reviewed_isolated_component_rerun",
+    "image7": "full_image_ocr_context_rerun",
+    "image8": "reviewed_isolated_component_rerun",
+    "image10": "reviewed_isolated_component_rerun",
+    "image12": "reviewed_isolated_component_rerun",
+    "image13": "reviewed_isolated_component_rerun",
+    "image14": "reviewed_isolated_component_rerun",
+    "image9": "reviewed_isolated_component_rerun",
+    "image15": "reviewed_isolated_component_rerun"
+  },
+  "default_retention_reason_codes": {
+    "image11": "winner_reviewed_branch_needs_explicit_promotion",
+    "image7": "winner_pending_context_review",
+    "image8": "winner_reviewed_branch_needs_explicit_promotion",
+    "image10": "winner_pending_context_review",
+    "image12": "winner_pending_context_review",
+    "image13": "winner_pending_context_review",
+    "image14": "winner_pending_context_review",
+    "image9": "winner_pending_context_review",
+    "image15": "winner_pending_context_review"
+  },
+  "priority_sorted_image_ids": [
+    "image11",
+    "image7",
+    "image8",
+    "image10",
+    "image12",
+    "image13",
+    "image14",
+    "image9",
+    "image15"
+  ],
+  "highest_priority_image_ids": [
+    "image11",
+    "image7",
+    "image8"
+  ],
+  "high_priority_image_ids": [
+    "image10",
+    "image12",
+    "image13",
+    "image14",
+    "image9"
+  ],
+  "required_human_decision_fields": [
+    "selected_caption_arm",
+    "approved_caption",
+    "approved_alt_text",
+    "use_for_retrieval",
+    "mapping_review_required",
+    "outlier_candidate",
+    "reviewer_notes"
+  ],
+  "downstream_status": {
+    "retrieval_ready": false,
+    "mapping_ready": false,
+    "regeneration_ready": false
+  },
+  "generated_outputs": {
+    "decision_seed_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl",
+    "retrieval_input_seed_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_retrieval_input_seed_at2026_03_30.jsonl",
+    "mapping_review_seed_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_mapping_review_seed_at2026_03_30.jsonl"
+  }
+}

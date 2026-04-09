@@ -1,0 +1,319 @@
+{
+  "schema_version": "v1",
+  "generated_at": "2026-03-30T22:47+09:00",
+  "review_title": "Phase 2 Caption Four-Mode Corpus Review",
+  "source_closure_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md",
+  "source_ready_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json",
+  "source_auto_eval_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json",
+  "source_policy_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_caption_arm_promotion_policy.md",
+  "review_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md",
+  "review_asset_root": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45",
+  "image_count": 9,
+  "image_ids": [
+    "image11",
+    "image7",
+    "image8",
+    "image10",
+    "image12",
+    "image13",
+    "image14",
+    "image9",
+    "image15"
+  ],
+  "highest_priority_image_ids": [
+    "image11",
+    "image7",
+    "image8"
+  ],
+  "high_priority_image_ids": [
+    "image10",
+    "image12",
+    "image13",
+    "image14",
+    "image9"
+  ],
+  "images": [
+    {
+      "image_id": "image11",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image11.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_ready_reviewed_branch",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun"
+      ],
+      "priority_label": "highest",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation",
+        "reviewed_branch_ready_for_human_promotion_check"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because a `comparison_ready_reviewed_branch` may win bounded comparison without becoming the default; a later explicit promotion decision is still required.",
+      "priority_rank": 1,
+      "default_retention_reason_code": "winner_reviewed_branch_needs_explicit_promotion"
+    },
+    {
+      "image_id": "image7",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image7.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "full_image_ocr_context_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_only_pending_context_review",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "priority_label": "highest",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation",
+        "winner_is_full_image_ocr_context_rerun"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.",
+      "priority_rank": 2,
+      "default_retention_reason_code": "winner_pending_context_review"
+    },
+    {
+      "image_id": "image8",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image8.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_ready_reviewed_branch",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun"
+      ],
+      "priority_label": "highest",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation",
+        "reviewed_branch_ready_for_human_promotion_check"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because a `comparison_ready_reviewed_branch` may win bounded comparison without becoming the default; a later explicit promotion decision is still required.",
+      "priority_rank": 3,
+      "default_retention_reason_code": "winner_reviewed_branch_needs_explicit_promotion"
+    },
+    {
+      "image_id": "image10",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image10.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_only_pending_context_review",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "priority_label": "high",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.",
+      "priority_rank": 4,
+      "default_retention_reason_code": "winner_pending_context_review"
+    },
+    {
+      "image_id": "image12",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image12.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image12_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_only_pending_context_review",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "priority_label": "high",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.",
+      "priority_rank": 5,
+      "default_retention_reason_code": "winner_pending_context_review"
+    },
+    {
+      "image_id": "image13",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image13.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_only_pending_context_review",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "priority_label": "high",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.",
+      "priority_rank": 6,
+      "default_retention_reason_code": "winner_pending_context_review"
+    },
+    {
+      "image_id": "image14",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image14.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_only_pending_context_review",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "priority_label": "high",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.",
+      "priority_rank": 7,
+      "default_retention_reason_code": "winner_pending_context_review"
+    },
+    {
+      "image_id": "image9",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image9.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_only_pending_context_review",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "priority_label": "high",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present",
+        "proxy_tie_recommendation"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.",
+      "priority_rank": 8,
+      "default_retention_reason_code": "winner_pending_context_review"
+    },
+    {
+      "image_id": "image15",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png",
+      "embedded_review_asset_path": "review_assets/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45/image15.png",
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image15_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "current_default": "full_image_baseline",
+      "comparison_winner": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "winner_promotion_state": "comparison_only_pending_context_review",
+      "winner_next_gate": "review_context_package",
+      "pending_context_review_arms": [
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "priority_label": "elevated",
+      "high_priority_reasons": [
+        "winner_differs_from_default",
+        "pending_context_review_arm_present"
+      ],
+      "why_default_stays_default": "The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.",
+      "priority_rank": 9,
+      "default_retention_reason_code": "winner_pending_context_review"
+    }
+  ],
+  "output_contract": {
+    "portable_markdown_review": true,
+    "copied_assets": true,
+    "aggregate_bundle_modified": false,
+    "registry_modified": false
+  },
+  "priority_schema": {
+    "canonical_priority_field": "images[].priority_label",
+    "canonical_priority_rank_field": "images[].priority_rank",
+    "canonical_priority_order": [
+      "highest",
+      "high",
+      "elevated",
+      "normal"
+    ],
+    "top_level_priority_arrays_are_projections": true,
+    "priority_bucket_projection_fields": [
+      "highest_priority_image_ids",
+      "high_priority_image_ids",
+      "priority_bucket_image_ids"
+    ]
+  },
+  "priority_bucket_image_ids": {
+    "highest": [
+      "image11",
+      "image7",
+      "image8"
+    ],
+    "high": [
+      "image10",
+      "image12",
+      "image13",
+      "image14",
+      "image9"
+    ],
+    "elevated": [
+      "image15"
+    ],
+    "normal": []
+  },
+  "priority_sorted_image_ids": [
+    "image11",
+    "image7",
+    "image8",
+    "image10",
+    "image12",
+    "image13",
+    "image14",
+    "image9",
+    "image15"
+  ],
+  "machine_truth_contract": {
+    "machine_truth_source": "manifest",
+    "human_facing_surface": "markdown_review",
+    "markdown_human_facing_only": true,
+    "session_b_may_use_manifest_only": true
+  }
+}

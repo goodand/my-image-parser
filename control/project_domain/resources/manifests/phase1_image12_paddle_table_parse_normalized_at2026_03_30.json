@@ -1,0 +1,345 @@
+{
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 25,
+  "table_id": "t1",
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+  "source_slide_usages": [
+    {
+      "slide": 25,
+      "occurrence": 1
+    }
+  ],
+  "parser_backend": "paddleocr-mcp/pp_structurev3",
+  "normalization_mode": "table_res_list[0].pred_html",
+  "rows": [
+    {
+      "row_index": 0,
+      "cells": [
+        {
+          "cell_id": "t1_r0_c0",
+          "col_index": 0,
+          "text": "异",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            22,
+            80,
+            354,
+            137
+          ],
+          "confidence": 0.419634
+        },
+        {
+          "cell_id": "t1_r0_c1",
+          "col_index": 1,
+          "text": "川仝",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            353,
+            80,
+            455,
+            137
+          ],
+          "confidence": 0.474519
+        },
+        {
+          "cell_id": "t1_r0_c2",
+          "col_index": 2,
+          "text": "旦咖",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            455,
+            81,
+            569,
+            136
+          ],
+          "confidence": 0.549202
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "cells": [
+        {
+          "cell_id": "t1_r1_c0",
+          "col_index": 0,
+          "text": "召咎",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            22,
+            136,
+            354,
+            192
+          ],
+          "confidence": 0.847542
+        },
+        {
+          "cell_id": "t1_r1_c1",
+          "col_index": 1,
+          "text": "394",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            353,
+            136,
+            455,
+            192
+          ],
+          "confidence": 0.999957
+        },
+        {
+          "cell_id": "t1_r1_c2",
+          "col_index": 2,
+          "text": "98.7%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            455,
+            136,
+            569,
+            192
+          ],
+          "confidence": 0.998787
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "cells": [
+        {
+          "cell_id": "t1_r2_c0",
+          "col_index": 0,
+          "text": "URL-heavy (>50%)",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            22,
+            192,
+            354,
+            249
+          ],
+          "confidence": 0.994112
+        },
+        {
+          "cell_id": "t1_r2_c1",
+          "col_index": 1,
+          "text": "4",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            353,
+            192,
+            455,
+            249
+          ],
+          "confidence": 0.999788
+        },
+        {
+          "cell_id": "t1_r2_c2",
+          "col_index": 2,
+          "text": "1.0%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            455,
+            192,
+            569,
+            249
+          ],
+          "confidence": 0.983482
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "cells": [
+        {
+          "cell_id": "t1_r3_c0",
+          "col_index": 0,
+          "text": "六 <100",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            22,
+            249,
+            353,
+            304
+          ],
+          "confidence": 0.0
+        },
+        {
+          "cell_id": "t1_r3_c1",
+          "col_index": 1,
+          "text": "7",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            353,
+            249,
+            455,
+            304
+          ],
+          "confidence": 0.146638
+        },
+        {
+          "cell_id": "t1_r3_c2",
+          "col_index": 2,
+          "text": "1.8%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            455,
+            249,
+            569,
+            304
+          ],
+          "confidence": 0.811277
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "cells": [
+        {
+          "cell_id": "t1_r4_c0",
+          "col_index": 0,
+          "text": "markdown >30%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            22,
+            304,
+            353,
+            361
+          ],
+          "confidence": 0.999891
+        },
+        {
+          "cell_id": "t1_r4_c1",
+          "col_index": 1,
+          "text": "8",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            353,
+            304,
+            455,
+            361
+          ],
+          "confidence": 0.998645
+        },
+        {
+          "cell_id": "t1_r4_c2",
+          "col_index": 2,
+          "text": "2.0%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            455,
+            304,
+            569,
+            361
+          ],
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "cells": [
+        {
+          "cell_id": "t1_r5_c0",
+          "col_index": 0,
+          "text": "URL平",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            22,
+            361,
+            354,
+            417
+          ],
+          "confidence": 0.998039
+        },
+        {
+          "cell_id": "t1_r5_c1",
+          "col_index": 1,
+          "text": "240",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            353,
+            361,
+            455,
+            417
+          ],
+          "confidence": 0.999954
+        },
+        {
+          "cell_id": "t1_r5_c2",
+          "col_index": 2,
+          "text": "60.2%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            455,
+            361,
+            569,
+            416
+          ],
+          "confidence": 0.992741
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "cells": [
+        {
+          "cell_id": "t1_r6_c0",
+          "col_index": 0,
+          "text": "ref平",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            22,
+            416,
+            354,
+            471
+          ],
+          "confidence": 0.89294
+        },
+        {
+          "cell_id": "t1_r6_c1",
+          "col_index": 1,
+          "text": "312",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            353,
+            416,
+            455,
+            470
+          ],
+          "confidence": 0.999971
+        },
+        {
+          "cell_id": "t1_r6_c2",
+          "col_index": 2,
+          "text": "78.2%",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            455,
+            416,
+            569,
+            471
+          ],
+          "confidence": 0.997925
+        }
+      ]
+    }
+  ]
+}

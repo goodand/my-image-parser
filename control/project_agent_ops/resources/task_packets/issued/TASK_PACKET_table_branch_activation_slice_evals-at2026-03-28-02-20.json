@@ -1,0 +1,40 @@
+{
+  "packet_profile": "issued",
+  "task_family": "skill_sidecar_parallel_draft",
+  "task_id": "TASK-TBL-BRANCH-ACTIVATION-EVALS",
+  "title": "table-branch-activation-slice evals sidecar",
+  "goal": "Draft the evals.json page for the new table-branch-activation-slice skill.",
+  "scope": [
+    "Define bounded acceptance and boundary cases for the skill.",
+    "Keep the evals at policy and workflow level.",
+    "Avoid pretending there is a single executable script for the whole slice."
+  ],
+  "non_goals": [
+    "Do not edit SKILL.md.",
+    "Do not add a wrapper script.",
+    "Do not edit any other sidecar."
+  ],
+  "owned_paths": [
+    "skills/table-branch-activation-slice/evals/evals.json"
+  ],
+  "reference_paths": [
+    "skills/table-branch-activation-slice/SKILL.md",
+    "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+    "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md"
+  ],
+  "done_definition": [
+    "evals.json exists",
+    "it contains mainline and boundary cases",
+    "it reflects bounded activation rather than generic parser use"
+  ],
+  "required_checks": [
+    "Keep write scope to owned_paths only",
+    "Use valid JSON",
+    "Keep cases tied to the real table-branch workflow"
+  ],
+  "evidence_output_paths": [
+    "skills/table-branch-activation-slice/evals/evals.json"
+  ],
+  "created_at": "2026-03-28T02:20:00+09:00"
+}

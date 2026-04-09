@@ -1,0 +1,161 @@
+{
+  "auto_eval_name": "phase1_caption_four_mode_small_batch_auto_eval",
+  "schema_version": "v1",
+  "semantic_judge_available": false,
+  "bundle_paths_used": [
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json"
+  ],
+  "image_count": 1,
+  "evaluations": [
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+      "mode_count": 4,
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "qualitative_winner_candidate": "reviewed_isolated_component_rerun",
+      "baseline_retained": true,
+      "edge_case_review_recommended": true,
+      "edge_case_review_reason": "top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed",
+      "per_arm_scores": [
+        {
+          "execution_arm": "full_image_baseline",
+          "promotion_state": "default_ready_anchor",
+          "default_ready": true,
+          "metric_mention_coverage": 3.0,
+          "comparative_relation_signal": 2.0,
+          "caption_completeness": 4.0,
+          "title_context_fidelity": 2.0,
+          "parser_structure_support": 0.0,
+          "ocr_evidence_support": 0.0,
+          "non_table_noise_suppression_proxy": 0.5,
+          "promotion_state_adjustment": 1.0,
+          "total_score": 12.5,
+          "strengths": [
+            "all_core_metrics_present",
+            "title_or_condition_context_present",
+            "default_ready_anchor"
+          ],
+          "weaknesses": []
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "promotion_state": "comparison_only_pending_context_review",
+          "default_ready": false,
+          "metric_mention_coverage": 3.0,
+          "comparative_relation_signal": 3.0,
+          "caption_completeness": 4.0,
+          "title_context_fidelity": 1.0,
+          "parser_structure_support": 0.0,
+          "ocr_evidence_support": 1.0,
+          "non_table_noise_suppression_proxy": 0.5,
+          "promotion_state_adjustment": -0.75,
+          "total_score": 11.75,
+          "strengths": [
+            "all_core_metrics_present",
+            "explicit_relation_signal",
+            "title_or_condition_context_present",
+            "ocr_evidence_support"
+          ],
+          "weaknesses": [
+            "generic_image_framing_noise",
+            "promotion_penalty:comparison_only_pending_context_review"
+          ]
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "promotion_state": "comparison_only_pending_context_review",
+          "default_ready": false,
+          "metric_mention_coverage": 3.0,
+          "comparative_relation_signal": 2.0,
+          "caption_completeness": 4.0,
+          "title_context_fidelity": 1.0,
+          "parser_structure_support": 1.0,
+          "ocr_evidence_support": 1.0,
+          "non_table_noise_suppression_proxy": 1.0,
+          "promotion_state_adjustment": -0.75,
+          "total_score": 12.25,
+          "strengths": [
+            "all_core_metrics_present",
+            "title_or_condition_context_present",
+            "parser_structure_support",
+            "ocr_evidence_support"
+          ],
+          "weaknesses": [
+            "promotion_penalty:comparison_only_pending_context_review"
+          ]
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "promotion_state": "comparison_ready_reviewed_branch",
+          "default_ready": false,
+          "metric_mention_coverage": 3.0,
+          "comparative_relation_signal": 3.0,
+          "caption_completeness": 4.0,
+          "title_context_fidelity": 0.0,
+          "parser_structure_support": 0.0,
+          "ocr_evidence_support": 1.0,
+          "non_table_noise_suppression_proxy": 2.0,
+          "promotion_state_adjustment": -0.5,
+          "total_score": 12.5,
+          "strengths": [
+            "all_core_metrics_present",
+            "explicit_relation_signal",
+            "ocr_evidence_support",
+            "strong_noise_suppression_proxy"
+          ],
+          "weaknesses": [
+            "weak_title_context_fidelity",
+            "promotion_penalty:comparison_ready_reviewed_branch"
+          ]
+        }
+      ],
+      "winner_reason": "highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage"
+    }
+  ],
+  "batch_summary": {
+    "winner_frequency": {
+      "reviewed_isolated_component_rerun": 1
+    },
+    "baseline_retained": true,
+    "strong_patterns_by_arm": {
+      "full_image_baseline": [
+        "all_core_metrics_present",
+        "default_ready_anchor",
+        "title_or_condition_context_present"
+      ],
+      "full_image_ocr_context_rerun": [
+        "all_core_metrics_present",
+        "explicit_relation_signal",
+        "ocr_evidence_support",
+        "title_or_condition_context_present"
+      ],
+      "parser_table_enriched_rerun": [
+        "all_core_metrics_present",
+        "ocr_evidence_support",
+        "parser_structure_support",
+        "title_or_condition_context_present"
+      ],
+      "reviewed_isolated_component_rerun": [
+        "all_core_metrics_present",
+        "explicit_relation_signal",
+        "ocr_evidence_support",
+        "strong_noise_suppression_proxy"
+      ]
+    },
+    "weak_patterns_by_arm": {
+      "full_image_baseline": [],
+      "full_image_ocr_context_rerun": [
+        "generic_image_framing_noise",
+        "promotion_penalty:comparison_only_pending_context_review"
+      ],
+      "parser_table_enriched_rerun": [
+        "promotion_penalty:comparison_only_pending_context_review"
+      ],
+      "reviewed_isolated_component_rerun": [
+        "promotion_penalty:comparison_ready_reviewed_branch",
+        "weak_title_context_fidelity"
+      ]
+    }
+  }
+}

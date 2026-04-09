@@ -1,0 +1,41 @@
+{
+  "packet_profile": "issued",
+  "task_family": "skill_sidecar_parallel_draft",
+  "task_id": "TASK-TBL-BRANCH-ACTIVATION-RUNTIME",
+  "title": "table-branch-activation-slice runtime sidecar",
+  "goal": "Draft the runtime.md page for the new table-branch-activation-slice skill.",
+  "scope": [
+    "Describe the ordered activation slice.",
+    "List canonical artifact families and execution order.",
+    "Keep the page operational and bounded."
+  ],
+  "non_goals": [
+    "Do not edit SKILL.md.",
+    "Do not edit registry or inventory files.",
+    "Do not add new scripts or code."
+  ],
+  "owned_paths": [
+    "skills/table-branch-activation-slice/references/runtime.md"
+  ],
+  "reference_paths": [
+    "skills/table-branch-activation-slice/SKILL.md",
+    "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+    "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md"
+  ],
+  "done_definition": [
+    "runtime.md exists",
+    "the ordered slice is explicit",
+    "canonical artifact locations are named",
+    "the page does not widen into rollout guidance"
+  ],
+  "required_checks": [
+    "Keep write scope to owned_paths only",
+    "Use repo-relative paths",
+    "Stay consistent with the existing bounded activation plan"
+  ],
+  "evidence_output_paths": [
+    "skills/table-branch-activation-slice/references/runtime.md"
+  ],
+  "created_at": "2026-03-28T02:20:00+09:00"
+}

@@ -1,0 +1,228 @@
+{
+  "phase_name": "phase1_caption_10w",
+  "generated_at": "2026-03-27T09:38:38Z",
+  "worker_count": 10,
+  "model": "gpt-4.1",
+  "datasets": [
+    {
+      "dataset_id": "01_full_presentation_2026-03-17",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/01_full_presentation_2026-03-17/openai_api/media_extract_dataset.jsonl",
+      "row_count": 15,
+      "allocated_workers": 2
+    },
+    {
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "row_count": 46,
+      "allocated_workers": 8
+    }
+  ],
+  "overlap_checks": {
+    "unique_image_ids": 61,
+    "unique_output_ledgers": 10,
+    "status": "ok"
+  },
+  "shards": [
+    {
+      "worker_id": "w01",
+      "dataset_id": "01_full_presentation_2026-03-17",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/01_full_presentation_2026-03-17/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_01_full_presentation_2026-03-17_w01.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01_responses",
+      "row_count": 8,
+      "first_image_id": "01_full_presentation_2026-03-17:image1.png",
+      "last_image_id": "01_full_presentation_2026-03-17:image2.png",
+      "row_indexes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_01_full_presentation_2026-03-17_w01.json"
+    },
+    {
+      "worker_id": "w02",
+      "dataset_id": "01_full_presentation_2026-03-17",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/01_full_presentation_2026-03-17/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_01_full_presentation_2026-03-17_w02.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02_responses",
+      "row_count": 7,
+      "first_image_id": "01_full_presentation_2026-03-17:image3.png",
+      "last_image_id": "01_full_presentation_2026-03-17:image9.png",
+      "row_indexes": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_01_full_presentation_2026-03-17_w02.json"
+    },
+    {
+      "worker_id": "w03",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w03.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w03.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w03_responses",
+      "row_count": 6,
+      "first_image_id": "02_1:image1.png",
+      "last_image_id": "02_1:image14.png",
+      "row_indexes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w03.json"
+    },
+    {
+      "worker_id": "w04",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w04.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w04.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w04_responses",
+      "row_count": 6,
+      "first_image_id": "02_1:image15.png",
+      "last_image_id": "02_1:image2.png",
+      "row_indexes": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w04.json"
+    },
+    {
+      "worker_id": "w05",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w05.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w05.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w05_responses",
+      "row_count": 6,
+      "first_image_id": "02_1:image20.png",
+      "last_image_id": "02_1:image25.png",
+      "row_indexes": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w05.json"
+    },
+    {
+      "worker_id": "w06",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w06.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w06.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w06_responses",
+      "row_count": 6,
+      "first_image_id": "02_1:image26.png",
+      "last_image_id": "02_1:image30.png",
+      "row_indexes": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w06.json"
+    },
+    {
+      "worker_id": "w07",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w07.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w07.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w07_responses",
+      "row_count": 6,
+      "first_image_id": "02_1:image31.png",
+      "last_image_id": "02_1:image36.png",
+      "row_indexes": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w07.json"
+    },
+    {
+      "worker_id": "w08",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w08.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w08.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w08_responses",
+      "row_count": 6,
+      "first_image_id": "02_1:image37.png",
+      "last_image_id": "02_1:image41.png",
+      "row_indexes": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w08.json"
+    },
+    {
+      "worker_id": "w09",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w09.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w09.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w09_responses",
+      "row_count": 5,
+      "first_image_id": "02_1:image42.png",
+      "last_image_id": "02_1:image46.png",
+      "row_indexes": [
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w09.json"
+    },
+    {
+      "worker_id": "w10",
+      "dataset_id": "02_1",
+      "dataset_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl",
+      "shard_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w10.jsonl",
+      "output_ledger": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w10.json",
+      "output_responses_dir": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w10_responses",
+      "row_count": 5,
+      "first_image_id": "02_1:image5.png",
+      "last_image_id": "02_1:image9.png",
+      "row_indexes": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "packet_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_caption_10w_02_1_w10.json"
+    }
+  ]
+}

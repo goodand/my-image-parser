@@ -1,0 +1,53 @@
+{
+  "backend" : "apple_vision_recognize_documents_request",
+  "error_detail" : "Error Domain=NSOSStatusErrorDomain Code=-6662 \"Failed to create CVPixelBuffer Width = 978, Height = 736, Format = '420f'\" UserInfo={NSLocalizedDescription=Failed to create CVPixelBuffer Width = 978, Height = 736, Format = '420f'}",
+  "helper_role" : "table_structure_hint_sidecar",
+  "input_path" : "\/Users\/jaehyuntak\/Desktop\/Project_____현재_진행중인\/my-image-parser\/control\/project_domain\/runs\/pptx_jobs\/01_full_presentation_2026-03-17\/media\/image8.png",
+  "message" : "RecognizeDocumentsRequest failed while analyzing the input image.",
+  "output_path" : "\/Users\/jaehyuntak\/Desktop\/Project_____현재_진행중인\/my-image-parser\/control\/project_domain\/runs\/manifests\/phase1_image8_apple_document_structure_raw_at2026_03_29.json",
+  "ownership_skill" : "parser-sidecar-to-canonical-schema-promotion",
+  "probe" : {
+    "compile_probe_status" : "compile_probe_succeeded",
+    "host_os_version" : "26.3.1",
+    "required_macos_major" : 26,
+    "sdk_path" : "\/Applications\/Xcode-26.3.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX26.2.sdk",
+    "supported_recognition_languages" : [
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(ar), script: nil, region: Optional(SA)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(ars), script: nil, region: Optional(SA)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(cs), script: nil, region: Optional(CZ)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(da), script: nil, region: Optional(DK)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(de), script: nil, region: Optional(DE)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(en), script: nil, region: Optional(US)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(es), script: nil, region: Optional(ES)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(fr), script: nil, region: Optional(FR)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(id), script: nil, region: Optional(ID)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(it), script: nil, region: Optional(IT)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(ja), script: nil, region: Optional(JP)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(ko), script: nil, region: Optional(KR)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(ms), script: nil, region: Optional(MY)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(nb), script: nil, region: Optional(NO)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(nl), script: nil, region: Optional(NL)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(nn), script: nil, region: Optional(NO)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(no), script: nil, region: Optional(NO)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(pl), script: nil, region: Optional(PL)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(pt), script: nil, region: Optional(BR)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(ro), script: nil, region: Optional(RO)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(ru), script: nil, region: Optional(RU)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(sv), script: nil, region: Optional(SE)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(th), script: nil, region: Optional(TH)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(tr), script: nil, region: Optional(TR)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(uk), script: nil, region: Optional(UA)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(vi), script: nil, region: Optional(VT)))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(yue), script: Optional(Hans), region: nil))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(yue), script: Optional(Hant), region: nil))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(zh), script: Optional(Hans), region: nil))",
+      "Language(components: Foundation.Locale.Language.Components(languageCode: Optional(zh), script: Optional(Hant), region: nil))"
+    ],
+    "supported_revisions" : [
+      "revision1"
+    ],
+    "swift_version" : "Apple Swift version 6.2.4 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)\nTarget: arm64-apple-macosx26.0"
+  },
+  "status" : "vision_request_failed"
+}
+VTEST: error: perform(_:): inside 'for await result in resultStream' error: internalError("Error Domain=NSOSStatusErrorDomain Code=-6662 \"Failed to create CVPixelBuffer Width = 978, Height = 736, Format = \'420f\'\" UserInfo={NSLocalizedDescription=Failed to create CVPixelBuffer Width = 978, Height = 736, Format = \'420f\'}")

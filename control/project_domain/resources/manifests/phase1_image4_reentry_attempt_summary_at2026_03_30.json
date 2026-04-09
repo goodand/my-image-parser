@@ -1,0 +1,69 @@
+{
+  "experiment": "phase1_image4_multi_component_recrop_reentry_slice",
+  "status": "completed",
+  "decision": "excluded",
+  "decision_reason": "no_stable_parser_or_reviewed_surface_after_bounded_recrop_slice",
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
+  "used_truth_sources": [
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_image4_multi_component_recrop_reentry_slice-at2026-03-30.md",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_small_batch_readiness-at2026-03-28-14-10.md",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_candidates_at2026_03_28.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_excluded_at2026_03_29.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_alpha_split_batch_classification_manifest.jsonl"
+  ],
+  "full_image_baseline": {
+    "status": "existing",
+    "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+    "image_id": "01_full_presentation_2026-03-17:image4.png"
+  },
+  "deterministic_attempts": {
+    "full_image_ocr_context": {
+      "status": "completed",
+      "execution_surface": "python3 scripts/build_full_image_ocr_context_package.py",
+      "output_root": "/private/tmp/image4_full_image_ocr_context",
+      "manifest_jsonl": "/private/tmp/image4_full_image_ocr_manifest.jsonl",
+      "ocr_status": "usable",
+      "review_status": "pending_review",
+      "ocr_engine": "ocrmac",
+      "ocr_annotation_count": 73
+    },
+    "paddle_table_parse": {
+      "status": "completed",
+      "execution_surface": "vendor/mcp/paddleocr-mcp/.venv/bin/python scripts/run_paddleocr_mcp_boot_smoke.py",
+      "output_json": "/private/tmp/image4_paddle_smoke.json",
+      "raw_content_json": "/private/tmp/image4_paddle_raw.json",
+      "normalized_output_json": "/private/tmp/image4_paddle_normalized.json",
+      "normalized_status": "no_table_found",
+      "tool_names": [
+        "pp_structurev3"
+      ],
+      "slide_usages": [
+        {
+          "slide": 18,
+          "occurrence": 1
+        }
+      ]
+    },
+    "apple_document_structure_helper": {
+      "status": "blocked",
+      "execution_surface": "xcrun swift skills/parser-sidecar-to-canonical-schema-promotion/scripts/macos_table_structure_helper.swift",
+      "raw_sidecar_json": "/private/tmp/image4_apple_helper_raw.json",
+      "bounded_observation_result": "no_json_emitted_within_bounded_window",
+      "runtime_behavior": "left long-lived swift helper runner processes until manual cleanup",
+      "cleanup_action": "terminated lingering vision_document_runner process after bounded probe",
+      "interpretation": "no stable Apple helper sidecar was produced for downstream canonical promotion in this slice"
+    },
+    "reviewed_component_recrop": {
+      "status": "blocked",
+      "reason": "reviewed recrop requires merged_candidate cell bboxes and no stable parser-normalized table was produced for image4",
+      "seed_bbox_source_required": "merged_candidate.rows[*].cells[*].bbox"
+    }
+  },
+  "gpt_direct_confirmation": {
+    "used": false,
+    "reason": "deterministic path was sufficient to preserve exclusion without a new tie-break"
+  },
+  "next_one_step": "Keep image4 excluded unless a future deterministic parser path yields a stable normalized table or seed bbox without helper non-termination."
+}

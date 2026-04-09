@@ -1,0 +1,651 @@
+{
+  "experiment": "table_merge_candidate_builder",
+  "status": "completed",
+  "policy_name": "single_source_fallback_v1",
+  "hook_chain": [
+    "SingleSourceFallback",
+    "BaselineReviewGateHook"
+  ],
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 25,
+  "table_id": "t1",
+  "structure_source": "paddle_single_source",
+  "apple_backend": "paddleocr-mcp/pp_structurev3",
+  "paddle_backend": "paddleocr-mcp/pp_structurev3",
+  "source_manifests": {
+    "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_paddle_table_parse_normalized_at2026_03_30.json"
+  },
+  "comparison_difference_count": 0,
+  "merge_summary": {
+    "total_cells": 24,
+    "auto_accept_candidate_count": 17,
+    "pending_review_count": 7,
+    "review_target_cell_ids": [
+      "t1_r1_c1",
+      "t1_r2_c1",
+      "t1_r3_c1",
+      "t1_r4_c1",
+      "t1_r5_c1",
+      "t1_r6_c1",
+      "t1_r7_c1"
+    ]
+  },
+  "rows": [
+    {
+      "row_index": 0,
+      "cells": [
+        {
+          "cell_id": "t1_r0_c0",
+          "row_index": 0,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            29,
+            214,
+            84
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "升印引",
+          "paddle_text": "升印引",
+          "apple_confidence": 0.565003,
+          "paddle_confidence": 0.565003,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "升印引",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r0_c1",
+          "row_index": 0,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            29,
+            316,
+            84
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "2个",
+          "paddle_text": "2个",
+          "apple_confidence": 0.293949,
+          "paddle_confidence": 0.293949,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "2个",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r0_c2",
+          "row_index": 0,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            29,
+            792,
+            84
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "叫咀",
+          "paddle_text": "叫咀",
+          "apple_confidence": 0.486068,
+          "paddle_confidence": 0.486068,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "叫咀",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "cells": [
+        {
+          "cell_id": "t1_r1_c0",
+          "row_index": 1,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            84,
+            214,
+            140
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "image_md",
+          "paddle_text": "image_md",
+          "apple_confidence": 0.997627,
+          "paddle_confidence": 0.997627,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "image_md",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r1_c1",
+          "row_index": 1,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            84,
+            316,
+            140
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "808",
+          "paddle_text": "808",
+          "apple_confidence": 0.99987,
+          "paddle_confidence": 0.99987,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "808",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r1_c2",
+          "row_index": 1,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            84,
+            792,
+            140
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "![alt](src)",
+          "paddle_text": "![alt](src)",
+          "apple_confidence": 0.0,
+          "paddle_confidence": 0.0,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "![alt](src)",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "cells": [
+        {
+          "cell_id": "t1_r2_c0",
+          "row_index": 2,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            140,
+            215,
+            196
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "inline_img",
+          "paddle_text": "inline_img",
+          "apple_confidence": 0.954521,
+          "paddle_confidence": 0.954521,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "inline_img",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r2_c1",
+          "row_index": 2,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            140,
+            316,
+            196
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "81",
+          "paddle_text": "81",
+          "apple_confidence": 0.999371,
+          "paddle_confidence": 0.999371,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "81",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r2_c2",
+          "row_index": 2,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            140,
+            792,
+            196
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "人 歪 ref",
+          "paddle_text": "人 歪 ref",
+          "apple_confidence": 0.999751,
+          "paddle_confidence": 0.999751,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "人 歪 ref",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "cells": [
+        {
+          "cell_id": "t1_r3_c0",
+          "row_index": 3,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            196,
+            215,
+            252
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "",
+          "paddle_text": "",
+          "apple_confidence": 0.532365,
+          "paddle_confidence": 0.532365,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r3_c1",
+          "row_index": 3,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            196,
+            316,
+            252
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "889",
+          "paddle_text": "889",
+          "apple_confidence": 0.14465,
+          "paddle_confidence": 0.14465,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "889",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r3_c2",
+          "row_index": 3,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            196,
+            792,
+            252
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "",
+          "paddle_text": "",
+          "apple_confidence": 0.0,
+          "paddle_confidence": 0.0,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "cells": [
+        {
+          "cell_id": "t1_r4_c0",
+          "row_index": 4,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            252,
+            215,
+            308
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "url_only",
+          "paddle_text": "url_only",
+          "apple_confidence": 0.0,
+          "paddle_confidence": 0.0,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "url_only",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r4_c1",
+          "row_index": 4,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            252,
+            316,
+            308
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "11",
+          "paddle_text": "11",
+          "apple_confidence": 0.0,
+          "paddle_confidence": 0.0,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "11",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r4_c2",
+          "row_index": 4,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            252,
+            792,
+            308
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "URL",
+          "paddle_text": "URL",
+          "apple_confidence": 0.999837,
+          "paddle_confidence": 0.999837,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "URL",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "cells": [
+        {
+          "cell_id": "t1_r5_c0",
+          "row_index": 5,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            308,
+            215,
+            364
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "bare_ link",
+          "paddle_text": "bare_ link",
+          "apple_confidence": 0.0,
+          "paddle_confidence": 0.0,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "bare_ link",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r5_c1",
+          "row_index": 5,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            308,
+            316,
+            364
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "301",
+          "paddle_text": "301",
+          "apple_confidence": 0.0,
+          "paddle_confidence": 0.0,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "301",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r5_c2",
+          "row_index": 5,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            308,
+            792,
+            364
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "歪 [text](url)",
+          "paddle_text": "歪 [text](url)",
+          "apple_confidence": 0.99979,
+          "paddle_confidence": 0.99979,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "歪 [text](url)",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "cells": [
+        {
+          "cell_id": "t1_r6_c0",
+          "row_index": 6,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            364,
+            215,
+            420
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "inline_url",
+          "paddle_text": "inline_url",
+          "apple_confidence": 0.997823,
+          "paddle_confidence": 0.997823,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "inline_url",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r6_c1",
+          "row_index": 6,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            364,
+            316,
+            420
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "169",
+          "paddle_text": "169",
+          "apple_confidence": 0.999959,
+          "paddle_confidence": 0.999959,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "169",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r6_c2",
+          "row_index": 6,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            364,
+            792,
+            420
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "人 歪 URL",
+          "paddle_text": "人 歪 URL",
+          "apple_confidence": 0.0,
+          "paddle_confidence": 0.0,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "人 歪 URL",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 7,
+      "cells": [
+        {
+          "cell_id": "t1_r7_c0",
+          "row_index": 7,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            420,
+            214,
+            476
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "URL",
+          "paddle_text": "URL",
+          "apple_confidence": 0.999478,
+          "paddle_confidence": 0.999478,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "URL",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r7_c1",
+          "row_index": 7,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            420,
+            316,
+            476
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "481",
+          "paddle_text": "481",
+          "apple_confidence": 0.99796,
+          "paddle_confidence": 0.99796,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "481",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r7_c2",
+          "row_index": 7,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            420,
+            793,
+            476
+          ],
+          "structure_source": "paddle_single_source",
+          "apple_text": "",
+          "paddle_text": "",
+          "apple_confidence": 0.99927,
+          "paddle_confidence": 0.99927,
+          "difference_classification": "single_source_fallback",
+          "recommended_text": "",
+          "recommended_text_source": "paddle_single_source",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    }
+  ]
+}

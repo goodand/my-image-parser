@@ -1,0 +1,115 @@
+{
+  "$schema_notes": {
+    "_comment": "Phase0 table triage selection JSONL row contract. Step 0 selection gate output before PaddleOCR parser smoke.",
+    "reference_basis": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md"
+    ],
+    "identity": "The artifact is a JSONL manifest where each row records one triage decision for one PPT-extracted image candidate.",
+    "path_rule": "All path examples below are repo-root relative paths unless explicitly marked absolute."
+  },
+  "contract_version": "0.1",
+  "contract_type": "jsonl_row_contract",
+  "artifact_family": "phase0_table_triage_selection",
+  "artifact_path": "control/project_domain/resources/manifests/phase0_table_triage_selection.jsonl",
+  "source_artifact_path": "control/project_domain/resources/manifests/phase0_table_triage_candidates_seed_at2026_03_28.jsonl",
+  "row_shape": {
+    "required": [
+      "source_image_id",
+      "source_image_path",
+      "source_slide_numbers",
+      "selection_decision",
+      "selected_surface_path",
+      "selection_rationale",
+      "worker_id",
+      "audit_required"
+    ],
+    "field_definitions": {
+      "source_image_id": {
+        "type": "string",
+        "description": "Stable image candidate identifier for one PPT-extracted image."
+      },
+      "source_image_path": {
+        "type": "string",
+        "description": "Absolute path to the original PPT-extracted image."
+      },
+      "source_slide_numbers": {
+        "type": "array",
+        "items": "integer",
+        "description": "Slide provenance if known. May be an empty array when the current evidence surface does not resolve slide numbers yet."
+      },
+      "selection_decision": {
+        "type": "string",
+        "enum": [
+          "use_full_image",
+          "use_reviewed_crop",
+          "not_a_table_candidate",
+          "needs_manual_audit"
+        ],
+        "description": "Exactly one triage decision per candidate."
+      },
+      "selected_surface_path": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "Absolute path to the image surface promoted for parser smoke. Must equal the original image path for use_full_image, a reviewed crop path for use_reviewed_crop, and null for excluded cases."
+      },
+      "selection_rationale": {
+        "type": "string",
+        "description": "Short evidence-backed explanation for the decision."
+      },
+      "worker_id": {
+        "type": "string",
+        "description": "Coordinator or triage worker identifier that produced the decision."
+      },
+      "audit_required": {
+        "type": "boolean",
+        "description": "True when the case must be manually reviewed before parser smoke promotion."
+      },
+      "source_provenance": {
+        "type": "string",
+        "required": false,
+        "description": "Optional PPT job or dataset provenance string."
+      },
+      "evidence_refs": {
+        "type": "array",
+        "required": false,
+        "items": "string",
+        "description": "Optional paths to smoke evidence, OCR evidence, or review notes used to justify the decision."
+      }
+    }
+  },
+  "cross_field_rules": [
+    {
+      "id": "R-1",
+      "description": "If selection_decision is use_full_image, selected_surface_path must equal source_image_path."
+    },
+    {
+      "id": "R-2",
+      "description": "If selection_decision is use_reviewed_crop, selected_surface_path must be a reviewed crop path and must not be null."
+    },
+    {
+      "id": "R-3",
+      "description": "If selection_decision is not_a_table_candidate, selected_surface_path must be null and audit_required should normally be false."
+    },
+    {
+      "id": "R-4",
+      "description": "If selection_decision is needs_manual_audit, audit_required must be true."
+    }
+  ],
+  "success_gate": [
+    "Every seed candidate receives exactly one output row.",
+    "At least 1 and at most 2 rows are promoted into the parser smoke set through use_full_image or use_reviewed_crop.",
+    "No reviewed crop may be promoted without an explicit evidence-backed rationale.",
+    "No output row may silently drop provenance."
+  ],
+  "forbidden_states": [
+    "Dropping a seed candidate without an output row.",
+    "Promoting an automatic crop that was not explicitly reviewed.",
+    "Producing more than 2 parser smoke candidates in this bounded phase0 gate."
+  ],
+  "created_at": "2026-03-28T00:04:00+09:00",
+  "created_by": "codex"
+}

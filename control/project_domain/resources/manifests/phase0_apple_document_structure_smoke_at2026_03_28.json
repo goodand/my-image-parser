@@ -1,0 +1,49 @@
+{
+  "experiment": "apple_document_structure_helper_smoke",
+  "status": "completed",
+  "verified_by": "codex_main_agent",
+  "ownership_skill": "parser-sidecar-to-canonical-schema-promotion",
+  "backend": "apple_vision_recognize_documents_request",
+  "input_image": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+  "raw_sidecar_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_apple_document_structure_raw_at2026_03_28.json",
+  "promotion_result_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_apple_document_structure_promotion_at2026_03_28.json",
+  "normalized_output_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_apple_document_structure_normalized_at2026_03_28.json",
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 24,
+  "table_id": "t1",
+  "table_count": 1,
+  "row_count": 4,
+  "column_count": 4,
+  "cell_count": 16,
+  "table_text_grid": [
+    [
+      "Metric",
+      "70Q",
+      "65Q",
+      "Delta"
+    ],
+    [
+      "DH@10",
+      "0.757",
+      "0.815",
+      "+0.058"
+    ],
+    [
+      "MRR",
+      "0.622",
+      "0.670",
+      "+0.048"
+    ],
+    [
+      "CR@10",
+      "0.514",
+      "0.554",
+      "+0.040"
+    ]
+  ],
+  "notes": [
+    "Apple helper is treated as a structure-hint sidecar, not the canonical table output.",
+    "Canonical downstream consumers must continue to read the normalized Table -> Row -> Cell manifest.",
+    "This smoke verifies the same promotion entrypoint can ingest both Paddle raw sidecars and Apple helper sidecars."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "jobs": [
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/01_full_presentation_2026-03-17/cross_validation_manifest.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/cross_validation_manifest.json"
+  ],
+  "tool_availability": {
+    "soffice": false,
+    "pdftoppm": false,
+    "xcrun": true
+  }
+}

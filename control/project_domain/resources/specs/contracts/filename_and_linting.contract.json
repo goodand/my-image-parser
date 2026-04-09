@@ -1,0 +1,131 @@
+{
+  "contract_version": "1.0.0",
+  "contract_id": "filename_and_linting",
+  "title": "Filename And Linting Contract",
+  "source_of_truth": {
+    "primary": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/skill-creation-process/references/script-and-linter-writing-patterns-at2026-03-20-14-15.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/python-static-diagnostic-fixer/knowledge_bases/python-static-diagnostic-fixer-knowledge_base-at2026-03-17-01-18.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/python-static-diagnostic-fixer/checklist-forconsistency-evaluation/consistency-checklist-at2026-03-17-01-18.md"
+    ],
+    "supporting": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_development_team_operating_playbook.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_legacy_boundary_linting.md"
+    ]
+  },
+  "scope": {
+    "governs": [
+      "git_managed_filename_policy_under_control",
+      "lint_static_ordering",
+      "safe_vs_unsafe_static_fix_policy",
+      "hard_fail_vs_soft_warn_classification"
+    ],
+    "does_not_govern": [
+      "project_specific_import_boundaries",
+      "full_team_workflow",
+      "tdd_playbook",
+      "smoke_execution_policy",
+      "task_packet_policy",
+      "workspace_env_policy"
+    ]
+  },
+  "filename_policy": {
+    "git_managed_ascii_only": true,
+    "no_spaces": true,
+    "no_parentheses": true,
+    "canonical_doc_date_suffix_forbidden": true,
+    "user_facing_notes_dated_overlay_exception": true,
+    "single_active_master_plan_per_domain": true,
+    "canonical_doc_prefixes": [
+      "MASTER_PLAN",
+      "SPEC",
+      "RULES",
+      "CHECKLIST",
+      "REFERENCE",
+      "KB"
+    ],
+    "canonical_doc_extensions": [
+      ".md"
+    ],
+    "decision_record_pattern": "^ADR_[0-9]{4}_[a-z0-9_]+\\.md$",
+    "dated_operational_pattern": "^[A-Z]+_[a-z0-9_]+-at[0-9]{4}-[0-9]{2}-[0-9]{2}(?:-[0-9]{2}-[0-9]{2})?\\.md$",
+    "draft_plan_minute_timestamp_required": true,
+    "user_facing_note_minute_timestamp_required": true,
+    "machine_readable_pattern": "^[a-z0-9_]+(?:\\.(?:schema|contract))?\\.(json|ya?ml)$",
+    "skill_directory_case": "kebab-case",
+    "skill_fixed_files": [
+      "SKILL.md",
+      "agents/openai.yaml"
+    ]
+  },
+  "lint_execution_policy": {
+    "runtime_gate_first": true,
+    "static_after_runtime_gate": true,
+    "validation_before_mutation": true,
+    "rerun_validation_after_mutation": true,
+    "evidence_required": true,
+    "minimum_runtime_gate": [
+      "compile_or_equivalent",
+      "existing_relevant_tests",
+      "minimum_smoke_if_execution_flow_changed"
+    ]
+  },
+  "safe_fix_policy": {
+    "allowed": [
+      "unused_import_cleanup",
+      "unused_variable_cleanup",
+      "typing_support_addition",
+      "future_annotations_addition",
+      "optional_guard_addition",
+      "filename_normalization_without_behavior_change",
+      "document_filename_normalization_without_semantic_change"
+    ],
+    "requires_review": [
+      "import_graph_rewrite_disguised_as_lint_cleanup",
+      "move_runtime_logic_across_directories",
+      "delete_meaningful_branching_to_silence_warning",
+      "introduce_noop_only_for_checker",
+      "rename_files_without_updating_references_and_contracts"
+    ]
+  },
+  "lint_classes": {
+    "hard_fail": [
+      "non_ascii_filename_in_git_managed_tree",
+      "space_in_git_managed_filename",
+      "parentheses_in_git_managed_filename",
+      "canonical_document_with_date_suffix_except_user_facing_notes_overlay",
+      "machine_readable_filename_not_lowercase_snake_case",
+      "duplicate_canonical_document_for_same_role",
+      "more_than_one_active_master_plan_for_same_domain"
+    ],
+    "soft_warn": [
+      "document_title_filename_drift",
+      "dated_artifact_in_canonical_doc_location",
+      "legacy_naming_outside_legacy",
+      "stale_file_under_archive_pending_delete",
+      "user_facing_note_missing_minute_timestamp"
+    ]
+  },
+  "recommended_lint_surface": {
+    "hard_gate": [
+      "filename_invariants",
+      "json_syntax",
+      "yaml_syntax",
+      "schema_syntax",
+      "required_machine_readable_contract_presence"
+    ],
+    "secondary_gate": [
+      "markdown_structure",
+      "heading_ordering",
+      "title_filename_consistency",
+      "stale_pending_delete_candidates"
+    ]
+  },
+  "active_profiles": [
+    {
+      "id": "legacy_boundary_linting",
+      "rule_doc": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_legacy_boundary_linting.md",
+      "contract": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/legacy_boundary_lint.contract.json"
+    }
+  ]
+}

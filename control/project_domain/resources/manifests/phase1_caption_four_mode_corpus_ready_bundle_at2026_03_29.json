@@ -1,0 +1,1001 @@
+{
+  "bundle_name": "phase1_caption_four_mode_small_batch_bundle",
+  "schema_version": "v1",
+  "image_count": 9,
+  "bundle_paths_used": [
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image12_caption_four_mode_eval_bundle_at2026_03_30.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_caption_four_mode_eval_bundle_at2026_03_30.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_caption_four_mode_eval_bundle_at2026_03_30.json",
+    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image15_caption_four_mode_eval_bundle_at2026_03_30.json"
+  ],
+  "all_comparison_ready": true,
+  "default_anchor_consistent": true,
+  "images": [
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000005",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "A table displays four performance metrics, their improvements from worst to best values, and the percentage improvement rates. The metrics include Context Coherence, Information Concentration, Chunk Recall, and Mean Reciprocal Rank.",
+          "alt_text": "Table showing four metrics with values for worst to best and percentage improvement."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image7_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image7/CONTEXT_PACKAGE.json",
+          "caption": "A table compares four evaluation metrics with their lowest and highest values and percentage improvements. The metrics are CC, IC, CR@10, and MRR.",
+          "alt_text": "A table shows metrics CC, IC, CR@10, and MRR with WORST to BEST values and percent improvements."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image7_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image7/CONTEXT_PACKAGE.json",
+          "caption": "A table shows the improvement rates of four evaluation metrics: Context Coherence, Information Concentration, Chunk Recall, and Mean Reciprocal Rank, with percentage improvements from worst to best cases.",
+          "alt_text": "Table comparing four metrics, displaying values from worst to best and their improvement rates."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image7_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image7/CONTEXT_PACKAGE.json",
+          "caption": "A table compares four metrics across WORST and BEST values and percentage improvements: Context Coherence, Information Concentration, Chunk Recall at 10, and Mean Reciprocal Rank.",
+          "alt_text": "Table showing four metrics with worst-to-best values and percentage improvements."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000006",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "This image shows two tables summarizing experimental scale information in Korean, including query and mode evaluation counts, total files, and breakdown by query set.",
+          "alt_text": "Two tables in Korean summarize experimental scale and file count by query set."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image8_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image8/CONTEXT_PACKAGE.json",
+          "caption": "Two tables provide summary data for experiment scale and query set distribution, with figures on evaluations, files, and search modes. The information is presented in Korean with clear numeric data.",
+          "alt_text": "Two tables showing experiment summary, including total evaluations, files, search modes, and query set file counts, in Korean."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image8_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image8/CONTEXT_PACKAGE.json",
+          "caption": "The image shows two structured tables summarizing experimental scale for a study involving queries and modes. It provides counts for total evaluation instances, file totals, search modes, and query sets in Korean.",
+          "alt_text": "Tables in Korean presenting experiment scale, with counts for evaluation, files, search modes, and query sets."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image8_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "reviewed_candidate",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image8/CONTEXT_PACKAGE.json",
+          "caption": "A table displays three rows of metrics in Korean, listing counts of evaluations, experiment files, and search modes used in an analysis.",
+          "alt_text": "Table with Korean labels and numeric metrics for evaluation counts, experiment files, and search modes."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_ready_reviewed_branch",
+          "next_gate": "review_context_package",
+          "notes": [
+            "The rerun passed a reviewed-branch gate and may participate in bounded comparison as a non-default arm.",
+            "Keep the baseline active until this reviewed branch is explicitly promoted beyond comparison scope."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000007",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "A table in Korean compares four metrics (CC, IC, CR@10, MRR) for quality and accuracy improvements, showing percentage increases for each. Key improvements are highlighted below the table.",
+          "alt_text": "A Korean table comparing search metrics (CC, IC, CR@10, MRR) and their improvement percentages."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image9_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image9/CONTEXT_PACKAGE.json",
+          "caption": "A table compares four search quality and accuracy metrics, showing percentage increases for each. Additional notes indicate the largest increases in two perspectives.",
+          "alt_text": "Table with four metrics (CC, IC, CR@10, MRR) and their increases; summary notes below."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image9_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image9/CONTEXT_PACKAGE.json",
+          "caption": "A table in Korean compares four metrics (CC, IC, CR@10, MRR) related to search quality and accuracy, showing their percentage increases. Notes under the table summarize the largest increases by category.",
+          "alt_text": "Table shows percentage increases for search metrics: CC +683%, IC +284%, CR@10 +259%, MRR +195%."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image9_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image9/CONTEXT_PACKAGE.json",
+          "caption": "A table in Korean compares four performance indicators (CC, IC, CR@10, MRR) with their descriptions and respective percentage improvements. The table is structured into three columns: indicator, description, and relative increase.",
+          "alt_text": "Table showing Korean performance metrics CC, IC, CR@10, MRR each with description and percentage increase."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000002",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "A table in Korean showing three scenarios with calculations and corresponding DH@10 values. Each row lists a scenario, a calculation, and a bolded decimal value.",
+          "alt_text": "Korean table showing three scenarios with calculations and DH@10 values."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image10_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/imported_fourarm/image10/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image10/CONTEXT_PACKAGE.json",
+          "caption": "A table compares three scenarios using calculation values and DH@10 metrics. It includes scenarios '현재', '오류 5건 제거', and '+ P0 재매핑 hit 전환 시'.",
+          "alt_text": "Table comparing scenarios with calculation values and DH@10 metric."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image10_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/imported_fourarm/image10/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image10/CONTEXT_PACKAGE.json",
+          "caption": "A table presents three scenarios comparing calculation values and DH@10 scores. The scenarios include current state, after removing 5 errors, and after P0 remapping hit conversion.",
+          "alt_text": "Table with scenarios, calculation values, and DH@10 scores in three rows."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image10_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/imported_fourarm/image10/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image10/CONTEXT_PACKAGE.json",
+          "caption": "A table in Korean presents three scenarios with corresponding calculations and DH@10 values, showing incremental improvements.",
+          "alt_text": "Korean table comparing scenarios and DH@10 values, including calculations like 53/70 and 0.757."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000003",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "A table compares metrics between 70Q and 65Q with corresponding delta values, under the heading 'Two-Phase Hyde-PC (65Q, 오류 5건 제외)'. The table presents values for DH@10, MRR, and CR@10.",
+          "alt_text": "Table comparing 70Q and 65Q metrics with deltas, titled 'Two-Phase Hyde-PC'."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase0_full_image_context_rerun_image11_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json",
+          "caption": "This image shows a table comparing metrics for 'Two-Phase Hyde-PC' on '70Q' and '65Q' scenarios, with delta values for each metric. The metrics include DH@10, MRR, and CR@10, with 65Q values generally higher than 70Q.",
+          "alt_text": "Table comparing metrics DH@10, MRR, and CR@10 between 70Q and 65Q with delta values."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase0_parser_enriched_rerun_image11_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json",
+          "caption": "A table compares DH@10, MRR, and CR@10 metrics for 70Q and 65Q under the Two-Phase Hyde-PC condition, showing the delta for each metric.",
+          "alt_text": "Table comparing DH@10, MRR, CR@10 metrics for 70Q and 65Q with deltas."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase0_reviewed_isolated_component_rerun_image11_at2026_03_28.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "reviewed_candidate",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json",
+          "caption": "A table compares three metrics (DH@10, MRR, CR@10) across two columns (70Q and 65Q) and shows the differences (Delta). The 65Q column has higher values for all metrics.",
+          "alt_text": "Table of DH@10, MRR, and CR@10 for 70Q and 65Q with corresponding Delta values."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_ready_reviewed_branch",
+          "next_gate": "review_context_package",
+          "notes": [
+            "The rerun passed a reviewed-branch gate and may participate in bounded comparison as a non-default arm.",
+            "Keep the baseline active until this reviewed branch is explicitly promoted beyond comparison scope."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image12_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000004",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "A table in Korean categorizes problem check types with columns for type, count, and percentage. Various content issues such as URL-heavy and image markdown are listed.",
+          "alt_text": "A classification table in Korean showing problem check types, counts, and percentages."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image12_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.json",
+          "caption": "A table summarizes classification results for several types of issues, listing category, count, and percentage for each type. The categories include normal, URL-heavy, short content, markdown-heavy image, URL included, and image reference included.",
+          "alt_text": "Table showing issue classification types, counts, and their percentages."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image12_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.json",
+          "caption": "A table summarizes various categories related to the classification of check issues, showing counts and percentages for each type. Categories include normal, URL-heavy, short content, image markdown, URL inclusion, and image reference inclusion.",
+          "alt_text": "Table in Korean showing counts and percentages for types of check issues including normal, URL-heavy, and more."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image12_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.json",
+          "caption": "A table presents statistics on different categories of issues, showing counts and percentages for each type. The categories include 'normal', 'URL-heavy', 'short content', 'image markdown', 'URL included', and 'image reference included'.",
+          "alt_text": "Table showing issue type classifications with counts and percentages in Korean."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000005",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "A table compares various methods and their issues related to text extraction and filtering in Korean and English. It lists method names, current settings, and associated problems.",
+          "alt_text": "A table with Korean and English text extraction methods and corresponding issues."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image13_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image13/CONTEXT_PACKAGE.json",
+          "caption": "This image shows a table with four columns and five rows, displaying information about various text processing methods and their issues. It includes method names, their current values, and identified problems.",
+          "alt_text": "A table lists text processing methods, current values, and issues, with headers and sample entries in Korean and English."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image13_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image13/CONTEXT_PACKAGE.json",
+          "caption": "This image shows a 4-row, 3-column table comparing script functions, chunking methods, and filtering strategies with their current values and reported issues. The headers and each cell entry are written in Korean and English.",
+          "alt_text": "A table with functions, current values, and problems, with headers and entries in Korean and English."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image13_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image13/CONTEXT_PACKAGE.json",
+          "caption": "A table appears with three columns labeled 항목 (Item), 현재 값 (Current Value), and 문제 (Issue), displaying settings and issues for text processing functions.",
+          "alt_text": "Table shows items, current values, and issues for several text processing methods."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000006",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "A table with three columns details categories, counts, and descriptions related to images and URLs. Categories are listed in both English and Korean.",
+          "alt_text": "Table categorizing counts and descriptions of images and URLs with headers in Korean."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image14_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image14/CONTEXT_PACKAGE.json",
+          "caption": "A table summarizes categories related to images and URLs, including counts and brief descriptions in Korean and English. Categories include image_md, inline_img, url_only, bare_link, and inline_url.",
+          "alt_text": "Table in Korean and English showing categories for images and URLs with counts and descriptions."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image14_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image14/CONTEXT_PACKAGE.json",
+          "caption": "A table in Korean compares categories for images and URLs, showing counts and brief descriptions. Categories include image_md, inline_img, url_only, bare_link, and inline_url.",
+          "alt_text": "A Korean table listing categories, counts, and descriptions for image and URL formats."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image14_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image14/CONTEXT_PACKAGE.json",
+          "caption": "A table in Korean compares counts and descriptions for image and URL categories. Table columns include 카테고리 (category), 건수 (count), and 설명 (description).",
+          "alt_text": "Table in Korean showing counts and descriptions for image and URL-related categories."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        }
+      }
+    },
+    {
+      "bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image15_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png",
+      "comparison_ready": true,
+      "recommended_current_default": "full_image_baseline",
+      "ready_arms": [
+        "full_image_baseline",
+        "full_image_ocr_context_rerun",
+        "parser_table_enriched_rerun",
+        "reviewed_isolated_component_rerun"
+      ],
+      "blocked_arms": [],
+      "arms": [
+        {
+          "execution_arm": "full_image_baseline",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-v1",
+          "image_id": "img_000007",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png",
+          "input_surface": "extracted_full_image",
+          "context_variant": null,
+          "context_review_status": null,
+          "ocr_status": null,
+          "context_package_present": false,
+          "context_package_json_path": null,
+          "caption": "This image shows a table with three columns and four rows, displaying metrics related to text and noise processing. The table headers and explanations are written in both Korean and English.",
+          "alt_text": "Table showing text and noise processing metrics with descriptions in Korean and English."
+        },
+        {
+          "execution_arm": "full_image_ocr_context_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image15_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png",
+          "input_surface": "full_image_original",
+          "context_variant": null,
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image15/CONTEXT_PACKAGE.json",
+          "caption": "This image shows a table with metrics and descriptions, including NoiseLeakage, TextRecall, Noise Rejection Rate, and TextPrecision delta, with definitions in both Korean and English.",
+          "alt_text": "Table displaying four text processing metrics and their definitions in Korean and English."
+        },
+        {
+          "execution_arm": "parser_table_enriched_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image15_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png",
+          "input_surface": "full_image_original",
+          "context_variant": "parser_table_enriched",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image15/CONTEXT_PACKAGE.json",
+          "caption": "This image shows a three-column table with metrics related to text noise and precision. Each row defines a metric, its formula, and its meaning in both English and Korean.",
+          "alt_text": "Table defining metrics: NoiseLeakage, TextRecall, Noise Rejection Rate, and TextPrecision delta."
+        },
+        {
+          "execution_arm": "reviewed_isolated_component_rerun",
+          "status": "completed",
+          "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image15_at2026_03_30.json",
+          "model": "gpt-4.1",
+          "prompt_version": "openai-gpt-4.1-caption-context-v1",
+          "image_id": "img_000001",
+          "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png",
+          "input_surface": "reviewed_table_component_crop",
+          "context_variant": "reviewed_isolated_component",
+          "context_review_status": "pending_review",
+          "ocr_status": "usable",
+          "context_package_present": true,
+          "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image15/CONTEXT_PACKAGE.json",
+          "caption": "A table lists four metrics (NoiseLeakage, TextRecall, Noise Rejection Rate, TextPrecision delta) with formulas and Korean-language explanations.",
+          "alt_text": "Table showing four metrics with English formulas and Korean explanations."
+        }
+      ],
+      "per_arm_promotion": {
+        "full_image_ocr_context_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "parser_table_enriched_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        },
+        "reviewed_isolated_component_rerun": {
+          "promotion_state": "comparison_only_pending_context_review",
+          "next_gate": "review_context_package",
+          "notes": [
+            "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+            "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+          ]
+        }
+      }
+    }
+  ]
+}

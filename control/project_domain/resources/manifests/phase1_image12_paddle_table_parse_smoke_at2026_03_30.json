@@ -1,0 +1,27 @@
+{
+  "experiment": "paddleocr_table_parse_smoke",
+  "server_command": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/mcp/start-paddleocr-mcp.sh",
+  "image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+  "status": "completed",
+  "tool_names": [
+    "pp_structurev3"
+  ],
+  "call_tool": "pp_structurev3",
+  "call_args": {
+    "input_data": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+    "output_mode": "detailed",
+    "return_images": false
+  },
+  "initialized": true,
+  "content_item_count": 2,
+  "text_preview": "## 是刘是异\n\n\n<div style=\"text-align: center;\"><html><body><table border=\"1\"><tbody><tr><td>异</td><td>川仝</td><td>旦咖</td></tr><tr><td>召咎</td><td>394</td><td>98.7%</td></tr><tr><td>URL-heavy (>50%)</td><td>4</td><td>1.0%</td></tr><tr><td>六 <100</td><td>7</td><td>1.8%</td></tr><tr><td>markdown >30%</td><td>8</td><td>2.0%</td></tr><tr><td>URL平</td><td>240</td><td>60.2%</td></tr><tr><td>ref平</td><td>312</td><td>78.2%</td></tr></tbody></table></body></html></div>\n",
+  "slide_usages": [
+    {
+      "slide": 25,
+      "occurrence": 1
+    }
+  ],
+  "raw_content_json": "/private/tmp/image12_paddle_raw.json",
+  "normalized_output_json": "/private/tmp/image12_paddle_normalized.json",
+  "normalized_status": "completed"
+}

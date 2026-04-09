@@ -39,6 +39,7 @@ user_decisions/archive/pending_delete/
 project_domain/resources/assets/added_screenshots/
 project_domain/resources/assets/pptx_inputs/
 project_domain/resources/assets/caption_experiment/extracted_media/
+project_domain/resources/assets/caption_experiment/pptx/
 project_domain/resources/context_packages/
 project_domain/resources/cross_validation/
 project_domain/resources/imported_fourarm/

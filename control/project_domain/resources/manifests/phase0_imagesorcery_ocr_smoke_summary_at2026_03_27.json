@@ -1,0 +1,65 @@
+{
+  "experiment": "phase0_imagesorcery_ocr_smoke",
+  "date": "2026-03-27",
+  "status": "completed",
+  "cases": [
+    {
+      "label": "ppt1_image1_bar_chart",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image1.png",
+      "intended_prompt": "bar chart",
+      "baseline_caption_available": true,
+      "find_found": false,
+      "selection_method": "detect_fallback",
+      "detected_class": "darkness",
+      "selected_bbox_int": [
+        412,
+        325,
+        1280,
+        760
+      ],
+      "selection_quality": "bad",
+      "selection_note": "Fallback detect selected the lower note/empty region instead of one chart panel.",
+      "standalone_ocr": {
+        "full_image_annotation_count": 29,
+        "crop_annotation_count": 0,
+        "isolated_annotation_count": 0
+      },
+      "context_value": "negative",
+      "context_note": "Naive automatic isolation removed the useful chart text surface; full-image OCR is strictly better here."
+    },
+    {
+      "label": "ppt1_image11_table",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+      "intended_prompt": "table",
+      "baseline_caption_available": true,
+      "find_found": false,
+      "selection_method": "detect_fallback",
+      "detected_class": "cancer",
+      "selected_bbox_int": [
+        296,
+        93,
+        338,
+        114
+      ],
+      "selection_quality": "bad",
+      "selection_note": "Fallback detect selected a single cell fragment rather than the full table.",
+      "standalone_ocr": {
+        "full_image_annotation_count": 18,
+        "crop_annotation_count": 1,
+        "isolated_annotation_count": 1
+      },
+      "context_value": "negative",
+      "context_note": "Full-image OCR captured the table structure; crop/isolation reduced OCR to a single token."
+    }
+  ],
+  "combined_runner_observation": {
+    "imagesorcery_stage": "works",
+    "ocr_stage_inside_combined_script": "failed",
+    "standalone_ocr_stage": "works",
+    "interpretation": "A combined runner drift exists between ImageSorcery-invoking Python flow and subsequent OCR subprocess execution."
+  },
+  "overall_decision": {
+    "phase0_batch_ready": false,
+    "recommended_next_step": "Do not fan out automatic object isolation yet. Keep full-image OCR as the immediate context source and use xhigh subagents only for ambiguous boundary triage and prompt-selection review."
+  }
+}

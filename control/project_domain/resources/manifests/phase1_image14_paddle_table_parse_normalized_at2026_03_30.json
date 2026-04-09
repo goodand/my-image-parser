@@ -1,0 +1,392 @@
+{
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 25,
+  "table_id": "t1",
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+  "source_slide_usages": [
+    {
+      "slide": 25,
+      "occurrence": 1
+    }
+  ],
+  "parser_backend": "paddleocr-mcp/pp_structurev3",
+  "normalization_mode": "table_res_list[0].pred_html",
+  "rows": [
+    {
+      "row_index": 0,
+      "cells": [
+        {
+          "cell_id": "t1_r0_c0",
+          "col_index": 0,
+          "text": "升印引",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            29,
+            214,
+            84
+          ],
+          "confidence": 0.565003
+        },
+        {
+          "cell_id": "t1_r0_c1",
+          "col_index": 1,
+          "text": "2个",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            29,
+            316,
+            84
+          ],
+          "confidence": 0.293949
+        },
+        {
+          "cell_id": "t1_r0_c2",
+          "col_index": 2,
+          "text": "叫咀",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            29,
+            792,
+            84
+          ],
+          "confidence": 0.486068
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "cells": [
+        {
+          "cell_id": "t1_r1_c0",
+          "col_index": 0,
+          "text": "image_md",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            84,
+            214,
+            140
+          ],
+          "confidence": 0.997627
+        },
+        {
+          "cell_id": "t1_r1_c1",
+          "col_index": 1,
+          "text": "808",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            84,
+            316,
+            140
+          ],
+          "confidence": 0.99987
+        },
+        {
+          "cell_id": "t1_r1_c2",
+          "col_index": 2,
+          "text": "![alt](src)",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            84,
+            792,
+            140
+          ],
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "cells": [
+        {
+          "cell_id": "t1_r2_c0",
+          "col_index": 0,
+          "text": "inline_img",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            140,
+            215,
+            196
+          ],
+          "confidence": 0.954521
+        },
+        {
+          "cell_id": "t1_r2_c1",
+          "col_index": 1,
+          "text": "81",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            140,
+            316,
+            196
+          ],
+          "confidence": 0.999371
+        },
+        {
+          "cell_id": "t1_r2_c2",
+          "col_index": 2,
+          "text": "人 歪 ref",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            140,
+            792,
+            196
+          ],
+          "confidence": 0.999751
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "cells": [
+        {
+          "cell_id": "t1_r3_c0",
+          "col_index": 0,
+          "text": "",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            196,
+            215,
+            252
+          ],
+          "confidence": 0.532365
+        },
+        {
+          "cell_id": "t1_r3_c1",
+          "col_index": 1,
+          "text": "889",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            196,
+            316,
+            252
+          ],
+          "confidence": 0.14465
+        },
+        {
+          "cell_id": "t1_r3_c2",
+          "col_index": 2,
+          "text": "",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            196,
+            792,
+            252
+          ],
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "cells": [
+        {
+          "cell_id": "t1_r4_c0",
+          "col_index": 0,
+          "text": "url_only",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            252,
+            215,
+            308
+          ],
+          "confidence": 0.0
+        },
+        {
+          "cell_id": "t1_r4_c1",
+          "col_index": 1,
+          "text": "11",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            252,
+            316,
+            308
+          ],
+          "confidence": 0.0
+        },
+        {
+          "cell_id": "t1_r4_c2",
+          "col_index": 2,
+          "text": "URL",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            252,
+            792,
+            308
+          ],
+          "confidence": 0.999837
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "cells": [
+        {
+          "cell_id": "t1_r5_c0",
+          "col_index": 0,
+          "text": "bare_ link",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            308,
+            215,
+            364
+          ],
+          "confidence": 0.0
+        },
+        {
+          "cell_id": "t1_r5_c1",
+          "col_index": 1,
+          "text": "301",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            308,
+            316,
+            364
+          ],
+          "confidence": 0.0
+        },
+        {
+          "cell_id": "t1_r5_c2",
+          "col_index": 2,
+          "text": "歪 [text](url)",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            308,
+            792,
+            364
+          ],
+          "confidence": 0.99979
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "cells": [
+        {
+          "cell_id": "t1_r6_c0",
+          "col_index": 0,
+          "text": "inline_url",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            364,
+            215,
+            420
+          ],
+          "confidence": 0.997823
+        },
+        {
+          "cell_id": "t1_r6_c1",
+          "col_index": 1,
+          "text": "169",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            364,
+            316,
+            420
+          ],
+          "confidence": 0.999959
+        },
+        {
+          "cell_id": "t1_r6_c2",
+          "col_index": 2,
+          "text": "人 歪 URL",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            364,
+            792,
+            420
+          ],
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 7,
+      "cells": [
+        {
+          "cell_id": "t1_r7_c0",
+          "col_index": 0,
+          "text": "URL",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            13,
+            420,
+            214,
+            476
+          ],
+          "confidence": 0.999478
+        },
+        {
+          "cell_id": "t1_r7_c1",
+          "col_index": 1,
+          "text": "481",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            214,
+            420,
+            316,
+            476
+          ],
+          "confidence": 0.99796
+        },
+        {
+          "cell_id": "t1_r7_c2",
+          "col_index": 2,
+          "text": "",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            316,
+            420,
+            793,
+            476
+          ],
+          "confidence": 0.99927
+        }
+      ]
+    }
+  ]
+}

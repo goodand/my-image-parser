@@ -1,0 +1,27 @@
+{
+  "experiment": "paddleocr_table_parse_smoke",
+  "server_command": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/mcp/start-paddleocr-mcp.sh",
+  "image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+  "status": "completed",
+  "tool_names": [
+    "pp_structurev3"
+  ],
+  "call_tool": "pp_structurev3",
+  "call_args": {
+    "input_data": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+    "output_mode": "detailed",
+    "return_images": false
+  },
+  "initialized": true,
+  "content_item_count": 2,
+  "text_preview": "\n<div style=\"text-align: center;\"><html><body><table border=\"1\"><tbody><tr><td>豆</td><td>WORST BEST</td><td></td></tr><tr><td>CC (Context Coherence)</td><td>0.012 0.094</td><td>+683%</td></tr><tr><td>IC (Information Concentration)</td><td>0.179 0.687</td><td>+284%</td></tr><tr><td>CR@10 (Chunk Recall)</td><td>0.143 0.514 →</td><td>+259%</td></tr><tr><td>MRR (Mean Reciprocal Rank)</td><td>0.211 0.622</td><td>+195%</td></tr></tbody></table></body></html></div>\n",
+  "slide_usages": [
+    {
+      "slide": 24,
+      "occurrence": 1
+    }
+  ],
+  "raw_content_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_paddleocr_table_parse_raw_at2026_03_28.json",
+  "normalized_output_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_paddleocr_table_parse_normalized_at2026_03_28.json",
+  "normalized_status": "completed"
+}

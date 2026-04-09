@@ -1,0 +1,240 @@
+{
+  "generated_at": "2026-03-30",
+  "model": "gpt-5.4",
+  "reasoning_effort": "xhigh",
+  "worker_count": 10,
+  "scope": "Immediate migration of top-level control/*/runs into the 3-action-unit model without touching nested registry/runs.",
+  "coordinator": {
+    "role": "merge and final validation owner",
+    "responsibilities": [
+      "dispatch workers with disjoint write scopes",
+      "merge worker outputs in dependency order",
+      "run final path and schema validation",
+      "remove empty top-level control/*/runs directories at the end"
+    ]
+  },
+  "workers": [
+    {
+      "id": "W01",
+      "title": "project_domain manifests migration",
+      "owned_sources": [
+        "control/project_domain/runs/manifests"
+      ],
+      "owned_targets": [
+        "control/project_domain/resources/manifests"
+      ],
+      "done_definition": "manifests moved and internal references under owned scope updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits",
+        "json.tool passes for changed json files"
+      ],
+      "non_goals": [
+        "do not edit reports or registries"
+      ]
+    },
+    {
+      "id": "W02",
+      "title": "project_domain reports migration",
+      "owned_sources": [
+        "control/project_domain/runs/reports"
+      ],
+      "owned_targets": [
+        "control/project_domain/resources/reports"
+      ],
+      "done_definition": "reports moved and owned-scope references updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits"
+      ],
+      "non_goals": [
+        "do not edit manifests or registries"
+      ]
+    },
+    {
+      "id": "W03",
+      "title": "project_domain context packages migration",
+      "owned_sources": [
+        "control/project_domain/runs/context_packages"
+      ],
+      "owned_targets": [
+        "control/project_domain/resources/context_packages"
+      ],
+      "done_definition": "context package trees moved intact and owned-scope references updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits"
+      ],
+      "non_goals": [
+        "do not edit reports, manifests, or registries"
+      ]
+    },
+    {
+      "id": "W04",
+      "title": "project_domain active resource bundle migration",
+      "owned_sources": [
+        "control/project_domain/runs/added_screenshots",
+        "control/project_domain/runs/cross_validation",
+        "control/project_domain/runs/experiment_plans",
+        "control/project_domain/runs/imported_fourarm",
+        "control/project_domain/runs/pptx_jobs",
+        "control/project_domain/runs/smoke"
+      ],
+      "owned_targets": [
+        "control/project_domain/resources/assets/added_screenshots",
+        "control/project_domain/resources/cross_validation",
+        "control/project_domain/resources/experiment_plans",
+        "control/project_domain/resources/imported_fourarm",
+        "control/project_domain/resources/pptx_jobs",
+        "control/project_domain/resources/smoke"
+      ],
+      "done_definition": "active domain resource trees moved and owned-scope references updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits"
+      ],
+      "non_goals": [
+        "do not edit archive lanes or registries"
+      ]
+    },
+    {
+      "id": "W05",
+      "title": "project_domain archive bundle migration",
+      "owned_sources": [
+        "control/project_domain/runs/component_split_ocr",
+        "control/project_domain/runs/intermediates",
+        "control/project_domain/runs/logs",
+        "control/project_domain/runs/object_isolation",
+        "control/project_domain/runs/pptx_extract"
+      ],
+      "owned_targets": [
+        "control/project_domain/archive/component_split_ocr",
+        "control/project_domain/archive/intermediates",
+        "control/project_domain/archive/logs",
+        "control/project_domain/archive/object_isolation",
+        "control/project_domain/archive/pptx_extract"
+      ],
+      "done_definition": "archive-classified domain material moved and owned-scope references updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits"
+      ],
+      "non_goals": [
+        "do not edit active domain resources outside owned paths"
+      ]
+    },
+    {
+      "id": "W06",
+      "title": "project_agent_ops manifests and plans migration",
+      "owned_sources": [
+        "control/project_agent_ops/runs/experiment_plans",
+        "control/project_agent_ops/runs/manifests"
+      ],
+      "owned_targets": [
+        "control/project_agent_ops/resources/experiment_plans",
+        "control/project_agent_ops/resources/manifests"
+      ],
+      "done_definition": "agent-ops plans and manifests moved and owned-scope references updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits",
+        "json.tool passes for changed json files"
+      ],
+      "non_goals": [
+        "do not edit reports, smoke, or registries"
+      ]
+    },
+    {
+      "id": "W07",
+      "title": "project_agent_ops reports, smoke, and logs migration",
+      "owned_sources": [
+        "control/project_agent_ops/runs/reports",
+        "control/project_agent_ops/runs/smoke",
+        "control/project_agent_ops/runs/logs"
+      ],
+      "owned_targets": [
+        "control/project_agent_ops/resources/reports",
+        "control/project_agent_ops/resources/smoke",
+        "control/project_agent_ops/archive/logs"
+      ],
+      "done_definition": "agent-ops report and smoke resources migrated, logs archived, owned-scope references updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits"
+      ],
+      "non_goals": [
+        "do not edit manifests or registry"
+      ]
+    },
+    {
+      "id": "W08",
+      "title": "user_decisions runs migration",
+      "owned_sources": [
+        "control/user_decisions/runs/REPORT_legacy_boundary_decision_capture-at2026-03-27.md",
+        "control/user_decisions/runs/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+        "control/user_decisions/runs/img"
+      ],
+      "owned_targets": [
+        "control/user_decisions/resources/reports/REPORT_legacy_boundary_decision_capture-at2026-03-27.md",
+        "control/user_decisions/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+        "control/user_decisions/resources/assets/review_support_img"
+      ],
+      "done_definition": "user decision reports and support assets migrated and owned-scope references updated",
+      "required_checks": [
+        "rg old path returns no owned-scope hits"
+      ],
+      "non_goals": [
+        "do not edit ADRs or decision registry"
+      ]
+    },
+    {
+      "id": "W09",
+      "title": "team runs and team migration docs sync",
+      "owned_sources": [
+        "control/team/runs/REPORT_control_structure_16_bucket_migration-at2026-03-27.md",
+        "control/team/resources/rules/RULES_workspace_structure.md",
+        "control/team/resources/migration"
+      ],
+      "owned_targets": [
+        "control/team/resources/reports/REPORT_control_structure_16_bucket_migration-at2026-03-27.md",
+        "control/team/resources/rules/RULES_workspace_structure.md",
+        "control/team/resources/migration"
+      ],
+      "done_definition": "team migration report relocated and team-wide migration docs reflect actual moved paths",
+      "required_checks": [
+        "rg old path returns no owned-scope hits except intentional historical references"
+      ],
+      "non_goals": [
+        "do not edit project_domain or project_agent_ops resources"
+      ]
+    },
+    {
+      "id": "W10",
+      "title": "registry and path-index synchronization",
+      "owned_sources": [
+        "control/project_domain/registry",
+        "control/project_agent_ops/registry",
+        "control/user_decisions/registry",
+        "control/team/registry"
+      ],
+      "owned_targets": [
+        "control/project_domain/registry",
+        "control/project_agent_ops/registry",
+        "control/user_decisions/registry",
+        "control/team/registry"
+      ],
+      "done_definition": "registry files point at migrated locations and no stale top-level runs paths remain in active indexes",
+      "required_checks": [
+        "json.tool passes for changed registry files",
+        "rg stale top-level runs paths returns no active-index hits"
+      ],
+      "non_goals": [
+        "do not move resource or archive bodies directly"
+      ],
+      "depends_on": [
+        "W01",
+        "W02",
+        "W03",
+        "W04",
+        "W05",
+        "W06",
+        "W07",
+        "W08",
+        "W09"
+      ]
+    }
+  ]
+}

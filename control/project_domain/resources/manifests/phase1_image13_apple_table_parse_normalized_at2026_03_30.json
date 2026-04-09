@@ -1,0 +1,251 @@
+{
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 25,
+  "table_id": "t1",
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+  "source_slide_usages": [
+    {
+      "slide": 25,
+      "occurrence": 1
+    }
+  ],
+  "parser_backend": "apple_vision_recognize_documents_request",
+  "normalization_mode": "documents[0].tables[0].cells",
+  "rows": [
+    {
+      "row_index": 0,
+      "cells": [
+        {
+          "cell_id": "t1_r0_c0",
+          "col_index": 0,
+          "text": "항목",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.0125,
+            0.771111,
+            0.3325,
+            0.154815
+          ],
+          "confidence": 0.060539
+        },
+        {
+          "cell_id": "t1_r0_c1",
+          "col_index": 1,
+          "text": "현재값",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.345,
+            0.771111,
+            0.247,
+            0.154815
+          ],
+          "confidence": 0.074784
+        },
+        {
+          "cell_id": "t1_r0_c2",
+          "col_index": 2,
+          "text": "문제",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.592,
+            0.771111,
+            0.3705,
+            0.154815
+          ],
+          "confidence": 0.208884
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "cells": [
+        {
+          "cell_id": "t1_r1_c0",
+          "col_index": 0,
+          "text": "clean_text ()",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.0125,
+            0.591852,
+            0.3325,
+            0.179259
+          ],
+          "confidence": 0.251888
+        },
+        {
+          "cell_id": "t1_r1_c1",
+          "col_index": 1,
+          "text": "<script>, cstyle> 제거",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.345,
+            0.591852,
+            0.247,
+            0.179259
+          ],
+          "confidence": 0.264035
+        },
+        {
+          "cell_id": "t1_r1_c2",
+          "col_index": 2,
+          "text": "URL href, 이미지 markdown 미제 거",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.592,
+            0.591852,
+            0.3705,
+            0.179259
+          ],
+          "confidence": 0.349419
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "cells": [
+        {
+          "cell_id": "t1_r2_c0",
+          "col_index": 0,
+          "text": "extract_blocks_from_contents ()",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.0125,
+            0.420741,
+            0.3325,
+            0.171111
+          ],
+          "confidence": 0.307488
+        },
+        {
+          "cell_id": "t1_r2_c1",
+          "col_index": 1,
+          "text": "3토큰 미만 필터",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.345,
+            0.420741,
+            0.247,
+            0.171111
+          ],
+          "confidence": 0.301532
+        },
+        {
+          "cell_id": "t1_r2_c2",
+          "col_index": 2,
+          "text": "임계값 너무 낮음",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.592,
+            0.420741,
+            0.3705,
+            0.171111
+          ],
+          "confidence": 0.278343
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "cells": [
+        {
+          "cell_id": "t1_r3_c0",
+          "col_index": 0,
+          "text": "chunk_method",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.0125,
+            0.24963,
+            0.3325,
+            0.171111
+          ],
+          "confidence": 0.3887
+        },
+        {
+          "cell_id": "t1_r3_c1",
+          "col_index": 1,
+          "text": "Sentence 1024/50",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.345,
+            0.24963,
+            0.247,
+            0.171111
+          ],
+          "confidence": 0.732946
+        },
+        {
+          "cell_id": "t1_r3_c2",
+          "col_index": 2,
+          "text": "실제 DB는 220/40, 320/60 전략 사용",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.592,
+            0.24963,
+            0.3705,
+            0.171111
+          ],
+          "confidence": 0.482079
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "cells": [
+        {
+          "cell_id": "t1_r4_c0",
+          "col_index": 0,
+          "text": "URL/이미지 필터링",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.0125,
+            0.111111,
+            0.3325,
+            0.138519
+          ],
+          "confidence": 0.27633
+        },
+        {
+          "cell_id": "t1_r4_c1",
+          "col_index": 1,
+          "text": "없음",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.345,
+            0.111111,
+            0.247,
+            0.138519
+          ],
+          "confidence": 0.160969
+        },
+        {
+          "cell_id": "t1_r4_c2",
+          "col_index": 2,
+          "text": "60% 청크에 URL, 78%에 이미지 ref 잔존",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.592,
+            0.111111,
+            0.3705,
+            0.138519
+          ],
+          "confidence": 0.408738
+        }
+      ]
+    }
+  ]
+}

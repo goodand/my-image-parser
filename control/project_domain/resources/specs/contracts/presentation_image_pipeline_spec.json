@@ -1,0 +1,233 @@
+{
+  "saved_at": "2026-03-26",
+  "timezone": "Asia/Seoul",
+  "source": "conversation",
+  "scope": "canva_presentation_image_pipeline",
+  "goal": {
+    "summary": "Use Canva presentations as an image repository, extract images from exported presentation files, caption them, map them to related documents, and regenerate presentation assets from image plus caption records.",
+    "reverse_sync_to_canva_required": false
+  },
+  "current_state": {
+    "completed_processes": [
+      "extract_images_from_presentation_file",
+      "generate_image_captions_with_gemini",
+      "generate_presentation_from_images_and_captions"
+    ],
+    "remaining_pipeline_extensions": [
+      "export_or_download_presentation_file_from_canva",
+      "persist_image_registry_records",
+      "generate_embedding_vectors_for_images",
+      "run_reranker_for_document_mapping_candidates",
+      "support_human_review_and_override_flow",
+      "rename_files_using_caption_candidates",
+      "optionally_write_caption_metadata_to_image_files"
+    ]
+  },
+  "pipeline_overview": [
+    {
+      "step": 1,
+      "id": "canva_export",
+      "summary": "Treat Canva presentation as the upstream asset store and export or download a presentation file when needed."
+    },
+    {
+      "step": 2,
+      "id": "presentation_image_extraction",
+      "summary": "Extract embedded images from the presentation file."
+    },
+    {
+      "step": 3,
+      "id": "image_captioning",
+      "summary": "Generate or refine captions for extracted images."
+    },
+    {
+      "step": 4,
+      "id": "image_registry_update",
+      "summary": "Store per-image path, caption, status, and rename candidate records in a JSON-friendly registry."
+    },
+    {
+      "step": 5,
+      "id": "embedding_and_rerank",
+      "summary": "Compute image embeddings, retrieve candidate documents, and rerank top matches."
+    },
+    {
+      "step": 6,
+      "id": "human_review",
+      "summary": "Review captions and mapping candidates, mark outliers, and write manual descriptions when needed."
+    },
+    {
+      "step": 7,
+      "id": "rename_and_metadata_commit",
+      "summary": "After approval, rename image files using caption-based candidates and optionally write metadata."
+    },
+    {
+      "step": 8,
+      "id": "presentation_regeneration",
+      "summary": "Generate presentation artifacts from curated image plus caption records."
+    }
+  ],
+  "manual_review_steps": [
+    {
+      "id": "1.1",
+      "name": "review_caption_quality",
+      "summary": "Check whether each generated caption is appropriate for the image.",
+      "actor": "human"
+    },
+    {
+      "id": "1.2",
+      "name": "edit_bad_caption",
+      "summary": "Manually revise captions when the generated caption is not suitable.",
+      "actor": "human"
+    },
+    {
+      "id": "2.1",
+      "name": "review_reranker_top5",
+      "summary": "Review the reranker top-5 image-to-document mapping candidates.",
+      "actor": "human"
+    },
+    {
+      "id": "2.2",
+      "name": "decide_mapping_or_outlier",
+      "summary": "Select the final related document mapping or label the image as an outlier.",
+      "actor": "human"
+    },
+    {
+      "id": "2.3",
+      "name": "write_manual_outlier_description",
+      "summary": "Write a manual description for outlier images when no related document is appropriate.",
+      "actor": "human"
+    }
+  ],
+  "architecture_preferences": {
+    "mcp_is_primary_control_and_data_plane": true,
+    "skills_are_for_subagent_execution_only": true,
+    "subagent_context_isolation_per_image": true,
+    "prefer_json_records_over_csv_for_llm_facing_data": true,
+    "csv_may_be_used_only_as_dispatch_keys": true,
+    "prefer_codex_cli_subagents_as_image_workers": true
+  },
+  "recommended_structure": {
+    "orchestration_layer": {
+      "owner": "skill",
+      "responsibilities": [
+        "create_jobs",
+        "fan_out_image_workers",
+        "coordinate_retries",
+        "aggregate_results"
+      ]
+    },
+    "control_plane": {
+      "owner": "agent-task-manager-mcp",
+      "responsibilities": [
+        "task_and_subtask_tracking",
+        "session_tracking",
+        "checkpoint_tracking",
+        "status_and_evidence_management"
+      ]
+    },
+    "data_plane": {
+      "owner": "conport",
+      "responsibilities": [
+        "store_image_registry_records",
+        "store_caption_fields",
+        "store_rename_candidates",
+        "store_progress_logs"
+      ]
+    },
+    "worker_tool_plane": {
+      "owners": [
+        "cv-mcp",
+        "filesystem",
+        "exiftool"
+      ],
+      "responsibilities": [
+        "caption_generation",
+        "file_rename_or_move",
+        "metadata_write"
+      ]
+    }
+  },
+  "recommended_mcp_stack": {
+    "required": [
+      "cv-mcp",
+      "conport",
+      "filesystem"
+    ],
+    "recommended": [
+      "agent-task-manager-mcp"
+    ],
+    "optional": [
+      "ExifTool_MCP"
+    ],
+    "already_registered_in_codex": [
+      "cv-mcp",
+      "conport",
+      "filesystem",
+      "agent-task-manager",
+      "exiftool",
+      "canva"
+    ]
+  },
+  "subagent_pattern": {
+    "worker_granularity": "one_subagent_per_image",
+    "worker_inputs": [
+      "job_id",
+      "image_id"
+    ],
+    "worker_reads_from_mcp": [
+      "image_path",
+      "current_caption",
+      "status",
+      "existing_metadata"
+    ],
+    "worker_writes_to_mcp": [
+      "caption",
+      "rename_candidate",
+      "metadata_status",
+      "last_error",
+      "evidence"
+    ],
+    "main_thread_completion_rule": "Treat MCP state as the source of truth rather than free-form worker text."
+  },
+  "artifact_preferences": {
+    "dispatch_format_preference": "json",
+    "batch_helper_usage": "If CSV fan-out is used, keep rows minimal and read full payloads from MCP-backed JSON records.",
+    "filename_strategy": "caption_based_slug_after_human_approval",
+    "metadata_write_strategy": "optional_final_commit_stage"
+  },
+  "candidate_record_shapes": {
+    "image_registry_record": {
+      "image_id": "img_000123",
+      "path": "/absolute/path/to/image.png",
+      "status": "queued",
+      "caption": null,
+      "caption_model": null,
+      "caption_confidence": null,
+      "metadata_status": "pending",
+      "rename_status": "pending",
+      "new_filename_candidate": null,
+      "last_error": null,
+      "updated_at": "2026-03-26T12:00:00+09:00"
+    },
+    "job_record": {
+      "job_id": "job_20260326_001",
+      "image_id": "img_000123",
+      "phase": "caption",
+      "state": "running",
+      "attempt": 1,
+      "worker_agent": "image_worker",
+      "evidence": [],
+      "started_at": "2026-03-26T12:01:00+09:00",
+      "finished_at": null
+    }
+  },
+  "future_skill_targets": [
+    {
+      "name": "presentation-image-pipeline",
+      "purpose": "Skill that orchestrates the MCP-first presentation image pipeline."
+    },
+    {
+      "name": "image-worker",
+      "purpose": "Custom subagent that handles one image at a time with isolated context."
+    }
+  ]
+}

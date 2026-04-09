@@ -1,0 +1,332 @@
+{
+  "experiment": "component_decomposition_candidate_scoring",
+  "status": "completed",
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
+  "input_probe_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image4_component_decomposition_probe_at2026_03_30.json",
+  "image_kind_guess": "compound_dashboard_like",
+  "current_experiment_objective": "dashboard_overview_caption_input",
+  "profiles": {
+    "dashboard_overview_caption_input": {
+      "winner_candidate": "full_dashboard",
+      "scores": [
+        {
+          "candidate_name": "full_dashboard",
+          "objective_profile": "dashboard_overview_caption_input",
+          "total_score": 10.0,
+          "strengths": [
+            "preserves_title_context",
+            "preserves_chart_region",
+            "preserves_lower_summary_or_table",
+            "preserves_dashboard_semantics",
+            "no_loss_anchor"
+          ],
+          "weaknesses": [],
+          "score_breakdown": {
+            "title_context": 2.0,
+            "chart_region": 3.0,
+            "table_region": 2.0,
+            "joint_dashboard_preservation": 2.0,
+            "full_context_anchor": 1.0,
+            "narrow_crop_penalty": 0.0,
+            "title_missing_penalty": 0.0,
+            "aggressive_crop_penalty": 0.0
+          },
+          "bbox": [
+            0,
+            0,
+            1280,
+            820
+          ],
+          "component_ids": [
+            "full_dashboard"
+          ]
+        },
+        {
+          "candidate_name": "title_plus_chart_set",
+          "objective_profile": "dashboard_overview_caption_input",
+          "total_score": 3.0,
+          "strengths": [
+            "preserves_title_context",
+            "preserves_chart_region"
+          ],
+          "weaknesses": [
+            "drops_lower_summary_or_table",
+            "partial_dashboard_semantics_only"
+          ],
+          "score_breakdown": {
+            "title_context": 2.0,
+            "chart_region": 3.0,
+            "table_region": 0.0,
+            "joint_dashboard_preservation": 0.0,
+            "full_context_anchor": 0.0,
+            "narrow_crop_penalty": -1.5,
+            "title_missing_penalty": 0.0,
+            "aggressive_crop_penalty": -0.5
+          },
+          "bbox": [
+            23,
+            12,
+            1225,
+            341
+          ],
+          "component_ids": [
+            "title_block",
+            "chart_region"
+          ]
+        },
+        {
+          "candidate_name": "title_plus_table",
+          "objective_profile": "dashboard_overview_caption_input",
+          "total_score": 2.5,
+          "strengths": [
+            "preserves_title_context",
+            "preserves_lower_summary_or_table"
+          ],
+          "weaknesses": [
+            "drops_chart_region",
+            "partial_dashboard_semantics_only"
+          ],
+          "score_breakdown": {
+            "title_context": 2.0,
+            "chart_region": 0.0,
+            "table_region": 2.0,
+            "joint_dashboard_preservation": 0.0,
+            "full_context_anchor": 0.0,
+            "narrow_crop_penalty": -1.5,
+            "title_missing_penalty": 0.0,
+            "aggressive_crop_penalty": 0.0
+          },
+          "bbox": [
+            23,
+            12,
+            984,
+            691
+          ],
+          "component_ids": [
+            "title_block",
+            "table_like_region"
+          ]
+        },
+        {
+          "candidate_name": "chart_set",
+          "objective_profile": "dashboard_overview_caption_input",
+          "total_score": 0.5,
+          "strengths": [
+            "preserves_chart_region"
+          ],
+          "weaknesses": [
+            "drops_title_context",
+            "drops_lower_summary_or_table",
+            "partial_dashboard_semantics_only"
+          ],
+          "score_breakdown": {
+            "title_context": 0.0,
+            "chart_region": 3.0,
+            "table_region": 0.0,
+            "joint_dashboard_preservation": 0.0,
+            "full_context_anchor": 0.0,
+            "narrow_crop_penalty": -1.5,
+            "title_missing_penalty": -0.5,
+            "aggressive_crop_penalty": -0.5
+          },
+          "bbox": [
+            23,
+            59,
+            1225,
+            341
+          ],
+          "component_ids": [
+            "chart_region"
+          ]
+        },
+        {
+          "candidate_name": "table_only",
+          "objective_profile": "dashboard_overview_caption_input",
+          "total_score": -0.5,
+          "strengths": [
+            "preserves_lower_summary_or_table"
+          ],
+          "weaknesses": [
+            "drops_title_context",
+            "drops_chart_region",
+            "partial_dashboard_semantics_only"
+          ],
+          "score_breakdown": {
+            "title_context": 0.0,
+            "chart_region": 0.0,
+            "table_region": 2.0,
+            "joint_dashboard_preservation": 0.0,
+            "full_context_anchor": 0.0,
+            "narrow_crop_penalty": -1.5,
+            "title_missing_penalty": -0.5,
+            "aggressive_crop_penalty": -0.5
+          },
+          "bbox": [
+            23,
+            409,
+            984,
+            691
+          ],
+          "component_ids": [
+            "table_like_region"
+          ]
+        }
+      ]
+    },
+    "embedded_table_focus": {
+      "winner_candidate": "title_plus_table",
+      "scores": [
+        {
+          "candidate_name": "title_plus_table",
+          "objective_profile": "embedded_table_focus",
+          "total_score": 5.0,
+          "strengths": [
+            "preserves_table_region",
+            "keeps_title_context",
+            "focused_crop"
+          ],
+          "weaknesses": [],
+          "score_breakdown": {
+            "table_region": 3.0,
+            "title_context": 1.0,
+            "compact_focus_bonus": 1.0,
+            "chart_noise_penalty": 0.0,
+            "full_dashboard_penalty": 0.0,
+            "missing_table_penalty": 0.0
+          },
+          "bbox": [
+            23,
+            12,
+            984,
+            691
+          ],
+          "component_ids": [
+            "title_block",
+            "table_like_region"
+          ]
+        },
+        {
+          "candidate_name": "table_only",
+          "objective_profile": "embedded_table_focus",
+          "total_score": 4.0,
+          "strengths": [
+            "preserves_table_region",
+            "focused_crop"
+          ],
+          "weaknesses": [],
+          "score_breakdown": {
+            "table_region": 3.0,
+            "title_context": 0.0,
+            "compact_focus_bonus": 1.0,
+            "chart_noise_penalty": 0.0,
+            "full_dashboard_penalty": 0.0,
+            "missing_table_penalty": 0.0
+          },
+          "bbox": [
+            23,
+            409,
+            984,
+            691
+          ],
+          "component_ids": [
+            "table_like_region"
+          ]
+        },
+        {
+          "candidate_name": "full_dashboard",
+          "objective_profile": "embedded_table_focus",
+          "total_score": 2.0,
+          "strengths": [
+            "preserves_table_region",
+            "keeps_title_context"
+          ],
+          "weaknesses": [
+            "keeps_chart_noise_for_table_focus"
+          ],
+          "score_breakdown": {
+            "table_region": 3.0,
+            "title_context": 1.0,
+            "compact_focus_bonus": 0.0,
+            "chart_noise_penalty": -1.0,
+            "full_dashboard_penalty": -1.0,
+            "missing_table_penalty": 0.0
+          },
+          "bbox": [
+            0,
+            0,
+            1280,
+            820
+          ],
+          "component_ids": [
+            "full_dashboard"
+          ]
+        },
+        {
+          "candidate_name": "title_plus_chart_set",
+          "objective_profile": "embedded_table_focus",
+          "total_score": -1.0,
+          "strengths": [
+            "keeps_title_context",
+            "focused_crop"
+          ],
+          "weaknesses": [
+            "drops_table_region",
+            "keeps_chart_noise_for_table_focus"
+          ],
+          "score_breakdown": {
+            "table_region": 0.0,
+            "title_context": 1.0,
+            "compact_focus_bonus": 1.0,
+            "chart_noise_penalty": -1.0,
+            "full_dashboard_penalty": 0.0,
+            "missing_table_penalty": -2.0
+          },
+          "bbox": [
+            23,
+            12,
+            1225,
+            341
+          ],
+          "component_ids": [
+            "title_block",
+            "chart_region"
+          ]
+        },
+        {
+          "candidate_name": "chart_set",
+          "objective_profile": "embedded_table_focus",
+          "total_score": -2.0,
+          "strengths": [
+            "focused_crop"
+          ],
+          "weaknesses": [
+            "drops_table_region",
+            "keeps_chart_noise_for_table_focus"
+          ],
+          "score_breakdown": {
+            "table_region": 0.0,
+            "title_context": 0.0,
+            "compact_focus_bonus": 1.0,
+            "chart_noise_penalty": -1.0,
+            "full_dashboard_penalty": 0.0,
+            "missing_table_penalty": -2.0
+          },
+          "bbox": [
+            23,
+            59,
+            1225,
+            341
+          ],
+          "component_ids": [
+            "chart_region"
+          ]
+        }
+      ]
+    }
+  },
+  "current_interpretation": {
+    "mainline_recommendation": "keep_full_dashboard_or_full_image_path",
+    "reentry_ready": false,
+    "reason": "deterministic scoring says dashboard semantics are best preserved by full_dashboard; derived-arm reentry still requires typed regrouping and stronger evidence"
+  }
+}

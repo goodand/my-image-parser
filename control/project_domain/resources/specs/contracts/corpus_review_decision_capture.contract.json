@@ -1,0 +1,431 @@
+{
+  "schema_version": "v1",
+  "contract_kind": "corpus_review_decision_capture",
+  "row_format": "jsonl_object_per_image",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "CorpusReviewDecisionRow",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "schema_version",
+      "decision_capture_kind",
+      "image_id",
+      "source_image_path",
+      "review_surface_path",
+      "review_markdown_path",
+      "bundle_path",
+      "active_default_arm",
+      "comparison_winner",
+      "comparison_winner_promotion_state",
+      "baseline_retained",
+      "review_priority_label",
+      "pending_context_review_arms",
+      "use_for_retrieval",
+      "outlier_candidate",
+      "review_status"
+    ],
+    "properties": {
+      "schema_version": {
+        "type": "string",
+        "const": "v1"
+      },
+      "decision_capture_kind": {
+        "type": "string",
+        "const": "corpus_review_decision"
+      },
+      "image_id": {
+        "type": "string",
+        "pattern": "^image[0-9]+$"
+      },
+      "source_image_path": {
+        "type": "string",
+        "minLength": 1
+      },
+      "review_surface_path": {
+        "type": "string",
+        "minLength": 1
+      },
+      "review_markdown_path": {
+        "type": "string",
+        "minLength": 1
+      },
+      "bundle_path": {
+        "type": "string",
+        "minLength": 1
+      },
+      "active_default_arm": {
+        "$ref": "#/$defs/captionArm"
+      },
+      "comparison_winner": {
+        "$ref": "#/$defs/captionArm"
+      },
+      "comparison_winner_promotion_state": {
+        "$ref": "#/$defs/promotionState"
+      },
+      "baseline_retained": {
+        "type": "boolean"
+      },
+      "review_priority_label": {
+        "type": "string",
+        "enum": [
+          "highest",
+          "high",
+          "elevated"
+        ]
+      },
+      "pending_context_review_arms": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/captionArm"
+        },
+        "uniqueItems": true
+      },
+      "selected_caption_arm": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/captionArm"
+          },
+          {
+            "type": "string",
+            "const": "llm_edited_caption"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "selected_caption_promotion_state": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/promotionState"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "caption_decision": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "select_active_default",
+              "select_comparison_winner",
+              "select_other_arm",
+              "approve_edited_caption",
+              "defer",
+              "exclude_from_retrieval"
+            ]
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "caption_edit_required": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "approved_caption": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "approved_alt_text": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "use_for_retrieval": {
+        "type": "boolean"
+      },
+      "mapping_review_required": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+      },
+      "outlier_candidate": {
+        "type": "boolean"
+      },
+      "review_status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "completed",
+          "deferred"
+        ]
+      },
+      "reviewer_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "reviewed_at": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "decision_rationale": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "retrieval_block_reason": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "enum": [
+          "review_deferred",
+          "policy_hold",
+          "manual_lane",
+          "rejected_for_retrieval",
+          null
+        ]
+      },
+      "outlier_reason": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "reviewer_notes": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "$defs": {
+      "captionArm": {
+        "type": "string",
+        "enum": [
+          "full_image_baseline",
+          "full_image_ocr_context_rerun",
+          "parser_table_enriched_rerun",
+          "reviewed_isolated_component_rerun"
+        ]
+      },
+      "promotionState": {
+        "type": "string",
+        "enum": [
+          "default_ready_anchor",
+          "comparison_only_pending_context_review",
+          "comparison_ready_reviewed_branch"
+        ]
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "review_status": {
+              "const": "completed"
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "selected_caption_arm",
+            "selected_caption_promotion_state",
+            "caption_decision",
+            "caption_edit_required",
+            "approved_caption",
+            "approved_alt_text",
+            "reviewer_id",
+            "reviewed_at"
+          ],
+          "properties": {
+            "approved_alt_text": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "use_for_retrieval": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "review_status": {
+              "const": "completed"
+            },
+            "approved_caption": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "use_for_retrieval": {
+              "const": false
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "retrieval_block_reason"
+          ]
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "caption_edit_required": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "approved_caption": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "outlier_candidate": {
+              "const": true
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "outlier_reason"
+          ]
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "caption_decision": {
+              "const": "defer"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "review_status": {
+              "const": "deferred"
+            },
+            "use_for_retrieval": {
+              "const": false
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "caption_decision": {
+              "const": "exclude_from_retrieval"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "use_for_retrieval": {
+              "const": false
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "selected_caption_arm": {
+              "const": "llm_edited_caption"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "selected_caption_promotion_state": {
+              "type": "null"
+            },
+            "caption_edit_required": {
+              "const": true
+            },
+            "caption_decision": {
+              "const": "approve_edited_caption"
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "caption_decision": {
+              "const": "approve_edited_caption"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "selected_caption_arm": {
+              "const": "llm_edited_caption"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "machine_prefilled_fields": [
+    "image_id",
+    "source_image_path",
+    "review_surface_path",
+    "review_markdown_path",
+    "bundle_path",
+    "active_default_arm",
+    "comparison_winner",
+    "comparison_winner_promotion_state",
+    "baseline_retained",
+    "review_priority_label",
+    "pending_context_review_arms"
+  ],
+  "human_supplied_fields": [
+    "selected_caption_arm",
+    "selected_caption_promotion_state",
+    "caption_decision",
+    "caption_edit_required",
+    "approved_caption",
+    "approved_alt_text",
+    "use_for_retrieval",
+    "mapping_review_required",
+    "outlier_candidate",
+    "review_status",
+    "reviewer_id",
+    "reviewed_at",
+    "decision_rationale",
+    "retrieval_block_reason",
+    "outlier_reason",
+    "reviewer_notes"
+  ],
+  "ingestion_rules": [
+    "Retrieval preflight may ingest only rows where review_status is completed, use_for_retrieval is true, and approved_caption is non-empty.",
+    "Mapping preflight may use mapping_review_required as an optional hint, but this contract does not finalize mapping.",
+    "The decision bridge must not mutate comparison bundles, aggregate manifests, or registry state during review capture."
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "checked_at": "2026-03-26",
+  "timezone": "Asia/Seoul",
+  "scope": "external_reference_urls_from_canva_presentation_pipeline_discussion",
+  "verification_method": "web_open",
+  "summary": {
+    "total_urls_checked": 35,
+    "reachable": 35,
+    "redirected_but_working": 5,
+    "broken": 0
+  },
+  "results": [
+    {
+      "url": "https://developers.openai.com/codex/concepts/customization/",
+      "status": "reachable_redirected",
+      "resolved_url": "https://developers.openai.com/codex/concepts/customization"
+    },
+    {
+      "url": "https://developers.openai.com/codex/concepts/subagents/",
+      "status": "reachable_redirected",
+      "resolved_url": "https://developers.openai.com/codex/concepts/subagents"
+    },
+    {
+      "url": "https://developers.openai.com/codex/subagents/",
+      "status": "reachable_redirected",
+      "resolved_url": "https://developers.openai.com/codex/subagents"
+    },
+    {
+      "url": "https://developers.openai.com/codex/guides/agents-sdk/",
+      "status": "reachable_redirected",
+      "resolved_url": "https://developers.openai.com/codex/guides/agents-sdk"
+    },
+    {
+      "url": "https://developers.openai.com/codex/skills/",
+      "status": "reachable_redirected",
+      "resolved_url": "https://developers.openai.com/codex/skills"
+    },
+    {
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/mlnima/agent-task-manager-mcp",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/GreatScottyMac/context-portal",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/joshmsimpson/ExifTool_MCP",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/jparkerweb/mcp-sqlite",
+      "status": "reachable"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lili-luo/aicoding-cookbook/main/skills/codex/taskmaster/SKILL.md",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/hellowind777/helloagents",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/catlog22/Claude-Code-Workflow",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/obra/superpowers/blob/main/skills/dispatching-parallel-agents/SKILL.md",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/openai/skills",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/VoltAgent/awesome-codex-subagents",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/samhains/cv-mcp",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/jkawamoto/mcp-florence2",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/ColeMurray/moondream-mcp",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/stass/exif-mcp",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/tychenjiajun/exif-ai",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/marirs/exif-ai",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/osteele/rename-image-files",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/myudak/Vision-Label",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/Gitnaseem745/imgdesc",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/doobidoo/mcp-memory-service",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/jpicklyk/task-orchestrator",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/madebyaris/agent-orchestration",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.canva.dev/docs/mcp/tools/",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.canva.dev/docs/connect/mcp-server/",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/lili-luo/aicoding-cookbook/tree/main/skills/codex/taskmaster",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md",
+      "status": "reachable"
+    },
+    {
+      "url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "status": "reachable"
+    }
+  ],
+  "notes": [
+    "All checked URLs returned content in the browsing tool.",
+    "OpenAI documentation URLs with trailing slashes resolved to the same paths without trailing slashes.",
+    "This check confirms reachability, not long-term content stability or repository quality."
+  ]
+}

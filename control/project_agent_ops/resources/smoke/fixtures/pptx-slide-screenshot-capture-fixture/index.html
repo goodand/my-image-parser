@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PPTX Slide Screenshot Capture Smoke Fixture</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4efe6;
+        --panel: #fffaf2;
+        --text: #2a2118;
+        --muted: #725f4f;
+        --accent: #a64b2a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(circle at top left, rgba(166, 75, 42, 0.18), transparent 28%),
+          linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 28px 20px 40px;
+      }
+
+      header {
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+        line-height: 1.15;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .slide {
+        background: var(--panel);
+        border: 1px solid rgba(42, 33, 24, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 14px 40px rgba(60, 37, 17, 0.08);
+        overflow: hidden;
+      }
+
+      .slide-meta {
+        padding: 14px 18px;
+        border-bottom: 1px solid rgba(42, 33, 24, 0.08);
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .slide-meta strong {
+        color: var(--accent);
+      }
+
+      .slide-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: #efe4d3;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>PPTX Slide Screenshot Capture Smoke Fixture</h1>
+        <p>
+          This page exists only to verify the simulator-visible screenshot capture path.
+          The image below is a locally extracted PPTX asset rendered in a stable viewer surface.
+        </p>
+      </header>
+
+      <section class="slide">
+        <div class="slide-meta">
+          <span><strong>Fixture</strong> slide-0001</span>
+          <span>source: extracted PPTX media</span>
+        </div>
+        <img
+          class="slide-image"
+          src="../../pptx_jobs/02_1/media/image1.png"
+          alt="Smoke fixture using one extracted PPTX image"
+        />
+      </section>
+    </main>
+  </body>
+</html>

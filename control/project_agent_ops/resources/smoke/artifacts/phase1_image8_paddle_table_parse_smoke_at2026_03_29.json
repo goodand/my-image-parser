@@ -1,0 +1,31 @@
+{
+  "experiment": "paddleocr_table_parse_smoke",
+  "server_command": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/mcp/start-paddleocr-mcp.sh",
+  "image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+  "status": "completed",
+  "tool_names": [
+    "pp_structurev3"
+  ],
+  "call_tool": "pp_structurev3",
+  "call_args": {
+    "input_data": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+    "output_mode": "detailed",
+    "return_images": false
+  },
+  "initialized": true,
+  "content_item_count": 2,
+  "text_preview": "(70Q+ 45Q + smokeZ刘 )\n\n\n<div style=\"text-align: center;\"><html><body><table border=\"1\"><tbody><tr><td>是</td><td>个</td></tr><tr><td>query × mode 个</td><td>25,602|</td></tr><tr><td>窖仝</td><td>363</td></tr><tr><td>卫异 召州 </td><td>121否 正石六百） ）</td></tr></tbody></table></body></html></div>\n\n\n\n<div style=\"text-align: center;\"><html><body><table border=\"1\"><tbody><tr><td>引</td><td>m 个</td></tr><tr><td>70Q (刘）</td><td>275</td></tr><tr><td>45Q (answerable)</td><td>47H</td></tr><tr><td>5Q (smoke)</td><td>14H</td></tr><tr><td>10Q</td><td>21H</td></tr><tr><td>(1~20Q)</td><td>49H</td></tr></tbody></table></body></html></div>\n",
+  "slide_usages": [
+    {
+      "slide": 24,
+      "occurrence": 1
+    },
+    {
+      "slide": 24,
+      "occurrence": 2
+    }
+  ],
+  "raw_content_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_paddle_table_parse_raw_at2026_03_29.json",
+  "normalized_output_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_paddle_table_parse_normalized_at2026_03_29.json",
+  "normalized_status": "completed"
+}

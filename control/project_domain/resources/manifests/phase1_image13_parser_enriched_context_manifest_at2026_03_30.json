@@ -1,0 +1,149 @@
+[
+  {
+    "image_id": "01_full_presentation_2026-03-17:image13.png",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+    "source_dataset": "01_full_presentation_2026-03-17",
+    "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+    "source_slide_numbers": [
+      25
+    ],
+    "image_surface": "full_image_original",
+    "ocr_surface": "full_image_standalone_ocr",
+    "ocr_status": "usable",
+    "ocr_engine": "ocrmac",
+    "ocr_annotation_count": 8,
+    "ocr_text_excerpt": "clean_text () extract_blocks_from_contents () chunk_method <script>, ‹style> 1|| 71 URL href, 0| 0|* He markdown 0 H Sentence 1024/50 * 0 005 22040, 320660",
+    "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image13/OCR_FULL_TEXT.txt",
+    "ppt_local_summary": "Source PPT: `full_presentation_2026-03-17.pptx`. Dataset: `01_full_presentation_2026-03-17`. Slides: 25. Extracted media file: `image13.png` from `ppt/media/image13.png`. Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `5 x 3` with `15` total cells. Header: 항목 | 현재값 | 문제. Rows: clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거; extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음; chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용. Parser review status: `accepted` with `0` pending-review cell(s).",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image13/CONTEXT_PACKAGE.md",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image13/CONTEXT_PACKAGE.json",
+    "review_status": "pending_review",
+    "notes": [
+      "Parser-enriched bounded adapter attached merged table candidate evidence for caption rerun."
+    ],
+    "source_filename": "full_presentation_2026-03-17.pptx",
+    "source_zip_path": "ppt/media/image13.png",
+    "sha256": "8064692af8889bcb9addb96025d0d1f05d315e297132517b5da49b67e5b7a708",
+    "image_width": 1444,
+    "image_height": 324,
+    "mime_type": "image/png",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image13/OCR_RESULT.json",
+    "baseline_caption": "A table compares various methods and their issues related to text extraction and filtering in Korean and English. It lists method names, current settings, and associated problems.",
+    "baseline_alt_text": "A table with Korean and English text extraction methods and corresponding issues.",
+    "ppt_provenance_context": {
+      "source_kind": "ppt_export_manifest",
+      "source_dataset": "01_full_presentation_2026-03-17",
+      "source_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/manifest.json",
+      "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+      "source_filename": "full_presentation_2026-03-17.pptx",
+      "source_slide_numbers": [
+        25
+      ],
+      "source_image_file": "image13.png",
+      "source_zip_path": "ppt/media/image13.png",
+      "sha256": "8064692af8889bcb9addb96025d0d1f05d315e297132517b5da49b67e5b7a708",
+      "image_width": 1444,
+      "image_height": 324,
+      "mime_type": "image/png",
+      "baseline_caption": "A table compares various methods and their issues related to text extraction and filtering in Korean and English. It lists method names, current settings, and associated problems.",
+      "baseline_alt_text": "A table with Korean and English text extraction methods and corresponding issues."
+    },
+    "ocr_evidence_context": {
+      "source_kind": "ocr_evidence",
+      "ocr_surface": "full_image_standalone_ocr",
+      "ocr_status": "usable",
+      "ocr_engine": "ocrmac",
+      "ocr_annotation_count": 8,
+      "ocr_text_excerpt": "clean_text () extract_blocks_from_contents () chunk_method <script>, ‹style> 1|| 71 URL href, 0| 0|* He markdown 0 H Sentence 1024/50 * 0 005 22040, 320660",
+      "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image13/OCR_FULL_TEXT.txt",
+      "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image13/OCR_RESULT.json",
+      "selected_text_evidence": [
+        "항목 | 현재값 | 문제",
+        "clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거",
+        "extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음",
+        "chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용"
+      ]
+    },
+    "context_variant": "parser_table_enriched",
+    "structured_parse_context": {
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `5 x 3` with `15` total cells. Header: 항목 | 현재값 | 문제. Rows: clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거; extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음; chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용. Parser review status: `accepted` with `0` pending-review cell(s).",
+      "selected_text_evidence": [
+        "항목 | 현재값 | 문제",
+        "clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거",
+        "extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음",
+        "chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용"
+      ],
+      "table_structure_info": {
+        "document_id": "01_full_presentation_2026-03-17",
+        "page": 25,
+        "table_id": "t1",
+        "row_count": 5,
+        "column_count": 3,
+        "total_cells": 15,
+        "pending_review_count": 0,
+        "auto_accept_candidate_count": 15,
+        "review_status": "accepted",
+        "source_manifests": {
+          "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_apple_table_parse_normalized_at2026_03_30.json"
+        },
+        "merge_candidate_status": "completed",
+        "comparison_difference_count": 0
+      }
+    },
+    "parser_structured_context": {
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `5 x 3` with `15` total cells. Header: 항목 | 현재값 | 문제. Rows: clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거; extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음; chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용. Parser review status: `accepted` with `0` pending-review cell(s).",
+      "selected_text_evidence": [
+        "항목 | 현재값 | 문제",
+        "clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거",
+        "extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음",
+        "chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용"
+      ],
+      "table_structure_info": {
+        "document_id": "01_full_presentation_2026-03-17",
+        "page": 25,
+        "table_id": "t1",
+        "row_count": 5,
+        "column_count": 3,
+        "total_cells": 15,
+        "pending_review_count": 0,
+        "auto_accept_candidate_count": 15,
+        "review_status": "accepted",
+        "source_manifests": {
+          "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_apple_table_parse_normalized_at2026_03_30.json"
+        },
+        "merge_candidate_status": "completed",
+        "comparison_difference_count": 0
+      }
+    },
+    "selected_text_evidence": [
+      "항목 | 현재값 | 문제",
+      "clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거",
+      "extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음",
+      "chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용"
+    ],
+    "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `5 x 3` with `15` total cells. Header: 항목 | 현재값 | 문제. Rows: clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거; extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음; chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용. Parser review status: `accepted` with `0` pending-review cell(s).",
+    "parser_enrichment": {
+      "document_id": "01_full_presentation_2026-03-17",
+      "page": 25,
+      "table_id": "t1",
+      "row_count": 5,
+      "column_count": 3,
+      "total_cells": 15,
+      "pending_review_count": 0,
+      "auto_accept_candidate_count": 15,
+      "review_status": "accepted",
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `5 x 3` with `15` total cells. Header: 항목 | 현재값 | 문제. Rows: clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거; extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음; chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용. Parser review status: `accepted` with `0` pending-review cell(s).",
+      "selected_text_evidence": [
+        "항목 | 현재값 | 문제",
+        "clean_text () | <script>, cstyle> 제거 | URL href, 이미지 markdown 미제 거",
+        "extract_blocks_from_contents () | 3토큰 미만 필터 | 임계값 너무 낮음",
+        "chunk_method | Sentence 1024/50 | 실제 DB는 220/40, 320/60 전략 사용"
+      ],
+      "source_manifests": {
+        "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_apple_table_parse_normalized_at2026_03_30.json"
+      },
+      "merge_candidate_status": "completed",
+      "comparison_difference_count": 0
+    }
+  }
+]

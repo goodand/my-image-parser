@@ -1,0 +1,40 @@
+{
+  "packet_profile": "issued",
+  "task_family": "skill_sidecar_parallel_draft",
+  "task_id": "TASK-TBL-BRANCH-ACTIVATION-TROUBLESHOOTING",
+  "title": "table-branch-activation-slice troubleshooting sidecar",
+  "goal": "Draft the troubleshooting.md page for the new table-branch-activation-slice skill.",
+  "scope": [
+    "Capture recurring failure cases for bounded parser branch activation.",
+    "Prefer structural and observable issues over one-off noise.",
+    "Keep the guidance tied to stop conditions and safe fallback."
+  ],
+  "non_goals": [
+    "Do not edit SKILL.md.",
+    "Do not edit runtime.md or any other sidecar.",
+    "Do not patch repeated-issue KB files directly."
+  ],
+  "owned_paths": [
+    "skills/table-branch-activation-slice/references/troubleshooting.md"
+  ],
+  "reference_paths": [
+    "skills/table-branch-activation-slice/SKILL.md",
+    "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+    "control/project_agent_ops/resources/skill_candidates/repeated_issues/KB_repeated_issue_patterns.md",
+    "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md"
+  ],
+  "done_definition": [
+    "troubleshooting.md exists",
+    "at least four realistic failure patterns are covered",
+    "each pattern includes a concrete action or fallback"
+  ],
+  "required_checks": [
+    "Keep write scope to owned_paths only",
+    "Use current workspace failure patterns when possible",
+    "Do not invent unsupported backend behavior"
+  ],
+  "evidence_output_paths": [
+    "skills/table-branch-activation-slice/references/troubleshooting.md"
+  ],
+  "created_at": "2026-03-28T02:20:00+09:00"
+}

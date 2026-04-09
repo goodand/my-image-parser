@@ -1,0 +1,79 @@
+{
+  "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+  "reasoning": {
+    "high_confidence_inserted_slides": [
+      20,
+      24,
+      25,
+      26
+    ],
+    "evidence": [
+      "slide19 contains \"19 / 22\" while slide21 contains \"20 / 22\", so slide20 is an inserted extra slide",
+      "slide24 and slide25 are image-only slides with no regular text content",
+      "slide26 contains supporting text plus one PNG image and appears in the appended section before the final 22/22 closing slide",
+      "non-PNG image6.emf on slide24 is excluded because the user asked for screenshot images"
+    ]
+  },
+  "exported_images": [
+    {
+      "file": "image5.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image5.png",
+      "slide": 20,
+      "source_zip_path": "ppt/media/image5.png"
+    },
+    {
+      "file": "image7.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image7.png",
+      "slide": 24,
+      "source_zip_path": "ppt/media/image7.png"
+    },
+    {
+      "file": "image8.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image8.png",
+      "slide": 24,
+      "source_zip_path": "ppt/media/image8.png"
+    },
+    {
+      "file": "image9.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image9.png",
+      "slide": 24,
+      "source_zip_path": "ppt/media/image9.png"
+    },
+    {
+      "file": "image10.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image10.png",
+      "slide": 24,
+      "source_zip_path": "ppt/media/image10.png"
+    },
+    {
+      "file": "image11.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image11.png",
+      "slide": 24,
+      "source_zip_path": "ppt/media/image11.png"
+    },
+    {
+      "file": "image12.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image12.png",
+      "slide": 25,
+      "source_zip_path": "ppt/media/image12.png"
+    },
+    {
+      "file": "image13.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image13.png",
+      "slide": 25,
+      "source_zip_path": "ppt/media/image13.png"
+    },
+    {
+      "file": "image14.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image14.png",
+      "slide": 25,
+      "source_zip_path": "ppt/media/image14.png"
+    },
+    {
+      "file": "image15.png",
+      "output_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/added_screenshots/image15.png",
+      "slide": 26,
+      "source_zip_path": "ppt/media/image15.png"
+    }
+  ]
+}

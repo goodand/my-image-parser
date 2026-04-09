@@ -1,0 +1,52 @@
+[
+  {
+    "image_id": "01_full_presentation_2026-03-17:image12.png::reviewed_table_component",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+    "reviewed_component_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image12/REVIEWED_COMPONENT.png",
+    "selected_candidate_name": "alpha_nearby_union",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.json",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.md",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image12/OCR_RESULT.json",
+    "ocr_status": "usable",
+    "review_status": "pending_review",
+    "evidence_comparison": {
+      "expected_tokens": [
+        "394",
+        "98.7",
+        "URL-heavy",
+        "50",
+        "4",
+        "1.0",
+        "100",
+        "7",
+        "1.8"
+      ],
+      "full_image_hit_count": 8,
+      "full_image_extra_token_count": 8,
+      "full_image_extra_tokens": [
+        "markdown",
+        "30",
+        "8",
+        "240",
+        "312",
+        "2.0",
+        "60.2",
+        "78.2"
+      ],
+      "reviewed_component_hit_count": 8,
+      "reviewed_component_extra_token_count": 8,
+      "reviewed_component_extra_tokens": [
+        "markdown",
+        "30",
+        "8",
+        "240",
+        "312",
+        "2.0",
+        "60.2",
+        "78.2"
+      ],
+      "reviewed_component_better_for_caption_input": false,
+      "rationale": "Reviewed component OCR does not yet improve on the full-image OCR evidence."
+    }
+  }
+]

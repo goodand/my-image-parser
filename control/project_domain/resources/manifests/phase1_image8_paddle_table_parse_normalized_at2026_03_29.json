@@ -1,0 +1,152 @@
+{
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 24,
+  "table_id": "t1",
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+  "source_slide_usages": [
+    {
+      "slide": 24,
+      "occurrence": 1
+    },
+    {
+      "slide": 24,
+      "occurrence": 2
+    }
+  ],
+  "parser_backend": "paddleocr-mcp/pp_structurev3",
+  "normalization_mode": "table_res_list[0].pred_html",
+  "rows": [
+    {
+      "row_index": 0,
+      "cells": [
+        {
+          "cell_id": "t1_r0_c0",
+          "col_index": 0,
+          "text": "是",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            30,
+            97,
+            433,
+            153
+          ],
+          "confidence": 0.987272
+        },
+        {
+          "cell_id": "t1_r0_c1",
+          "col_index": 1,
+          "text": "个",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            433,
+            98,
+            938,
+            153
+          ],
+          "confidence": 0.489144
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "cells": [
+        {
+          "cell_id": "t1_r1_c0",
+          "col_index": 0,
+          "text": "query × mode 个",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            30,
+            153,
+            433,
+            210
+          ],
+          "confidence": 0.748541
+        },
+        {
+          "cell_id": "t1_r1_c1",
+          "col_index": 1,
+          "text": "25,602|",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            433,
+            153,
+            938,
+            209
+          ],
+          "confidence": 0.946492
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "cells": [
+        {
+          "cell_id": "t1_r2_c0",
+          "col_index": 0,
+          "text": "窖仝",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            30,
+            209,
+            433,
+            266
+          ],
+          "confidence": 0.0
+        },
+        {
+          "cell_id": "t1_r2_c1",
+          "col_index": 1,
+          "text": "363",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            433,
+            209,
+            938,
+            265
+          ],
+          "confidence": 0.0
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "cells": [
+        {
+          "cell_id": "t1_r3_c0",
+          "col_index": 0,
+          "text": "卫异 召州",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            29,
+            265,
+            433,
+            319
+          ],
+          "confidence": 0.579151
+        },
+        {
+          "cell_id": "t1_r3_c1",
+          "col_index": 1,
+          "text": "121否 正石六百） ）",
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            433,
+            265,
+            938,
+            319
+          ],
+          "confidence": 0.998379
+        }
+      ]
+    }
+  ]
+}

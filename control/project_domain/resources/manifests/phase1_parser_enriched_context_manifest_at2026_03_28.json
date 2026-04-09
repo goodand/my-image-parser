@@ -1,0 +1,192 @@
+[
+  {
+    "image_id": "01_full_presentation_2026-03-17:image7.png",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+    "source_dataset": "01_full_presentation_2026-03-17",
+    "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+    "source_slide_numbers": [
+      24
+    ],
+    "image_surface": "full_image_original",
+    "ocr_surface": "full_image_standalone_ocr",
+    "ocr_status": "usable",
+    "ocr_engine": "ocrmac",
+    "ocr_annotation_count": 14,
+    "ocr_text_excerpt": "T| # CC (Context Coherence) IC (Information Concentration) CR@10 (Chunk Recall) MRR (Mean Reciprocal Rank) WORST → BEST 0.012 → 0.094 0.179 → 0.687 0.143 → 0.514 0.211 → 0.622 +683% +284% +259% +195%",
+    "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image7/OCR_FULL_TEXT.txt",
+    "ppt_local_summary": "Source PPT: `full_presentation_2026-03-17.pptx`. Dataset: `01_full_presentation_2026-03-17`. Slides: 24. Extracted media file: `image7.png` from `ppt/media/image7.png`. Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `5 x 3` with `15` total cells. Header: 지표 | WORST → BEST | 개선율. Rows: CC (Context Coherence) | 0.012 → 0.094 | +683%; IC (Information Concentration) | 0.179 → 0.687 | +284%; CR@10 (Chunk Recall) | 0.143 → 0.514 | +259%. Parser review status: `accepted` with `0` pending-review cell(s).",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image7/CONTEXT_PACKAGE.md",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image7/CONTEXT_PACKAGE.json",
+    "review_status": "pending_review",
+    "notes": [
+      "Parser-enriched bounded adapter attached merged table candidate evidence for caption rerun."
+    ],
+    "source_filename": "full_presentation_2026-03-17.pptx",
+    "source_zip_path": "ppt/media/image7.png",
+    "sha256": "5e96092b1bec9afbf68ff3a234ed370f31293f688bc42fda9e6ebe2d703c9ba4",
+    "image_width": 892,
+    "image_height": 330,
+    "mime_type": "image/png",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image7/OCR_RESULT.json",
+    "baseline_caption": "A table displays four performance metrics, their improvements from worst to best values, and the percentage improvement rates. The metrics include Context Coherence, Information Concentration, Chunk Recall, and Mean Reciprocal Rank.",
+    "baseline_alt_text": "Table showing four metrics with values for worst to best and percentage improvement.",
+    "context_variant": "parser_table_enriched",
+    "selected_text_evidence": [
+      "지표 | WORST → BEST | 개선율",
+      "CC (Context Coherence) | 0.012 → 0.094 | +683%",
+      "IC (Information Concentration) | 0.179 → 0.687 | +284%",
+      "CR@10 (Chunk Recall) | 0.143 → 0.514 | +259%"
+    ],
+    "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `5 x 3` with `15` total cells. Header: 지표 | WORST → BEST | 개선율. Rows: CC (Context Coherence) | 0.012 → 0.094 | +683%; IC (Information Concentration) | 0.179 → 0.687 | +284%; CR@10 (Chunk Recall) | 0.143 → 0.514 | +259%. Parser review status: `accepted` with `0` pending-review cell(s).",
+    "parser_enrichment": {
+      "document_id": "01_full_presentation_2026-03-17",
+      "page": 24,
+      "table_id": "t1",
+      "row_count": 5,
+      "column_count": 3,
+      "total_cells": 15,
+      "pending_review_count": 0,
+      "auto_accept_candidate_count": 15,
+      "review_status": "accepted",
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `5 x 3` with `15` total cells. Header: 지표 | WORST → BEST | 개선율. Rows: CC (Context Coherence) | 0.012 → 0.094 | +683%; IC (Information Concentration) | 0.179 → 0.687 | +284%; CR@10 (Chunk Recall) | 0.143 → 0.514 | +259%. Parser review status: `accepted` with `0` pending-review cell(s).",
+      "selected_text_evidence": [
+        "지표 | WORST → BEST | 개선율",
+        "CC (Context Coherence) | 0.012 → 0.094 | +683%",
+        "IC (Information Concentration) | 0.179 → 0.687 | +284%",
+        "CR@10 (Chunk Recall) | 0.143 → 0.514 | +259%"
+      ],
+      "source_manifests": {
+        "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_apple_document_structure_normalized_at2026_03_28.json"
+      },
+      "merge_candidate_status": "completed",
+      "comparison_difference_count": 0
+    }
+  },
+  {
+    "image_id": "01_full_presentation_2026-03-17:image9.png",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+    "source_dataset": "01_full_presentation_2026-03-17",
+    "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+    "source_slide_numbers": [
+      24
+    ],
+    "image_surface": "full_image_original",
+    "ocr_surface": "full_image_standalone_ocr",
+    "ocr_status": "usable",
+    "ocr_engine": "ocrmac",
+    "ocr_annotation_count": 10,
+    "ocr_text_excerpt": "CC IC CR@10 MRR +683% +284% +259% +195% → CR@10 +259% ™ +69",
+    "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image9/OCR_FULL_TEXT.txt",
+    "ppt_local_summary": "Source PPT: `full_presentation_2026-03-17.pptx`. Dataset: `01_full_presentation_2026-03-17`. Slides: 24. Extracted media file: `image9.png` from `ppt/media/image9.png`. Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `5 x 3` with `15` total cells. Header: 지표 | 성 격 | 상 승 폭. Rows: CC | 검색된 청크들의 문맥 연결성 (품질) | +683%; IC | 정보\n검색된 청크들의 정보 집중도 (품질) | +284%; CR@10 | 정답 청크를 얼마나 많이 찾았나 (정확도) | +259%. Parser review status: `accepted` with `0` pending-review cell(s).",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image9/CONTEXT_PACKAGE.md",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image9/CONTEXT_PACKAGE.json",
+    "review_status": "pending_review",
+    "notes": [
+      "Parser-enriched bounded adapter attached merged table candidate evidence for caption rerun."
+    ],
+    "source_filename": "full_presentation_2026-03-17.pptx",
+    "source_zip_path": "ppt/media/image9.png",
+    "sha256": "ffd8cd615075aef7c8fe8821a03cdb33972b4544a5fa2276956efcc193bcd88d",
+    "image_width": 1072,
+    "image_height": 434,
+    "mime_type": "image/png",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image9/OCR_RESULT.json",
+    "baseline_caption": "A table in Korean compares four metrics (CC, IC, CR@10, MRR) for quality and accuracy improvements, showing percentage increases for each. Key improvements are highlighted below the table.",
+    "baseline_alt_text": "A Korean table comparing search metrics (CC, IC, CR@10, MRR) and their improvement percentages.",
+    "context_variant": "parser_table_enriched",
+    "selected_text_evidence": [
+      "지표 | 성 격 | 상 승 폭",
+      "CC | 검색된 청크들의 문맥 연결성 (품질) | +683%",
+      "IC | 정보\n검색된 청크들의 정보 집중도 (품질) | +284%",
+      "CR@10 | 정답 청크를 얼마나 많이 찾았나 (정확도) | +259%"
+    ],
+    "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `5 x 3` with `15` total cells. Header: 지표 | 성 격 | 상 승 폭. Rows: CC | 검색된 청크들의 문맥 연결성 (품질) | +683%; IC | 정보\n검색된 청크들의 정보 집중도 (품질) | +284%; CR@10 | 정답 청크를 얼마나 많이 찾았나 (정확도) | +259%. Parser review status: `accepted` with `0` pending-review cell(s).",
+    "parser_enrichment": {
+      "document_id": "01_full_presentation_2026-03-17",
+      "page": 24,
+      "table_id": "t1",
+      "row_count": 5,
+      "column_count": 3,
+      "total_cells": 15,
+      "pending_review_count": 0,
+      "auto_accept_candidate_count": 15,
+      "review_status": "accepted",
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `5 x 3` with `15` total cells. Header: 지표 | 성 격 | 상 승 폭. Rows: CC | 검색된 청크들의 문맥 연결성 (품질) | +683%; IC | 정보\n검색된 청크들의 정보 집중도 (품질) | +284%; CR@10 | 정답 청크를 얼마나 많이 찾았나 (정확도) | +259%. Parser review status: `accepted` with `0` pending-review cell(s).",
+      "selected_text_evidence": [
+        "지표 | 성 격 | 상 승 폭",
+        "CC | 검색된 청크들의 문맥 연결성 (품질) | +683%",
+        "IC | 정보\n검색된 청크들의 정보 집중도 (품질) | +284%",
+        "CR@10 | 정답 청크를 얼마나 많이 찾았나 (정확도) | +259%"
+      ],
+      "source_manifests": {
+        "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image9_apple_document_structure_normalized_at2026_03_28.json"
+      },
+      "merge_candidate_status": "completed",
+      "comparison_difference_count": 0
+    }
+  },
+  {
+    "image_id": "01_full_presentation_2026-03-17:image8.png",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+    "source_dataset": "01_full_presentation_2026-03-17",
+    "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+    "source_slide_numbers": [
+      24,
+      24
+    ],
+    "image_surface": "full_image_original",
+    "ocr_surface": "full_image_standalone_ocr",
+    "ocr_status": "usable",
+    "ocr_engine": "ocrmac",
+    "ocr_annotation_count": 12,
+    "ocr_text_excerpt": "query & mode 25,6023 3637H 45Q (answerable) 5Q (smoke) 10Q J| E| (1~20Q) 2757H 47H 147H 217H 497H",
+    "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image8/OCR_FULL_TEXT.txt",
+    "ppt_local_summary": "Source PPT: `full_presentation_2026-03-17.pptx`. Dataset: `01_full_presentation_2026-03-17`. Slides: 24, 24. Extracted media file: `image8.png` from `ppt/media/image8.png`. Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 2` with `8` total cells. Header: 是 | 个. Rows: query × mode 个 | 25,602|; 窖仝 | 363; 卫异 召州 | 121否 正石六百） ）. Parser review status: `pending_review` with `1` pending-review cell(s).",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image8/CONTEXT_PACKAGE.md",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image8/CONTEXT_PACKAGE.json",
+    "review_status": "pending_review",
+    "notes": [
+      "Parser-enriched bounded adapter attached merged table candidate evidence for caption rerun."
+    ],
+    "source_filename": "full_presentation_2026-03-17.pptx",
+    "source_zip_path": "ppt/media/image8.png",
+    "sha256": "743e0a046d879c2f6994a551c5cfcb36a0235addd17ccf073bdeb6c882dff6ca",
+    "image_width": 978,
+    "image_height": 736,
+    "mime_type": "image/png",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image8/OCR_RESULT.json",
+    "baseline_caption": "This image shows two tables summarizing experimental scale information in Korean, including query and mode evaluation counts, total files, and breakdown by query set.",
+    "baseline_alt_text": "Two tables in Korean summarize experimental scale and file count by query set.",
+    "context_variant": "parser_table_enriched",
+    "selected_text_evidence": [
+      "是 | 个",
+      "query × mode 个 | 25,602|",
+      "窖仝 | 363",
+      "卫异 召州 | 121否 正石六百） ）"
+    ],
+    "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 2` with `8` total cells. Header: 是 | 个. Rows: query × mode 个 | 25,602|; 窖仝 | 363; 卫异 召州 | 121否 正石六百） ）. Parser review status: `pending_review` with `1` pending-review cell(s).",
+    "parser_enrichment": {
+      "document_id": "01_full_presentation_2026-03-17",
+      "page": 24,
+      "table_id": "t1",
+      "row_count": 4,
+      "column_count": 2,
+      "total_cells": 8,
+      "pending_review_count": 1,
+      "auto_accept_candidate_count": 7,
+      "review_status": "pending_review",
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 2` with `8` total cells. Header: 是 | 个. Rows: query × mode 个 | 25,602|; 窖仝 | 363; 卫异 召州 | 121否 正石六百） ）. Parser review status: `pending_review` with `1` pending-review cell(s).",
+      "selected_text_evidence": [
+        "是 | 个",
+        "query × mode 个 | 25,602|",
+        "窖仝 | 363",
+        "卫异 召州 | 121否 正石六百） ）"
+      ],
+      "source_manifests": {
+        "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_paddle_table_parse_normalized_at2026_03_29.json"
+      },
+      "merge_candidate_status": "completed",
+      "comparison_difference_count": 0
+    }
+  }
+]

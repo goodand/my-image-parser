@@ -1,0 +1,225 @@
+{
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+  "reviewed_component_image_path": "/private/tmp/image10-fourarm/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image10/REVIEWED_COMPONENT.png",
+  "model": "gpt-4.1",
+  "prompt_kind": "reviewed_component_direct_verification_v1",
+  "full_context_review_status": "pending_review",
+  "reviewed_context_review_status": "pending_review",
+  "result": {
+    "decision": "promote_reviewed_component",
+    "winner_surface": "reviewed_table_component_crop",
+    "confidence": "high",
+    "full_image_scores": {
+      "table_completeness": 5,
+      "caption_fitness": 5,
+      "noise_suppression": 3
+    },
+    "reviewed_component_scores": {
+      "table_completeness": 5,
+      "caption_fitness": 5,
+      "noise_suppression": 5
+    },
+    "key_observations": [
+      "Both images fully preserve the table and all cell content.",
+      "Metric names and relation structure are legible and uncut in both.",
+      "Reviewed crop completely eliminates surrounding slide noise.",
+      "No tight cropping; no loss of relevant table context.",
+      "Reviewed crop is cleaner and more focused for captioning by removing irrelevant background."
+    ],
+    "rationale": "The reviewed table component crop contains all of the table data and structure present in the full original image, with no loss of rows, headers, or context. In addition, it perfectly suppresses any non-table noise, which the original full image retains as a background. This results in a cleaner, more caption-suitable image. There is no evidence of over-tight cropping or lost content. Therefore, the reviewed component is clearly superior for factual caption extraction."
+  },
+  "api_response_id": "resp_01745c9c8c024c730069c78f3a0468819788f871eb486e59bb",
+  "usage": {
+    "input_tokens": 1411,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 285,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 1696
+  },
+  "raw_response": {
+    "id": "resp_01745c9c8c024c730069c78f3a0468819788f871eb486e59bb",
+    "object": "response",
+    "created_at": 1774686010,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1774686013,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "Return structured JSON only.",
+    "max_output_tokens": 900,
+    "max_tool_calls": null,
+    "model": "gpt-4.1-2025-04-14",
+    "output": [
+      {
+        "id": "msg_01745c9c8c024c730069c78f3a97508197b1ba33d3f2c2a56f",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\n  \"decision\": \"promote_reviewed_component\",\n  \"winner_surface\": \"reviewed_table_component_crop\",\n  \"confidence\": \"high\",\n  \"full_image_scores\": {\n    \"table_completeness\": 5,\n    \"caption_fitness\": 5,\n    \"noise_suppression\": 3\n  },\n  \"reviewed_component_scores\": {\n    \"table_completeness\": 5,\n    \"caption_fitness\": 5,\n    \"noise_suppression\": 5\n  },\n  \"key_observations\": [\n    \"Both images fully preserve the table and all cell content.\",\n    \"Metric names and relation structure are legible and uncut in both.\",\n    \"Reviewed crop completely eliminates surrounding slide noise.\",\n    \"No tight cropping; no loss of relevant table context.\",\n    \"Reviewed crop is cleaner and more focused for captioning by removing irrelevant background.\"\n  ],\n  \"rationale\": \"The reviewed table component crop contains all of the table data and structure present in the full original image, with no loss of rows, headers, or context. In addition, it perfectly suppresses any non-table noise, which the original full image retains as a background. This results in a cleaner, more caption-suitable image. There is no evidence of over-tight cropping or lost content. Therefore, the reviewed component is clearly superior for factual caption extraction.\"\n}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": null,
+    "reasoning": {
+      "effort": null,
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": true,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "reviewed_component_direct_verification",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "decision",
+            "winner_surface",
+            "confidence",
+            "full_image_scores",
+            "reviewed_component_scores",
+            "key_observations",
+            "rationale"
+          ],
+          "properties": {
+            "decision": {
+              "type": "string",
+              "enum": [
+                "promote_reviewed_component",
+                "keep_full_image",
+                "inconclusive"
+              ]
+            },
+            "winner_surface": {
+              "type": "string",
+              "enum": [
+                "full_image_original",
+                "reviewed_table_component_crop",
+                "inconclusive"
+              ]
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "medium",
+                "low"
+              ]
+            },
+            "full_image_scores": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "table_completeness",
+                "caption_fitness",
+                "noise_suppression"
+              ],
+              "properties": {
+                "table_completeness": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "caption_fitness": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "noise_suppression": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                }
+              }
+            },
+            "reviewed_component_scores": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "table_completeness",
+                "caption_fitness",
+                "noise_suppression"
+              ],
+              "properties": {
+                "table_completeness": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "caption_fitness": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "noise_suppression": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                }
+              }
+            },
+            "key_observations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 240
+              },
+              "minItems": 2,
+              "maxItems": 6
+            },
+            "rationale": {
+              "type": "string",
+              "maxLength": 900
+            }
+          }
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 1411,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1696
+    },
+    "user": null,
+    "metadata": {
+      "pipeline": "reviewed_component_direct_verification",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+      "reviewed_component_image_path": "/private/tmp/image10-fourarm/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image10/REVIEWED_COMPONENT.png"
+    }
+  }
+}

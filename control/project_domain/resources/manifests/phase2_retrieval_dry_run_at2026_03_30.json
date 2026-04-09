@@ -1,0 +1,23 @@
+{
+  "schema_version": "phase2_retrieval_dry_run.v1",
+  "decision_ingestion_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl",
+  "retrieval_ready_rows_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_retrieval_ready_rows_at2026_03_30.jsonl",
+  "input_row_count": 9,
+  "retrieval_ready_count": 0,
+  "retrieval_ready_image_ids": [],
+  "active_default_baseline": "full_image_baseline",
+  "execution_mode": "dry_run_only",
+  "ready_to_execute": false,
+  "blocked_reason": "no_completed_review_rows_marked_for_retrieval",
+  "next_runtime_inputs": [
+    "approved_caption",
+    "source_image_path",
+    "selected_caption_arm",
+    "selected_caption_promotion_state"
+  ],
+  "planned_outputs": [
+    "retrieval_input.jsonl",
+    "retrieval_candidates.jsonl",
+    "reranked_top5.jsonl"
+  ]
+}

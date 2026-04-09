@@ -1,0 +1,281 @@
+{
+  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+  "same_source_image": true,
+  "mode_count": 4,
+  "modes": [
+    {
+      "execution_arm": "full_image_baseline",
+      "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+      "job_id": "job_20260327_094219",
+      "model": "gpt-4.1",
+      "prompt_version": "openai-gpt-4.1-caption-v1",
+      "image_id": "img_000004",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "status": "completed",
+      "input_surface": "extracted_full_image",
+      "caption": "A table in Korean categorizes problem check types with columns for type, count, and percentage. Various content issues such as URL-heavy and image markdown are listed.",
+      "alt_text": "A classification table in Korean showing problem check types, counts, and percentages.",
+      "context_package_present": false,
+      "context_review_status": null,
+      "ocr_status": null,
+      "context_package_json_path": null,
+      "context_variant": null
+    },
+    {
+      "execution_arm": "full_image_ocr_context_rerun",
+      "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_full_image_context_rerun_image12_at2026_03_30.json",
+      "job_id": "job_20260330_130221",
+      "model": "gpt-4.1",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "image_id": "img_000001",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "status": "completed",
+      "input_surface": "full_image_original",
+      "caption": "A table summarizes classification results for several types of issues, listing category, count, and percentage for each type. The categories include normal, URL-heavy, short content, markdown-heavy image, URL included, and image reference included.",
+      "alt_text": "Table showing issue classification types, counts, and their percentages.",
+      "context_package_present": true,
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.json",
+      "context_variant": null
+    },
+    {
+      "execution_arm": "parser_table_enriched_rerun",
+      "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_parser_enriched_rerun_image12_at2026_03_30.json",
+      "job_id": "job_20260330_130244",
+      "model": "gpt-4.1",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "image_id": "img_000001",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "status": "completed",
+      "input_surface": "full_image_original",
+      "caption": "A table summarizes various categories related to the classification of check issues, showing counts and percentages for each type. Categories include normal, URL-heavy, short content, image markdown, URL inclusion, and image reference inclusion.",
+      "alt_text": "Table in Korean showing counts and percentages for types of check issues including normal, URL-heavy, and more.",
+      "context_package_present": true,
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.json",
+      "context_variant": "parser_table_enriched"
+    },
+    {
+      "execution_arm": "reviewed_isolated_component_rerun",
+      "ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_reviewed_isolated_component_rerun_image12_at2026_03_30.json",
+      "job_id": "job_20260330_130244",
+      "model": "gpt-4.1",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "image_id": "img_000001",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "status": "completed",
+      "input_surface": "reviewed_table_component_crop",
+      "caption": "A table presents statistics on different categories of issues, showing counts and percentages for each type. The categories include 'normal', 'URL-heavy', 'short content', 'image markdown', 'URL included', and 'image reference included'.",
+      "alt_text": "Table showing issue type classifications with counts and percentages in Korean.",
+      "context_package_present": true,
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image12/CONTEXT_PACKAGE.json",
+      "context_variant": "reviewed_isolated_component"
+    }
+  ],
+  "parity_audit": {
+    "required_fields": [
+      "execution_arm",
+      "ledger_path",
+      "job_id",
+      "image_id",
+      "source_image_path",
+      "status",
+      "input_surface",
+      "caption",
+      "alt_text",
+      "prompt_version"
+    ],
+    "all_required_present": true,
+    "missing_required_fields": {},
+    "same_source_image": true,
+    "same_image_id": false,
+    "same_model": true,
+    "source_paths": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png"
+    ],
+    "image_ids": [
+      "img_000004",
+      "img_000001",
+      "img_000001",
+      "img_000001"
+    ],
+    "models": [
+      "gpt-4.1",
+      "gpt-4.1",
+      "gpt-4.1",
+      "gpt-4.1"
+    ],
+    "prompt_versions": [
+      "openai-gpt-4.1-caption-v1",
+      "openai-gpt-4.1-caption-context-v1",
+      "openai-gpt-4.1-caption-context-v1",
+      "openai-gpt-4.1-caption-context-v1"
+    ],
+    "input_surfaces": [
+      "extracted_full_image",
+      "full_image_original",
+      "full_image_original",
+      "reviewed_table_component_crop"
+    ],
+    "review_statuses": [
+      null,
+      "pending_review",
+      "pending_review",
+      "pending_review"
+    ],
+    "context_variants": [
+      null,
+      null,
+      "parser_table_enriched",
+      "reviewed_isolated_component"
+    ],
+    "ocr_statuses": [
+      null,
+      "usable",
+      "usable",
+      "usable"
+    ],
+    "context_package_presence": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "nonblocking_drift": [
+      "image_id",
+      "prompt_version",
+      "input_surface",
+      "review_status",
+      "context_variant",
+      "ocr_status",
+      "context_package_present"
+    ],
+    "blocking_reasons": [],
+    "ready_for_side_by_side_read": true
+  },
+  "status_summary": {
+    "baseline_status": "completed",
+    "all_completed": true,
+    "ready_arm_count": 4,
+    "blocked_arm_count": 0
+  },
+  "signal_comparison": {
+    "baseline": {
+      "mentions_table": true,
+      "mentions_dh10": false,
+      "mentions_mrr": false,
+      "mentions_cr10": false,
+      "mentions_70q": false,
+      "mentions_65q": false,
+      "mentions_delta": false,
+      "mentions_relation": false
+    },
+    "per_candidate": {
+      "full_image_ocr_context_rerun": {
+        "signals": {
+          "mentions_table": true,
+          "mentions_dh10": false,
+          "mentions_mrr": false,
+          "mentions_cr10": false,
+          "mentions_70q": false,
+          "mentions_65q": false,
+          "mentions_delta": false,
+          "mentions_relation": false
+        },
+        "delta_vs_baseline": {
+          "gained": [],
+          "lost": [],
+          "preserved": [
+            "mentions_table"
+          ]
+        }
+      },
+      "parser_table_enriched_rerun": {
+        "signals": {
+          "mentions_table": true,
+          "mentions_dh10": false,
+          "mentions_mrr": false,
+          "mentions_cr10": false,
+          "mentions_70q": false,
+          "mentions_65q": false,
+          "mentions_delta": false,
+          "mentions_relation": false
+        },
+        "delta_vs_baseline": {
+          "gained": [],
+          "lost": [],
+          "preserved": [
+            "mentions_table"
+          ]
+        }
+      },
+      "reviewed_isolated_component_rerun": {
+        "signals": {
+          "mentions_table": true,
+          "mentions_dh10": false,
+          "mentions_mrr": false,
+          "mentions_cr10": false,
+          "mentions_70q": false,
+          "mentions_65q": false,
+          "mentions_delta": false,
+          "mentions_relation": false
+        },
+        "delta_vs_baseline": {
+          "gained": [],
+          "lost": [],
+          "preserved": [
+            "mentions_table"
+          ]
+        }
+      }
+    }
+  },
+  "per_arm_promotion": {
+    "full_image_ocr_context_rerun": {
+      "promotion_state": "comparison_only_pending_context_review",
+      "next_gate": "review_context_package",
+      "notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    "parser_table_enriched_rerun": {
+      "promotion_state": "comparison_only_pending_context_review",
+      "next_gate": "review_context_package",
+      "notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    "reviewed_isolated_component_rerun": {
+      "promotion_state": "comparison_only_pending_context_review",
+      "next_gate": "review_context_package",
+      "notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    }
+  },
+  "ready_arms": [
+    "full_image_baseline",
+    "full_image_ocr_context_rerun",
+    "parser_table_enriched_rerun",
+    "reviewed_isolated_component_rerun"
+  ],
+  "blocked_arms": [],
+  "comparison_scope": "ready_arm_anchor",
+  "recommended_current_default": "full_image_baseline",
+  "next_gate": "review_context_package",
+  "comparison_ready": true,
+  "notes": [
+    "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+    "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$schema_notes": {
+    "_comment": "Caption experiment worker용 최소 packet 템플릿. immutable task contract의 standard profile.",
+    "reference_basis": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_standard_template.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-task-packet/references/packet-fields.md"
+    ]
+  },
+  "packet_version": "0.1",
+  "packet_profile": "standard",
+  "task_family": "image_caption_experiment",
+  "task_id": "TASK-IMGCAP-XXXX",
+  "title": "caption experiment worker task",
+  "goal": "지정된 입력 이미지 또는 이미지 세트에 대해 caption experiment 한 단계를 완료한다.",
+  "why": "caption experiment를 재현 가능하게 실행하기 위한 최소 불변 계약이다.",
+  "allowed_paths": [
+    "control/project_domain/resources/assets/caption_experiment/",
+    "control/project_domain/resources/",
+    "control/project_agent_ops/registry/"
+  ],
+  "context_files": [
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+    "control/project_domain/resources/specs/prose/SPEC_openai_image_caption_runner.md",
+    "control/project_domain/registry/caption_experiment_resource_index.json"
+  ],
+  "priority": "high",
+  "constraints": {
+    "must_not_modify": [],
+    "must_run_tests": false,
+    "must_not_use_network": false,
+    "notes": "실험 arm에 필요한 도구와 네트워크 사용 여부는 issued packet에서 더 좁힌다."
+  },
+  "done_definition": [
+    "지정된 실험 arm 산출물이 resources 하위의 적절한 위치에 생성된다.",
+    "실행 상태 또는 결과 요약이 registry 또는 report에 남는다."
+  ],
+  "required_checks": [
+    {
+      "type": "file_exists",
+      "value": "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+      "required": true
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "control/project_domain/resources/",
+      "type": "artifact",
+      "required": true
+    }
+  ],
+  "timeout_minutes": null,
+  "stop_conditions": [
+    "canonical resource가 없으면 중단",
+    "실험 arm 입력이 불명확하면 상위 agent에 에스컬레이션"
+  ],
+  "revision": 1,
+  "created_at": "2026-03-27T00:00:00+09:00",
+  "created_by": "codex",
+  "updated_at": "2026-03-27T00:00:00+09:00"
+}

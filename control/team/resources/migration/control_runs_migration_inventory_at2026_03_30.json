@@ -1,0 +1,291 @@
+{
+  "generated_at": "2026-03-30",
+  "model_source": "ADR_0002_workspace_plane_and_control_action_units",
+  "purpose": "Immediate migration inventory for replacing top-level control/*/runs buckets under the 3-action-unit model.",
+  "preferred_depth_sequence": [
+    "control",
+    "project_meaning",
+    "action_unit"
+  ],
+  "action_units": [
+    "resources",
+    "registry",
+    "archive"
+  ],
+  "top_level_runs_snapshot": {
+    "project_domain": [],
+    "project_agent_ops": [],
+    "user_decisions": [],
+    "team": []
+  },
+  "entries": [
+    {
+      "source_path": "control/project_domain/runs/added_screenshots",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/assets/added_screenshots",
+      "target_exists": true,
+      "reason": "generated image assets that are still reread as domain support material",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/component_split_ocr",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "archive",
+      "target_path": "control/project_domain/archive/component_split_ocr",
+      "target_exists": true,
+      "reason": "historical experiment output kept for traceability, not current active truth",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/context_packages",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/context_packages",
+      "target_exists": true,
+      "reason": "active canonical context package bodies consumed downstream",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/cross_validation",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/cross_validation",
+      "target_exists": true,
+      "reason": "active domain validation material reread as canonical experiment support",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/experiment_plans",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/experiment_plans",
+      "target_exists": true,
+      "reason": "active domain planning documents are canonical resources",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/imported_fourarm",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/imported_fourarm",
+      "target_exists": true,
+      "reason": "imported canonical experiment artifacts remain active domain resources",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/intermediates",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "archive",
+      "target_path": "control/project_domain/archive/intermediates",
+      "target_exists": true,
+      "reason": "intermediate derivations are historical support, not primary active truth",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/logs",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "archive",
+      "target_path": "control/project_domain/archive/logs",
+      "target_exists": true,
+      "reason": "run logs are retained history, not active canonical resources",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/manifests",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/manifests",
+      "target_exists": true,
+      "reason": "manifests are machine-readable canonical resource bodies",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/object_isolation",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "archive",
+      "target_path": "control/project_domain/archive/object_isolation",
+      "target_exists": true,
+      "reason": "historical isolation output is preserved for traceability but not active truth",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/pptx_extract",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "archive",
+      "target_path": "control/project_domain/archive/pptx_extract",
+      "target_exists": true,
+      "reason": "legacy extracted media is superseded by active pptx job resources",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/pptx_jobs",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/pptx_jobs",
+      "target_exists": true,
+      "reason": "pptx job manifests and media are active canonical domain resources",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/reports",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/reports",
+      "target_exists": true,
+      "reason": "reports are reread canonical bodies rather than index state",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_domain/runs/smoke",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_domain",
+      "target_action_unit": "resources",
+      "target_path": "control/project_domain/resources/smoke",
+      "target_exists": true,
+      "reason": "kept smoke artifacts are reread reference material for future work",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_agent_ops/runs/experiment_plans",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_agent_ops",
+      "target_action_unit": "resources",
+      "target_path": "control/project_agent_ops/resources/experiment_plans",
+      "target_exists": true,
+      "reason": "agent-ops plans are active reusable operational resources",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_agent_ops/runs/logs",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_agent_ops",
+      "target_action_unit": "archive",
+      "target_path": "control/project_agent_ops/archive/logs",
+      "target_exists": true,
+      "reason": "agent-ops logs are historical trace material",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_agent_ops/runs/manifests",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_agent_ops",
+      "target_action_unit": "resources",
+      "target_path": "control/project_agent_ops/resources/manifests",
+      "target_exists": true,
+      "reason": "operational manifests are active machine-readable resources",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_agent_ops/runs/reports",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_agent_ops",
+      "target_action_unit": "resources",
+      "target_path": "control/project_agent_ops/resources/reports",
+      "target_exists": true,
+      "reason": "operational reports are canonical reread bodies",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/project_agent_ops/runs/smoke",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "project_agent_ops",
+      "target_action_unit": "resources",
+      "target_path": "control/project_agent_ops/resources/smoke",
+      "target_exists": true,
+      "reason": "smoke outputs are kept as active operational reference material",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/team/runs/REPORT_control_structure_16_bucket_migration-at2026-03-27.md",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "team",
+      "target_action_unit": "resources",
+      "target_path": "control/team/resources/reports/REPORT_control_structure_16_bucket_migration-at2026-03-27.md",
+      "target_exists": true,
+      "reason": "team migration report remains active governance reference material",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/user_decisions/runs/REPORT_legacy_boundary_decision_capture-at2026-03-27.md",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "user_decisions",
+      "target_action_unit": "resources",
+      "target_path": "control/user_decisions/resources/reports/REPORT_legacy_boundary_decision_capture-at2026-03-27.md",
+      "target_exists": true,
+      "reason": "decision capture report is reread canonical decision material",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/user_decisions/runs/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "user_decisions",
+      "target_action_unit": "resources",
+      "target_path": "control/user_decisions/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+      "target_exists": true,
+      "reason": "review body is active decision-support material",
+      "migration_status": "completed"
+    },
+    {
+      "source_path": "control/user_decisions/runs/img",
+      "source_exists": false,
+      "source_kind": "file",
+      "project_meaning": "user_decisions",
+      "target_action_unit": "resources",
+      "target_path": "control/user_decisions/resources/assets/review_support_img",
+      "target_exists": true,
+      "reason": "embedded review images are active supporting assets for decision reread",
+      "migration_status": "completed"
+    }
+  ],
+  "unresolved_top_level_entries": [],
+  "summary": {
+    "planned_entry_count": 23,
+    "unresolved_top_level_entry_count": 0,
+    "by_action_unit": {
+      "resources": 17,
+      "archive": 6
+    },
+    "by_project_meaning": {
+      "project_domain": 14,
+      "project_agent_ops": 5,
+      "team": 1,
+      "user_decisions": 3
+    }
+  }
+}

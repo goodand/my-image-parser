@@ -1,0 +1,40 @@
+{
+  "packet_profile": "issued",
+  "task_family": "skill_sidecar_parallel_draft",
+  "task_id": "TASK-TBL-BRANCH-ACTIVATION-KB",
+  "title": "table-branch-activation-slice knowledge base sidecar",
+  "goal": "Draft the knowledge-base page for the new table-branch-activation-slice skill.",
+  "scope": [
+    "Explain why bounded activation slices exist.",
+    "Link the repeated-task pattern to current table-branch evidence.",
+    "Keep the page rationale-focused rather than procedural."
+  ],
+  "non_goals": [
+    "Do not edit SKILL.md.",
+    "Do not edit runtime.md or troubleshooting.md.",
+    "Do not add new repeated-task entries."
+  ],
+  "owned_paths": [
+    "skills/table-branch-activation-slice/knowledge_bases/table-branch-activation-slice-knowledge-base-at2026-03-28-02-20.md"
+  ],
+  "reference_paths": [
+    "skills/table-branch-activation-slice/SKILL.md",
+    "control/project_agent_ops/resources/skill_candidates/repeated_tasks/KB_repeated_task_patterns.md",
+    "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md"
+  ],
+  "done_definition": [
+    "knowledge-base file exists",
+    "the repeated pattern and current bounded table branch are connected",
+    "the page explains why this is a skill rather than a one-off plan"
+  ],
+  "required_checks": [
+    "Keep write scope to owned_paths only",
+    "Use current repo artifacts as justification",
+    "Keep the tone explanatory, not implementation-heavy"
+  ],
+  "evidence_output_paths": [
+    "skills/table-branch-activation-slice/knowledge_bases/table-branch-activation-slice-knowledge-base-at2026-03-28-02-20.md"
+  ],
+  "created_at": "2026-03-28T02:20:00+09:00"
+}

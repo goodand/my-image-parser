@@ -1,0 +1,92 @@
+[
+  {
+    "image_id": "01_full_presentation_2026-03-17:image9.png::reviewed_table_component",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+    "reviewed_component_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image9/REVIEWED_COMPONENT.png",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image9/CONTEXT_PACKAGE.json",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image9/CONTEXT_PACKAGE.md",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image9/OCR_RESULT.json",
+    "ocr_status": "usable",
+    "review_status": "pending_review",
+    "evidence_comparison": {
+      "expected_tokens": [
+        "CC",
+        "+683",
+        "IC",
+        "+284",
+        "CR@10",
+        "+259"
+      ],
+      "full_image_hit_count": 6,
+      "full_image_extra_token_count": 3,
+      "full_image_extra_tokens": [
+        "MRR",
+        "+195",
+        "+69"
+      ],
+      "reviewed_component_hit_count": 6,
+      "reviewed_component_extra_token_count": 4,
+      "reviewed_component_extra_tokens": [
+        "J",
+        "E",
+        "MRR",
+        "+195"
+      ],
+      "reviewed_component_better_for_caption_input": false,
+      "rationale": "Reviewed component OCR does not yet improve on the full-image OCR evidence."
+    }
+  },
+  {
+    "image_id": "01_full_presentation_2026-03-17:image8.png::reviewed_table_component",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+    "reviewed_component_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image8/REVIEWED_COMPONENT.png",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image8/CONTEXT_PACKAGE.json",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image8/CONTEXT_PACKAGE.md",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image8/OCR_RESULT.json",
+    "ocr_status": "usable",
+    "review_status": "reviewed_candidate",
+    "evidence_comparison": {
+      "expected_tokens": [
+        "query",
+        "mode",
+        "25",
+        "602",
+        "363",
+        "121"
+      ],
+      "full_image_hit_count": 3,
+      "full_image_extra_token_count": 16,
+      "full_image_extra_tokens": [
+        "6023",
+        "3637H",
+        "45Q",
+        "answerable",
+        "5Q",
+        "smoke",
+        "10Q",
+        "J",
+        "E",
+        "1",
+        "20Q",
+        "2757H",
+        "47H",
+        "147H",
+        "217H",
+        "497H"
+      ],
+      "reviewed_component_hit_count": 3,
+      "reviewed_component_extra_token_count": 7,
+      "reviewed_component_extra_tokens": [
+        "0",
+        "0",
+        "y",
+        "6023l",
+        "3637H",
+        "4",
+        "i"
+      ],
+      "reviewed_component_better_for_caption_input": true,
+      "rationale": "Reviewed component OCR preserves the same or better table-token coverage with fewer extraneous tokens than the full-image OCR excerpt."
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "experiment": "paddleocr_table_parse_smoke",
+  "server_command": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/mcp/start-paddleocr-mcp.sh",
+  "image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+  "status": "completed",
+  "tool_names": [
+    "pp_structurev3"
+  ],
+  "call_tool": "pp_structurev3",
+  "call_args": {
+    "input_data": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+    "output_mode": "detailed",
+    "return_images": false
+  },
+  "initialized": true,
+  "content_item_count": 2,
+  "text_preview": "\n<div style=\"text-align: center;\"><html><body><table border=\"1\"><tbody><tr><td>升印引</td><td>2个</td><td>叫咀</td></tr><tr><td>image_md</td><td>808</td><td>![alt](src)</td></tr><tr><td>inline_img</td><td>81</td><td>人 歪 ref</td></tr><tr><td></td><td>889</td><td></td></tr><tr><td>url_only</td><td>11</td><td>URL</td></tr><tr><td>bare_ link</td><td>301</td><td>歪 [text](url)</td></tr><tr><td>inline_url</td><td>169</td><td>人 歪 URL</td></tr><tr><td>URL </td><td>481</td><td></td></tr></tbody></table></body></html></div>\n",
+  "slide_usages": [
+    {
+      "slide": 25,
+      "occurrence": 1
+    }
+  ],
+  "raw_content_json": "/private/tmp/image14_paddle_raw.json",
+  "normalized_output_json": "/private/tmp/image14_paddle_normalized.json",
+  "normalized_status": "completed"
+}

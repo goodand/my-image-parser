@@ -1,0 +1,126 @@
+{
+  "$schema_notes": {
+    "_comment": "Packetized skill creation sidecar 작성용 팀 공식 packet 템플릿. richer immutable contract profile.",
+    "reference_basis": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/standard/skill_creation_sidecar_standard_packet.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_tasks/TASK_packetized_subagent_skill_creation_sidecars.md"
+    ],
+    "identity": "이 canonical packet은 skill creation에서 sidecar-only subagent delegation을 immutable contract로 고정한다.",
+    "path_rule": "모든 경로는 repo root 상대경로다."
+  },
+  "packet_version": "0.1",
+  "packet_profile": "canonical",
+  "task_family": "skill_creation_sidecar",
+  "task_id": "TASK-SKILL-SIDECAR-XXXX",
+  "title": "skill creation sidecar canonical task",
+  "goal": "새 skill 또는 확장된 skill의 sidecar artifact를 bounded write-set 안에서 작성하고, main agent integration에 필요한 검증 조건을 남긴다.",
+  "why": "subagent를 sidecar 전용 생산자로 사용하면서 shared files와 registry는 main agent만 소유하도록 강제하기 위함이다.",
+  "source_of_truth": "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md",
+  "allowed_paths": [
+    "skills/",
+    "control/project_agent_ops/resources/task_packets/",
+    "control/project_agent_ops/resources/smoke/"
+  ],
+  "forbidden_paths": [
+    "control/project_agent_ops/registry/runtime/session_paths.json",
+    "control/project_agent_ops/registry/tools/tool_inventory.json",
+    "control/project_domain/resources/master_plans/",
+    ".env",
+    ".venv/"
+  ],
+  "context_files": [
+    "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md",
+    "control/project_agent_ops/resources/skill_candidates/REFERENCE_repeated_pattern_triage.md",
+    "control/project_agent_ops/registry/tools/tool_inventory.json"
+  ],
+  "depends_on": [],
+  "parallel_group": "skill_sidecar_creation",
+  "priority": "high",
+  "constraints": {
+    "must_not_modify": [
+      "SKILL.md unless explicitly owned by the packet",
+      "session_paths.json",
+      "tool_inventory.json",
+      "master plan files"
+    ],
+    "must_run_tests": false,
+    "must_not_use_network": true,
+    "allowed_tools": [],
+    "forbidden_tools": [],
+    "notes": "Tool inventory는 reference input일 뿐이며, tool list 자체를 skill로 래핑하지 않는다. workflow는 packetized sidecar creation이 소유한다."
+  },
+  "non_goals": [
+    {
+      "case": "shared-files",
+      "description": "shared registry, master plan, cross-document synchronization은 이 packet의 범위가 아니다."
+    },
+    {
+      "case": "tool-inventory",
+      "description": "tool list 자체를 skill로 재정의하거나 독립 workflow로 소유하지 않는다."
+    },
+    {
+      "case": "runtime-rewrite",
+      "description": "기존 working runtime이나 shared library를 subagent가 직접 재작성하지 않는다."
+    }
+  ],
+  "done_definition": [
+    "packet은 정확히 하나의 bounded sidecar family 또는 명시된 disjoint artifact set만 소유한다.",
+    "owned_paths와 reference_paths가 packet 안에 명시된다.",
+    "required_checks와 evidence_output_paths가 main agent integration에 충분한 수준으로 채워진다."
+  ],
+  "required_checks": [
+    {
+      "id": "C-1",
+      "type": "file_exists",
+      "value": "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md",
+      "required": true,
+      "done_index": 0,
+      "category": "smoke"
+    },
+    {
+      "id": "C-2",
+      "type": "file_exists",
+      "value": "control/project_agent_ops/registry/tools/tool_inventory.json",
+      "required": true,
+      "done_index": 0,
+      "category": "p2p"
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "skills/",
+      "type": "artifact",
+      "required": true,
+      "done_index": 1
+    }
+  ],
+  "owned_paths": [
+    "skills/<target-skill>/references/runtime.md"
+  ],
+  "reference_paths": [
+    "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md",
+    "control/project_agent_ops/registry/tools/tool_inventory.json",
+    "skills/<target-skill>/SKILL.md"
+  ],
+  "evidence_output_paths": [
+    "control/project_agent_ops/resources/smoke/"
+  ],
+  "timeout_minutes": 20,
+  "stop_conditions": [
+    "owned_paths가 shared file과 겹치면 중단",
+    "tool inventory drift를 직접 수정해야 하는 상황이면 main agent에 에스컬레이션",
+    "SKILL.md 수정이 필요한데 packet ownership에 없으면 중단",
+    "reference_paths 없이 broad narrative만 주어지면 중단"
+  ],
+  "handoff_notes": "Issued packet은 target skill path, exact owned_paths, reference_paths, evidence_output_paths, and required_checks[].category/done_index를 반드시 구체화해야 한다.",
+  "branch_hint": null,
+  "worktree_hint": null,
+  "launch_hint": null,
+  "trace_id": null,
+  "parent_task_id": null,
+  "revision": 1,
+  "created_at": "2026-03-28T11:40:00+09:00",
+  "created_by": "codex",
+  "updated_at": "2026-03-28T11:40:00+09:00"
+}

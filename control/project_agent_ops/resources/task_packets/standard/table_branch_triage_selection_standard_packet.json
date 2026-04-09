@@ -1,0 +1,70 @@
+{
+  "$schema_notes": {
+    "_comment": "Phase0 table branch triage selection worker용 최소 packet 템플릿. immutable task contract의 standard profile.",
+    "reference_basis": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_standard_template.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-task-packet/references/packet-fields.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md"
+    ]
+  },
+  "packet_version": "0.1",
+  "packet_profile": "standard",
+  "task_family": "phase0_table_triage_selection",
+  "task_id": "TASK-TBLTRIAGE-XXXX",
+  "title": "phase0 table triage selection task",
+  "goal": "PPT 추출 이미지 후보를 triage하여 table parser smoke 입력 집합을 좁힌다.",
+  "why": "자동 object-isolation fanout 대신 evidence-backed selection gate를 먼저 고정하기 위한 최소 불변 계약이다.",
+  "allowed_paths": [
+    "control/project_domain/resources/master_plans/",
+    "control/project_domain/resources/experiment_plans/",
+    "control/project_domain/resources/manifests/",
+    "control/project_domain/resources/reports/",
+    "control/project_domain/resources/pptx_jobs/"
+  ],
+  "context_files": [
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+    "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+    "control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md",
+    "control/project_domain/resources/manifests/phase0_imagesorcery_ocr_smoke_summary_at2026_03_27.json"
+  ],
+  "priority": "high",
+  "constraints": {
+    "must_not_modify": [],
+    "must_run_tests": false,
+    "must_not_use_network": false,
+    "notes": "Issued packet은 seed manifest, write target, triage worker ceiling, and output contract를 더 좁혀야 한다."
+  },
+  "done_definition": [
+    "bounded triage selection manifest가 runs/manifests 하위에 생성된다.",
+    "각 후보는 정확히 하나의 triage decision과 rationale을 가진다."
+  ],
+  "required_checks": [
+    {
+      "type": "file_exists",
+      "value": "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+      "required": true
+    },
+    {
+      "type": "file_exists",
+      "value": "control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md",
+      "required": true
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "control/project_domain/resources/manifests/phase0_table_triage_selection.jsonl",
+      "type": "artifact",
+      "required": true
+    }
+  ],
+  "timeout_minutes": null,
+  "stop_conditions": [
+    "seed candidate provenance가 불명확하면 중단",
+    "output contract 없이 triage row를 쓰게 되면 중단",
+    "2개를 초과하는 parser smoke 후보가 필요하면 상위 agent로 에스컬레이션"
+  ],
+  "revision": 1,
+  "created_at": "2026-03-28T00:04:00+09:00",
+  "created_by": "codex",
+  "updated_at": "2026-03-28T00:04:00+09:00"
+}

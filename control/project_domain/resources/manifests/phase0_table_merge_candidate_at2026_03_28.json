@@ -1,0 +1,444 @@
+{
+  "experiment": "table_merge_candidate_builder",
+  "status": "completed",
+  "policy_name": "baseline_v1",
+  "hook_chain": [
+    "BaselineTextSelectionHook",
+    "BaselineReviewGateHook"
+  ],
+  "document_id": "01_full_presentation_2026-03-17",
+  "page": 24,
+  "table_id": "t1",
+  "structure_source": "apple",
+  "apple_backend": "apple_vision_recognize_documents_request",
+  "paddle_backend": "paddleocr-mcp/pp_structurev3",
+  "source_manifests": {
+    "apple_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_apple_document_structure_normalized_at2026_03_28.json",
+    "paddle_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_paddleocr_table_parse_normalized_at2026_03_28.json",
+    "comparison_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_table_parser_comparison_at2026_03_28.json"
+  },
+  "comparison_difference_count": 6,
+  "merge_summary": {
+    "total_cells": 16,
+    "auto_accept_candidate_count": 6,
+    "pending_review_count": 10,
+    "review_target_cell_ids": [
+      "t1_r0_c2",
+      "t1_r1_c1",
+      "t1_r1_c2",
+      "t1_r1_c3",
+      "t1_r2_c1",
+      "t1_r2_c2",
+      "t1_r2_c3",
+      "t1_r3_c1",
+      "t1_r3_c2",
+      "t1_r3_c3"
+    ]
+  },
+  "rows": [
+    {
+      "row_index": 0,
+      "cells": [
+        {
+          "cell_id": "t1_r0_c0",
+          "row_index": 0,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.025,
+            0.566742,
+            0.235125,
+            0.198409
+          ],
+          "structure_source": "apple",
+          "apple_text": "Metric",
+          "paddle_text": "Metric",
+          "apple_confidence": 0.50593,
+          "paddle_confidence": 0.997857,
+          "difference_classification": "identical",
+          "recommended_text": "Metric",
+          "recommended_text_source": "apple",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r0_c1",
+          "row_index": 0,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.260125,
+            0.566742,
+            0.200292,
+            0.198409
+          ],
+          "structure_source": "apple",
+          "apple_text": "70Q",
+          "paddle_text": "70Q",
+          "apple_confidence": 0.515643,
+          "paddle_confidence": 0.993136,
+          "difference_classification": "identical",
+          "recommended_text": "70Q",
+          "recommended_text_source": "apple",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r0_c2",
+          "row_index": 0,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.460417,
+            0.566742,
+            0.209,
+            0.198409
+          ],
+          "structure_source": "apple",
+          "apple_text": "65Q",
+          "paddle_text": "650",
+          "apple_confidence": 0.50349,
+          "paddle_confidence": 0.883384,
+          "difference_classification": "header_character_substitution",
+          "recommended_text": "65Q",
+          "recommended_text_source": "apple_provisional",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "header_character_substitution"
+        },
+        {
+          "cell_id": "t1_r0_c3",
+          "row_index": 0,
+          "col_index": 3,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.669417,
+            0.566742,
+            0.226417,
+            0.198409
+          ],
+          "structure_source": "apple",
+          "apple_text": "Delta",
+          "paddle_text": "Delta",
+          "apple_confidence": 0.544722,
+          "paddle_confidence": 0.99865,
+          "difference_classification": "identical",
+          "recommended_text": "Delta",
+          "recommended_text_source": "apple",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        }
+      ]
+    },
+    {
+      "row_index": 1,
+      "cells": [
+        {
+          "cell_id": "t1_r1_c0",
+          "row_index": 1,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.025,
+            0.38303,
+            0.235125,
+            0.183712
+          ],
+          "structure_source": "apple",
+          "apple_text": "DH@10",
+          "paddle_text": "DH@10",
+          "apple_confidence": 0.368307,
+          "paddle_confidence": 0.99907,
+          "difference_classification": "identical",
+          "recommended_text": "DH@10",
+          "recommended_text_source": "apple",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r1_c1",
+          "row_index": 1,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.260125,
+            0.38303,
+            0.200292,
+            0.183712
+          ],
+          "structure_source": "apple",
+          "apple_text": "0.757",
+          "paddle_text": "0 757",
+          "apple_confidence": 0.649986,
+          "paddle_confidence": 0.901467,
+          "difference_classification": "decimal_point_drift",
+          "recommended_text": "0.757",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r1_c2",
+          "row_index": 1,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.460417,
+            0.38303,
+            0.209,
+            0.183712
+          ],
+          "structure_source": "apple",
+          "apple_text": "0.815",
+          "paddle_text": "815",
+          "apple_confidence": 0.644268,
+          "paddle_confidence": 0.996426,
+          "difference_classification": "decimal_point_drift",
+          "recommended_text": "0.815",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r1_c3",
+          "row_index": 1,
+          "col_index": 3,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.669417,
+            0.38303,
+            0.226417,
+            0.183712
+          ],
+          "structure_source": "apple",
+          "apple_text": "+0.058",
+          "paddle_text": "+0.058",
+          "apple_confidence": 0.596955,
+          "paddle_confidence": 0.999676,
+          "difference_classification": "identical",
+          "recommended_text": "+0.058",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "cells": [
+        {
+          "cell_id": "t1_r2_c0",
+          "row_index": 2,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.025,
+            0.206667,
+            0.235125,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "MRR",
+          "paddle_text": "MRR",
+          "apple_confidence": 0.204196,
+          "paddle_confidence": 0.999057,
+          "difference_classification": "identical",
+          "recommended_text": "MRR",
+          "recommended_text_source": "apple",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r2_c1",
+          "row_index": 2,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.260125,
+            0.206667,
+            0.200292,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "0.622",
+          "paddle_text": ".622",
+          "apple_confidence": 0.62957,
+          "paddle_confidence": 0.999451,
+          "difference_classification": "numeric_format_drift",
+          "recommended_text": "0.622",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r2_c2",
+          "row_index": 2,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.460417,
+            0.206667,
+            0.209,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "0.670",
+          "paddle_text": "",
+          "apple_confidence": 0.643019,
+          "paddle_confidence": 0.994161,
+          "difference_classification": "missing_in_paddle",
+          "recommended_text": "0.670",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r2_c3",
+          "row_index": 2,
+          "col_index": 3,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.669417,
+            0.206667,
+            0.226417,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "+0.048",
+          "paddle_text": "+0.048",
+          "apple_confidence": 0.589972,
+          "paddle_confidence": 0.999021,
+          "difference_classification": "identical",
+          "recommended_text": "+0.048",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "cells": [
+        {
+          "cell_id": "t1_r3_c0",
+          "row_index": 3,
+          "col_index": 0,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.025,
+            0.030303,
+            0.235125,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "CR@10",
+          "paddle_text": "CR@10",
+          "apple_confidence": 0.264801,
+          "paddle_confidence": 0.999572,
+          "difference_classification": "identical",
+          "recommended_text": "CR@10",
+          "recommended_text_source": "apple",
+          "review_status": "auto_accept_candidate",
+          "review_priority": "normal",
+          "review_reason": "stable_non_numeric_candidate"
+        },
+        {
+          "cell_id": "t1_r3_c1",
+          "row_index": 3,
+          "col_index": 1,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.260125,
+            0.030303,
+            0.200292,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "0.514",
+          "paddle_text": "0.514",
+          "apple_confidence": 0.66363,
+          "paddle_confidence": 0.99986,
+          "difference_classification": "identical",
+          "recommended_text": "0.514",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r3_c2",
+          "row_index": 3,
+          "col_index": 2,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.460417,
+            0.030303,
+            0.209,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "0.554",
+          "paddle_text": "554",
+          "apple_confidence": 0.634452,
+          "paddle_confidence": 0.999343,
+          "difference_classification": "decimal_point_drift",
+          "recommended_text": "0.554",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        },
+        {
+          "cell_id": "t1_r3_c3",
+          "row_index": 3,
+          "col_index": 3,
+          "row_span": 1,
+          "col_span": 1,
+          "bbox": [
+            0.669417,
+            0.030303,
+            0.226417,
+            0.176364
+          ],
+          "structure_source": "apple",
+          "apple_text": "+0.040",
+          "paddle_text": "+0.040",
+          "apple_confidence": 0.584115,
+          "paddle_confidence": 0.998483,
+          "difference_classification": "identical",
+          "recommended_text": "+0.040",
+          "recommended_text_source": "apple",
+          "review_status": "pending_review",
+          "review_priority": "high",
+          "review_reason": "numeric_cell_review_gate"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "image_id": "01_full_presentation_2026-03-17:image14.png",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+    "source_dataset": "01_full_presentation_2026-03-17",
+    "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+    "source_slide_numbers": [
+      25
+    ],
+    "image_surface": "full_image_original",
+    "ocr_surface": "full_image_standalone_ocr",
+    "ocr_status": "usable",
+    "ocr_engine": "ocrmac",
+    "ocr_annotation_count": 15,
+    "ocr_text_excerpt": "image_md inline_img url_only bare_link inline_url 808 81 889 11 301 169 481 ! [alt] (src) [text] (url) ref",
+    "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image14/OCR_FULL_TEXT.txt",
+    "ppt_local_summary": "Source PPT: `full_presentation_2026-03-17.pptx`. Dataset: `01_full_presentation_2026-03-17`. Slides: 25. Extracted media file: `image14.png` from `ppt/media/image14.png`. Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `8 x 3` with `24` total cells. Header: 升印引 | 2个 | 叫咀. Rows: image_md | 808 | ![alt](src); inline_img | 81 | 人 歪 ref; 889. Parser review status: `pending_review` with `7` pending-review cell(s).",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image14/CONTEXT_PACKAGE.md",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image14/CONTEXT_PACKAGE.json",
+    "review_status": "pending_review",
+    "notes": [
+      "Parser-enriched bounded adapter attached merged table candidate evidence for caption rerun."
+    ],
+    "source_filename": "full_presentation_2026-03-17.pptx",
+    "source_zip_path": "ppt/media/image14.png",
+    "sha256": "ad09dac4c4044d98f85dc8297f5e7cd4cbfa822ce6120f74e87cd6476ee03664",
+    "image_width": 808,
+    "image_height": 490,
+    "mime_type": "image/png",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image14/OCR_RESULT.json",
+    "baseline_caption": "A table with three columns details categories, counts, and descriptions related to images and URLs. Categories are listed in both English and Korean.",
+    "baseline_alt_text": "Table categorizing counts and descriptions of images and URLs with headers in Korean.",
+    "ppt_provenance_context": {
+      "source_kind": "ppt_export_manifest",
+      "source_dataset": "01_full_presentation_2026-03-17",
+      "source_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/manifest.json",
+      "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+      "source_filename": "full_presentation_2026-03-17.pptx",
+      "source_slide_numbers": [
+        25
+      ],
+      "source_image_file": "image14.png",
+      "source_zip_path": "ppt/media/image14.png",
+      "sha256": "ad09dac4c4044d98f85dc8297f5e7cd4cbfa822ce6120f74e87cd6476ee03664",
+      "image_width": 808,
+      "image_height": 490,
+      "mime_type": "image/png",
+      "baseline_caption": "A table with three columns details categories, counts, and descriptions related to images and URLs. Categories are listed in both English and Korean.",
+      "baseline_alt_text": "Table categorizing counts and descriptions of images and URLs with headers in Korean."
+    },
+    "ocr_evidence_context": {
+      "source_kind": "ocr_evidence",
+      "ocr_surface": "full_image_standalone_ocr",
+      "ocr_status": "usable",
+      "ocr_engine": "ocrmac",
+      "ocr_annotation_count": 15,
+      "ocr_text_excerpt": "image_md inline_img url_only bare_link inline_url 808 81 889 11 301 169 481 ! [alt] (src) [text] (url) ref",
+      "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image14/OCR_FULL_TEXT.txt",
+      "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image14/OCR_RESULT.json",
+      "selected_text_evidence": [
+        "升印引 | 2个 | 叫咀",
+        "image_md | 808 | ![alt](src)",
+        "inline_img | 81 | 人 歪 ref",
+        "889"
+      ]
+    },
+    "context_variant": "parser_table_enriched",
+    "structured_parse_context": {
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `8 x 3` with `24` total cells. Header: 升印引 | 2个 | 叫咀. Rows: image_md | 808 | ![alt](src); inline_img | 81 | 人 歪 ref; 889. Parser review status: `pending_review` with `7` pending-review cell(s).",
+      "selected_text_evidence": [
+        "升印引 | 2个 | 叫咀",
+        "image_md | 808 | ![alt](src)",
+        "inline_img | 81 | 人 歪 ref",
+        "889"
+      ],
+      "table_structure_info": {
+        "document_id": "01_full_presentation_2026-03-17",
+        "page": 25,
+        "table_id": "t1",
+        "row_count": 8,
+        "column_count": 3,
+        "total_cells": 24,
+        "pending_review_count": 7,
+        "auto_accept_candidate_count": 17,
+        "review_status": "pending_review",
+        "source_manifests": {
+          "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_paddle_table_parse_normalized_at2026_03_30.json"
+        },
+        "merge_candidate_status": "completed",
+        "comparison_difference_count": 0
+      }
+    },
+    "parser_structured_context": {
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `8 x 3` with `24` total cells. Header: 升印引 | 2个 | 叫咀. Rows: image_md | 808 | ![alt](src); inline_img | 81 | 人 歪 ref; 889. Parser review status: `pending_review` with `7` pending-review cell(s).",
+      "selected_text_evidence": [
+        "升印引 | 2个 | 叫咀",
+        "image_md | 808 | ![alt](src)",
+        "inline_img | 81 | 人 歪 ref",
+        "889"
+      ],
+      "table_structure_info": {
+        "document_id": "01_full_presentation_2026-03-17",
+        "page": 25,
+        "table_id": "t1",
+        "row_count": 8,
+        "column_count": 3,
+        "total_cells": 24,
+        "pending_review_count": 7,
+        "auto_accept_candidate_count": 17,
+        "review_status": "pending_review",
+        "source_manifests": {
+          "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_paddle_table_parse_normalized_at2026_03_30.json"
+        },
+        "merge_candidate_status": "completed",
+        "comparison_difference_count": 0
+      }
+    },
+    "selected_text_evidence": [
+      "升印引 | 2个 | 叫咀",
+      "image_md | 808 | ![alt](src)",
+      "inline_img | 81 | 人 歪 ref",
+      "889"
+    ],
+    "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `8 x 3` with `24` total cells. Header: 升印引 | 2个 | 叫咀. Rows: image_md | 808 | ![alt](src); inline_img | 81 | 人 歪 ref; 889. Parser review status: `pending_review` with `7` pending-review cell(s).",
+    "parser_enrichment": {
+      "document_id": "01_full_presentation_2026-03-17",
+      "page": 25,
+      "table_id": "t1",
+      "row_count": 8,
+      "column_count": 3,
+      "total_cells": 24,
+      "pending_review_count": 7,
+      "auto_accept_candidate_count": 17,
+      "review_status": "pending_review",
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `25`. Shape: `8 x 3` with `24` total cells. Header: 升印引 | 2个 | 叫咀. Rows: image_md | 808 | ![alt](src); inline_img | 81 | 人 歪 ref; 889. Parser review status: `pending_review` with `7` pending-review cell(s).",
+      "selected_text_evidence": [
+        "升印引 | 2个 | 叫咀",
+        "image_md | 808 | ![alt](src)",
+        "inline_img | 81 | 人 歪 ref",
+        "889"
+      ],
+      "source_manifests": {
+        "single_source_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_paddle_table_parse_normalized_at2026_03_30.json"
+      },
+      "merge_candidate_status": "completed",
+      "comparison_difference_count": 0
+    }
+  }
+]

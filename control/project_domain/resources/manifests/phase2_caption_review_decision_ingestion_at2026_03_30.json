@@ -1,0 +1,30 @@
+{
+  "schema_version": "phase2_review_decision_ingestion.v1",
+  "decision_seed_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl",
+  "input_row_count": 9,
+  "review_status_counts": {
+    "pending": 9,
+    "completed": 0,
+    "deferred": 0
+  },
+  "retrieval_ready_count": 0,
+  "mapping_ready_count": 0,
+  "retrieval_ready_image_ids": [],
+  "mapping_ready_image_ids": [],
+  "blocked_image_ids": [
+    "image11",
+    "image7",
+    "image8",
+    "image10",
+    "image12",
+    "image13",
+    "image14",
+    "image9",
+    "image15"
+  ],
+  "generated_outputs": {
+    "retrieval_ready_rows_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_retrieval_ready_rows_at2026_03_30.jsonl",
+    "mapping_ready_rows_jsonl": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_mapping_ready_rows_at2026_03_30.jsonl"
+  },
+  "next_action": "fill human decision rows and rerun ingestion"
+}

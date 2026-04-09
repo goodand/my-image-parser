@@ -1,0 +1,62 @@
+{
+  "cache_name": "image4_component_decomposition_paper_cache",
+  "schema_version": "v1",
+  "saved_at": "2026-03-30",
+  "focus_problem": "composite dashboard image decomposition before regrouping and scoring",
+  "papers": [
+    {
+      "title": "Docling Technical Report",
+      "paper_id": "2408.09869",
+      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/docling_technical_report_2408.09869.pdf",
+      "source_urls": [
+        "https://github.com/docling-project/docling",
+        "https://arxiv.org/abs/2408.09869"
+      ],
+      "primary_role": "document_ingestion_and_unified_representation",
+      "fit_for_image4": "indirect"
+    },
+    {
+      "title": "LayoutParser: A Unified Toolkit for Deep Learning Based Document Image Analysis",
+      "paper_id": "2103.15348",
+      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/layoutparser_2103.15348.pdf",
+      "source_urls": [
+        "https://github.com/Layout-Parser/layout-parser",
+        "https://arxiv.org/abs/2103.15348"
+      ],
+      "primary_role": "layout_grouping_and_regrouping",
+      "fit_for_image4": "high"
+    },
+    {
+      "title": "PubTables-1M: Towards Comprehensive Table Extraction From Unstructured Documents",
+      "paper_id": "2110.00061",
+      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/pubtables1m_table_transformer_2110.00061.pdf",
+      "source_urls": [
+        "https://github.com/microsoft/table-transformer",
+        "https://arxiv.org/abs/2110.00061"
+      ],
+      "primary_role": "table_structure_recovery",
+      "fit_for_image4": "medium"
+    },
+    {
+      "title": "DocLayout-YOLO: Enhancing Document Layout Analysis through Diverse Synthetic Data and Global-to-Local Adaptive Perception",
+      "paper_id": "2410.12628",
+      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/doclayout_yolo_2410.12628.pdf",
+      "source_urls": [
+        "https://arxiv.org/abs/2410.12628"
+      ],
+      "primary_role": "layout_proposal_and_component_detection",
+      "fit_for_image4": "high"
+    },
+    {
+      "title": "Semantic Segmentation for Compound Figures",
+      "paper_id": "1912.07142",
+      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/semantic_segmentation_for_compound_figures_1912.07142.pdf",
+      "source_urls": [
+        "https://arxiv.org/abs/1912.07142"
+      ],
+      "primary_role": "compound_figure_decomposition",
+      "fit_for_image4": "highest"
+    }
+  ],
+  "current_takeaway": "The main missing capability is component decomposition before regrouping."
+}

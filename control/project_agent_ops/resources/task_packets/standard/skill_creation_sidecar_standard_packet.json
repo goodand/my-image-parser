@@ -1,0 +1,65 @@
+{
+  "$schema_notes": {
+    "_comment": "Subagent를 사용한 skill sidecar 작성용 최소 packet 템플릿. immutable task contract의 standard profile.",
+    "reference_basis": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-task-packet/references/packet-fields.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md"
+    ]
+  },
+  "packet_version": "0.1",
+  "packet_profile": "standard",
+  "task_family": "skill_creation_sidecar",
+  "task_id": "TASK-SKILL-SIDECAR-XXXX",
+  "title": "skill sidecar subagent task",
+  "goal": "하나의 skill sidecar artifact를 bounded write-set 안에서 작성하거나 갱신한다.",
+  "why": "SKILL.md와 shared registry를 main agent가 소유한 상태에서 disjoint sidecar만 병렬 생성하기 위한 최소 불변 계약이다.",
+  "allowed_paths": [
+    "skills/",
+    "control/project_agent_ops/resources/task_packets/issued/",
+    "control/project_agent_ops/resources/smoke/"
+  ],
+  "context_files": [
+    "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md",
+    "control/project_agent_ops/resources/skill_candidates/REFERENCE_repeated_pattern_triage.md",
+    "control/project_agent_ops/registry/tools/tool_inventory.json"
+  ],
+  "priority": "medium",
+  "constraints": {
+    "must_not_modify": [
+      "shared registry files",
+      "master plan files",
+      "SKILL.md unless explicitly owned"
+    ],
+    "must_run_tests": false,
+    "must_not_use_network": true,
+    "notes": "Issued packet은 owned_paths, reference_paths, evidence_output_paths를 구체화해야 한다."
+  },
+  "done_definition": [
+    "지정된 sidecar artifact가 하나의 owned path 집합 안에서 작성 또는 갱신된다.",
+    "근거가 되는 reference path와 expected checks가 packet에 명시된다."
+  ],
+  "required_checks": [
+    {
+      "type": "file_exists",
+      "value": "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md",
+      "required": true
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "skills/",
+      "type": "artifact",
+      "required": true
+    }
+  ],
+  "timeout_minutes": 20,
+  "stop_conditions": [
+    "owned_paths가 shared file과 겹치면 중단",
+    "reference_paths 없이 broad prose handoff만 주어지면 중단",
+    "sidecar 범위를 넘어 shared registry 수정이 필요하면 상위 agent에 에스컬레이션"
+  ],
+  "revision": 1,
+  "created_at": "2026-03-28T11:40:00+09:00",
+  "created_by": "codex",
+  "updated_at": "2026-03-28T11:40:00+09:00"
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "image_id": "01_full_presentation_2026-03-17:image14.png::reviewed_table_component",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+    "reviewed_component_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image14/REVIEWED_COMPONENT.png",
+    "selected_candidate_name": "seed_bbox",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image14/CONTEXT_PACKAGE.json",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image14/CONTEXT_PACKAGE.md",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/reviewed_isolated_component/01_full_presentation_2026-03-17/image14/OCR_RESULT.json",
+    "ocr_status": "usable",
+    "review_status": "pending_review",
+    "evidence_comparison": {
+      "expected_tokens": [
+        "2",
+        "image",
+        "md",
+        "808",
+        "alt",
+        "src",
+        "inline",
+        "img",
+        "81",
+        "ref",
+        "889"
+      ],
+      "full_image_hit_count": 10,
+      "full_image_extra_token_count": 11,
+      "full_image_extra_tokens": [
+        "url",
+        "only",
+        "bare",
+        "link",
+        "url",
+        "11",
+        "301",
+        "169",
+        "481",
+        "text",
+        "url"
+      ],
+      "reviewed_component_hit_count": 9,
+      "reviewed_component_extra_token_count": 11,
+      "reviewed_component_extra_tokens": [
+        "url",
+        "only",
+        "bare",
+        "link",
+        "url",
+        "11",
+        "301",
+        "169",
+        "481",
+        "text",
+        "url"
+      ],
+      "reviewed_component_better_for_caption_input": false,
+      "rationale": "Reviewed component OCR does not yet improve on the full-image OCR evidence."
+    }
+  }
+]

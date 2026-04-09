@@ -1,0 +1,57 @@
+{
+  "packet_profile": "issued",
+  "task_family": "image_caption_experiment_parallel_worker",
+  "task_id": "TASK-PHASE1_CAPTION_10W-02_1-W10",
+  "title": "phase1_caption_10w 02_1 w10",
+  "goal": "Run one non-overlapping shard of the extracted-media OpenAI caption experiment.",
+  "worker_id": "w10",
+  "dataset_id": "02_1",
+  "context_files": [
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+    "control/project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md",
+    "control/project_domain/resources/experiment_plans/PLAN_phase1_caption_experiment_parallel_execution-at2026-03-27-18-31.md"
+  ],
+  "allowed_paths": [
+    "control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w10.jsonl",
+    "control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w10.json",
+    "control/project_agent_ops/registry/jobs/image_caption_jobs"
+  ],
+  "locked_paths": [
+    "control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w10.jsonl",
+    "control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w10.json",
+    "control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w10_responses"
+  ],
+  "constraints": {
+    "do_not_touch_other_worker_ledgers": true,
+    "do_not_edit_canonical_docs": true,
+    "model": "gpt-4.1"
+  },
+  "command": [
+    "python3",
+    "scripts/caption_images_openai.py",
+    "--dataset-jsonl",
+    "control/project_domain/resources/manifests/phase1_caption_10w_shards/phase1_caption_10w_02_1_w10.jsonl",
+    "--output",
+    "control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_02_1_w10.json",
+    "--model",
+    "gpt-4.1",
+    "--detail",
+    "high"
+  ],
+  "expected_rows": 5,
+  "row_indexes": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "first_image_id": "02_1:image5.png",
+  "last_image_id": "02_1:image9.png",
+  "done_definition": [
+    "Only this worker ledger and sidecars are written.",
+    "Status summary is readable from the worker ledger.",
+    "No overlap exists with other worker shards or ledgers."
+  ],
+  "created_at": "2026-03-27T09:38:38Z"
+}

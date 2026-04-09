@@ -1,0 +1,110 @@
+{
+  "$schema_notes": {
+    "_comment": "Caption experiment worker용 팀 공식 packet 템플릿. richer immutable contract profile.",
+    "reference_basis": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_template.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_extended_template.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_master_plan_consolidation-at2026-03-27-16-56.md"
+    ],
+    "identity": "팀 공식 채택 형식은 standard보다 더 많은 제약, 검증, 전달 산출물을 고정한다.",
+    "path_rule": "모든 경로는 repo root 상대경로다."
+  },
+  "packet_version": "0.1",
+  "packet_profile": "canonical",
+  "task_family": "image_caption_experiment",
+  "task_id": "TASK-IMGCAP-XXXX",
+  "title": "caption experiment canonical worker task",
+  "goal": "caption experiment의 특정 arm 또는 특정 이미지 배치를 수행하고, 실행 증거와 상태를 남긴다.",
+  "why": "여러 agent가 동일한 실험 계약을 공유하도록 하기 위함이다.",
+  "source_of_truth": "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+  "allowed_paths": [
+    "control/project_domain/resources/assets/caption_experiment/",
+    "control/project_domain/resources/specs/",
+    "control/project_domain/resources/",
+    "control/project_agent_ops/registry/"
+  ],
+  "forbidden_paths": [
+    ".env",
+    ".venv/",
+    "control/archive/"
+  ],
+  "context_files": [
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+    "control/project_domain/resources/knowledge_bases/KB_caption_experiment_foundation.md",
+    "control/project_domain/resources/checklists/CHECKLIST_caption_experiment_readiness.md",
+    "control/project_domain/resources/specs/prose/SPEC_openai_image_caption_runner.md",
+    "control/project_domain/registry/caption_experiment_resource_index.json"
+  ],
+  "depends_on": [],
+  "parallel_group": null,
+  "priority": "high",
+  "constraints": {
+    "must_not_modify": [],
+    "must_run_tests": false,
+    "must_not_use_network": false,
+    "allowed_tools": [],
+    "forbidden_tools": [],
+    "notes": "issued packet은 arm별로 network, simulator, approval gate 조건을 더 좁혀야 한다."
+  },
+  "non_goals": [
+    {
+      "case": "scope",
+      "description": "master plan 전체 개편은 이 packet의 범위가 아니다."
+    },
+    {
+      "case": "state",
+      "description": "human approval 없이 destructive commit을 수행하지 않는다."
+    }
+  ],
+  "done_definition": [
+    "실험 arm 결과물이 resources 하위의 적절한 위치에 저장된다.",
+    "execution record 또는 동등한 상태 기록이 registry에 남는다.",
+    "필요 시 report 또는 decision artifact가 함께 생성된다."
+  ],
+  "required_checks": [
+    {
+      "id": "C-1",
+      "type": "file_exists",
+      "value": "control/project_domain/registry/caption_experiment_resource_index.json",
+      "required": true,
+      "done_index": 0
+    },
+    {
+      "id": "C-2",
+      "type": "file_exists",
+      "value": "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+      "required": true,
+      "done_index": 0
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "control/project_domain/resources/",
+      "type": "artifact",
+      "required": true,
+      "done_index": 1
+    },
+    {
+      "path": "control/project_agent_ops/registry/",
+      "type": "artifact",
+      "required": true,
+      "done_index": 1
+    }
+  ],
+  "timeout_minutes": null,
+  "stop_conditions": [
+    "canonical resource index와 실제 자원 경로가 불일치하면 중단",
+    "필수 spec 또는 master plan이 없으면 중단",
+    "viewer surface가 없는 screenshot arm은 실행하지 않는다"
+  ],
+  "handoff_notes": "issued packet은 arm 이름, 입력 자산, 허용 도구, 네트워크 조건, 증거 산출물 경로를 반드시 추가해야 한다.",
+  "branch_hint": null,
+  "worktree_hint": null,
+  "launch_hint": null,
+  "trace_id": null,
+  "parent_task_id": null,
+  "revision": 1,
+  "created_at": "2026-03-27T00:00:00+09:00",
+  "created_by": "codex",
+  "updated_at": "2026-03-27T00:00:00+09:00"
+}

@@ -1,0 +1,123 @@
+{
+  "contract_version": "1.0.0",
+  "contract_id": "legacy_boundary_lint",
+  "title": "Legacy Boundary Lint Contract",
+  "source_of_truth": {
+    "primary": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/closed_questions/Legacy_Boundary_Decision_Answers-at2026-03-27.md"
+    ],
+    "supporting": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/closed_questions/Legacy_Boundary_Decision_Checklist.md",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/assets/legacy_boundary_decision_map.svg"
+    ]
+  },
+  "lint_execution_policy": {
+    "runtime_gate_first": true,
+    "static_after_runtime_gate": true,
+    "minimal_behavior_change": true,
+    "unsafe_fix_requires_review": true,
+    "evidence_required": true
+  },
+  "module_creation_policy": {
+    "generator_only": true,
+    "command": "npm run new:module",
+    "duplicate_detection_stage": "precreate",
+    "duplicate_detection_targets": [
+      "file_name",
+      "class_name",
+      "function_name",
+      "export_name"
+    ]
+  },
+  "directory_contract_policy": {
+    "required": true,
+    "accepted_files": [
+      "CONTRACT.json",
+      "ALLOWED.md"
+    ]
+  },
+  "file_rules": [
+    {
+      "id": "LB001",
+      "name": "shim_reexport_only",
+      "target": "legacy_shim",
+      "severity": "error",
+      "enforcement": "lint",
+      "allowed_shapes": [
+        "re_export_only"
+      ]
+    },
+    {
+      "id": "LB002",
+      "name": "directory_contract_required",
+      "target": "governed_directory",
+      "severity": "error",
+      "enforcement": "lint"
+    },
+    {
+      "id": "LB003",
+      "name": "legacy_import_comment_required",
+      "target": "annotated_migration_import",
+      "severity": "error",
+      "enforcement": "lint",
+      "required_comment_prefix": "LEGACY-IMPORT:"
+    }
+  ],
+  "import_rules": [
+    {
+      "id": "LB101",
+      "from": "services",
+      "to": "components",
+      "severity": "error",
+      "mode": "hard_block",
+      "comment_required": false
+    },
+    {
+      "id": "LB102",
+      "from": "legacy",
+      "to": "services",
+      "severity": "warn",
+      "mode": "migration_exception",
+      "comment_required": true,
+      "comment_prefix": "LEGACY-IMPORT:"
+    },
+    {
+      "id": "LB103",
+      "from": "components",
+      "to": "legacy",
+      "severity": "warn",
+      "mode": "migration_exception",
+      "comment_required": true,
+      "comment_prefix": "LEGACY-IMPORT:"
+    }
+  ],
+  "allowlist_policy": {
+    "enabled": true,
+    "refresh_mode": "llm_assisted"
+  },
+  "legacy_removal_policy": {
+    "criteria": [
+      "zero_references",
+      "replacement_stable",
+      "warning_quiet_period"
+    ]
+  },
+  "safe_fix_policy": {
+    "allowed": [
+      "add_required_legacy_import_comment",
+      "restore_pure_reexport_shim",
+      "attach_missing_directory_contract_reference"
+    ],
+    "forbidden": [
+      "move_runtime_logic_across_layers",
+      "rewrite_architecture_ownership",
+      "create_new_public_entrypoint",
+      "remove_legacy_without_removal_criteria"
+    ]
+  },
+  "unresolved_items": [
+    "intent_declaration_required",
+    "facade_header_contract_required",
+    "layer_specific_no_restricted_imports_profile_expansion"
+  ]
+}

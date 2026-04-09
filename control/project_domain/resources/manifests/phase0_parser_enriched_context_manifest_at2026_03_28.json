@@ -1,0 +1,157 @@
+[
+  {
+    "image_id": "01_full_presentation_2026-03-17:image11.png",
+    "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+    "source_dataset": "01_full_presentation_2026-03-17",
+    "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+    "source_slide_numbers": [
+      24
+    ],
+    "image_surface": "full_image_original",
+    "ocr_surface": "full_image_standalone_ocr",
+    "ocr_status": "usable",
+    "ocr_engine": "ocrmac",
+    "ocr_annotation_count": 18,
+    "ocr_text_excerpt": "Two-Phase Hyde-PC (65Q, § fr ^ 52 00 9 0 Metric DH@10 MRR CR@10 70Q 0.757 0.622 0.514 65Q 0.815 0.670 0.554 Delta +0.058 +0.048 +0.040",
+    "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image11/OCR_FULL_TEXT.txt",
+    "ppt_local_summary": "Source PPT: `full_presentation_2026-03-17.pptx`. Dataset: `01_full_presentation_2026-03-17`. Slides: 24. Extracted media file: `image11.png` from `ppt/media/image11.png`. Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 4` with `16` total cells. Header: Metric | 70Q | 65Q | Delta. Rows: DH@10 | 0.757 | 0.815 | +0.058; MRR | 0.622 | 0.670 | +0.048; CR@10 | 0.514 | 0.554 | +0.040. Parser review status: `pending_review` with `10` pending-review cell(s).",
+    "context_package_markdown_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.md",
+    "context_package_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/parser_enriched_table_baseline/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json",
+    "review_status": "pending_review",
+    "notes": [
+      "phase0 bounded baseline build",
+      "unsandboxed rerun for usable OCR baseline",
+      "Parser-enriched bounded adapter attached merged table candidate evidence for caption rerun."
+    ],
+    "source_filename": "full_presentation_2026-03-17.pptx",
+    "source_zip_path": "ppt/media/image11.png",
+    "sha256": "efeb891c44cef739d7aef4986ce54d5410df766ccb80273e72733637197df234",
+    "image_width": 562,
+    "image_height": 308,
+    "mime_type": "image/png",
+    "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image11/OCR_RESULT.json",
+    "baseline_caption": "A table compares metrics between 70Q and 65Q with corresponding delta values, under the heading 'Two-Phase Hyde-PC (65Q, 오류 5건 제외)'. The table presents values for DH@10, MRR, and CR@10.",
+    "baseline_alt_text": "Table comparing 70Q and 65Q metrics with deltas, titled 'Two-Phase Hyde-PC'.",
+    "context_variant": "parser_table_enriched",
+    "ppt_provenance_context": {
+      "source_kind": "ppt_export_manifest",
+      "source_dataset": "01_full_presentation_2026-03-17",
+      "source_manifest_path": null,
+      "source_pptx": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/pptx_inputs/full_presentation_2026-03-17.pptx",
+      "source_filename": "full_presentation_2026-03-17.pptx",
+      "source_slide_numbers": [
+        24
+      ],
+      "source_image_file": "image11.png",
+      "source_zip_path": "ppt/media/image11.png",
+      "sha256": "efeb891c44cef739d7aef4986ce54d5410df766ccb80273e72733637197df234",
+      "image_width": 562,
+      "image_height": 308,
+      "mime_type": "image/png",
+      "baseline_caption": "A table compares metrics between 70Q and 65Q with corresponding delta values, under the heading 'Two-Phase Hyde-PC (65Q, 오류 5건 제외)'. The table presents values for DH@10, MRR, and CR@10.",
+      "baseline_alt_text": "Table comparing 70Q and 65Q metrics with deltas, titled 'Two-Phase Hyde-PC'."
+    },
+    "structured_parse_context": {
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 4` with `16` total cells. Header: Metric | 70Q | 65Q | Delta. Rows: DH@10 | 0.757 | 0.815 | +0.058; MRR | 0.622 | 0.670 | +0.048; CR@10 | 0.514 | 0.554 | +0.040. Parser review status: `pending_review` with `10` pending-review cell(s).",
+      "selected_text_evidence": [
+        "Metric | 70Q | 65Q | Delta",
+        "DH@10 | 0.757 | 0.815 | +0.058",
+        "MRR | 0.622 | 0.670 | +0.048",
+        "CR@10 | 0.514 | 0.554 | +0.040"
+      ],
+      "table_structure_info": {
+        "document_id": "01_full_presentation_2026-03-17",
+        "page": 24,
+        "table_id": "t1",
+        "row_count": 4,
+        "column_count": 4,
+        "total_cells": 16,
+        "pending_review_count": 10,
+        "auto_accept_candidate_count": 6,
+        "review_status": "pending_review",
+        "source_manifests": {
+          "apple_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_apple_document_structure_normalized_at2026_03_28.json",
+          "paddle_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_paddleocr_table_parse_normalized_at2026_03_28.json",
+          "comparison_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_table_parser_comparison_at2026_03_28.json"
+        },
+        "merge_candidate_status": "completed",
+        "comparison_difference_count": 6
+      }
+    },
+    "parser_structured_context": {
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 4` with `16` total cells. Header: Metric | 70Q | 65Q | Delta. Rows: DH@10 | 0.757 | 0.815 | +0.058; MRR | 0.622 | 0.670 | +0.048; CR@10 | 0.514 | 0.554 | +0.040. Parser review status: `pending_review` with `10` pending-review cell(s).",
+      "selected_text_evidence": [
+        "Metric | 70Q | 65Q | Delta",
+        "DH@10 | 0.757 | 0.815 | +0.058",
+        "MRR | 0.622 | 0.670 | +0.048",
+        "CR@10 | 0.514 | 0.554 | +0.040"
+      ],
+      "table_structure_info": {
+        "document_id": "01_full_presentation_2026-03-17",
+        "page": 24,
+        "table_id": "t1",
+        "row_count": 4,
+        "column_count": 4,
+        "total_cells": 16,
+        "pending_review_count": 10,
+        "auto_accept_candidate_count": 6,
+        "review_status": "pending_review",
+        "source_manifests": {
+          "apple_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_apple_document_structure_normalized_at2026_03_28.json",
+          "paddle_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_paddleocr_table_parse_normalized_at2026_03_28.json",
+          "comparison_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_table_parser_comparison_at2026_03_28.json"
+        },
+        "merge_candidate_status": "completed",
+        "comparison_difference_count": 6
+      }
+    },
+    "ocr_evidence_context": {
+      "source_kind": "ocr_evidence",
+      "ocr_surface": "full_image_standalone_ocr",
+      "ocr_status": "usable",
+      "ocr_engine": "ocrmac",
+      "ocr_annotation_count": 18,
+      "ocr_text_excerpt": "Two-Phase Hyde-PC (65Q, § fr ^ 52 00 9 0 Metric DH@10 MRR CR@10 70Q 0.757 0.622 0.514 65Q 0.815 0.670 0.554 Delta +0.058 +0.048 +0.040",
+      "ocr_text_full_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image11/OCR_FULL_TEXT.txt",
+      "ocr_result_json_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/context_packages/full_image_ocr_baseline/01_full_presentation_2026-03-17/image11/OCR_RESULT.json",
+      "selected_text_evidence": [
+        "Metric | 70Q | 65Q | Delta",
+        "DH@10 | 0.757 | 0.815 | +0.058",
+        "MRR | 0.622 | 0.670 | +0.048",
+        "CR@10 | 0.514 | 0.554 | +0.040"
+      ]
+    },
+    "selected_text_evidence": [
+      "Metric | 70Q | 65Q | Delta",
+      "DH@10 | 0.757 | 0.815 | +0.058",
+      "MRR | 0.622 | 0.670 | +0.048",
+      "CR@10 | 0.514 | 0.554 | +0.040"
+    ],
+    "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 4` with `16` total cells. Header: Metric | 70Q | 65Q | Delta. Rows: DH@10 | 0.757 | 0.815 | +0.058; MRR | 0.622 | 0.670 | +0.048; CR@10 | 0.514 | 0.554 | +0.040. Parser review status: `pending_review` with `10` pending-review cell(s).",
+    "parser_enrichment": {
+      "document_id": "01_full_presentation_2026-03-17",
+      "page": 24,
+      "table_id": "t1",
+      "row_count": 4,
+      "column_count": 4,
+      "total_cells": 16,
+      "pending_review_count": 10,
+      "auto_accept_candidate_count": 6,
+      "review_status": "pending_review",
+      "table_summary": "Parser-enriched bounded table evidence for table `t1` on page `24`. Shape: `4 x 4` with `16` total cells. Header: Metric | 70Q | 65Q | Delta. Rows: DH@10 | 0.757 | 0.815 | +0.058; MRR | 0.622 | 0.670 | +0.048; CR@10 | 0.514 | 0.554 | +0.040. Parser review status: `pending_review` with `10` pending-review cell(s).",
+      "selected_text_evidence": [
+        "Metric | 70Q | 65Q | Delta",
+        "DH@10 | 0.757 | 0.815 | +0.058",
+        "MRR | 0.622 | 0.670 | +0.048",
+        "CR@10 | 0.514 | 0.554 | +0.040"
+      ],
+      "source_manifests": {
+        "apple_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_apple_document_structure_normalized_at2026_03_28.json",
+        "paddle_normalized_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_paddleocr_table_parse_normalized_at2026_03_28.json",
+        "comparison_json": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_table_parser_comparison_at2026_03_28.json"
+      },
+      "merge_candidate_status": "completed",
+      "comparison_difference_count": 6
+    }
+  }
+]

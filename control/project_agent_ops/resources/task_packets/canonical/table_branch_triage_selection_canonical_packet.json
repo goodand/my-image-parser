@@ -1,0 +1,116 @@
+{
+  "$schema_notes": {
+    "_comment": "Phase0 table branch triage selection용 팀 공식 packet 템플릿. richer immutable contract profile.",
+    "reference_basis": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_template.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_extended_template.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/standard/table_branch_triage_selection_standard_packet.json",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/phase0_table_triage_selection.contract.json"
+    ],
+    "identity": "이 canonical packet은 xhigh triage worker 기반 selection gate를 immutable execution contract로 고정한다.",
+    "path_rule": "모든 경로는 repo root 상대경로다."
+  },
+  "packet_version": "0.1",
+  "packet_profile": "canonical",
+  "task_family": "phase0_table_triage_selection",
+  "task_id": "TASK-TBLTRIAGE-XXXX",
+  "title": "phase0 table triage selection canonical task",
+  "goal": "실제 PPT 추출 이미지 후보를 검토하여 bounded parser smoke에 넣을 1~2개의 table candidate surface를 선정한다.",
+  "why": "기계적으로 valid한 auto crop을 바로 확대하지 않고, 의미적으로 맞는 parser smoke 입력만 선별하기 위함이다.",
+  "source_of_truth": "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+  "allowed_paths": [
+    "control/project_domain/resources/master_plans/",
+    "control/project_domain/resources/specs/contracts/",
+    "control/project_domain/resources/experiment_plans/",
+    "control/project_domain/resources/manifests/",
+    "control/project_domain/resources/reports/",
+    "control/project_domain/resources/pptx_jobs/"
+  ],
+  "forbidden_paths": [
+    ".env",
+    ".venv/",
+    "control/archive/",
+    "control/project_agent_ops/registry/tools/"
+  ],
+  "context_files": [
+    "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+    "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+    "control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md",
+    "control/project_domain/resources/manifests/phase0_imagesorcery_ocr_smoke_summary_at2026_03_27.json",
+    "control/project_domain/resources/specs/contracts/phase0_table_triage_selection.contract.json"
+  ],
+  "depends_on": [],
+  "parallel_group": "phase0_table_triage",
+  "priority": "high",
+  "constraints": {
+    "must_not_modify": [],
+    "must_run_tests": false,
+    "must_not_use_network": false,
+    "allowed_tools": [],
+    "forbidden_tools": [],
+    "notes": "Triage 단계는 기존 smoke evidence와 source image를 우선 사용한다. issued packet이 없는 상태에서 parser run, broad crop fanout, or wrapper implementation으로 확장하지 않는다."
+  },
+  "non_goals": [
+    {
+      "case": "scope",
+      "description": "PaddleOCR boot smoke, parser raw output 생성, canonical normalization, wrapper implementation은 이 packet의 범위가 아니다."
+    },
+    {
+      "case": "selection",
+      "description": "자동 detect fallback 결과를 review 없이 바로 parser smoke 입력으로 승격하지 않는다."
+    }
+  ],
+  "done_definition": [
+    "selection manifest가 contract-required fields를 모두 채운다.",
+    "promoted parser smoke surfaces는 1개 이상 2개 이하이며 provenance가 명시된다.",
+    "not_a_table_candidate와 needs_manual_audit 사례도 drop하지 않고 manifest에 남긴다."
+  ],
+  "required_checks": [
+    {
+      "id": "C-1",
+      "type": "file_exists",
+      "value": "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+      "required": true,
+      "done_index": 0
+    },
+    {
+      "id": "C-2",
+      "type": "file_exists",
+      "value": "control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md",
+      "required": true,
+      "done_index": 0
+    },
+    {
+      "id": "C-3",
+      "type": "file_exists",
+      "value": "control/project_domain/resources/specs/contracts/phase0_table_triage_selection.contract.json",
+      "required": true,
+      "done_index": 0
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "control/project_domain/resources/manifests/phase0_table_triage_selection.jsonl",
+      "type": "artifact",
+      "required": true,
+      "done_index": 1
+    }
+  ],
+  "timeout_minutes": null,
+  "stop_conditions": [
+    "seed candidate set가 없거나 source image path가 깨져 있으면 중단",
+    "decision per candidate를 고정할 수 없으면 중단",
+    "promotion count가 2개를 초과하면 중단",
+    "reviewed crop를 새로 만들어야 하는데 explicit authority가 없으면 중단"
+  ],
+  "handoff_notes": "issued packet은 seed manifest path, output manifest path, worker ceiling, write ownership, and any reviewed crop authority를 반드시 고정해야 한다.",
+  "branch_hint": null,
+  "worktree_hint": null,
+  "launch_hint": null,
+  "trace_id": null,
+  "parent_task_id": null,
+  "revision": 1,
+  "created_at": "2026-03-28T00:04:00+09:00",
+  "created_by": "codex",
+  "updated_at": "2026-03-28T00:04:00+09:00"
+}

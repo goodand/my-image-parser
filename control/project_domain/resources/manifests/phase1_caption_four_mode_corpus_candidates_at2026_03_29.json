@@ -1,0 +1,434 @@
+{
+  "experiment": "phase1_caption_four_mode_small_batch_candidate_selection",
+  "status": "completed",
+  "target_image_count": 20,
+  "confirmation_policy": "evidence_only_corpus_scan",
+  "default_baseline": "full_image_baseline",
+  "included_candidates": [
+    {
+      "candidate_label": "image7",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "gpt_visual_confirmation": {
+        "status": "not_required",
+        "reviewer": null,
+        "edge_case": false,
+        "rationale": "Corpus scan used artifact evidence only for `image7` and did not require direct image review.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image8",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "gpt_visual_confirmation": {
+        "status": "not_required",
+        "reviewer": null,
+        "edge_case": false,
+        "rationale": "Corpus scan used artifact evidence only for `image8` and did not require direct image review.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image9",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "gpt_visual_confirmation": {
+        "status": "not_required",
+        "reviewer": null,
+        "edge_case": false,
+        "rationale": "Corpus scan used artifact evidence only for `image9` and did not require direct image review.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image10",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "gpt_visual_confirmation": {
+        "status": "not_required",
+        "reviewer": null,
+        "edge_case": false,
+        "rationale": "Corpus scan used artifact evidence only for `image10` and did not require direct image review.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image11",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json",
+      "gpt_visual_confirmation": {
+        "status": "not_required",
+        "reviewer": null,
+        "edge_case": false,
+        "rationale": "Corpus scan used artifact evidence only for `image11` and did not require direct image review.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image12",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image12_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "gpt_visual_confirmation": {
+        "status": "confirmed_table_centric",
+        "reviewer": "Codex",
+        "edge_case": false,
+        "rationale": "Direct GPT visual confirmation found that image12 is a single table-centric surface with category/count/percentage content.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image12_caption_four_mode_eval_bundle_at2026_03_30.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image13",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "gpt_visual_confirmation": {
+        "status": "confirmed_table_centric",
+        "reviewer": "Codex",
+        "edge_case": false,
+        "rationale": "Direct GPT visual confirmation found that image13 is a table-centric comparison surface with method/current-value/problem columns.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_caption_four_mode_eval_bundle_at2026_03_30.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image14",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "gpt_visual_confirmation": {
+        "status": "confirmed_table_centric",
+        "reviewer": "Codex",
+        "edge_case": false,
+        "rationale": "Direct GPT visual confirmation found that image14 is a table-centric category/count/description surface.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_caption_four_mode_eval_bundle_at2026_03_30.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    },
+    {
+      "candidate_label": "image15",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png",
+      "decision": "include",
+      "decision_reason": "stable_frozen_four_mode_bundle_present",
+      "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image15_caption_four_mode_eval_bundle_at2026_03_30.json",
+      "gpt_visual_confirmation": {
+        "status": "confirmed_table_centric",
+        "reviewer": "Codex",
+        "edge_case": false,
+        "rationale": "Direct GPT visual confirmation found that image15 is a table-centric metrics/formula/meaning surface.",
+        "risks": []
+      },
+      "evidence": {
+        "single_image_bundle_present": true,
+        "single_image_bundle_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image15_caption_four_mode_eval_bundle_at2026_03_30.json",
+        "comparison_ready": true,
+        "ready_arm_count": 0,
+        "blocked_arm_count": 0
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "ready",
+        "parser_table_enriched_rerun": "ready",
+        "reviewed_isolated_component_rerun": "ready"
+      }
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "candidate_label": "image1",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image1.png",
+      "decision": "exclude",
+      "decision_reason": "chart_dominant_non_table_image_confirmed_by_gpt",
+      "single_image_bundle_path": null,
+      "gpt_visual_confirmation": {
+        "status": "confirmed_exclude",
+        "reviewer": "Codex",
+        "edge_case": false,
+        "rationale": "Direct GPT visual confirmation found that image1 is chart-only and not a table-centric caption target for the current 4-mode experiment.",
+        "risks": []
+      },
+      "evidence": {
+        "baseline_ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+        "baseline_status": "completed",
+        "full_image_ocr_context_rerun_ledger_path": null,
+        "parser_table_enriched_rerun_ledger_path": null,
+        "reviewed_isolated_component_rerun_ledger_path": null,
+        "alpha_component_count": 82,
+        "alpha_split_sufficient": true,
+        "alpha_split_reason": "Alpha split found 82 component(s) at or above the pixel threshold.",
+        "table_centric_caption_hint": "This image displays a set of bar charts labeled 'Latest Structure Metrics (Hete Family)', with metrics IC Mean, CC Parent Mean, SR Mean, and ACR Mean. Each chart compares 'Hete', 'Hete-PC', and 'Hete-PC-HyDE' values."
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "blocked_by_confirmed_non_table_surface",
+        "parser_table_enriched_rerun": "blocked_by_confirmed_non_table_surface",
+        "reviewed_isolated_component_rerun": "blocked_by_confirmed_non_table_surface"
+      }
+    },
+    {
+      "candidate_label": "image2",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image2.png",
+      "decision": "exclude",
+      "decision_reason": "mixed_chart_table_composite_confirmed_by_gpt",
+      "single_image_bundle_path": null,
+      "gpt_visual_confirmation": {
+        "status": "confirmed_exclude",
+        "reviewer": "Codex",
+        "edge_case": true,
+        "rationale": "Direct GPT visual confirmation found that image2 is a chart-dominant composite with a small summary table, so table-focused derived arms would under-represent the full image.",
+        "risks": [
+          "table-focused reruns may collapse the chart overview into the small summary table"
+        ]
+      },
+      "evidence": {
+        "baseline_ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+        "baseline_status": "completed",
+        "full_image_ocr_context_rerun_ledger_path": null,
+        "parser_table_enriched_rerun_ledger_path": null,
+        "reviewed_isolated_component_rerun_ledger_path": null,
+        "alpha_component_count": 139,
+        "alpha_split_sufficient": true,
+        "alpha_split_reason": "Alpha split found 139 component(s) at or above the pixel threshold.",
+        "table_centric_caption_hint": "The image presents the 'Core 70Q Metrics Overview,' displaying multiple bar charts and a summary table with performance metrics for different modes such as HyDE, A3, Sequential, HyDE+r, A3+r, and Seq+r."
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "blocked_by_confirmed_chart_table_composite",
+        "parser_table_enriched_rerun": "blocked_by_confirmed_chart_table_composite",
+        "reviewed_isolated_component_rerun": "blocked_by_confirmed_chart_table_composite"
+      }
+    },
+    {
+      "candidate_label": "image3",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image3.png",
+      "decision": "exclude",
+      "decision_reason": "chart_dominant_non_table_image_confirmed_by_gpt",
+      "single_image_bundle_path": null,
+      "gpt_visual_confirmation": {
+        "status": "confirmed_exclude",
+        "reviewer": "Codex",
+        "edge_case": false,
+        "rationale": "Direct GPT visual confirmation found that image3 is chart-only and not a table-centric caption target for the current 4-mode experiment.",
+        "risks": []
+      },
+      "evidence": {
+        "baseline_ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+        "baseline_status": "completed",
+        "full_image_ocr_context_rerun_ledger_path": null,
+        "parser_table_enriched_rerun_ledger_path": null,
+        "reviewed_isolated_component_rerun_ledger_path": null,
+        "alpha_component_count": 85,
+        "alpha_split_sufficient": true,
+        "alpha_split_reason": "Alpha split found 85 component(s) at or above the pixel threshold.",
+        "table_centric_caption_hint": "This image presents four bar charts summarizing RAGAS and Judge Quality Overview metrics: Context Precision, Context Recall, Judge avg_total, and Judge Delta (rerank - nonrerank) for several models."
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "blocked_by_confirmed_non_table_surface",
+        "parser_table_enriched_rerun": "blocked_by_confirmed_non_table_surface",
+        "reviewed_isolated_component_rerun": "blocked_by_confirmed_non_table_surface"
+      }
+    },
+    {
+      "candidate_label": "image4",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
+      "decision": "exclude",
+      "decision_reason": "mixed_chart_table_edge_case_confirmed_by_gpt_and_no_frozen_derived_arms",
+      "single_image_bundle_path": null,
+      "gpt_visual_confirmation": {
+        "status": "confirmed_exclude",
+        "reviewer": "Codex",
+        "edge_case": true,
+        "rationale": "Direct GPT visual confirmation found that the image is chart-dominant overall. The embedded structure table is secondary, so table-focused derived arms would under-represent the full image meaning.",
+        "risks": [
+          "parser arm may over-focus on the small embedded table and miss chart context",
+          "reviewed-crop arm may pick an unstable crop and lose merged-metrics context"
+        ]
+      },
+      "evidence": {
+        "baseline_ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+        "baseline_status": "completed",
+        "alpha_component_count": 140,
+        "alpha_split_sufficient": true,
+        "alpha_split_reason": "Alpha split found 140 component(s) at or above the pixel threshold.",
+        "table_centric_caption_hint": "The image displays an overview of merged metrics for 'Answerable-45' with four bar charts and one table summarizing structure metrics. Metric labels include DocHits@1, MRR, ChunkRecall@1, and ChunkF1@10 across different models or methods."
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "blocked_by_confirmed_mixed_chart_table_edge_case",
+        "parser_table_enriched_rerun": "blocked_by_confirmed_mixed_chart_table_edge_case",
+        "reviewed_isolated_component_rerun": "blocked_by_confirmed_mixed_chart_table_edge_case"
+      }
+    },
+    {
+      "candidate_label": "image5",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image5.png",
+      "decision": "exclude",
+      "decision_reason": "diagram_non_table_image_confirmed_by_gpt",
+      "single_image_bundle_path": null,
+      "gpt_visual_confirmation": {
+        "status": "confirmed_exclude",
+        "reviewer": "Codex",
+        "edge_case": false,
+        "rationale": "Direct GPT visual confirmation found that image5 is a process/architecture diagram, not a table-centric image suited to parser/reviewed table-derived arms.",
+        "risks": []
+      },
+      "evidence": {
+        "baseline_ledger_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+        "baseline_status": "completed",
+        "full_image_ocr_context_rerun_ledger_path": null,
+        "parser_table_enriched_rerun_ledger_path": null,
+        "reviewed_isolated_component_rerun_ledger_path": null,
+        "alpha_component_count": 1,
+        "alpha_split_sufficient": false,
+        "alpha_split_reason": "Alpha split found 1 component(s) at or above the pixel threshold.",
+        "table_centric_caption_hint": "This is a flowchart diagram explaining a multi-stage information retrieval and ranking process with text in Korean. It shows sequences including query rewriting, dual-index retrieval, and score fusion, leading to context ranking and LLM interaction. The diagram contains labeled boxes, arrows indicating process flow, as"
+      },
+      "four_arm_readiness": {
+        "full_image_baseline": "ready",
+        "full_image_ocr_context_rerun": "blocked_by_confirmed_non_table_surface",
+        "parser_table_enriched_rerun": "blocked_by_confirmed_non_table_surface",
+        "reviewed_isolated_component_rerun": "blocked_by_confirmed_non_table_surface"
+      }
+    }
+  ],
+  "summary": {
+    "included_count": 9,
+    "excluded_count": 5,
+    "minimum_target_met": false,
+    "included_source_image_paths": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image12.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image13.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image14.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image15.png"
+    ],
+    "excluded_source_image_paths": [
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image1.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image2.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image3.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
+      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image5.png"
+    ]
+  }
+}

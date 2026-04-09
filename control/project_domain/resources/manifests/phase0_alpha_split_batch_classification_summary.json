@@ -1,0 +1,72 @@
+{
+  "experiment": "phase0_alpha_split_batch_classification",
+  "saved_at": "2026-03-27T15:07:38Z",
+  "total_images": 61,
+  "classification_counts": {
+    "alpha_split_sufficient": 9,
+    "single_component_only": 50,
+    "unsupported_source_format": 1,
+    "non_alpha_source_or_opaque_surface": 1
+  },
+  "dataset_counts": {
+    "01_full_presentation_2026-03-17": 15,
+    "02_1": 46
+  },
+  "alpha_split_sufficient_images": [
+    {
+      "image_id": "01_full_presentation_2026-03-17:image1.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image1.png",
+      "alpha_component_count": 82,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/01_full_presentation_2026-03-17/image1/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "01_full_presentation_2026-03-17:image2.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image2.png",
+      "alpha_component_count": 139,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/01_full_presentation_2026-03-17/image2/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "01_full_presentation_2026-03-17:image3.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image3.png",
+      "alpha_component_count": 85,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/01_full_presentation_2026-03-17/image3/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "01_full_presentation_2026-03-17:image4.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
+      "alpha_component_count": 140,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/01_full_presentation_2026-03-17/image4/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "02_1:image11.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image11.png",
+      "alpha_component_count": 3,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/02_1/image11/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "02_1:image12.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image12.png",
+      "alpha_component_count": 4,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/02_1/image12/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "02_1:image17.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image17.png",
+      "alpha_component_count": 9,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/02_1/image17/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "02_1:image7.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image7.png",
+      "alpha_component_count": 26,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/02_1/image7/alpha_components/alpha_components.json"
+    },
+    {
+      "image_id": "02_1:image8.png",
+      "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image8.png",
+      "alpha_component_count": 7,
+      "alpha_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/02_1/image8/alpha_components/alpha_components.json"
+    }
+  ],
+  "recommended_next_step": "Use the alpha_split_sufficient subset as the only immediate deterministic object-isolation candidate set. Keep all other images on the full-image + standalone OCR baseline unless a reviewed selection gate is added."
+}
