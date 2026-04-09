@@ -13,9 +13,13 @@ from pathlib import Path
 from typing import Any
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
-IMAGESORCERY_DIR = ROOT_DIR / "vendor" / "mcp" / "imagesorcery-mcp"
-MACOS_OCR_VENV_PYTHON = ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp" / ".venv" / "bin" / "python"
-MACOS_OCR_MAIN = ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp" / "main.py"
+IMAGESORCERY_DIR = Path(
+    os.environ.get("IMAGESORCERY_SERVER_DIR", str(ROOT_DIR / "vendor" / "mcp" / "imagesorcery-mcp"))
+)
+MACOS_OCR_DIR = Path(
+    os.environ.get("MACOS_OCR_MCP_SERVER_DIR", str(ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp"))
+)
+MACOS_OCR_MAIN = MACOS_OCR_DIR / "main.py"
 YOLO_CONFIG_DIR = ROOT_DIR / "logs" / "imagesorcery" / "ultralytics"
 
 
@@ -53,12 +57,13 @@ def _parse_args() -> argparse.Namespace:
 def _ensure_runtime() -> None:
     if not IMAGESORCERY_DIR.is_dir():
         raise RuntimeError(f"Missing ImageSorcery vendor directory: {IMAGESORCERY_DIR}")
-    if not MACOS_OCR_VENV_PYTHON.is_file():
-        raise RuntimeError(f"Missing macOS OCR python runtime: {MACOS_OCR_VENV_PYTHON}")
+    macos_ocr_python = _resolve_macos_ocr_python()
+    if not macos_ocr_python.is_file():
+        raise RuntimeError(f"Missing macOS OCR python runtime: {macos_ocr_python}")
     if not MACOS_OCR_MAIN.is_file():
         raise RuntimeError(f"Missing macOS OCR entrypoint: {MACOS_OCR_MAIN}")
 
-    imagesorcery_site_packages = next((IMAGESORCERY_DIR / ".venv" / "lib").glob("python*/site-packages"), None)
+    imagesorcery_site_packages = _resolve_imagesorcery_site_packages()
     if imagesorcery_site_packages is None:
         raise RuntimeError("Could not locate ImageSorcery site-packages directory.")
 
@@ -67,6 +72,39 @@ def _ensure_runtime() -> None:
 
     YOLO_CONFIG_DIR.mkdir(parents=True, exist_ok=True)
     os.environ["YOLO_CONFIG_DIR"] = str(YOLO_CONFIG_DIR)
+
+
+def _resolve_macos_ocr_python() -> Path:
+    override = os.environ.get("MACOS_OCR_PYTHON")
+    candidates = []
+    if override:
+        candidates.append(Path(override))
+    candidates.extend(
+        [
+            MACOS_OCR_DIR / ".venv" / "bin" / "python",
+            MACOS_OCR_DIR / "venv" / "bin" / "python",
+        ]
+    )
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    return candidates[0]
+
+
+def _resolve_imagesorcery_site_packages() -> Path | None:
+    override = os.environ.get("IMAGESORCERY_SITE_PACKAGES")
+    if override:
+        override_path = Path(override)
+        if override_path.exists():
+            return override_path
+    for env_dir_name in (".venv", "venv"):
+        lib_dir = IMAGESORCERY_DIR / env_dir_name / "lib"
+        if not lib_dir.is_dir():
+            continue
+        site_packages = next(lib_dir.glob("python*/site-packages"), None)
+        if site_packages is not None:
+            return site_packages
+    return None
 
 
 @contextmanager
@@ -130,6 +168,7 @@ def _tool_result_data(result: Any) -> Any:
 
 
 def _run_ocr(file_path: Path) -> dict[str, Any]:
+    macos_ocr_python = _resolve_macos_ocr_python()
     code = (
         "import asyncio, importlib.util, json, sys; "
         "spec = importlib.util.spec_from_file_location('macos_ocr_main', sys.argv[1]); "
@@ -139,7 +178,7 @@ def _run_ocr(file_path: Path) -> dict[str, Any]:
         "print(json.dumps(result, ensure_ascii=False))"
     )
     completed = subprocess.run(
-        [str(MACOS_OCR_VENV_PYTHON), "-c", code, str(MACOS_OCR_MAIN), str(file_path)],
+        [str(macos_ocr_python), "-c", code, str(MACOS_OCR_MAIN), str(file_path)],
         capture_output=True,
         text=True,
         check=False,

@@ -16,7 +16,7 @@ Fragment-heavy slides can mechanically produce multiple components without yield
 Run the wrapper through the vendored runtime:
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+"$IMAGESORCERY_PYTHON" -B \
   skills/transparent-component-triage/scripts/classify_alpha_split_batch.py
 ```
 

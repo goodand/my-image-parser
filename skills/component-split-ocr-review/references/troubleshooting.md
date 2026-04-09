@@ -21,7 +21,7 @@ Use the component table as the primary review surface and treat OCR as supportin
 Run the wrapper with:
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+"$IMAGESORCERY_PYTHON" -B \
   skills/component-split-ocr-review/scripts/build_component_split_ocr_report.py \
   --image-path <image>
 ```

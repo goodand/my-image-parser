@@ -9,10 +9,15 @@ python3 skills/component-split-ocr-review/scripts/build_component_split_ocr_repo
 
 ## Recommended Runtime
 
-If the default interpreter is missing image-processing dependencies, run the wrapper with the vendored ImageSorcery venv:
+If the default interpreter is missing image-processing dependencies, set `IMAGESORCERY_PYTHON` to the vendored runtime that exists:
+
+- `vendor/mcp/imagesorcery-mcp/.venv/bin/python`
+- `vendor/mcp/imagesorcery-mcp/venv/bin/python`
+
+Then run:
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+"$IMAGESORCERY_PYTHON" -B \
   skills/component-split-ocr-review/scripts/build_component_split_ocr_report.py \
   --image-path control/project_domain/resources/pptx_jobs/02_1/media/image11.png
 ```

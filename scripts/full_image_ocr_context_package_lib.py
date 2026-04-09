@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 from dataclasses import asdict, dataclass
@@ -12,8 +13,10 @@ from typing import Any
 ROOT_DIR = Path(__file__).resolve().parents[1]
 PPTX_JOBS_DIR = ROOT_DIR / "control" / "project_domain" / "resources" / "pptx_jobs"
 CAPTION_JOBS_DIR = ROOT_DIR / "control" / "project_agent_ops" / "registry" / "jobs" / "image_caption_jobs"
-MACOS_OCR_VENV_PYTHON = ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp" / ".venv" / "bin" / "python"
-MACOS_OCR_MAIN = ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp" / "main.py"
+MACOS_OCR_DIR = Path(
+    os.environ.get("MACOS_OCR_MCP_SERVER_DIR", str(ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp"))
+)
+MACOS_OCR_MAIN = MACOS_OCR_DIR / "main.py"
 DEFAULT_OUTPUT_ROOT = ROOT_DIR / "control" / "project_domain" / "resources" / "context_packages" / "full_image_ocr_baseline"
 DEFAULT_MANIFEST_JSONL = ROOT_DIR / "control" / "project_domain" / "resources" / "manifests" / "phase0_full_image_ocr_context_package_manifest.jsonl"
 
@@ -82,6 +85,23 @@ def _resolve_samefile(a: Path, b: Path) -> bool:
         return a.name == b.name
 
 
+def resolve_macos_ocr_python() -> Path:
+    override = os.environ.get("MACOS_OCR_PYTHON")
+    candidates = []
+    if override:
+        candidates.append(Path(override))
+    candidates.extend(
+        [
+            MACOS_OCR_DIR / ".venv" / "bin" / "python",
+            MACOS_OCR_DIR / "venv" / "bin" / "python",
+        ]
+    )
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    return candidates[0]
+
+
 def find_manifest_record(image_path: Path) -> ManifestRecord | None:
     target = image_path.resolve()
     direct_manifest = image_path.parent.parent / "manifest.json"
@@ -148,8 +168,9 @@ def load_caption_record(image_path: Path) -> CaptionRecord | None:
 
 
 def run_full_image_ocr(image_path: Path) -> dict[str, Any]:
-    if not MACOS_OCR_VENV_PYTHON.is_file():
-        raise RuntimeError(f"Missing macOS OCR python runtime: {MACOS_OCR_VENV_PYTHON}")
+    macos_ocr_python = resolve_macos_ocr_python()
+    if not macos_ocr_python.is_file():
+        raise RuntimeError(f"Missing macOS OCR python runtime: {macos_ocr_python}")
     if not MACOS_OCR_MAIN.is_file():
         raise RuntimeError(f"Missing macOS OCR main module: {MACOS_OCR_MAIN}")
 
@@ -162,7 +183,7 @@ def run_full_image_ocr(image_path: Path) -> dict[str, Any]:
         "print(json.dumps(result, ensure_ascii=False))"
     )
     completed = subprocess.run(
-        [str(MACOS_OCR_VENV_PYTHON), "-c", code, str(MACOS_OCR_MAIN), str(image_path)],
+        [str(macos_ocr_python), "-c", code, str(MACOS_OCR_MAIN), str(image_path)],
         capture_output=True,
         text=True,
         check=False,

@@ -11,10 +11,16 @@ Capture the practical command surface for building an object-isolation correctio
 
 ## Canonical Interpreter For The Worker
 
-Use the vendored ImageSorcery runtime because it already contains `fastmcp`, `Pillow`, and `numpy`:
+Use the vendored ImageSorcery runtime because it already contains `fastmcp`, `Pillow`, and `numpy`.
+Set `IMAGESORCERY_PYTHON` to whichever vendored runtime exists in your environment, usually:
+
+- `vendor/mcp/imagesorcery-mcp/.venv/bin/python`
+- `vendor/mcp/imagesorcery-mcp/venv/bin/python`
+
+Then run:
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python \
+"$IMAGESORCERY_PYTHON" \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
   --packet-json "/abs/path/to/CORRECTION_packet.json" \
   --output-dir "/abs/path/to/object_isolation_worker_run"
@@ -103,7 +109,7 @@ Expected route:
 Use this when the image already has transparency and the main question is whether alpha split alone is enough.
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python \
+"$IMAGESORCERY_PYTHON" \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
   --packet-json "/abs/path/to/CORRECTION_packet.json" \
   --output-dir "/abs/path/to/object_isolation_worker_run"
@@ -120,7 +126,7 @@ Expected behavior:
 Use this when alpha split is not expected to help, or the current image has no useful alpha channel.
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python \
+"$IMAGESORCERY_PYTHON" \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
   --packet-json "/abs/path/to/CORRECTION_packet.json" \
   --output-dir "/abs/path/to/object_isolation_worker_run" \

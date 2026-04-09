@@ -8,17 +8,22 @@ python3 skills/transparent-component-triage/scripts/classify_alpha_split_batch.p
 
 ## Recommended Runtime
 
-If the underlying worker needs the vendored ImageSorcery runtime, use:
+If the underlying worker needs the vendored ImageSorcery runtime, set `IMAGESORCERY_PYTHON` to the vendored runtime that exists:
+
+- `vendor/mcp/imagesorcery-mcp/.venv/bin/python`
+- `vendor/mcp/imagesorcery-mcp/venv/bin/python`
+
+Then run:
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+"$IMAGESORCERY_PYTHON" -B \
   skills/transparent-component-triage/scripts/classify_alpha_split_batch.py
 ```
 
 ## Useful Narrow Smoke
 
 ```bash
-vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+"$IMAGESORCERY_PYTHON" -B \
   skills/transparent-component-triage/scripts/classify_alpha_split_batch.py \
   --limit 3
 ```

@@ -72,6 +72,7 @@ Fix:
 
 - run the worker with the vendored ImageSorcery interpreter:
   - `vendor/mcp/imagesorcery-mcp/.venv/bin/python`
+  - or `vendor/mcp/imagesorcery-mcp/venv/bin/python`
 - do not assume the repo root `.venv` contains `fastmcp`
 
 ## Worker cannot start the ImageSorcery launcher
