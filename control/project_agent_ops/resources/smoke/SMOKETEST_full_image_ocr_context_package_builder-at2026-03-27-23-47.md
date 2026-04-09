@@ -12,11 +12,11 @@ Verify that the new full-image standalone OCR context-package builder can:
 ## Script Surface
 
 - script:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/build_full_image_ocr_context_package.py`
+  - `scripts/build_full_image_ocr_context_package.py`
 - helper library:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/full_image_ocr_context_package_lib.py`
+  - `scripts/full_image_ocr_context_package_lib.py`
 - fixture test:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/test_full_image_ocr_context_package_lib.py`
+  - `scripts/test_full_image_ocr_context_package_lib.py`
 
 ## Static Verification
 
@@ -32,7 +32,7 @@ Verify that the new full-image standalone OCR context-package builder can:
 ## Live Smoke Input
 
 - image:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png`
+  - `control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png`
 - expected semantic type:
   - full-image table OCR candidate
 

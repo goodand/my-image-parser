@@ -6,9 +6,9 @@ Validate the local skill `pptx-slide-screenshot-capture` on a minimal simulator-
 
 ## Fixture
 
-- Viewer page: [index.html](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/smoke/fixtures/pptx-slide-screenshot-capture-fixture/index.html)
-- Source image: [image1.png](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image1.png)
-- Job manifest: [cross_validation_manifest.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/cross_validation_manifest.json)
+- Viewer page: [index.html](./fixtures/pptx-slide-screenshot-capture-fixture/index.html)
+- Source image: [image1.png](../../../project_domain/resources/pptx_jobs/02_1/media/image1.png)
+- Job manifest: [cross_validation_manifest.json](../../../project_domain/resources/cross_validation/02_1/cross_validation_manifest.json)
 - Simulator: `iPhone 17` `890CC53F-E0E3-4559-AA1B-0764B0369851`
 
 ## Result
@@ -36,8 +36,8 @@ python3 skills/pptx-slide-screenshot-capture/scripts/capture_simctl_slide_screen
 
 ## Output Artifacts
 
-- Screenshot: [slide-0001.png](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/slide_screenshots_simctl/slide-0001.png)
-- Dataset: [slide_screenshots_simctl_dataset.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/slide_screenshots_simctl_dataset.jsonl)
+- Screenshot: [slide-0001.png](../../../project_domain/resources/cross_validation/02_1/slide_screenshots_simctl/slide-0001.png)
+- Dataset: [slide_screenshots_simctl_dataset.jsonl](../../../project_domain/resources/cross_validation/02_1/slide_screenshots_simctl_dataset.jsonl)
 
 ## Observed Failure
 

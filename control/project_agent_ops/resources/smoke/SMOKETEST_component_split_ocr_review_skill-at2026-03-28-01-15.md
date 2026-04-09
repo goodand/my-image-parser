@@ -3,7 +3,7 @@
 ## Command
 
 ```bash
-/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+<REPO_ROOT>/vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
   skills/component-split-ocr-review/scripts/build_component_split_ocr_report.py \
   --image-path control/project_domain/resources/pptx_jobs/02_1/media/image11.png
 ```
@@ -20,7 +20,7 @@
 - live smoke exit: `0`
 - image_id: `02_1:image11.png`
 - alpha_component_count: `3`
-- output_dir: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/component_split_ocr/02_1/image11`
+- output_dir: `control/project_domain/archive/component_split_ocr/02_1/image11`
 - component 01:
   - pixel_count: `10844`
   - ocr_status: `weak_text`
@@ -32,9 +32,9 @@
 
 ## Output Paths
 
-- markdown report: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.md`
-- json report: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.json`
-- skill: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/component-split-ocr-review`
+- markdown report: `control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.md`
+- json report: `control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.json`
+- skill: `skills/component-split-ocr-review`
 
 ## Interpretation
 

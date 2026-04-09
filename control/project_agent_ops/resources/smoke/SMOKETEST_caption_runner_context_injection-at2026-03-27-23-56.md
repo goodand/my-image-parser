@@ -10,13 +10,13 @@ Verify that the local OpenAI caption runner can consume the new full-image stand
 ## Script Surface
 
 - runner:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/caption_images_openai.py`
+  - `scripts/caption_images_openai.py`
 - runner library:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/caption_runner_lib.py`
+  - `scripts/caption_runner_lib.py`
 - context-package builder:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/build_full_image_ocr_context_package.py`
+  - `scripts/build_full_image_ocr_context_package.py`
 - fake-client test:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/test_caption_runner_context_injection.py`
+  - `scripts/test_caption_runner_context_injection.py`
 
 ## Static Verification
 
@@ -28,7 +28,7 @@ Verify that the local OpenAI caption runner can consume the new full-image stand
 ## Live Smoke Input
 
 - image:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png`
+  - `control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image11.png`
 - context package:
   - `/private/tmp/full-image-ocr-context-smoke-unsandboxed/01_full_presentation_2026-03-17/image11/CONTEXT_PACKAGE.json`
 
