@@ -6,7 +6,7 @@ Consume the corpus review decision rows and materialize only the retrieval-ready
 
 ## Input
 
-- decision seed path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl`
+- decision seed path: `../manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl`
 - input_row_count: `9`
 
 ## Review Status Counts
@@ -24,8 +24,8 @@ Consume the corpus review decision rows and materialize only the retrieval-ready
 
 ## Outputs
 
-- retrieval ready rows: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_retrieval_ready_rows_at2026_03_30.jsonl`
-- mapping ready rows: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_mapping_ready_rows_at2026_03_30.jsonl`
+- retrieval ready rows: `../manifests/phase2_retrieval_ready_rows_at2026_03_30.jsonl`
+- mapping ready rows: `../manifests/phase2_mapping_ready_rows_at2026_03_30.jsonl`
 
 ## Next Action
 

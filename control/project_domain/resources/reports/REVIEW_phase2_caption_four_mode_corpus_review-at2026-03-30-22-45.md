@@ -6,10 +6,10 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 
 ## Canonical Inputs
 
-- closure: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md`
-- ready bundle: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json`
-- corpus auto-eval: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json`
-- promotion policy: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_caption_arm_promotion_policy.md`
+- closure: `../reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md`
+- ready bundle: `../manifests/phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json`
+- corpus auto-eval: `../manifests/phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json`
+- promotion policy: `../specs/prose/SPEC_caption_arm_promotion_policy.md`
 
 ## Summary
 
@@ -48,7 +48,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because a `comparison_ready_reviewed_branch` may win bounded comparison without becoming the default; a later explicit promotion decision is still required.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json`
+- bundle path: `../manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation, reviewed_branch_ready_for_human_promotion_check`
 
@@ -93,7 +93,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun, reviewed_isolated_component_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json`
+- bundle path: `../manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation, winner_is_full_image_ocr_context_rerun`
 
@@ -138,7 +138,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because a `comparison_ready_reviewed_branch` may win bounded comparison without becoming the default; a later explicit promotion decision is still required.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json`
+- bundle path: `../manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation, reviewed_branch_ready_for_human_promotion_check`
 
@@ -183,7 +183,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun, reviewed_isolated_component_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json`
+- bundle path: `../manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation`
 
@@ -228,7 +228,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun, reviewed_isolated_component_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image12_caption_four_mode_eval_bundle_at2026_03_30.json`
+- bundle path: `../manifests/phase1_image12_caption_four_mode_eval_bundle_at2026_03_30.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation`
 
@@ -273,7 +273,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun, reviewed_isolated_component_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image13_caption_four_mode_eval_bundle_at2026_03_30.json`
+- bundle path: `../manifests/phase1_image13_caption_four_mode_eval_bundle_at2026_03_30.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation`
 
@@ -318,7 +318,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun, reviewed_isolated_component_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image14_caption_four_mode_eval_bundle_at2026_03_30.json`
+- bundle path: `../manifests/phase1_image14_caption_four_mode_eval_bundle_at2026_03_30.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation`
 
@@ -363,7 +363,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun, reviewed_isolated_component_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json`
+- bundle path: `../manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json`
 - edge-case review note: top proxy scores are close; use GPT direct image verification for this image if a stronger semantic tie-break is needed
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present, proxy_tie_recommendation`
 
@@ -408,7 +408,7 @@ Build a human-facing review surface for the current 9-image phase-1 four-mode co
 - winner reason: highest proxy total with strongest comparative takeaway and noise suppression while keeping core metric coverage
 - why default stays default: The active default stays `full_image_baseline` because the comparison winner is still `comparison_only_pending_context_review`, and the promotion policy forbids default replacement while context review remains pending.
 - pending-context-review arms: `full_image_ocr_context_rerun, parser_table_enriched_rerun, reviewed_isolated_component_rerun`
-- bundle path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image15_caption_four_mode_eval_bundle_at2026_03_30.json`
+- bundle path: `../manifests/phase1_image15_caption_four_mode_eval_bundle_at2026_03_30.json`
 - human-review reasons: `winner_differs_from_default, pending_context_review_arm_present`
 
 ### Default vs Winner
