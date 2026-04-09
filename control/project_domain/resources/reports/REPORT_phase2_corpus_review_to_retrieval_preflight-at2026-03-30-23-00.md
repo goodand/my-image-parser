@@ -6,7 +6,7 @@ Bridge the human-facing corpus review surface into machine-readable decision, re
 
 ## Used Truth Source
 
-- review surface manifest: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json`
+- review surface manifest: `../manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json`
 - machine truth mode: `manifest`
 - manifest-only consumer: `true`
 
@@ -23,9 +23,9 @@ Bridge the human-facing corpus review surface into machine-readable decision, re
 
 ## Output Seeds
 
-- decision seed: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl`
-- retrieval input seed: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_retrieval_input_seed_at2026_03_30.jsonl`
-- mapping review seed: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_mapping_review_seed_at2026_03_30.jsonl`
+- decision seed: `../manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl`
+- retrieval input seed: `../manifests/phase2_retrieval_input_seed_at2026_03_30.jsonl`
+- mapping review seed: `../manifests/phase2_mapping_review_seed_at2026_03_30.jsonl`
 
 ## Guardrails
 

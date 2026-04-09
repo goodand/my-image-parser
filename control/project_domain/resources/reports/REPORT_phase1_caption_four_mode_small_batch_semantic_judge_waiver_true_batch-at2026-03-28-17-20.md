@@ -6,8 +6,8 @@ Record that the current auto-eval lane closed without a repo-local semantic judg
 
 ## Bundle Paths Used
 
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json`
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json`
+- `../manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json`
+- `../manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json`
 
 ## Verdict
 

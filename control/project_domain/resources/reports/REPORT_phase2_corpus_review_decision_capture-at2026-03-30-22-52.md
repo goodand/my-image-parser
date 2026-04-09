@@ -7,20 +7,20 @@ Create the bounded bridge between the existing corpus review surface and the lat
 ## Produced Artifacts
 
 - prose spec:
-  - [SPEC_corpus_review_decision_capture.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
+  - [SPEC_corpus_review_decision_capture.md](../specs/prose/SPEC_corpus_review_decision_capture.md)
 - machine-readable contract:
-  - [corpus_review_decision_capture.contract.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/corpus_review_decision_capture.contract.json)
+  - [corpus_review_decision_capture.contract.json](../specs/contracts/corpus_review_decision_capture.contract.json)
 - prefilled review seed:
-  - [phase2_caption_review_decision_seed_at2026_03_30.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
+  - [phase2_caption_review_decision_seed_at2026_03_30.jsonl](../manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
 
 ## Canonical Inputs
 
 - review surface manifest:
-  - [phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
+  - [phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json](../manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
 - review markdown:
-  - [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
+  - [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](./REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
 - promotion policy:
-  - [SPEC_caption_arm_promotion_policy.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_caption_arm_promotion_policy.md)
+  - [SPEC_caption_arm_promotion_policy.md](../specs/prose/SPEC_caption_arm_promotion_policy.md)
 
 ## Design Summary
 

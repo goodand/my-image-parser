@@ -7,11 +7,11 @@ Record why the current `phase1` auto-eval lane is still consuming a `1-image` fr
 ## Input Evidence
 
 - auto-eval input used:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json`
+  - `../manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json`
 - auto-eval output:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_auto_eval_at2026_03_28.json`
+  - `../manifests/phase1_caption_four_mode_small_batch_auto_eval_at2026_03_28.json`
 - readiness closure:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase0_four_mode_caption_readiness-at2026-03-28-11-36.md`
+  - `./REPORT_phase0_four_mode_caption_readiness-at2026-03-28-11-36.md`
 
 ## Findings
 

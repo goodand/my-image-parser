@@ -16,9 +16,9 @@ Review a bounded sample from the completed `phase1 extracted-media + OpenAI` bas
 
 ## Canonical Inputs
 
-- [phase1 summary](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_experiment_summary_at2026_03_27.json)
-- [phase1 execution report](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_experiment_execution-at2026-03-27-18-31.md)
-- [sample review JSONL](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_quality_sample_review_at2026_03_27.jsonl)
+- [phase1 summary](../manifests/phase1_caption_experiment_summary_at2026_03_27.json)
+- [phase1 execution report](./REPORT_phase1_caption_experiment_execution-at2026-03-27-18-31.md)
+- [sample review JSONL](../manifests/phase1_caption_quality_sample_review_at2026_03_27.jsonl)
 
 ## Verdict
 
