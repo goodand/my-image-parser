@@ -5,7 +5,7 @@
       "purpose": "Validate dispatcher boundary, ownership, packet discipline, and completion-source rules."
     },
     "benchmark_alignment_layer": {
-      "reference_skill": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-tool-benchmark/SKILL.md",
+      "reference_skill": "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/agent-tool-benchmark/SKILL.md",
       "notes": [
         "Use the local cases below as acceptance gates first.",
         "When this dispatcher is scored for orchestration quality, align each case with agent-tool-benchmark metrics rather than inventing a separate scoring vocabulary.",

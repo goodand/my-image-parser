@@ -54,7 +54,7 @@ python3 skills/obsidian-caption-review-builder/scripts/build_obsidian_caption_re
   --output "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-atYYYY-MM-DD-HH-MM.md" \
   --review-title "Phase 1 Caption 10w Review" \
   --mode prefixed \
-  --source-root "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs" \
+  --source-root "control/project_domain/resources/pptx_jobs" \
   --embed-prefix "img/pptx_jobs"
 ```
 

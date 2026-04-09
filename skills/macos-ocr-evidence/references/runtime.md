@@ -3,9 +3,9 @@
 ## Preferred MCP Path
 
 - Launcher:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/mcp/start-macos-ocr-mcp.sh`
+  - `scripts/mcp/start-macos-ocr-mcp.sh`
 - Vendored source:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/vendor/mcp/macos-ocr-mcp`
+  - `vendor/mcp/macos-ocr-mcp`
 - Tool:
   - `ocr_image(file_path)`
 
@@ -22,14 +22,14 @@ Observed behavior:
 ## Fallback Path
 
 - local fallback script:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/ocr/macos_vision_ocr.swift`
+  - `scripts/ocr/macos_vision_ocr.swift`
 
 The vendored MCP wrapper can call this script when `ocrmac` throws a `NoneType`-style failure.
 
 ## Complementary CLI Path
 
 - Vendored source:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/vendor/ocr/macOCR`
+  - `vendor/ocr/macOCR`
 
 The repo documents:
 

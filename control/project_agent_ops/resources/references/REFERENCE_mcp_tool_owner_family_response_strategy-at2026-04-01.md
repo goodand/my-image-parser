@@ -15,11 +15,11 @@ The goal is to close that ownership gap with the smallest safe change.
 ## Canonical Sources
 
 - tool inventory:
-  - [tool_inventory.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/tools/tool_inventory.json)
+  - local/private canonical inventory at `control/project_agent_ops/registry/tools/tool_inventory.json`
 - MCP setup reference:
-  - [REFERENCE_mcp_setup.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/tools_inventory/REFERENCE_mcp_setup.md)
+  - local/private setup reference at `control/project_agent_ops/resources/tools_inventory/REFERENCE_mcp_setup.md`
 - closest current owner skill:
-  - [vendored-mcp-onboarding/SKILL.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/vendored-mcp-onboarding/SKILL.md)
+  - [`skills/vendored-mcp-onboarding/SKILL.md`](../../../../skills/vendored-mcp-onboarding/SKILL.md)
 
 ## Verified Assessment
 
@@ -81,9 +81,9 @@ This is the smallest change that addresses the feedback without creating unneces
 
 These remain consumers, not owners:
 
-- [macos-ocr-evidence/SKILL.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/macos-ocr-evidence/SKILL.md)
-- [component-split-ocr-review/SKILL.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/component-split-ocr-review/SKILL.md)
-- [openai-image-caption-validation/SKILL.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/openai-image-caption-validation/SKILL.md)
+- [`skills/macos-ocr-evidence/SKILL.md`](../../../../skills/macos-ocr-evidence/SKILL.md)
+- [`skills/component-split-ocr-review/SKILL.md`](../../../../skills/component-split-ocr-review/SKILL.md)
+- [`skills/openai-image-caption-validation/SKILL.md`](../../../../skills/openai-image-caption-validation/SKILL.md)
 
 They may depend on MCPs, but they must not become canonical inventory owners.
 

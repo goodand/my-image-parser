@@ -5,7 +5,7 @@
       "purpose": "Validate single-image boundary, evidence-backed completion, and image-scoped state handling."
     },
     "benchmark_alignment_layer": {
-      "reference_skill": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-tool-benchmark/SKILL.md",
+      "reference_skill": "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/agent-tool-benchmark/SKILL.md",
       "notes": [
         "Use these cases as local acceptance first.",
         "When this worker is scored inside a packetized orchestration run, keep metric naming aligned with agent-tool-benchmark rather than inventing a worker-only scoring vocabulary."

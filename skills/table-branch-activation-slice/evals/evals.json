@@ -5,7 +5,7 @@
       "purpose": "Validate bounded activation order, reviewed triage gating, normalized consumer-readiness, and ownership limits."
     },
     "benchmark_alignment_layer": {
-      "reference_skill": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-tool-benchmark/SKILL.md",
+      "reference_skill": "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/agent-tool-benchmark/SKILL.md",
       "notes": [
         "Use these cases as local acceptance gates first.",
         "When this activation slice is evaluated as orchestration or tool-use quality, align the metric vocabulary with agent-tool-benchmark instead of inventing a separate scoring layer.",
