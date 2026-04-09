@@ -16,28 +16,28 @@ purpose: image4-style composite analytical figures를 decomposition -> regroupin
 | 문서 | 역할 |
 |---|---|
 | `KB_component_decomposition_strategy.md` | canonical strategy KB |
-| [REFERENCE_image4_component_decomposition_research-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_image4_component_decomposition_research-at2026-03-30.md) | 외부 논문/도구 research cache |
-| [REFERENCE_component_decomposition_strategy-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_component_decomposition_strategy-at2026-03-30.md) | implementation-facing strategy reference |
-| [REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md) | current edge-case interpretation |
-| [REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md) | bounded deterministic decomposition probe |
-| [REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md) | objective-profile scoring over regrouped candidates |
-| [image4_component_decomposition_paper_cache_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/image4_component_decomposition_paper_cache_at2026_03_30.json) | saved paper cache manifest |
+| [REFERENCE_image4_component_decomposition_research-at2026-03-30.md](../references/REFERENCE_image4_component_decomposition_research-at2026-03-30.md) | 외부 논문/도구 research cache |
+| [REFERENCE_component_decomposition_strategy-at2026-03-30.md](../references/REFERENCE_component_decomposition_strategy-at2026-03-30.md) | implementation-facing strategy reference |
+| [REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md](../reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md) | current edge-case interpretation |
+| [REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md](../reports/REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md) | bounded deterministic decomposition probe |
+| [REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md](../reports/REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md) | objective-profile scoring over regrouped candidates |
+| [image4_component_decomposition_paper_cache_at2026_03_30.json](../manifests/image4_component_decomposition_paper_cache_at2026_03_30.json) | saved paper cache manifest |
 
 ## Input evidence set
 
 - local image case:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png`
+  - `<LOCAL_PPTX_JOBS_ROOT>/01_full_presentation_2026-03-17/media/image4.png`
 - current decomposition-adjacent code:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/alpha_component_lib.py`
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/reviewed_component_context_package_lib.py`
+  - `../../../../scripts/alpha_component_lib.py`
+  - `../../../../scripts/reviewed_component_context_package_lib.py`
 - bounded decomposition probe evidence:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image4_component_decomposition_probe_at2026_03_30.json`
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md`
+  - `../manifests/phase1_image4_component_decomposition_probe_at2026_03_30.json`
+  - `../reports/REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md`
 - candidate scoring evidence:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image4_component_decomposition_candidate_scoring_at2026_03_30.json`
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md`
+  - `../manifests/phase1_image4_component_decomposition_candidate_scoring_at2026_03_30.json`
+  - `../reports/REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md`
 - repeated issue memory:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_issues/ISSUE_regrouping_only_fix_stalls_without_component_decomposition.md`
+  - `../../../project_agent_ops/resources/skill_candidates/repeated_issues/ISSUE_regrouping_only_fix_stalls_without_component_decomposition.md`
 
 ## Canonical design takeaways
 
@@ -57,11 +57,11 @@ purpose: image4-style composite analytical figures를 decomposition -> regroupin
 ### Existing assets
 
 - alpha component extraction:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/alpha_component_lib.py`
+  - `../../../../scripts/alpha_component_lib.py`
 - reviewed recrop reinforcement:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/reviewed_component_context_package_lib.py`
+  - `../../../../scripts/reviewed_component_context_package_lib.py`
 - image4 direct-read status:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md`
+  - `../reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md`
 
 ### Current limitation
 
@@ -262,7 +262,7 @@ Build a bounded decomposition slice in this order:
 
 ## Reference basis
 
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_image4_component_decomposition_research-at2026-03-30.md`
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_component_decomposition_strategy-at2026-03-30.md`
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md`
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_issues/ISSUE_regrouping_only_fix_stalls_without_component_decomposition.md`
+- `../references/REFERENCE_image4_component_decomposition_research-at2026-03-30.md`
+- `../references/REFERENCE_component_decomposition_strategy-at2026-03-30.md`
+- `../reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md`
+- `../../../project_agent_ops/resources/skill_candidates/repeated_issues/ISSUE_regrouping_only_fix_stalls_without_component_decomposition.md`

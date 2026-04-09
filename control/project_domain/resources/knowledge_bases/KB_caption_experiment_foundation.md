@@ -27,13 +27,13 @@ purpose: PPT 2종과 추출 이미지 자산을 기준으로 caption generation 
 ## Canonical experiment resources
 
 - PPT 원본:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/caption_experiment/pptx/full_presentation_2026-03-17.pptx`
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/caption_experiment/pptx/탁재현(자기소개서)-최신 (1).pptx`
+  - `<LOCAL_CAPTION_EXPERIMENT_ASSET_ROOT>/pptx/full_presentation_2026-03-17.pptx`
+  - `<LOCAL_CAPTION_EXPERIMENT_ASSET_ROOT>/pptx/탁재현(자기소개서)-최신 (1).pptx`
 - 추출 이미지 세트:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/caption_experiment/extracted_media/01_full_presentation_2026-03-17`
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/assets/caption_experiment/extracted_media/02_1`
+  - `<LOCAL_CAPTION_EXPERIMENT_ASSET_ROOT>/extracted_media/01_full_presentation_2026-03-17`
+  - `<LOCAL_CAPTION_EXPERIMENT_ASSET_ROOT>/extracted_media/02_1`
 - 자원 인덱스:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/registry/caption_experiment_resource_index.json`
+  - `<LOCAL_DOMAIN_REGISTRY>/caption_experiment_resource_index.json`
 
 ## Core experiment arms
 
@@ -71,5 +71,5 @@ purpose: PPT 2종과 추출 이미지 자산을 기준으로 caption generation 
 
 ## Reference basis
 
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/knowledge_base.md`
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-tool-benchmark/knowledge_bases/agent-tool-benchmark-kb-at2026-03-24.md`
+- `<EXTERNAL_TEMPLATE_ROOT>/template/knowledge_base.md`
+- `<EXTERNAL_SKILLS_ROOT>/agent-tool-benchmark/knowledge_bases/agent-tool-benchmark-kb-at2026-03-24.md`
