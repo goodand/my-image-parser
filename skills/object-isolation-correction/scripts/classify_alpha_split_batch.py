@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
@@ -43,7 +44,18 @@ def default_report_md() -> Path:
 
 
 def default_worker_python() -> Path:
-    return repo_root_from_script() / "vendor" / "mcp" / "imagesorcery-mcp" / ".venv" / "bin" / "python"
+    env_python = os.environ.get("IMAGESORCERY_PYTHON")
+    if env_python:
+        return Path(env_python).expanduser()
+    repo_root = repo_root_from_script()
+    candidates = [
+        repo_root / "vendor" / "mcp" / "imagesorcery-mcp" / ".venv" / "bin" / "python",
+        repo_root / "vendor" / "mcp" / "imagesorcery-mcp" / "venv" / "bin" / "python",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return candidates[0]
 
 
 def default_worker_script() -> Path:

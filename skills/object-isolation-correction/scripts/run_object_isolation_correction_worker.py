@@ -153,7 +153,8 @@ async def run_imagesorcery_fallback(
     except ModuleNotFoundError as exc:
         raise SystemExit(
             "fastmcp is not available in this interpreter. "
-            "Run this worker with vendor/mcp/imagesorcery-mcp/.venv/bin/python."
+            "Run this worker with IMAGESORCERY_PYTHON=<REPO_ROOT>/vendor/mcp/imagesorcery-mcp/{.venv|venv}/bin/python "
+            "or another interpreter that has fastmcp installed."
         ) from exc
 
     fallback_dir = output_dir / "imagesorcery"

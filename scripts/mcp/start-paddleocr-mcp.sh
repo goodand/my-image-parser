@@ -2,8 +2,14 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-SERVER_DIR="$ROOT_DIR/vendor/mcp/paddleocr-mcp"
-VENV_BIN="$SERVER_DIR/.venv/bin"
+SERVER_DIR="${PADDLEOCR_MCP_SERVER_DIR:-$ROOT_DIR/vendor/mcp/paddleocr-mcp}"
+if [ -n "${PADDLEOCR_MCP_BIN:-}" ]; then
+  MCP_BIN="$PADDLEOCR_MCP_BIN"
+elif [ -x "$SERVER_DIR/.venv/bin/paddleocr_mcp" ]; then
+  MCP_BIN="$SERVER_DIR/.venv/bin/paddleocr_mcp"
+else
+  MCP_BIN="$SERVER_DIR/venv/bin/paddleocr_mcp"
+fi
 LOG_DIR="$ROOT_DIR/logs/paddleocr"
 MCP_HOME_DIR="$LOG_DIR/home"
 PADDLE_HOME_DIR="$LOG_DIR/paddle_home"
@@ -17,8 +23,8 @@ if [ ! -f "$SERVER_DIR/pyproject.toml" ]; then
   exit 1
 fi
 
-if [ ! -x "$VENV_BIN/paddleocr_mcp" ]; then
-  echo "Missing PaddleOCR MCP executable at $VENV_BIN/paddleocr_mcp. Run 'uv sync --directory $SERVER_DIR' first." >&2
+if [ ! -x "$MCP_BIN" ]; then
+  echo "Missing PaddleOCR MCP executable at $MCP_BIN. Set PADDLEOCR_MCP_BIN or run 'uv sync --directory $SERVER_DIR' first." >&2
   exit 1
 fi
 
@@ -37,4 +43,4 @@ export HF_HOME="${HF_HOME:-$HF_CACHE_DIR}"
 export HUGGINGFACE_HUB_CACHE="${HUGGINGFACE_HUB_CACHE:-$HF_CACHE_DIR/hub}"
 
 cd "$SERVER_DIR"
-exec "$VENV_BIN/paddleocr_mcp" "$@"
+exec "$MCP_BIN" "$@"
