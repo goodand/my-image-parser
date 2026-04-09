@@ -2,9 +2,9 @@
   "$schema_notes": {
     "_comment": "Phase0 table branch triage selection worker용 최소 packet 템플릿. immutable task contract의 standard profile.",
     "reference_basis": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_standard_template.json",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-task-packet/references/packet-fields.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md"
+      "<EXTERNAL_TEMPLATE_ROOT>/task_packet_standard_template.json",
+      "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/agent-task-packet/references/packet-fields.md",
+      "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md"
     ]
   },
   "packet_version": "0.1",

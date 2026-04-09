@@ -2,8 +2,8 @@
   "$schema_notes": {
     "_comment": "Subagent를 사용한 skill sidecar 작성용 최소 packet 템플릿. immutable task contract의 standard profile.",
     "reference_basis": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-task-packet/references/packet-fields.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md"
+      "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/agent-task-packet/references/packet-fields.md",
+      "control/project_agent_ops/resources/references/REFERENCE_subagent_xhigh_skill_creation_strategy.md"
     ]
   },
   "packet_version": "0.1",

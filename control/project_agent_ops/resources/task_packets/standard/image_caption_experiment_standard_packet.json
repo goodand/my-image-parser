@@ -2,8 +2,8 @@
   "$schema_notes": {
     "_comment": "Caption experiment worker용 최소 packet 템플릿. immutable task contract의 standard profile.",
     "reference_basis": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_standard_template.json",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-task-packet/references/packet-fields.md"
+      "<EXTERNAL_TEMPLATE_ROOT>/task_packet_standard_template.json",
+      "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/agent-task-packet/references/packet-fields.md"
     ]
   },
   "packet_version": "0.1",

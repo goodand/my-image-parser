@@ -2,10 +2,10 @@
   "$schema_notes": {
     "_comment": "Phase0 table branch triage selection용 팀 공식 packet 템플릿. richer immutable contract profile.",
     "reference_basis": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_template.json",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/task_packet_extended_template.json",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/standard/table_branch_triage_selection_standard_packet.json",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/phase0_table_triage_selection.contract.json"
+      "<EXTERNAL_TEMPLATE_ROOT>/task_packet_template.json",
+      "<EXTERNAL_TEMPLATE_ROOT>/task_packet_extended_template.json",
+      "control/project_agent_ops/resources/task_packets/standard/table_branch_triage_selection_standard_packet.json",
+      "control/project_domain/resources/specs/contracts/phase0_table_triage_selection.contract.json"
     ],
     "identity": "이 canonical packet은 xhigh triage worker 기반 selection gate를 immutable execution contract로 고정한다.",
     "path_rule": "모든 경로는 repo root 상대경로다."

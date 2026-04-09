@@ -15,7 +15,7 @@ Translate current promotion-worthy repeated patterns into concrete integration t
 ### `image-result-auditor`
 
 - issued task packet:
-  - [TASK_PACKET_image_result_auditor_review_bridge_integration-at2026-04-04-23-34.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_image_result_auditor_review_bridge_integration-at2026-04-04-23-34.md)
+  - [TASK_PACKET_image_result_auditor_review_bridge_integration-at2026-04-04-23-34.md](../task_packets/issued/TASK_PACKET_image_result_auditor_review_bridge_integration-at2026-04-04-23-34.md)
 - absorbs:
   - aggregate bundle to human review surface flattening
   - review surface manifest to retrieval preflight bridge
@@ -28,7 +28,7 @@ Translate current promotion-worthy repeated patterns into concrete integration t
 ### `image-job-dispatcher`
 
 - issued task packet:
-  - [TASK_PACKET_image_job_dispatcher_fast_start_packet_integration-at2026-04-04-23-34.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_image_job_dispatcher_fast_start_packet_integration-at2026-04-04-23-34.md)
+  - [TASK_PACKET_image_job_dispatcher_fast_start_packet_integration-at2026-04-04-23-34.md](../task_packets/issued/TASK_PACKET_image_job_dispatcher_fast_start_packet_integration-at2026-04-04-23-34.md)
 - absorbs:
   - fast-start packet for parallel experiment session split
   - packet-first bounded session startup
@@ -37,7 +37,7 @@ Translate current promotion-worthy repeated patterns into concrete integration t
 ### `parser-sidecar-to-canonical-schema-promotion`
 
 - issued task packet:
-  - [TASK_PACKET_parser_sidecar_compound_edgecase_integration-at2026-04-04-23-34.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_parser_sidecar_compound_edgecase_integration-at2026-04-04-23-34.md)
+  - [TASK_PACKET_parser_sidecar_compound_edgecase_integration-at2026-04-04-23-34.md](../task_packets/issued/TASK_PACKET_parser_sidecar_compound_edgecase_integration-at2026-04-04-23-34.md)
 - absorbs:
   - projection-profile component decomposition probe for compound dashboards
   - objective-profile scoring for regrouped component candidates
