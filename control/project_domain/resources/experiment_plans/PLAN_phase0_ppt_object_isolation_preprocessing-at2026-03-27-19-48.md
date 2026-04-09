@@ -48,7 +48,7 @@ Out of scope:
 - raw extraction run artifacts:
   - `control/project_domain/resources/pptx_jobs/`
 - reference basis:
-  - [REFERENCE_object_isolation_tools.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_object_isolation_tools.md)
+  - [REFERENCE_object_isolation_tools.md](../references/REFERENCE_object_isolation_tools.md)
 
 ## Current Status
 

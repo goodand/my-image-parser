@@ -28,7 +28,7 @@ Current use in this workspace:
 ### 1. Repository Boundary
 
 - 구현 대상은 현재 workspace 안의 임시 스크립트가 아니라 별도 plugin/repo다.
-- `/tmp/vscode-openwith-bridge-experiment`는 seed prototype로만 유지한다.
+- `<TMP_DIR>/vscode-openwith-bridge-experiment`는 seed prototype로만 유지한다.
 
 ### 2. Data Model
 

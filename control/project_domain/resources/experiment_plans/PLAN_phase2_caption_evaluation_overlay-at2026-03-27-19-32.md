@@ -53,15 +53,15 @@ Out of scope:
 ## Canonical Inputs
 
 - master plan:
-  - [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+  - [MASTER_PLAN_presentation_image_pipeline.md](../master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 - implementation profile draft:
-  - [PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md)
+  - [PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md](../master_plans/drafts/PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md)
 - phase-1 execution truth:
-  - [REPORT_phase1_caption_experiment_execution-at2026-03-27-18-31.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_experiment_execution-at2026-03-27-18-31.md)
-  - [phase1_caption_experiment_summary_at2026_03_27.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_experiment_summary_at2026_03_27.json)
+  - [REPORT_phase1_caption_experiment_execution-at2026-03-27-18-31.md](../reports/REPORT_phase1_caption_experiment_execution-at2026-03-27-18-31.md)
+  - [phase1_caption_experiment_summary_at2026_03_27.json](../manifests/phase1_caption_experiment_summary_at2026_03_27.json)
 - phase-1 quality evidence:
-  - [REPORT_phase1_caption_quality_sample_review-at2026-03-27-19-07.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_quality_sample_review-at2026-03-27-19-07.md)
-  - [REPORT_caption_completeness_validator_smoke-at2026-03-27-19-14.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_caption_completeness_validator_smoke-at2026-03-27-19-14.md)
+  - [REPORT_phase1_caption_quality_sample_review-at2026-03-27-19-07.md](../reports/REPORT_phase1_caption_quality_sample_review-at2026-03-27-19-07.md)
+  - [REPORT_caption_completeness_validator_smoke-at2026-03-27-19-14.md](../reports/REPORT_caption_completeness_validator_smoke-at2026-03-27-19-14.md)
 - phase-1 shard boundaries:
   - `control/project_domain/resources/manifests/phase1_caption_shards/`
 - completed phase-1 ledgers:

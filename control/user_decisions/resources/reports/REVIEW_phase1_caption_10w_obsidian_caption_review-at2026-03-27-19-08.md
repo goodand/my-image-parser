@@ -257,7 +257,7 @@
 - filename_candidate: `n/a`
 - ledger: `phase1_caption_10w_01_full_presentation_2026-03-17_w02.json`
 
-- image_path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image6.emf`
+- image_path: `../../../project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image6.emf`
 
 **Caption**
 
