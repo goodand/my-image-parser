@@ -10,21 +10,21 @@ Draft
 
 Related artifacts:
 
-- [NOTE_vscode_first_surface_model-at2026-03-29-01-04.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/NOTE_vscode_first_surface_model-at2026-03-29-01-04.md)
-- [CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md)
-- `/tmp/vscode-openwith-bridge-experiment/`
+- [NOTE_vscode_first_surface_model-at2026-03-29-01-04.md](./NOTE_vscode_first_surface_model-at2026-03-29-01-04.md)
+- [CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md](./CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md)
+- `<TMP_DIR>/vscode-openwith-bridge-experiment/`
 
 ## Experiment Setup
 
-- development extension path: `/tmp/vscode-openwith-bridge-experiment`
-- validation workspace: `/tmp/vscode_fabriqa_foam_validation`
-- test target: `/tmp/vscode_fabriqa_foam_validation/note_with_image_embed.md`
+- development extension path: `<TMP_DIR>/vscode-openwith-bridge-experiment`
+- validation workspace: `<TMP_DIR>/vscode_fabriqa_foam_validation`
+- test target: `<TMP_DIR>/vscode_fabriqa_foam_validation/note_with_image_embed.md`
 - command/API: `vscode.commands.executeCommand('vscode.openWith', target, viewId, { preview: false })`
 
 ## Result 1. Built-in Markdown Preview
 
 - target viewId: `vscode.markdown.preview.editor`
-- result file: `/tmp/vscode-openwith-bridge-experiment/results/markdown-preview-result.json`
+- result file: `<TMP_DIR>/vscode-openwith-bridge-experiment/results/markdown-preview-result.json`
 - verdict: `pass`
 
 Observed facts:
@@ -42,8 +42,8 @@ Interpretation:
 ## Result 2. Fabriqa Custom Editor
 
 - target viewId: `fabriqa.markdownEditor`
-- result file: `/tmp/vscode-openwith-bridge-experiment/results/fabriqa-result-fresh.json`
-- activated retry result: `/tmp/vscode-openwith-bridge-experiment/results/fabriqa-result-activated.json`
+- result file: `<TMP_DIR>/vscode-openwith-bridge-experiment/results/fabriqa-result-fresh.json`
+- activated retry result: `<TMP_DIR>/vscode-openwith-bridge-experiment/results/fabriqa-result-activated.json`
 - verdict: `fail` under current development-host conditions
 
 Observed facts:

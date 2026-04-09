@@ -11,7 +11,7 @@
 
 canonical contract와 phase flow는 계속:
 
-- [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+- [MASTER_PLAN_presentation_image_pipeline.md](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 
 를 따른다.
 
@@ -49,9 +49,9 @@ canonical contract와 phase flow는 계속:
 
 ## Recommended Reading
 
-1. [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
-2. [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
-3. [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+1. [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](./REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
+2. [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](./REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
+3. [MASTER_PLAN_presentation_image_pipeline.md](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 
 ## Practical Decision Point
 

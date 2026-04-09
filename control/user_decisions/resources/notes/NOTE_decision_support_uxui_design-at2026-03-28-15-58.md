@@ -18,9 +18,9 @@ Draft
 
 Related artifacts:
 
-- [REFERENCE_decision_support_prompt.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/closed_questions/REFERENCE_decision_support_prompt.md)
-- [VISUAL_master_plan_presentation_image_pipeline-at2026-03-28-10-13.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/VISUAL_master_plan_presentation_image_pipeline-at2026-03-28-10-13.md)
-- [NOTE_vscode_first_surface_model-at2026-03-29-01-04.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/NOTE_vscode_first_surface_model-at2026-03-29-01-04.md)
+- [REFERENCE_decision_support_prompt.md](../closed_questions/REFERENCE_decision_support_prompt.md)
+- [VISUAL_master_plan_presentation_image_pipeline-at2026-03-28-10-13.md](./VISUAL_master_plan_presentation_image_pipeline-at2026-03-28-10-13.md)
+- [NOTE_vscode_first_surface_model-at2026-03-29-01-04.md](./NOTE_vscode_first_surface_model-at2026-03-29-01-04.md)
 
 ## Design Position
 

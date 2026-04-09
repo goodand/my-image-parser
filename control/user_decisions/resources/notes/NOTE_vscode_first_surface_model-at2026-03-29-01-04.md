@@ -16,13 +16,13 @@ Draft
 
 Related artifacts:
 
-- [REFERENCE_decision_support_prompt.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/closed_questions/REFERENCE_decision_support_prompt.md)
-- [NOTE_decision_support_uxui_design-at2026-03-28-15-58.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/NOTE_decision_support_uxui_design-at2026-03-28-15-58.md)
-- [CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md)
-- [NOTE_vscode_openwith_bridge_experiment_results-at2026-03-30-01-04.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/NOTE_vscode_openwith_bridge_experiment_results-at2026-03-30-01-04.md)
-- [obsidian-caption-review-builder/SKILL.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/obsidian-caption-review-builder/SKILL.md)
-- [vscode-fabriqa-foam-workflow/SKILL.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/vscode-fabriqa-foam-workflow/SKILL.md)
-- `/tmp/vscode-openwith-bridge-experiment/`
+- [REFERENCE_decision_support_prompt.md](../closed_questions/REFERENCE_decision_support_prompt.md)
+- [NOTE_decision_support_uxui_design-at2026-03-28-15-58.md](./NOTE_decision_support_uxui_design-at2026-03-28-15-58.md)
+- [CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md](./CHECKLIST_vscode_surface_control_experiments-at2026-03-29-00-38.md)
+- [NOTE_vscode_openwith_bridge_experiment_results-at2026-03-30-01-04.md](./NOTE_vscode_openwith_bridge_experiment_results-at2026-03-30-01-04.md)
+- [obsidian-caption-review-builder/SKILL.md](../../../../skills/obsidian-caption-review-builder/SKILL.md)
+- [vscode-fabriqa-foam-workflow/SKILL.md](../../../../skills/vscode-fabriqa-foam-workflow/SKILL.md)
+- `<TMP_DIR>/vscode-openwith-bridge-experiment/`
 
 ## Why These Skills Exist
 
@@ -217,7 +217,7 @@ backlink의 주요 역할은 사용자의 기억 연상을 돕는 것이다.
 
 6. `openwith-command-bridge module`
 - `vscode.openWith`를 직접 호출하는 최소 extension/command bridge 검토
-- current bounded experiment: `/tmp/vscode-openwith-bridge-experiment/`
+- current bounded experiment: `<TMP_DIR>/vscode-openwith-bridge-experiment/`
 
 7. `mcp-control module`
 - chat이 VS Code artifact를 더 직접적으로 여는 통로 검토

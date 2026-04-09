@@ -12,7 +12,7 @@ The diagrams below follow the current parser-first active baseline rather than t
 
 Canonical source:
 
-- [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+- [MASTER_PLAN_presentation_image_pipeline.md](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 
 ## VSCode Viewing
 

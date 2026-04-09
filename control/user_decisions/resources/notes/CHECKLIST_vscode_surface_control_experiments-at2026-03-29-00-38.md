@@ -16,10 +16,10 @@ Draft
 
 Related artifacts:
 
-- [NOTE_vscode_first_surface_model-at2026-03-29-01-04.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/NOTE_vscode_first_surface_model-at2026-03-29-01-04.md)
-- [CHECKLIST_fabriqa_foam_integration_validation-at2026-03-28-14-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/CHECKLIST_fabriqa_foam_integration_validation-at2026-03-28-14-17.md)
-- [vscode-fabriqa-foam-workflow/SKILL.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/vscode-fabriqa-foam-workflow/SKILL.md)
-- `/tmp/vscode-openwith-bridge-experiment/`
+- [NOTE_vscode_first_surface_model-at2026-03-29-01-04.md](./NOTE_vscode_first_surface_model-at2026-03-29-01-04.md)
+- [CHECKLIST_fabriqa_foam_integration_validation-at2026-03-28-14-17.md](./CHECKLIST_fabriqa_foam_integration_validation-at2026-03-28-14-17.md)
+- [vscode-fabriqa-foam-workflow/SKILL.md](../../../../skills/vscode-fabriqa-foam-workflow/SKILL.md)
+- `<TMP_DIR>/vscode-openwith-bridge-experiment/`
 
 ## Current Baseline
 
@@ -235,9 +235,9 @@ CLI와 settings만으로 부족한 부분을 `vscode.openWith` command/API layer
 
 ### Current experiment artifact
 
-- `/tmp/vscode-openwith-bridge-experiment/package.json`
-- `/tmp/vscode-openwith-bridge-experiment/extension.js`
-- `/tmp/vscode-openwith-bridge-experiment/README.md`
+- `<TMP_DIR>/vscode-openwith-bridge-experiment/package.json`
+- `<TMP_DIR>/vscode-openwith-bridge-experiment/extension.js`
+- `<TMP_DIR>/vscode-openwith-bridge-experiment/README.md`
 
 ### Checks
 

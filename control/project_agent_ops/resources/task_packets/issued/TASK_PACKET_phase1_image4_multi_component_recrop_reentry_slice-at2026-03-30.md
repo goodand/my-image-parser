@@ -20,13 +20,13 @@ Do not re-read or reinterpret the full master plan. Use only the truth sources b
 
 ## Required Inputs
 
-- [phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json)
-- [REPORT_phase1_caption_four_mode_small_batch_readiness-at2026-03-28-14-10.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_small_batch_readiness-at2026-03-28-14-10.md)
-- [phase1_caption_four_mode_small_batch_candidates_at2026_03_28.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_candidates_at2026_03_28.json)
-- [image4.png](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png)
-- [build_reviewed_component_context_package.py](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/build_reviewed_component_context_package.py)
-- [reviewed_component_context_package_lib.py](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/reviewed_component_context_package_lib.py)
-- [alpha_component_lib.py](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/alpha_component_lib.py)
+- [phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json](../../../../project_domain/resources/manifests/phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json)
+- [REPORT_phase1_caption_four_mode_small_batch_readiness-at2026-03-28-14-10.md](../../../../project_domain/resources/reports/REPORT_phase1_caption_four_mode_small_batch_readiness-at2026-03-28-14-10.md)
+- [phase1_caption_four_mode_small_batch_candidates_at2026_03_28.json](../../../../project_domain/resources/manifests/phase1_caption_four_mode_small_batch_candidates_at2026_03_28.json)
+- [image4.png](../../../../project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png)
+- [build_reviewed_component_context_package.py](../../../../../scripts/build_reviewed_component_context_package.py)
+- [reviewed_component_context_package_lib.py](../../../../../scripts/reviewed_component_context_package_lib.py)
+- [alpha_component_lib.py](../../../../../scripts/alpha_component_lib.py)
 
 ## Fixed Interpretation
 
@@ -57,7 +57,7 @@ Do not re-read or reinterpret the full master plan. Use only the truth sources b
 - `scripts/` only if a bounded bug fix is required for this slice
 - `control/project_domain/resources/manifests/` for new `image4`-specific artifacts
 - `control/project_domain/resources/reports/` for new bounded reports
-- `/tmp/` for scratch outputs
+- `<TMP_DIR>/` for scratch outputs
 
 ## Expected Outputs
 
