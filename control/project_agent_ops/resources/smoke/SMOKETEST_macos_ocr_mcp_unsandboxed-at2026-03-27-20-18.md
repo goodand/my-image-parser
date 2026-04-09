@@ -7,9 +7,9 @@ Verify whether the vendored `macos-ocr-mcp` is usable in this workspace and clar
 ## Inputs
 
 - synthetic sample:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/smoke/macos_ocr_smoke_sample.png`
+  - `control/project_agent_ops/resources/smoke/macos_ocr_smoke_sample.png`
 - project screenshot sample:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/slide_screenshots_simctl/slide-0001.png`
+  - `control/project_domain/resources/cross_validation/02_1/slide_screenshots_simctl/slide-0001.png`
 
 ## Observed Results
 

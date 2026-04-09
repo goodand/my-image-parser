@@ -3,7 +3,7 @@
 ## Command
 
 ```bash
-/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+<REPO_ROOT>/vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
   scripts/build_component_split_ocr_report.py \
   --image-path control/project_domain/resources/pptx_jobs/02_1/media/image11.png
 ```
@@ -30,10 +30,10 @@
 
 ## Output Paths
 
-- markdown report: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.md`
-- json report: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.json`
-- component dir: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/component_split_ocr/02_1/image11/alpha_components`
-- component OCR dir: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/archive/component_split_ocr/02_1/image11/component_ocr`
+- markdown report: `control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.md`
+- json report: `control/project_domain/archive/component_split_ocr/02_1/image11/COMPONENT_SPLIT_OCR_REPORT.json`
+- component dir: `control/project_domain/archive/component_split_ocr/02_1/image11/alpha_components`
+- component OCR dir: `control/project_domain/archive/component_split_ocr/02_1/image11/component_ocr`
 
 ## Interpretation
 

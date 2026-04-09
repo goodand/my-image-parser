@@ -24,33 +24,33 @@ Validated files:
 
 ```bash
 python3 skills/object-isolation-correction/scripts/prepare_object_isolation_correction_packet.py \
-  --source-image "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image10.png" \
+  --source-image control/project_domain/resources/pptx_jobs/02_1/media/image10.png \
   --issue merged_objects \
   --issue split_decision_needed \
-  --output-md /tmp/object-isolation-worker-smoke-alpha/CORRECTION_packet.md \
-  --output-json /tmp/object-isolation-worker-smoke-alpha/CORRECTION_packet.json
+  --output-md <TMP_DIR>/object-isolation-worker-smoke-alpha/CORRECTION_packet.md \
+  --output-json <TMP_DIR>/object-isolation-worker-smoke-alpha/CORRECTION_packet.json
 
 vendor/mcp/imagesorcery-mcp/.venv/bin/python \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
-  --packet-json /tmp/object-isolation-worker-smoke-alpha/CORRECTION_packet.json \
-  --output-dir /tmp/object-isolation-worker-smoke-alpha/run
+  --packet-json <TMP_DIR>/object-isolation-worker-smoke-alpha/CORRECTION_packet.json \
+  --output-dir <TMP_DIR>/object-isolation-worker-smoke-alpha/run
 ```
 
 ### Case B: Hybrid photo / imagegen-request path
 
 ```bash
 python3 skills/object-isolation-correction/scripts/prepare_object_isolation_correction_packet.py \
-  --source-image "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/02_1/media/image6.jpeg" \
+  --source-image control/project_domain/resources/pptx_jobs/02_1/media/image6.jpeg \
   --issue background_residue \
   --issue transparent_cutout_needed \
   --target-description "the person only" \
-  --output-md /tmp/object-isolation-worker-smoke-photo/CORRECTION_packet.md \
-  --output-json /tmp/object-isolation-worker-smoke-photo/CORRECTION_packet.json
+  --output-md <TMP_DIR>/object-isolation-worker-smoke-photo/CORRECTION_packet.md \
+  --output-json <TMP_DIR>/object-isolation-worker-smoke-photo/CORRECTION_packet.json
 
 vendor/mcp/imagesorcery-mcp/.venv/bin/python \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
-  --packet-json /tmp/object-isolation-worker-smoke-photo/CORRECTION_packet.json \
-  --output-dir /tmp/object-isolation-worker-smoke-photo/run
+  --packet-json <TMP_DIR>/object-isolation-worker-smoke-photo/CORRECTION_packet.json \
+  --output-dir <TMP_DIR>/object-isolation-worker-smoke-photo/run
 ```
 
 ## Observed Results
@@ -71,11 +71,11 @@ vendor/mcp/imagesorcery-mcp/.venv/bin/python \
 
 Artifacts:
 
-- `/tmp/object-isolation-worker-smoke-alpha/run/worker_report.md`
-- `/tmp/object-isolation-worker-smoke-alpha/run/worker_result.json`
-- `/tmp/object-isolation-worker-smoke-alpha/run/alpha_components/alpha_component_01.png`
-- `/tmp/object-isolation-worker-smoke-alpha/run/imagesorcery/imagesorcery_crop_01.png`
-- `/tmp/object-isolation-worker-smoke-alpha/run/imagesorcery/imagesorcery_crop_02.png`
+- `<TMP_DIR>/object-isolation-worker-smoke-alpha/run/worker_report.md`
+- `<TMP_DIR>/object-isolation-worker-smoke-alpha/run/worker_result.json`
+- `<TMP_DIR>/object-isolation-worker-smoke-alpha/run/alpha_components/alpha_component_01.png`
+- `<TMP_DIR>/object-isolation-worker-smoke-alpha/run/imagesorcery/imagesorcery_crop_01.png`
+- `<TMP_DIR>/object-isolation-worker-smoke-alpha/run/imagesorcery/imagesorcery_crop_02.png`
 
 ### Case B
 
@@ -93,11 +93,11 @@ Artifacts:
 
 Artifacts:
 
-- `/tmp/object-isolation-worker-smoke-photo/run/worker_report.md`
-- `/tmp/object-isolation-worker-smoke-photo/run/worker_result.json`
-- `/tmp/object-isolation-worker-smoke-photo/run/imagesorcery/find_result.json`
-- `/tmp/object-isolation-worker-smoke-photo/run/imagegen/IMAGEGEN_REQUEST.md`
-- `/tmp/object-isolation-worker-smoke-photo/run/imagegen/IMAGEGEN_REQUEST.json`
+- `<TMP_DIR>/object-isolation-worker-smoke-photo/run/worker_report.md`
+- `<TMP_DIR>/object-isolation-worker-smoke-photo/run/worker_result.json`
+- `<TMP_DIR>/object-isolation-worker-smoke-photo/run/imagesorcery/find_result.json`
+- `<TMP_DIR>/object-isolation-worker-smoke-photo/run/imagegen/IMAGEGEN_REQUEST.md`
+- `<TMP_DIR>/object-isolation-worker-smoke-photo/run/imagegen/IMAGEGEN_REQUEST.json`
 
 ## Troubleshooting Captured
 

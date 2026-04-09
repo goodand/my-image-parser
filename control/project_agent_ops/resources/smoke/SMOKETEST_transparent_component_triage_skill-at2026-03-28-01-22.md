@@ -3,13 +3,13 @@
 ## Command
 
 ```bash
-/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
+<REPO_ROOT>/vendor/mcp/imagesorcery-mcp/.venv/bin/python -B \
   skills/transparent-component-triage/scripts/classify_alpha_split_batch.py \
   --limit 2 \
-  --output-root /tmp/transparent_component_triage_smoke/output \
-  --manifest-jsonl /tmp/transparent_component_triage_smoke/manifest.jsonl \
-  --summary-json /tmp/transparent_component_triage_smoke/summary.json \
-  --report-md /tmp/transparent_component_triage_smoke/report.md
+  --output-root <TMP_DIR>/transparent_component_triage_smoke/output \
+  --manifest-jsonl <TMP_DIR>/transparent_component_triage_smoke/manifest.jsonl \
+  --summary-json <TMP_DIR>/transparent_component_triage_smoke/summary.json \
+  --report-md <TMP_DIR>/transparent_component_triage_smoke/report.md
 ```
 
 ## Expected
@@ -34,11 +34,11 @@
 
 ## Output Paths
 
-- report: `/private/tmp/transparent_component_triage_smoke/report.md`
-- summary: `/private/tmp/transparent_component_triage_smoke/summary.json`
-- manifest: `/private/tmp/transparent_component_triage_smoke/manifest.jsonl`
-- output_root: `/private/tmp/transparent_component_triage_smoke/output/2026-03-27-16-22`
-- skill: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/skills/transparent-component-triage`
+- report: `<TMP_DIR>/transparent_component_triage_smoke/report.md`
+- summary: `<TMP_DIR>/transparent_component_triage_smoke/summary.json`
+- manifest: `<TMP_DIR>/transparent_component_triage_smoke/manifest.jsonl`
+- output_root: `<TMP_DIR>/transparent_component_triage_smoke/output/2026-03-27-16-22`
+- skill: `skills/transparent-component-triage`
 
 ## Interpretation
 

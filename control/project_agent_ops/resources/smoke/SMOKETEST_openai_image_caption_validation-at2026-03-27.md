@@ -6,9 +6,9 @@ Validate the local OpenAI caption runner on one extracted image through the new 
 
 ## Input
 
-- Dataset: [media_extract_dataset.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl)
-- Smoke output ledger: [smoke_gpt41_media_extract_job.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/smoke_gpt41_media_extract_job.json)
-- Raw response: [img_000001.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/cross_validation/02_1/openai_api/smoke_gpt41_media_extract_job_responses/img_000001.json)
+- Dataset: [media_extract_dataset.jsonl](../../../project_domain/resources/cross_validation/02_1/openai_api/media_extract_dataset.jsonl)
+- Smoke output ledger: [smoke_gpt41_media_extract_job.json](../../../project_domain/resources/cross_validation/02_1/openai_api/smoke_gpt41_media_extract_job.json)
+- Raw response: [img_000001.json](../../../project_domain/resources/cross_validation/02_1/openai_api/smoke_gpt41_media_extract_job_responses/img_000001.json)
 
 ## Command
 
