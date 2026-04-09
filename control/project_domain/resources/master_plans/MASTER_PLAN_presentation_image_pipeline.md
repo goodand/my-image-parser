@@ -22,22 +22,22 @@ This document is the append-oriented canonical master plan for the pipeline.
 ## Source Of Truth
 
 - Pipeline contract:
-  - [presentation_image_pipeline_spec.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/presentation_image_pipeline_spec.json)
+  - [presentation_image_pipeline_spec.json](../specs/contracts/presentation_image_pipeline_spec.json)
 - Supporting operational specs:
-  - [SPEC_openai_image_caption_runner.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_openai_image_caption_runner.md)
-  - [SPEC_full_image_standalone_ocr_context_package_baseline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_full_image_standalone_ocr_context_package_baseline.md)
+  - [SPEC_openai_image_caption_runner.md](../specs/prose/SPEC_openai_image_caption_runner.md)
+  - [SPEC_full_image_standalone_ocr_context_package_baseline.md](../specs/prose/SPEC_full_image_standalone_ocr_context_package_baseline.md)
 - Tooling and runtime references:
-  - [Tool Inventory](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/tools/tool_inventory.json)
-  - [MCP Setup Reference](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/tools_inventory/REFERENCE_mcp_setup.md)
-  - [Object Isolation Tool Reference](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_object_isolation_tools.md)
-  - [OCR Evidence Tool Reference](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_ocr_evidence_tools.md)
+  - Tool Inventory (local/private registry): `<LOCAL_AGENT_REGISTRY>/tools/tool_inventory.json`
+  - MCP Setup Reference (local/private tools inventory): `<LOCAL_AGENT_REFERENCE_ROOT>/tools_inventory/REFERENCE_mcp_setup.md`
+  - [Object Isolation Tool Reference](../references/REFERENCE_object_isolation_tools.md)
+  - [OCR Evidence Tool Reference](../references/REFERENCE_ocr_evidence_tools.md)
 - Current appended extension:
-  - [PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md)
+  - [PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md](./drafts/PLAN_image_table_row_rag_worksheet_mcp-at2026-03-27-15-29.md)
 - Active implementation profiles:
-  - [PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md)
-  - [PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md)
+  - [PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md](./drafts/PLAN_image_caption_pipeline_data_flow-at2026-03-27-15-29.md)
+  - [PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md](./drafts/PLAN_cv_mcp_caption_eval_metadata_flow-at2026-03-27-15-29.md)
 - Active experiment-preparation profile:
-  - [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
+  - [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](./drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
 
 ## Operational Assumptions
 
@@ -553,8 +553,8 @@ The human-in-the-loop stages remain mandatory:
 
 Reference:
 
-- [Tool Inventory](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/tools/tool_inventory.json)
-- [MCP Setup Reference](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/tools_inventory/REFERENCE_mcp_setup.md)
+- Tool Inventory (local/private registry): `<LOCAL_AGENT_REGISTRY>/tools/tool_inventory.json`
+- MCP Setup Reference (local/private tools inventory): `<LOCAL_AGENT_REFERENCE_ROOT>/tools_inventory/REFERENCE_mcp_setup.md`
 
 Recommended ownership split:
 
@@ -1430,19 +1430,19 @@ Active drafts that inform but remain outside the canonical master plan:
 
 ### External Good-Case References
 
-- [external_reference_index.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/external_reference_index.json)
+- External reference index (local/private registry): `<LOCAL_AGENT_REGISTRY>/external_reference_index.json`
   - Machine-readable index for external good-case references, template sources, and source directories that stay indexed-only outside the active workspace tree.
-- [Decision Framework Template](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template/decision_framework.md)
+- Decision Framework Template: `<EXTERNAL_TEMPLATE_ROOT>/decision_framework.md`
   - Used as a reference for ADR and closed-question capture structure in user decision records.
-- [Template Directory](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-second-identity/template)
+- Template Directory: `<EXTERNAL_TEMPLATE_ROOT>`
   - Used as a reference source for reusable document forms that may later be promoted into team templates.
-- [Agent Tool Benchmark Knowledge Base Good Case](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/agent-tool-benchmark/knowledge_bases/agent-tool-benchmark-kb-at2026-03-24.md)
+- Agent Tool Benchmark Knowledge Base Good Case: `<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/agent-tool-benchmark/knowledge_bases/agent-tool-benchmark-kb-at2026-03-24.md`
   - Used as a reference for clean frontmatter, a short purpose statement, source-of-truth rules, and simplification boundaries in reusable knowledge-style documents.
-- [Codebase Analysis Spec Good Case](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/codebase-analysis/references/codebase-analysis-spec-at2026-03-23-03-14.md)
+- Codebase Analysis Spec Good Case: `<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/codebase-analysis/references/codebase-analysis-spec-at2026-03-23-03-14.md`
   - Used as a reference for stable spec structure with source-of-truth, supporting appendix, functional spec, IO, constraints, API surface, and schema framing.
-- [Codebase Analysis Directory Reference](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/codebase-analysis)
+- Codebase Analysis Directory Reference: `<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/codebase-analysis`
   - Used as a source-directory reference for codebase graph artifacts and analysis workflow patterns in project-agent operations.
-- [Codebase Analysis Development Playbook Good Case](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/codebase-analysis/references/codebase-analysis-development-playbook-at2026-03-23-03-36.md)
+- Codebase Analysis Development Playbook Good Case: `<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/codebase-analysis/references/codebase-analysis-development-playbook-at2026-03-23-03-36.md`
   - Used as a reference for workflow, TDD, smoke-test ordering, task-packet operation, and workspace or environment policy.
 
 ### Exploratory Drafts

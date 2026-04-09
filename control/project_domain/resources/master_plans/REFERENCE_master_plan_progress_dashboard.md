@@ -5,7 +5,7 @@
 이 문서의 canonical 위치는 `master_plans`가 아니라 `user_decisions` 입니다.
 
 - canonical path:
-  - [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
+  - [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](../../../user_decisions/resources/notes/REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
 
 ## Reason
 

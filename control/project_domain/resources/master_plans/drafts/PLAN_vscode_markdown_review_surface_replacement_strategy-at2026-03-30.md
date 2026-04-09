@@ -113,5 +113,5 @@ Current use in this workspace:
 
 Current progress and bottleneck reading should use:
 
-- [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
-- [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
+- [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](../../../../user_decisions/resources/notes/REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
+- [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](../../../../user_decisions/resources/notes/REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
