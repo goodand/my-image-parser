@@ -6,7 +6,7 @@ Provide a compact editing reference for the decision seed JSONL so an operator c
 
 ## Seed Path
 
-- [phase2_caption_review_decision_seed_at2026_03_30.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
+- [phase2_caption_review_decision_seed_at2026_03_30.jsonl](../manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
 
 ## Allowed `selected_caption_arm`
 

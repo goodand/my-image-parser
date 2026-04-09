@@ -4,11 +4,11 @@
   "title": "Legacy Boundary Lint Contract",
   "source_of_truth": {
     "primary": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/closed_questions/Legacy_Boundary_Decision_Answers-at2026-03-27.md"
+      "control/user_decisions/resources/closed_questions/Legacy_Boundary_Decision_Answers-at2026-03-27.md"
     ],
     "supporting": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/closed_questions/Legacy_Boundary_Decision_Checklist.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/assets/legacy_boundary_decision_map.svg"
+      "control/user_decisions/resources/closed_questions/Legacy_Boundary_Decision_Checklist.md",
+      "control/user_decisions/resources/assets/legacy_boundary_decision_map.svg"
     ]
   },
   "lint_execution_policy": {

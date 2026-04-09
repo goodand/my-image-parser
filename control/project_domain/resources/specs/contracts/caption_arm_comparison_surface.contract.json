@@ -2,11 +2,11 @@
   "name": "caption_arm_comparison_surface",
   "status": "implemented",
   "mode": "read_only",
-  "source_of_truth": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_caption_arm_comparison_surface.md",
+  "source_of_truth": "control/project_domain/resources/specs/prose/SPEC_caption_arm_comparison_surface.md",
   "implementation_paths": [
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/caption_arm_comparison_lib.py",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/run_caption_arm_comparison.py",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/test_caption_arm_comparison_lib.py"
+    "scripts/caption_arm_comparison_lib.py",
+    "scripts/run_caption_arm_comparison.py",
+    "scripts/test_caption_arm_comparison_lib.py"
   ],
   "cli_surface": {
     "baseline_flag": "--baseline-ledger",
@@ -18,7 +18,7 @@
     "bundle_json_flag": "--bundle-json",
     "bundle_report_flag": "--bundle-report-md"
   },
-  "ledger_source_glob": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/*.json",
+  "ledger_source_glob": "control/project_agent_ops/registry/jobs/image_caption_jobs/*.json",
   "record_shape": {
     "required_fields": [
       "execution_arm",
@@ -87,7 +87,7 @@
     }
   },
   "bounded_artifacts": [
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_two_mode_comparison_at2026_03_28.json",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase0_caption_three_mode_comparison_at2026_03_28.json"
+    "control/project_domain/resources/manifests/phase0_caption_two_mode_comparison_at2026_03_28.json",
+    "control/project_domain/resources/manifests/phase0_caption_three_mode_comparison_at2026_03_28.json"
   ]
 }

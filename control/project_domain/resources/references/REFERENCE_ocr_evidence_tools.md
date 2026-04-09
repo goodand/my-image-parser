@@ -10,11 +10,11 @@ This document is reference-only.
 
 Workspace-local source:
 
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/vendor/mcp/macos-ocr-mcp`
+- `vendor/mcp/macos-ocr-mcp`
 
 Launcher:
 
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/mcp/start-macos-ocr-mcp.sh`
+- `scripts/mcp/start-macos-ocr-mcp.sh`
 
 Surface:
 
@@ -44,7 +44,7 @@ Observed activation status in this workspace:
 
 Workspace-local source:
 
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/vendor/ocr/macOCR`
+- `vendor/ocr/macOCR`
 
 Upstream:
 

@@ -19,17 +19,17 @@ This policy applies to:
 ## Source Of Truth
 
 - comparison surface:
-  - [SPEC_caption_arm_comparison_surface.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_caption_arm_comparison_surface.md)
+  - [SPEC_caption_arm_comparison_surface.md](./SPEC_caption_arm_comparison_surface.md)
 - phase1 aggregate bundle:
-  - [phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json)
+  - [phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json](../../manifests/phase1_caption_four_mode_small_batch_bundle_at2026_03_28.json)
 - phase1 auto-eval:
-  - [phase1_caption_four_mode_small_batch_auto_eval_true_batch_at2026_03_28.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_auto_eval_true_batch_at2026_03_28.json)
+  - [phase1_caption_four_mode_small_batch_auto_eval_true_batch_at2026_03_28.json](../../manifests/phase1_caption_four_mode_small_batch_auto_eval_true_batch_at2026_03_28.json)
 - phase1 corpus aggregate bundle:
-  - [phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json)
+  - [phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json](../../manifests/phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json)
 - phase1 corpus auto-eval:
-  - [phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json)
+  - [phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json](../../manifests/phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json)
 - phase1 corpus closure:
-  - [REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md)
+  - [REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md](../../reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md)
 
 ## Promotion States
 

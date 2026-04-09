@@ -5,7 +5,7 @@
 Define the implementation strategy for `component decomposition` in the current image parsing experiment stack.
 
 Canonical KB:
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/knowledge_bases/KB_component_decomposition_strategy.md`
+- [`KB_component_decomposition_strategy.md`](../knowledge_bases/KB_component_decomposition_strategy.md)
 
 This document exists because `image4`-style composite analytical figures are not blocked only by weak regrouping. The harder missing stage is:
 
@@ -34,13 +34,13 @@ For those images, the system must first answer:
 ### What already exists
 
 - alpha-component extraction:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/alpha_component_lib.py`
+  - [`scripts/alpha_component_lib.py`](../../../../scripts/alpha_component_lib.py)
 - reviewed-crop recrop reinforcement:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/reviewed_component_context_package_lib.py`
+  - [`scripts/reviewed_component_context_package_lib.py`](../../../../scripts/reviewed_component_context_package_lib.py)
 - bounded direct read of the current edge case:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md`
+  - [`REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md`](../reports/REPORT_phase1_image4_edge_case_direct_read_and_recrop_status-at2026-03-30-20-39.md)
 - external research cache:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_image4_component_decomposition_research-at2026-03-30.md`
+  - [`REFERENCE_image4_component_decomposition_research-at2026-03-30.md`](./REFERENCE_image4_component_decomposition_research-at2026-03-30.md)
 
 ### What is still missing
 

@@ -58,4 +58,4 @@
 
 ## Reference basis
 
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/python-static-diagnostic-fixer/checklist-forconsistency-evaluation/consistency-checklist-at2026-03-17-01-18.md`
+- `<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/python-static-diagnostic-fixer/checklist-forconsistency-evaluation/consistency-checklist-at2026-03-17-01-18.md`

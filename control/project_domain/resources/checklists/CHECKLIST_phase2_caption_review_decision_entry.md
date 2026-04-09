@@ -2,8 +2,8 @@
 
 ## Before Editing
 
-- [ ] Open [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
-- [ ] Open [phase2_caption_review_decision_seed_at2026_03_30.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
+- [ ] Open [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](../reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
+- [ ] Open [phase2_caption_review_decision_seed_at2026_03_30.jsonl](../manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
 - [ ] Confirm only one active writer is editing the canonical seed JSONL
 - [ ] Confirm fixed truth is unchanged
 - [ ] Review images in priority order: `image11, image7, image8, image10, image12, image13, image14, image9, image15`
@@ -43,7 +43,7 @@
 ## Rebuild Ingestion
 
 - [ ] Run `python3 scripts/build_phase2_review_decision_ingestion.py --review-surface-json control/project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json ...`
-- [ ] Reopen [phase2_caption_review_decision_ingestion_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
+- [ ] Reopen [phase2_caption_review_decision_ingestion_at2026_03_30.json](../manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
 - [ ] Confirm no `Machine-prefilled field drift detected` error was raised
 - [ ] Check `review_status_counts`
 - [ ] Check `retrieval_ready_count`

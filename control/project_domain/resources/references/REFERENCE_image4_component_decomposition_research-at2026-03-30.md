@@ -9,10 +9,10 @@ The goal is not just better regrouping. The harder open problem is:
 - then regroup those components into candidate caption surfaces
 
 Follow-on implementation strategy:
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_component_decomposition_strategy-at2026-03-30.md`
+- [`REFERENCE_component_decomposition_strategy-at2026-03-30.md`](./REFERENCE_component_decomposition_strategy-at2026-03-30.md)
 
 Canonical KB:
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/knowledge_bases/KB_component_decomposition_strategy.md`
+- [`KB_component_decomposition_strategy.md`](../knowledge_bases/KB_component_decomposition_strategy.md)
 
 ## Current Conclusion
 
@@ -36,7 +36,7 @@ So the research stack should be read in two layers:
 ### 1. Docling Technical Report
 
 - local PDF:
-  - [docling_technical_report_2408.09869.pdf](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/docling_technical_report_2408.09869.pdf)
+  - [docling_technical_report_2408.09869.pdf](./papers/image4_component_decomposition/docling_technical_report_2408.09869.pdf)
 - source:
   - https://github.com/docling-project/docling
   - https://arxiv.org/abs/2408.09869
@@ -48,7 +48,7 @@ So the research stack should be read in two layers:
 ### 2. LayoutParser: A Unified Toolkit for Deep Learning Based Document Image Analysis
 
 - local PDF:
-  - [layoutparser_2103.15348.pdf](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/layoutparser_2103.15348.pdf)
+  - [layoutparser_2103.15348.pdf](./papers/image4_component_decomposition/layoutparser_2103.15348.pdf)
 - source:
   - https://github.com/Layout-Parser/layout-parser
   - https://arxiv.org/abs/2103.15348
@@ -65,7 +65,7 @@ So the research stack should be read in two layers:
 ### 3. PubTables-1M / Table Transformer Line
 
 - local PDF:
-  - [pubtables1m_table_transformer_2110.00061.pdf](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/pubtables1m_table_transformer_2110.00061.pdf)
+  - [pubtables1m_table_transformer_2110.00061.pdf](./papers/image4_component_decomposition/pubtables1m_table_transformer_2110.00061.pdf)
 - source:
   - https://github.com/microsoft/table-transformer
   - https://arxiv.org/abs/2110.00061
@@ -78,7 +78,7 @@ So the research stack should be read in two layers:
 ### 4. DocLayout-YOLO
 
 - local PDF:
-  - [doclayout_yolo_2410.12628.pdf](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/doclayout_yolo_2410.12628.pdf)
+  - [doclayout_yolo_2410.12628.pdf](./papers/image4_component_decomposition/doclayout_yolo_2410.12628.pdf)
 - source:
   - https://arxiv.org/abs/2410.12628
 - why it matters:
@@ -89,7 +89,7 @@ So the research stack should be read in two layers:
 ### 5. Semantic Segmentation for Compound Figures
 
 - local PDF:
-  - [semantic_segmentation_for_compound_figures_1912.07142.pdf](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/semantic_segmentation_for_compound_figures_1912.07142.pdf)
+  - [semantic_segmentation_for_compound_figures_1912.07142.pdf](./papers/image4_component_decomposition/semantic_segmentation_for_compound_figures_1912.07142.pdf)
 - source:
   - https://arxiv.org/abs/1912.07142
 - why it matters:

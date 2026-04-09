@@ -4,13 +4,13 @@
   "title": "Filename And Linting Contract",
   "source_of_truth": {
     "primary": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/skill-creation-process/references/script-and-linter-writing-patterns-at2026-03-20-14-15.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/python-static-diagnostic-fixer/knowledge_bases/python-static-diagnostic-fixer-knowledge_base-at2026-03-17-01-18.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/python-static-diagnostic-fixer/checklist-forconsistency-evaluation/consistency-checklist-at2026-03-17-01-18.md"
+      "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/skill-creation-process/references/script-and-linter-writing-patterns-at2026-03-20-14-15.md",
+      "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/python-static-diagnostic-fixer/knowledge_bases/python-static-diagnostic-fixer-knowledge_base-at2026-03-17-01-18.md",
+      "<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/python-static-diagnostic-fixer/checklist-forconsistency-evaluation/consistency-checklist-at2026-03-17-01-18.md"
     ],
     "supporting": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_development_team_operating_playbook.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_legacy_boundary_linting.md"
+      "control/team/resources/rules/RULES_development_team_operating_playbook.md",
+      "control/team/resources/rules/RULES_legacy_boundary_linting.md"
     ]
   },
   "scope": {
@@ -124,8 +124,8 @@
   "active_profiles": [
     {
       "id": "legacy_boundary_linting",
-      "rule_doc": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_legacy_boundary_linting.md",
-      "contract": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/legacy_boundary_lint.contract.json"
+      "rule_doc": "control/team/resources/rules/RULES_legacy_boundary_linting.md",
+      "contract": "control/project_domain/resources/specs/contracts/legacy_boundary_lint.contract.json"
     }
   ]
 }

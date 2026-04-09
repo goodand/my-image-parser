@@ -9,13 +9,13 @@ This surface exists so the workspace can freeze the next runtime contract even w
 ## Canonical Inputs
 
 - decision ingestion manifest:
-  - [phase2_caption_review_decision_ingestion_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
+  - [phase2_caption_review_decision_ingestion_at2026_03_30.json](../../manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
 - retrieval-ready subset:
-  - [phase2_retrieval_ready_rows_at2026_03_30.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_retrieval_ready_rows_at2026_03_30.jsonl)
+  - [phase2_retrieval_ready_rows_at2026_03_30.jsonl](../../manifests/phase2_retrieval_ready_rows_at2026_03_30.jsonl)
 - mapping-ready subset:
-  - [phase2_mapping_ready_rows_at2026_03_30.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_mapping_ready_rows_at2026_03_30.jsonl)
+  - [phase2_mapping_ready_rows_at2026_03_30.jsonl](../../manifests/phase2_mapping_ready_rows_at2026_03_30.jsonl)
 - decision capture contract:
-  - [SPEC_corpus_review_decision_capture.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
+  - [SPEC_corpus_review_decision_capture.md](./SPEC_corpus_review_decision_capture.md)
 
 ## Design Rule
 
@@ -56,4 +56,3 @@ The dry-run manifest must report:
 - do not execute reranking
 - do not finalize mapping
 - do not mutate decision rows
-

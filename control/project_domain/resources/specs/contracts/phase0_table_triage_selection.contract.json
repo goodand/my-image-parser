@@ -2,9 +2,9 @@
   "$schema_notes": {
     "_comment": "Phase0 table triage selection JSONL row contract. Step 0 selection gate output before PaddleOCR parser smoke.",
     "reference_basis": [
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
-      "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md"
+      "control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md",
+      "control/project_domain/resources/experiment_plans/PLAN_phase0_table_branch_activation-at2026-03-27-23-57.md",
+      "control/project_domain/resources/reports/REPORT_phase0_imagesorcery_ocr_smoke-at2026-03-27-23-30.md"
     ],
     "identity": "The artifact is a JSONL manifest where each row records one triage decision for one PPT-extracted image candidate.",
     "path_rule": "All path examples below are repo-root relative paths unless explicitly marked absolute."
@@ -32,7 +32,7 @@
       },
       "source_image_path": {
         "type": "string",
-        "description": "Absolute path to the original PPT-extracted image."
+        "description": "Repo-root relative path to the original PPT-extracted image."
       },
       "source_slide_numbers": {
         "type": "array",
@@ -54,7 +54,7 @@
           "string",
           "null"
         ],
-        "description": "Absolute path to the image surface promoted for parser smoke. Must equal the original image path for use_full_image, a reviewed crop path for use_reviewed_crop, and null for excluded cases."
+        "description": "Repo-root relative path to the image surface promoted for parser smoke. Must equal the original image path for use_full_image, a reviewed crop path for use_reviewed_crop, and null for excluded cases."
       },
       "selection_rationale": {
         "type": "string",
