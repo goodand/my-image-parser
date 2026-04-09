@@ -15,7 +15,7 @@ The goal is simple:
 ## Derived From
 
 - External good case:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/codebase-analysis/references/codebase-analysis-development-playbook-at2026-03-23-03-36.md`
+  - `<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/codebase-analysis/references/codebase-analysis-development-playbook-at2026-03-23-03-36.md`
 
 This local document is the active rule document for this workspace.
 The external file remains a reference only.
@@ -24,20 +24,20 @@ The external file remains a reference only.
 
 Primary local references:
 
-- [RULES_workspace_structure.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_workspace_structure.md)
-- [RULES_filename_and_linting.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_filename_and_linting.md)
-- [REFERENCE_project_start_document_map.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_project_start_document_map.md)
-- [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
-- [presentation_image_pipeline_spec.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/presentation_image_pipeline_spec.json)
-- [SPEC_openai_image_caption_runner.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_openai_image_caption_runner.md)
-- [REFERENCE_mcp_setup.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/tools_inventory/REFERENCE_mcp_setup.md)
-- [REFERENCE_feedback_filing_guide.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/feedback/REFERENCE_feedback_filing_guide.md)
-- [REFERENCE_repeated_pattern_triage.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/REFERENCE_repeated_pattern_triage.md)
-- [session_paths.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/runtime/session_paths.json)
+- [RULES_workspace_structure.md](./RULES_workspace_structure.md)
+- [RULES_filename_and_linting.md](./RULES_filename_and_linting.md)
+- [REFERENCE_project_start_document_map.md](../../../project_domain/resources/references/REFERENCE_project_start_document_map.md)
+- [MASTER_PLAN_presentation_image_pipeline.md](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+- [presentation_image_pipeline_spec.json](../../../project_domain/resources/specs/contracts/presentation_image_pipeline_spec.json)
+- [SPEC_openai_image_caption_runner.md](../../../project_domain/resources/specs/prose/SPEC_openai_image_caption_runner.md)
+- [REFERENCE_mcp_setup.md](<LOCAL_AGENT_REFERENCE_ROOT>/tools_inventory/REFERENCE_mcp_setup.md)
+- [REFERENCE_feedback_filing_guide.md](../../../project_agent_ops/resources/feedback/REFERENCE_feedback_filing_guide.md)
+- [REFERENCE_repeated_pattern_triage.md](../../../project_agent_ops/resources/skill_candidates/REFERENCE_repeated_pattern_triage.md)
+- [session_paths.json](<LOCAL_AGENT_REGISTRY>/runtime/session_paths.json)
 
 Important active experiment profile:
 
-- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
+- [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](../../../project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
 
 ## Scope
 

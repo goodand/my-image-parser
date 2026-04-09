@@ -42,9 +42,9 @@ These are decision-support overlays rather than stable master plans.
 
 Canonical moved files:
 
-- [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
-- [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
-- [NOTE_presentation_image_pipeline_current_state_snapshot-at2026-03-30-09-21.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/NOTE_presentation_image_pipeline_current_state_snapshot-at2026-03-30-09-21.md)
+- [REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md](../../../user_decisions/resources/notes/REFERENCE_master_plan_progress_dashboard-at2026-04-05-09-17.md)
+- [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](../../../user_decisions/resources/notes/REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
+- [NOTE_presentation_image_pipeline_current_state_snapshot-at2026-03-30-09-21.md](../../../user_decisions/resources/notes/NOTE_presentation_image_pipeline_current_state_snapshot-at2026-03-30-09-21.md)
 
 Redirect stubs remain in `master_plans/` only when needed for path continuity.
 

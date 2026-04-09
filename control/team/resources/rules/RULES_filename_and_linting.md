@@ -7,13 +7,13 @@ Git-managed control tree 안에서 파일명 규칙과 lint/static 진단 순서
 ## Source Of Truth
 
 - Primary references:
-  - [script-and-linter-writing-patterns-at2026-03-20-14-15.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/skill-creation-process/references/script-and-linter-writing-patterns-at2026-03-20-14-15.md)
-  - [python-static-diagnostic-fixer-knowledge_base-at2026-03-17-01-18.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/python-static-diagnostic-fixer/knowledge_bases/python-static-diagnostic-fixer-knowledge_base-at2026-03-17-01-18.md)
-  - [consistency-checklist-at2026-03-17-01-18.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/claude-gemini-communicator/skills/Skills-Create-Project/python-static-diagnostic-fixer/checklist-forconsistency-evaluation/consistency-checklist-at2026-03-17-01-18.md)
+  - [script-and-linter-writing-patterns-at2026-03-20-14-15.md](<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/skill-creation-process/references/script-and-linter-writing-patterns-at2026-03-20-14-15.md)
+  - [python-static-diagnostic-fixer-knowledge_base-at2026-03-17-01-18.md](<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/python-static-diagnostic-fixer/knowledge_bases/python-static-diagnostic-fixer-knowledge_base-at2026-03-17-01-18.md)
+  - [consistency-checklist-at2026-03-17-01-18.md](<EXTERNAL_SKILLS_ROOT>/Skills-Create-Project/python-static-diagnostic-fixer/checklist-forconsistency-evaluation/consistency-checklist-at2026-03-17-01-18.md)
 - Supporting reference for broader team operating policy:
-  - [RULES_development_team_operating_playbook.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_development_team_operating_playbook.md)
+  - [RULES_development_team_operating_playbook.md](./RULES_development_team_operating_playbook.md)
 - Project-specific extension:
-  - [RULES_legacy_boundary_linting.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_legacy_boundary_linting.md)
+  - [RULES_legacy_boundary_linting.md](./RULES_legacy_boundary_linting.md)
 
 ## Scope
 
@@ -221,17 +221,17 @@ Project-specific policy layers may extend it for:
 
 Current active profile:
 
-- [RULES_legacy_boundary_linting.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_legacy_boundary_linting.md)
+- [RULES_legacy_boundary_linting.md](./RULES_legacy_boundary_linting.md)
 
 ## Companion Contract
 
 Machine-readable companion:
 
-- [filename_and_linting.contract.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/filename_and_linting.contract.json)
+- [filename_and_linting.contract.json](../../../project_domain/resources/specs/contracts/filename_and_linting.contract.json)
 
 Automated checker:
 
-- [lint_control_tree.py](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/scripts/lint_control_tree.py)
+- [lint_control_tree.py](../scripts/lint_control_tree.py)
 
 ## One-Line Summary
 

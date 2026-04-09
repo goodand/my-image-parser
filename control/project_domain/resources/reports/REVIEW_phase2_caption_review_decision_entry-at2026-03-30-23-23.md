@@ -16,14 +16,14 @@ If multiple reviewers are needed, assign owned image ids before editing or use r
 
 Treat these as fixed truth while entering decisions:
 
-- [REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md)
-- [phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json)
-- [phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json)
-- [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
-- [phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
-- [SPEC_corpus_review_decision_capture.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
-- [phase2_caption_review_decision_seed_at2026_03_30.jsonl](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
-- [phase2_caption_review_decision_ingestion_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
+- [REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md](./REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md)
+- [phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json](../manifests/phase1_caption_four_mode_corpus_ready_bundle_at2026_03_29.json)
+- [phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json](../manifests/phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json)
+- [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](./REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
+- [phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json](../manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
+- [SPEC_corpus_review_decision_capture.md](../specs/prose/SPEC_corpus_review_decision_capture.md)
+- [phase2_caption_review_decision_seed_at2026_03_30.jsonl](../manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
+- [phase2_caption_review_decision_ingestion_at2026_03_30.json](../manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
 
 ## Active Interpretation
 
@@ -66,7 +66,7 @@ Treat these as fixed truth while entering decisions:
 
 Policy note:
 
-- [NOTE_phase2_caption_review_operator_policy-at2026-04-05-11-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/NOTE_phase2_caption_review_operator_policy-at2026-04-05-11-30.md)
+- [NOTE_phase2_caption_review_operator_policy-at2026-04-05-11-30.md](../../../user_decisions/resources/notes/NOTE_phase2_caption_review_operator_policy-at2026-04-05-11-30.md)
 
 ## Review Order
 
@@ -239,7 +239,7 @@ Then confirm:
 - `retrieval_ready_image_ids`
 - `mapping_ready_image_ids`
 
-from [phase2_caption_review_decision_ingestion_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
+from [phase2_caption_review_decision_ingestion_at2026_03_30.json](../manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
 
 ## Non-Goals
 

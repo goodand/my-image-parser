@@ -13,9 +13,9 @@ This baseline is intended to keep future cleanup work bounded and machine-reread
 ## Baseline Source
 
 - lint script:
-  - [lint_control_tree.py](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/scripts/lint_control_tree.py)
+  - [lint_control_tree.py](../scripts/lint_control_tree.py)
 - structure rule:
-  - [RULES_workspace_structure.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/team/resources/rules/RULES_workspace_structure.md)
+  - [RULES_workspace_structure.md](../rules/RULES_workspace_structure.md)
 - captured on:
   - `2026-03-30`
 
