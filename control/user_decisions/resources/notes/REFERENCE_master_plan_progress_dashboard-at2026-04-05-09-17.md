@@ -21,7 +21,7 @@
 
 Task dependency와 병목을 Mermaid로 보려면:
 
-- [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/user_decisions/resources/notes/REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
+- [REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md](./REFERENCE_master_plan_task_graphs-at2026-04-05-09-17.md)
 
 ## Executive Summary
 
@@ -36,7 +36,7 @@ Task dependency와 병목을 Mermaid로 보려면:
 ### 1. Presentation Image Pipeline
 
 - canonical document:
-  - [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+  - [MASTER_PLAN_presentation_image_pipeline.md](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 - current lane:
   - `4-mode comparison readiness and expansion`
 - progress shape:
@@ -54,16 +54,16 @@ Task dependency와 병목을 Mermaid로 보려면:
   - `corpus-wide operational closure`: medium progress
   - `default arm replacement decision`: still open
 - key evidence:
-  - [MASTER_PLAN_presentation_image_pipeline.md:1468](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md#L1468)
-  - [MASTER_PLAN_presentation_image_pipeline.md:1498](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md#L1498)
-  - [MASTER_PLAN_presentation_image_pipeline.md:1519](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md#L1519)
+  - [MASTER_PLAN_presentation_image_pipeline.md:1468](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md#L1468)
+  - [MASTER_PLAN_presentation_image_pipeline.md:1498](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md#L1498)
+  - [MASTER_PLAN_presentation_image_pipeline.md:1519](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md#L1519)
 
 ### 2. VS Code Markdown Review Surface
 
 - source plan:
-  - [PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md)
+  - [PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md](../../../project_domain/resources/master_plans/drafts/PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md)
 - actual implementation repo:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/vscode-markdown-review-surface`
+  - `<EXTERNAL_REVIEW_SURFACE_ROOT>`
 - progress shape:
   - migration pass: complete
   - smoke gate: complete
@@ -81,11 +81,11 @@ Task dependency와 병목을 Mermaid로 보려면:
   - `editor protocol hardening`: medium progress
   - `backlink / decision integration`: low progress
 - key evidence:
-  - [PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md:68](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md#L68)
-  - [SMOKE_review_surface_mvp-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/vscode-markdown-review-surface/control/project_domain/runs/smoke/SMOKE_review_surface_mvp-at2026-03-30.md)
-  - [REPORT_renderer_replacement_markdown_it-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/vscode-markdown-review-surface/control/project_domain/runs/reports/REPORT_renderer_replacement_markdown_it-at2026-03-30.md)
-  - [REPORT_sidecar_state-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/vscode-markdown-review-surface/control/project_domain/runs/reports/REPORT_sidecar_state-at2026-03-30.md)
-  - [REPORT_codex_direct_patch_round2_sync_gate-and-fixture-isolation-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/vscode-markdown-review-surface/control/project_domain/runs/reports/REPORT_codex_direct_patch_round2_sync_gate-and-fixture-isolation-at2026-03-30.md)
+  - [PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md:68](../../../project_domain/resources/master_plans/drafts/PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md#L68)
+  - Review-surface MVP smoke: `<EXTERNAL_REVIEW_SURFACE_ROOT>/control/project_domain/runs/smoke/SMOKE_review_surface_mvp-at2026-03-30.md`
+  - Renderer replacement report: `<EXTERNAL_REVIEW_SURFACE_ROOT>/control/project_domain/runs/reports/REPORT_renderer_replacement_markdown_it-at2026-03-30.md`
+  - Sidecar state report: `<EXTERNAL_REVIEW_SURFACE_ROOT>/control/project_domain/runs/reports/REPORT_sidecar_state-at2026-03-30.md`
+  - Direct patch round-2 report: `<EXTERNAL_REVIEW_SURFACE_ROOT>/control/project_domain/runs/reports/REPORT_codex_direct_patch_round2_sync_gate-and-fixture-isolation-at2026-03-30.md`
 
 ## Current Bottleneck Classification
 
@@ -164,9 +164,9 @@ Current recommendation:
 ## Reading Order
 
 1. this dashboard
-2. [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
-3. [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
-4. [PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/drafts/PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md)
+2. [MASTER_PLAN_presentation_image_pipeline.md](../../../project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+3. [PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md](../../../project_domain/resources/master_plans/drafts/PLAN_codebase_per_image_caption_experiment_comparison-at2026-03-27-16-46.md)
+4. [PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md](../../../project_domain/resources/master_plans/drafts/PLAN_vscode_markdown_review_surface_replacement_strategy-at2026-03-30.md)
 5. the latest `vscode-markdown-review-surface` run reports
 
 ## Operator Note

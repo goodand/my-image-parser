@@ -33,8 +33,8 @@ Teach the skill how to start bounded experiment sessions from frozen truth and n
 
 ## Required Inputs
 
-- [KB_repeated_task_patterns.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_tasks/KB_repeated_task_patterns.md)
-- [TASK_PACKET_phase1_image4_multi_component_recrop_reentry_slice-at2026-03-30.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_image4_multi_component_recrop_reentry_slice-at2026-03-30.md)
+- [KB_repeated_task_patterns.md](../../skill_candidates/repeated_tasks/KB_repeated_task_patterns.md)
+- [TASK_PACKET_phase1_image4_multi_component_recrop_reentry_slice-at2026-03-30.md](./TASK_PACKET_phase1_image4_multi_component_recrop_reentry_slice-at2026-03-30.md)
 
 ## Expected Changes
 

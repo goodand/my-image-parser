@@ -33,9 +33,9 @@ Document the bounded decomposition-first route as a parser-sidecar troubleshooti
 
 ## Required Inputs
 
-- [KB_repeated_task_patterns.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_tasks/KB_repeated_task_patterns.md)
-- [KB_repeated_issue_patterns.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_issues/KB_repeated_issue_patterns.md)
-- [REPORT_phase1_image4_four_mode_reentry_waiver-at2026-03-30-21-27.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_four_mode_reentry_waiver-at2026-03-30-21-27.md)
+- [KB_repeated_task_patterns.md](../../skill_candidates/repeated_tasks/KB_repeated_task_patterns.md)
+- [KB_repeated_issue_patterns.md](../../skill_candidates/repeated_issues/KB_repeated_issue_patterns.md)
+- [REPORT_phase1_image4_four_mode_reentry_waiver-at2026-03-30-21-27.md](../../../../project_domain/resources/reports/REPORT_phase1_image4_four_mode_reentry_waiver-at2026-03-30-21-27.md)
 
 ## Expected Changes
 

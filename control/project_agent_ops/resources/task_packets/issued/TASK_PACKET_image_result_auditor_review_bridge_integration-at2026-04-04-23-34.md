@@ -42,11 +42,11 @@ Update the skill so a future operator can discover and execute the review-bridge
 
 ## Required Inputs
 
-- [KB_repeated_task_patterns.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_tasks/KB_repeated_task_patterns.md)
-- [KB_repeated_issue_patterns.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/skill_candidates/repeated_issues/KB_repeated_issue_patterns.md)
-- [SPEC_corpus_review_decision_capture.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
-- [REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md)
-- [phase2_caption_review_decision_ingestion_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
+- [KB_repeated_task_patterns.md](../../skill_candidates/repeated_tasks/KB_repeated_task_patterns.md)
+- [KB_repeated_issue_patterns.md](../../skill_candidates/repeated_issues/KB_repeated_issue_patterns.md)
+- [SPEC_corpus_review_decision_capture.md](../../../../project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
+- [REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md](../../../../project_domain/resources/reports/REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md)
+- [phase2_caption_review_decision_ingestion_at2026_03_30.json](../../../../project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
 
 ## Expected Changes
 

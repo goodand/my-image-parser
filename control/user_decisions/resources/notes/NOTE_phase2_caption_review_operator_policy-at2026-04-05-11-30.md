@@ -10,12 +10,12 @@ This stage exists to finalize caption decisions for the active 9-image corpus so
 
 Treat these as fixed truth while entering decisions:
 
-- [Corpus closure report](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md)
-- [Corpus review surface](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
-- [Decision capture spec](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
-- [Operator entry guide](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md)
-- [Operator checklist](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/checklists/CHECKLIST_phase2_caption_review_decision_entry.md)
-- [Editable decision seed JSONL](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
+- [Corpus closure report](../../../project_domain/resources/reports/REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md)
+- [Corpus review surface](../../../project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
+- [Decision capture spec](../../../project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
+- [Operator entry guide](../../../project_domain/resources/reports/REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md)
+- [Operator checklist](../../../project_domain/resources/checklists/CHECKLIST_phase2_caption_review_decision_entry.md)
+- [Editable decision seed JSONL](../../../project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
 
 Do not modify corpus truth, bundle truth, or auto-eval truth during this stage.
 
@@ -163,12 +163,12 @@ Under this policy:
 
 ## Directly Related Files
 
-- [Decision capture spec](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
-- [Decision capture contract](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/contracts/corpus_review_decision_capture.contract.json)
-- [Operator entry guide](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md)
-- [Operator checklist](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/checklists/CHECKLIST_phase2_caption_review_decision_entry.md)
-- [Seed editing reference](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_phase2_caption_review_decision_seed_editing.md)
-- [Editable decision seed JSONL](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
-- [Review surface manifest](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
-- [Corpus review markdown](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
-- [Decision ingestion manifest](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
+- [Decision capture spec](../../../project_domain/resources/specs/prose/SPEC_corpus_review_decision_capture.md)
+- [Decision capture contract](../../../project_domain/resources/specs/contracts/corpus_review_decision_capture.contract.json)
+- [Operator entry guide](../../../project_domain/resources/reports/REVIEW_phase2_caption_review_decision_entry-at2026-03-30-23-23.md)
+- [Operator checklist](../../../project_domain/resources/checklists/CHECKLIST_phase2_caption_review_decision_entry.md)
+- [Seed editing reference](../../../project_domain/resources/references/REFERENCE_phase2_caption_review_decision_seed_editing.md)
+- [Editable decision seed JSONL](../../../project_domain/resources/manifests/phase2_caption_review_decision_seed_at2026_03_30.jsonl)
+- [Review surface manifest](../../../project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
+- [Corpus review markdown](../../../project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
+- [Decision ingestion manifest](../../../project_domain/resources/manifests/phase2_caption_review_decision_ingestion_at2026_03_30.json)
