@@ -7,7 +7,7 @@
     {
       "title": "Docling Technical Report",
       "paper_id": "2408.09869",
-      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/docling_technical_report_2408.09869.pdf",
+      "local_pdf_path": "../references/papers/image4_component_decomposition/docling_technical_report_2408.09869.pdf",
       "source_urls": [
         "https://github.com/docling-project/docling",
         "https://arxiv.org/abs/2408.09869"
@@ -18,7 +18,7 @@
     {
       "title": "LayoutParser: A Unified Toolkit for Deep Learning Based Document Image Analysis",
       "paper_id": "2103.15348",
-      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/layoutparser_2103.15348.pdf",
+      "local_pdf_path": "../references/papers/image4_component_decomposition/layoutparser_2103.15348.pdf",
       "source_urls": [
         "https://github.com/Layout-Parser/layout-parser",
         "https://arxiv.org/abs/2103.15348"
@@ -29,7 +29,7 @@
     {
       "title": "PubTables-1M: Towards Comprehensive Table Extraction From Unstructured Documents",
       "paper_id": "2110.00061",
-      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/pubtables1m_table_transformer_2110.00061.pdf",
+      "local_pdf_path": "../references/papers/image4_component_decomposition/pubtables1m_table_transformer_2110.00061.pdf",
       "source_urls": [
         "https://github.com/microsoft/table-transformer",
         "https://arxiv.org/abs/2110.00061"
@@ -40,7 +40,7 @@
     {
       "title": "DocLayout-YOLO: Enhancing Document Layout Analysis through Diverse Synthetic Data and Global-to-Local Adaptive Perception",
       "paper_id": "2410.12628",
-      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/doclayout_yolo_2410.12628.pdf",
+      "local_pdf_path": "../references/papers/image4_component_decomposition/doclayout_yolo_2410.12628.pdf",
       "source_urls": [
         "https://arxiv.org/abs/2410.12628"
       ],
@@ -50,7 +50,7 @@
     {
       "title": "Semantic Segmentation for Compound Figures",
       "paper_id": "1912.07142",
-      "local_pdf_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/papers/image4_component_decomposition/semantic_segmentation_for_compound_figures_1912.07142.pdf",
+      "local_pdf_path": "../references/papers/image4_component_decomposition/semantic_segmentation_for_compound_figures_1912.07142.pdf",
       "source_urls": [
         "https://arxiv.org/abs/1912.07142"
       ],

@@ -2,12 +2,12 @@
   "phase": "phase1_caption_experiment",
   "generated_at": "2026-03-27T18:31:00+09:00",
   "ledgers": [
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_ppt1_w1.json",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_ppt1_w2.json",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_ppt2_w3.json",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_ppt2_w4.json",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_ppt2_w5.json",
-    "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/registry/jobs/image_caption_jobs/phase1_ppt2_w6.json"
+    "<LOCAL_AGENT_REGISTRY>/jobs/image_caption_jobs/phase1_ppt1_w1.json",
+    "<LOCAL_AGENT_REGISTRY>/jobs/image_caption_jobs/phase1_ppt1_w2.json",
+    "<LOCAL_AGENT_REGISTRY>/jobs/image_caption_jobs/phase1_ppt2_w3.json",
+    "<LOCAL_AGENT_REGISTRY>/jobs/image_caption_jobs/phase1_ppt2_w4.json",
+    "<LOCAL_AGENT_REGISTRY>/jobs/image_caption_jobs/phase1_ppt2_w5.json",
+    "<LOCAL_AGENT_REGISTRY>/jobs/image_caption_jobs/phase1_ppt2_w6.json"
   ],
   "record_count": 61,
   "status_counts": {
