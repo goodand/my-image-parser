@@ -113,7 +113,7 @@ Output artifacts:
 - rendered review images: `control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-01.jpg` through `slide-06.jpg`
 - role matrix: `control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json`
 - review index: `control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md`
-- QA report: `control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-10-18.md`
+- QA report: `control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md`
 
 Rendering path:
 
