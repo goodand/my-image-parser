@@ -24,3 +24,9 @@ Another decision-capture workflow updates the contract or report vocabulary with
 
 2026-03-30 `phase2` corpus review decision capture briefly described a flat row contract while the actual seed still used a nested `human_decision_template` structure until the Session B bridge regenerated it.
 
+2026-04-07 `vscode-markdown-review-surface` product review revealed `buildDecisionRowTemplate()` produced `use_for_retrieval: false` + `retrieval_block_reason: null` which failed `validateDecisionRow()`. The template's own output was invalid by its contract. Fixed by adding `review_status !== 'pending'` guard. See also: `ISSUE_contract_template_vs_validator_self_consistency_drift.md`.
+
+## Linked Pattern
+
+- `ISSUE_contract_template_vs_validator_self_consistency_drift.md`
+
