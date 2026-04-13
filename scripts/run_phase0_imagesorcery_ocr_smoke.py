@@ -8,6 +8,7 @@ import math
 import os
 import subprocess
 import sys
+import unicodedata
 from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
@@ -20,13 +21,65 @@ MACOS_OCR_DIR = Path(
     os.environ.get("MACOS_OCR_MCP_SERVER_DIR", str(ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp"))
 )
 MACOS_OCR_MAIN = MACOS_OCR_DIR / "main.py"
-CAPTION_JOBS_DIR = Path(
-    os.environ.get(
-        "CAPTION_JOB_ROOT",
-        str(ROOT_DIR / "control" / "project_agent_ops" / "registry" / "runs" / "image_caption_jobs"),
-    )
+YOLO_CONFIG_DIR = Path(
+    os.environ.get("YOLO_CONFIG_DIR", str(ROOT_DIR / "logs" / "imagesorcery" / "ultralytics"))
 )
-YOLO_CONFIG_DIR = ROOT_DIR / "logs" / "imagesorcery" / "ultralytics"
+
+
+def resolve_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> Path:
+    path = Path(path_value)
+    if path.is_absolute():
+        return path.absolute()
+    return (root_dir / path).absolute()
+
+
+def serialize_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> str:
+    resolved = resolve_workspace_path(path_value, root_dir=root_dir)
+    try:
+        return unicodedata.normalize("NFC", str(resolved.relative_to(root_dir)))
+    except ValueError:
+        return unicodedata.normalize("NFC", str(resolved))
+
+
+def caption_job_roots() -> list[Path]:
+    override = os.environ.get("CAPTION_JOB_ROOT")
+    candidates: list[Path] = []
+    if override:
+        candidates.append(resolve_workspace_path(override))
+    candidates.extend(
+        [
+            ROOT_DIR / "control" / "project_agent_ops" / "registry" / "runs" / "image_caption_jobs",
+            ROOT_DIR / "control" / "project_agent_ops" / "registry" / "jobs" / "image_caption_jobs",
+        ]
+    )
+    deduped: list[Path] = []
+    seen: set[str] = set()
+    for candidate in candidates:
+        normalized = str(resolve_workspace_path(candidate))
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        deduped.append(resolve_workspace_path(candidate))
+    return deduped
+
+
+def _is_path_like_key(key: str) -> bool:
+    lowered = key.lower()
+    return lowered == "path" or lowered.endswith("_path") or lowered in {"job_file", "image_path"}
+
+
+def _sanitize_serialized_paths(payload: Any) -> Any:
+    if isinstance(payload, dict):
+        sanitized: dict[str, Any] = {}
+        for key, value in payload.items():
+            if isinstance(key, str) and isinstance(value, (str, Path)) and _is_path_like_key(key):
+                sanitized[key] = serialize_workspace_path(value)
+                continue
+            sanitized[key] = _sanitize_serialized_paths(value)
+        return sanitized
+    if isinstance(payload, list):
+        return [_sanitize_serialized_paths(item) for item in payload]
+    return payload
 
 
 def _parse_args() -> argparse.Namespace:
@@ -126,26 +179,29 @@ def _pushd(path: Path):
 def _load_existing_caption(image_path: Path) -> dict[str, Any] | None:
     preferred_prefixes = ("phase1_ppt", "phase1_smoke", "phase1_caption_10w")
     target_path = image_path.resolve()
-    for prefix in preferred_prefixes:
-        for candidate in sorted(CAPTION_JOBS_DIR.glob(f"{prefix}*.json")):
-            payload = json.loads(candidate.read_text())
-            for record in payload.get("records", []):
-                record_path_text = record.get("path")
-                if not record_path_text:
-                    continue
-                try:
-                    record_path = Path(record_path_text).resolve()
-                    same_path = record_path == target_path or record_path.samefile(target_path)
-                except Exception:
-                    same_path = Path(record_path_text).name == image_path.name
-                if same_path:
-                    return {
-                        "job_file": str(candidate),
-                        "caption": record.get("caption"),
-                        "alt_text": record.get("alt_text"),
-                        "status": record.get("status"),
-                        "source_context": record.get("source_context"),
-                    }
+    for caption_jobs_dir in caption_job_roots():
+        if not caption_jobs_dir.is_dir():
+            continue
+        for prefix in preferred_prefixes:
+            for candidate in sorted(caption_jobs_dir.glob(f"{prefix}*.json")):
+                payload = json.loads(candidate.read_text())
+                for record in payload.get("records", []):
+                    record_path_text = record.get("path")
+                    if not record_path_text:
+                        continue
+                    try:
+                        record_path = resolve_workspace_path(record_path_text)
+                        same_path = record_path == target_path or record_path.samefile(target_path)
+                    except Exception:
+                        same_path = Path(record_path_text).name == image_path.name
+                    if same_path:
+                        return {
+                            "job_file": serialize_workspace_path(candidate),
+                            "caption": record.get("caption"),
+                            "alt_text": record.get("alt_text"),
+                            "status": record.get("status"),
+                            "source_context": _sanitize_serialized_paths(record.get("source_context")),
+                        }
     return None
 
 
@@ -253,11 +309,11 @@ async def _run_smoke(args: argparse.Namespace) -> dict[str, Any]:
     from fastmcp import Client
     from imagesorcery_mcp.server import mcp as imagesorcery_server
 
-    image_path = Path(args.image_path).resolve()
+    image_path = resolve_workspace_path(args.image_path)
     if not image_path.is_file():
         raise FileNotFoundError(f"Input image not found: {image_path}")
 
-    output_root = Path(args.output_root).resolve() / args.label
+    output_root = resolve_workspace_path(args.output_root) / args.label
     output_root.mkdir(parents=True, exist_ok=True)
 
     crop_path = output_root / f"{args.label}_crop.png"
@@ -319,11 +375,11 @@ async def _run_smoke(args: argparse.Namespace) -> dict[str, Any]:
             if selection is None:
                 summary = {
                     "label": args.label,
-                    "image_path": str(image_path),
+                    "image_path": serialize_workspace_path(image_path),
                     "find_description": args.find_description,
                     "baseline_caption": baseline_caption,
-                    "detect_result": detect_payload,
-                    "find_result": find_payload,
+                    "detect_result": _sanitize_serialized_paths(detect_payload),
+                    "find_result": _sanitize_serialized_paths(find_payload),
                     "status": "no_selection",
                     "notes": [
                         "Neither find() nor detect() produced a usable component candidate.",
@@ -377,17 +433,17 @@ async def _run_smoke(args: argparse.Namespace) -> dict[str, Any]:
     summary = {
         "label": args.label,
         "status": "completed",
-        "image_path": str(image_path),
+        "image_path": serialize_workspace_path(image_path),
         "find_description": args.find_description,
         "baseline_caption": baseline_caption,
-        "detect_result": detect_payload,
-        "find_result": find_payload,
+        "detect_result": _sanitize_serialized_paths(detect_payload),
+        "find_result": _sanitize_serialized_paths(find_payload),
         "selection_method": selection_method,
-        "selection": selection,
-        "geometry_source": geometry_source,
+        "selection": _sanitize_serialized_paths(selection),
+        "geometry_source": _sanitize_serialized_paths(geometry_source),
         "bbox_int": bbox,
-        "crop_output": crop_payload,
-        "isolated_output": fill_payload,
+        "crop_output": _sanitize_serialized_paths(crop_payload),
+        "isolated_output": _sanitize_serialized_paths(fill_payload),
         "ocr_results": ocr_results,
         "context_package": {
             "slides": (baseline_caption or {}).get("source_context", {}).get("slide_numbers"),

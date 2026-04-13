@@ -5,6 +5,7 @@ import json
 import os
 import subprocess
 import sys
+import unicodedata
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
@@ -12,18 +13,49 @@ from typing import Any
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 PPTX_JOBS_DIR = ROOT_DIR / "control" / "project_domain" / "resources" / "pptx_jobs"
-CAPTION_JOBS_DIR = Path(
-    os.environ.get(
-        "CAPTION_JOB_ROOT",
-        str(ROOT_DIR / "control" / "project_agent_ops" / "registry" / "jobs" / "image_caption_jobs"),
-    )
-)
 MACOS_OCR_DIR = Path(
     os.environ.get("MACOS_OCR_MCP_SERVER_DIR", str(ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp"))
 )
 MACOS_OCR_MAIN = MACOS_OCR_DIR / "main.py"
 DEFAULT_OUTPUT_ROOT = ROOT_DIR / "control" / "project_domain" / "resources" / "context_packages" / "full_image_ocr_baseline"
 DEFAULT_MANIFEST_JSONL = ROOT_DIR / "control" / "project_domain" / "resources" / "manifests" / "phase0_full_image_ocr_context_package_manifest.jsonl"
+
+
+def resolve_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> Path:
+    path = Path(path_value)
+    if path.is_absolute():
+        return path.absolute()
+    return (root_dir / path).absolute()
+
+
+def serialize_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> str:
+    resolved = resolve_workspace_path(path_value, root_dir=root_dir)
+    try:
+        return unicodedata.normalize("NFC", str(resolved.relative_to(root_dir)))
+    except ValueError:
+        return unicodedata.normalize("NFC", str(resolved))
+
+
+def caption_job_roots() -> list[Path]:
+    override = os.environ.get("CAPTION_JOB_ROOT")
+    candidates: list[Path] = []
+    if override:
+        candidates.append(resolve_workspace_path(override))
+    candidates.extend(
+        [
+            ROOT_DIR / "control" / "project_agent_ops" / "registry" / "runs" / "image_caption_jobs",
+            ROOT_DIR / "control" / "project_agent_ops" / "registry" / "jobs" / "image_caption_jobs",
+        ]
+    )
+    deduped: list[Path] = []
+    seen: set[str] = set()
+    for candidate in candidates:
+        normalized = str(resolve_workspace_path(candidate))
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        deduped.append(resolve_workspace_path(candidate))
+    return deduped
 
 
 @dataclass(frozen=True)
@@ -125,19 +157,19 @@ def find_manifest_record(image_path: Path) -> ManifestRecord | None:
             output_path_text = item.get("output_path")
             if not output_path_text:
                 continue
-            candidate = Path(output_path_text)
+            candidate = resolve_workspace_path(output_path_text)
             if not _resolve_samefile(candidate, target):
                 continue
             embedded = item.get("embedded_metadata", {})
             slide_numbers = [entry.get("slide") for entry in item.get("slide_usages", []) if entry.get("slide") is not None]
             return ManifestRecord(
                 dataset=dataset,
-                manifest_path=str(manifest_path.resolve()),
+                manifest_path=serialize_workspace_path(manifest_path),
                 source_pptx=source_pptx,
                 source_filename=source_filename,
                 image_file=item.get("file", image_path.name),
                 source_zip_path=item.get("source_zip_path"),
-                output_path=str(candidate.resolve()),
+                output_path=serialize_workspace_path(candidate),
                 slide_numbers=slide_numbers,
                 sha256=item.get("sha256"),
                 image_width=embedded.get("ImageWidth"),
@@ -149,26 +181,27 @@ def find_manifest_record(image_path: Path) -> ManifestRecord | None:
 
 def load_caption_record(image_path: Path) -> CaptionRecord | None:
     target = image_path.resolve()
-    if not CAPTION_JOBS_DIR.is_dir():
-        return None
-    for candidate in sorted(CAPTION_JOBS_DIR.glob("*.json")):
-        try:
-            payload = json.loads(candidate.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
+    for caption_jobs_dir in caption_job_roots():
+        if not caption_jobs_dir.is_dir():
             continue
-        for record in payload.get("records", []):
-            record_path_text = record.get("path")
-            if not record_path_text:
+        for candidate in sorted(caption_jobs_dir.glob("*.json")):
+            try:
+                payload = json.loads(candidate.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
                 continue
-            if not _resolve_samefile(Path(record_path_text), target):
-                continue
-            return CaptionRecord(
-                job_file=str(candidate.resolve()),
-                caption=record.get("caption"),
-                alt_text=record.get("alt_text"),
-                status=record.get("status"),
-                source_context=record.get("source_context"),
-            )
+            for record in payload.get("records", []):
+                record_path_text = record.get("path")
+                if not record_path_text:
+                    continue
+                if not _resolve_samefile(resolve_workspace_path(record_path_text), target):
+                    continue
+                return CaptionRecord(
+                    job_file=serialize_workspace_path(candidate),
+                    caption=record.get("caption"),
+                    alt_text=record.get("alt_text"),
+                    status=record.get("status"),
+                    source_context=record.get("source_context"),
+                )
     return None
 
 
@@ -477,7 +510,7 @@ def build_context_package(
     ppt_local_summary_override: str | None = None,
     extra_notes: list[str] | None = None,
 ) -> tuple[ContextPackage, dict[str, Path]]:
-    image_path = image_path.resolve()
+    image_path = resolve_workspace_path(image_path)
     if not image_path.is_file():
         raise FileNotFoundError(f"Input image not found: {image_path}")
 
@@ -510,7 +543,7 @@ def build_context_package(
         mime_type = None
 
     safe_image_stem = image_path.stem.replace(" ", "_")
-    package_dir = output_root.resolve() / dataset / safe_image_stem
+    package_dir = resolve_workspace_path(output_root) / dataset / safe_image_stem
     package_dir.mkdir(parents=True, exist_ok=True)
     ocr_result_json_path = package_dir / "OCR_RESULT.json"
     ocr_text_full_path = package_dir / "OCR_FULL_TEXT.txt"
@@ -532,7 +565,7 @@ def build_context_package(
 
     package = ContextPackage(
         image_id=image_id,
-        source_image_path=str(image_path),
+        source_image_path=serialize_workspace_path(image_path),
         source_dataset=dataset,
         source_pptx=source_pptx,
         source_slide_numbers=slide_numbers,
@@ -542,10 +575,10 @@ def build_context_package(
         ocr_engine=ocr_result.get("engine"),
         ocr_annotation_count=int(ocr_result.get("annotation_count") or 0),
         ocr_text_excerpt=ocr_text_excerpt,
-        ocr_text_full_path=str(ocr_text_full_path),
+        ocr_text_full_path=serialize_workspace_path(ocr_text_full_path),
         ppt_local_summary=ppt_local_summary,
-        context_package_markdown_path=str(context_package_markdown_path),
-        context_package_json_path=str(context_package_json_path),
+        context_package_markdown_path=serialize_workspace_path(context_package_markdown_path),
+        context_package_json_path=serialize_workspace_path(context_package_json_path),
         review_status=review_status,
         notes=notes,
         source_filename=source_filename,
@@ -554,7 +587,7 @@ def build_context_package(
         image_width=image_width,
         image_height=image_height,
         mime_type=mime_type,
-        ocr_result_json_path=str(ocr_result_json_path),
+        ocr_result_json_path=serialize_workspace_path(ocr_result_json_path),
         baseline_caption=baseline_caption,
         baseline_alt_text=baseline_alt_text,
         ppt_provenance_context=build_ppt_provenance_context(
@@ -567,8 +600,8 @@ def build_context_package(
             ocr_status=ocr_status,
             ocr_surface="full_image_standalone_ocr",
             ocr_text_excerpt=ocr_text_excerpt,
-            ocr_text_full_path=str(ocr_text_full_path),
-            ocr_result_json_path=str(ocr_result_json_path),
+            ocr_text_full_path=serialize_workspace_path(ocr_text_full_path),
+            ocr_result_json_path=serialize_workspace_path(ocr_result_json_path),
         ),
     )
 
@@ -588,7 +621,7 @@ def build_context_package(
 
 def update_context_package_manifest(manifest_jsonl: Path, package: ContextPackage) -> None:
     row = asdict(package)
-    _write_jsonl_replace(manifest_jsonl.resolve(), row, key_field="image_id")
+    _write_jsonl_replace(resolve_workspace_path(manifest_jsonl), row, key_field="image_id")
 
 
 def print_json(payload: Any) -> None:

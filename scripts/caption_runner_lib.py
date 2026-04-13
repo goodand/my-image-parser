@@ -208,8 +208,8 @@ def utc_timestamp() -> str:
 def resolve_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> Path:
     path = Path(path_value)
     if path.is_absolute():
-        return path.resolve()
-    return (root_dir / path).resolve()
+        return path.absolute()
+    return (root_dir / path).absolute()
 
 
 def serialize_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> str:
@@ -222,6 +222,36 @@ def serialize_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DI
 
 def normalize_path_key(path_value: str | Path) -> str:
     return unicodedata.normalize("NFC", str(resolve_workspace_path(path_value)))
+
+
+def is_path_like_key(key: str) -> bool:
+    lowered = key.lower()
+    return lowered == "path" or lowered.endswith("_path") or lowered in {
+        "job_file",
+        "dataset_jsonl",
+        "manifest",
+        "input_dir",
+        "context_package_json",
+        "context_package_manifest_jsonl",
+    }
+
+
+def sanitize_serialized_paths(payload: Any, *, root_dir: Path = ROOT_DIR) -> Any:
+    if isinstance(payload, dict):
+        sanitized: dict[str, Any] = {}
+        for key, value in payload.items():
+            if isinstance(key, str) and isinstance(value, (str, Path)) and is_path_like_key(key):
+                text = str(value)
+                if re.match(r"^[a-z][a-z0-9+.-]*://", text):
+                    sanitized[key] = text
+                else:
+                    sanitized[key] = serialize_workspace_path(value, root_dir=root_dir)
+                continue
+            sanitized[key] = sanitize_serialized_paths(value, root_dir=root_dir)
+        return sanitized
+    if isinstance(payload, list):
+        return [sanitize_serialized_paths(item, root_dir=root_dir) for item in payload]
+    return payload
 
 
 def natural_sort_key(path: Path) -> list[Any]:
@@ -488,12 +518,12 @@ class ImageDiscoveryService:
 
     def discover_images(self) -> list[Path]:
         if self.args.image:
-            image_path = self.args.image.resolve()
+            image_path = resolve_workspace_path(self.args.image)
             if not image_path.exists():
                 raise FileNotFoundError(f"Image not found: {image_path}")
             return [image_path]
         if self.args.dataset_jsonl:
-            dataset_path = self.args.dataset_jsonl.resolve()
+            dataset_path = resolve_workspace_path(self.args.dataset_jsonl)
             if not dataset_path.exists():
                 raise FileNotFoundError(f"Dataset JSONL not found: {dataset_path}")
             images = []
@@ -501,14 +531,14 @@ class ImageDiscoveryService:
                 image_path = row.get("image_path")
                 if not image_path:
                     continue
-                path = Path(image_path).resolve()
+                path = resolve_workspace_path(image_path)
                 if not path.exists():
                     raise FileNotFoundError(f"Dataset image not found: {path}")
                 images.append(path)
             return images
         if not self.args.input_dir:
             return []
-        input_dir = self.args.input_dir.resolve()
+        input_dir = resolve_workspace_path(self.args.input_dir)
         if not input_dir.exists():
             raise FileNotFoundError(f"Input directory not found: {input_dir}")
         images = [path for path in input_dir.iterdir() if path.is_file()]
@@ -516,24 +546,24 @@ class ImageDiscoveryService:
 
     def discover_manifest(self, images: list[Path]) -> Path | None:
         if self.args.manifest:
-            return self.args.manifest.resolve()
+            return resolve_workspace_path(self.args.manifest)
         if self.args.dataset_jsonl:
             return None
         search_roots: list[Path] = []
         if self.args.image:
-            search_roots.append(self.args.image.resolve().parent)
+            search_roots.append(resolve_workspace_path(self.args.image).parent)
         if self.args.input_dir:
-            search_roots.append(self.args.input_dir.resolve())
+            search_roots.append(resolve_workspace_path(self.args.input_dir))
         for root in search_roots:
             candidate_paths = [root / "manifest.json", root.parent / "manifest.json"]
             for candidate in candidate_paths:
                 if candidate.exists():
-                    return candidate.resolve()
+                    return candidate.absolute()
         if images:
             candidate_paths = [images[0].parent / "manifest.json", images[0].parent.parent / "manifest.json"]
             for candidate in candidate_paths:
                 if candidate.exists():
-                    return candidate.resolve()
+                    return candidate.absolute()
         return None
 
 
@@ -568,7 +598,7 @@ class SourceContextCatalog:
             output_path = item.get("output_path")
             if not output_path:
                 continue
-            lookup[normalize_path_key(output_path)] = item
+            lookup[normalize_path_key(output_path)] = sanitize_serialized_paths(item)
         return lookup
 
     @classmethod
@@ -580,7 +610,7 @@ class SourceContextCatalog:
             image_path = row.get("image_path")
             if not image_path:
                 continue
-            lookup[normalize_path_key(image_path)] = row
+            lookup[normalize_path_key(image_path)] = sanitize_serialized_paths(row)
         return lookup
 
     @classmethod
@@ -654,7 +684,7 @@ class ContextPackageCatalog:
             source_image_path = row.get("source_image_path")
             if not source_image_path:
                 continue
-            lookup[normalize_path_key(source_image_path)] = row
+            lookup[normalize_path_key(source_image_path)] = sanitize_serialized_paths(row)
         return cls(lookup)
 
     def lookup_for(self, image_path: Path) -> dict[str, Any] | None:
@@ -769,8 +799,8 @@ class LedgerStore:
             "structured_metadata": None,
             "caption_model": self.config.model,
             "new_filename_candidate": None,
-            "source_context": source_context,
-            "context_package": context_package,
+            "source_context": sanitize_serialized_paths(source_context) if source_context else None,
+            "context_package": sanitize_serialized_paths(context_package) if context_package else None,
             "api_response_id": None,
             "usage": None,
             "raw_response_path": None,
@@ -1060,14 +1090,14 @@ class CaptionJobRunner:
         manifest_path = discovery.discover_manifest(images)
         catalog = SourceContextCatalog.from_sources(
             manifest_path=manifest_path,
-            dataset_path=self.args.dataset_jsonl.resolve() if self.args.dataset_jsonl else None,
+            dataset_path=resolve_workspace_path(self.args.dataset_jsonl) if self.args.dataset_jsonl else None,
         )
         source_context_lookup = catalog.as_lookup()
         context_catalog = ContextPackageCatalog.from_sources(
-            context_package_json=self.args.context_package_json.resolve()
+            context_package_json=resolve_workspace_path(self.args.context_package_json)
             if self.args.context_package_json
             else None,
-            context_package_manifest_jsonl=self.args.context_package_manifest_jsonl.resolve()
+            context_package_manifest_jsonl=resolve_workspace_path(self.args.context_package_manifest_jsonl)
             if self.args.context_package_manifest_jsonl
             else None,
         )
@@ -1152,9 +1182,15 @@ class CaptionJobRunner:
 
         return {
             "job_id": ledger["job_id"],
-            "output_path": str(output_path),
-            "execution_records_path": str(store.execution_records_path_for()),
-            "evaluation_decisions_path": str(store.evaluation_decisions_path_for()),
+            "output_path": serialize_workspace_path(output_path, root_dir=self.root_dir),
+            "execution_records_path": serialize_workspace_path(
+                store.execution_records_path_for(),
+                root_dir=self.root_dir,
+            ),
+            "evaluation_decisions_path": serialize_workspace_path(
+                store.evaluation_decisions_path_for(),
+                root_dir=self.root_dir,
+            ),
             "model": self.config.model,
             "api_key_env": self.config.api_key_name,
             "processed_count": processed_count,
