@@ -1,0 +1,120 @@
+[
+  {
+    "slide_no": 1,
+    "slide_title": "시스템을 구조로 설명하는 개발자",
+    "visual_type": "system_diagram",
+    "image_filename": "image27.png",
+    "support_images": [],
+    "portfolio_role": "architecture_hero",
+    "source_slide_numbers": [
+      {
+        "slide": 11,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "시스템 사고가 첫 인상으로 보이도록 만든다.",
+    "layout_role": "right_hero_diagram_with_left_title_stack",
+    "crop_required": false
+  },
+  {
+    "slide_no": 2,
+    "slide_title": "입력과 결과로 증명하는 제품 경험",
+    "visual_type": "ui_screenshot_pair",
+    "image_filename": "image4.png",
+    "support_images": [
+      "image37.png"
+    ],
+    "portfolio_role": "product_configuration_ui",
+    "source_slide_numbers": [
+      {
+        "slide": 1,
+        "occurrence": 1
+      },
+      {
+        "slide": 1,
+        "occurrence": 2
+      }
+    ],
+    "supporting_text_goal": "설정 화면과 결과 화면이 하나의 경험으로 이어진다는 점을 보여준다.",
+    "layout_role": "paired_ui_block_with_right_explanation",
+    "crop_required": false
+  },
+  {
+    "slide_no": 3,
+    "slide_title": "개인 맥락이 곧 포트폴리오의 신뢰도다",
+    "visual_type": "profile_summary_plus_portrait",
+    "image_filename": "image5.png",
+    "support_images": [
+      "image6.jpeg"
+    ],
+    "portfolio_role": "profile_summary",
+    "source_slide_numbers": [
+      {
+        "slide": 2,
+        "occurrence": 1
+      },
+      {
+        "slide": 2,
+        "occurrence": 2
+      }
+    ],
+    "supporting_text_goal": "정리된 이력과 실제 인물 이미지가 함께 신뢰도를 만든다는 점을 강조한다.",
+    "layout_role": "wide_profile_with_portrait_sidebar",
+    "crop_required": false
+  },
+  {
+    "slide_no": 4,
+    "slide_title": "구현 깊이는 문제와 해법을 한 화면에 둔다",
+    "visual_type": "code_and_problem_screen",
+    "image_filename": "image22.png",
+    "support_images": [],
+    "portfolio_role": "problem_and_code_proof",
+    "source_slide_numbers": [
+      {
+        "slide": 6,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "문제 해결형 개발자라는 점을 시각 증거로 보여준다.",
+    "layout_role": "wide_problem_code_canvas",
+    "crop_required": false
+  },
+  {
+    "slide_no": 5,
+    "slide_title": "실행 이력은 완료된 프로젝트 표로 확인한다",
+    "visual_type": "table_evidence",
+    "image_filename": "image23.png",
+    "support_images": [],
+    "portfolio_role": "portfolio_evidence_table",
+    "source_slide_numbers": [
+      {
+        "slide": 7,
+        "occurrence": 1
+      },
+      {
+        "slide": 8,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "실행 범위와 지속성을 포트폴리오 증거 표로 보여준다.",
+    "layout_role": "left_table_with_right_evidence_notes",
+    "crop_required": false
+  },
+  {
+    "slide_no": 6,
+    "slide_title": "적용형 AI 워크플로는 화면 안에서 끝까지 닫힌다",
+    "visual_type": "workflow_ui",
+    "image_filename": "image29.png",
+    "support_images": [],
+    "portfolio_role": "applied_ai_workflow_ui",
+    "source_slide_numbers": [
+      {
+        "slide": 13,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "실험 결과를 실제 사용 흐름으로 이어 붙일 수 있다는 점을 강조한다.",
+    "layout_role": "right_tall_ui_with_left_process_story",
+    "crop_required": false
+  }
+]
