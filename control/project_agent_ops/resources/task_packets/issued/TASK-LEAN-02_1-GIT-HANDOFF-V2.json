@@ -1,0 +1,146 @@
+{
+  "packet_version": "0.1",
+  "packet_profile": "extended",
+  "task_id": "TASK-LEAN-02_1-GIT-HANDOFF-V2",
+  "title": "lean 02_1 portfolio git handoff v2",
+  "goal": "Inspect the current lean 02_1 portfolio public-surface artifacts, verify whether any relevant uncommitted files remain, and create exactly one intentional git commit only if safe and necessary.",
+  "why": "The lean 02_1 portfolio slice now includes v1, v2, page-link, handoff, and local slides-grab linkage artifacts. This packet is the chained follow-up after TASK-PUBLIC-SURFACE-LEAN-02_1-ENTRY when that entry-packaging step leaves relevant repo-local changes. Git packaging must respect prior related commits, exclude unrelated pending files, and avoid empty or semantically risky follow-up commits.",
+  "allowed_paths": [
+    "control/project_domain/resources/master_plans/drafts/PLAN_lean_ppt_image_character_portfolio_slice-at2026-04-11.md",
+    "scripts/build_lean_02_1_system_first_portfolio.py",
+    "scripts/render_lean_02_1_system_first_portfolio.py",
+    "scripts/build_lean_02_1_system_first_portfolio_v2.py",
+    "scripts/render_lean_02_1_system_first_portfolio_v2.py",
+    "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+    "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_v2_review_index-at2026-04-13.md",
+    "control/project_domain/resources/references/REFERENCE_ppt_page_link_matrix_v0_1_step_by_step-at2026-04-13.md",
+    "control/project_domain/resources/references/REFERENCE_ppt_regeneration_handoff_bundle_v0_1-at2026-04-13.md",
+    "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md",
+    "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_v2_visual_qa-at2026-04-13-15-37.md",
+    "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+    "control/project_domain/resources/manifests/lean_02_1_system_first_v2_image_role_matrix_at2026_04_13.json",
+    "control/project_domain/resources/manifests/ppt_page_link_matrix_v0_1.json",
+    "control/project_domain/resources/manifests/ppt_regeneration_handoff_bundle_v0_1_at2026_04_13.json",
+    "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+    "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/render_sources",
+    "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders",
+    "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v2/lean_02_1_system_first_v2.pptx",
+    "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v2/render_sources",
+    "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v2/renders",
+    "control/project_domain/registry/domain_artifact_index.json"
+  ],
+  "forbidden_paths": [
+    "2026-04-09.md",
+    "control/user_decisions"
+  ],
+  "context_files": [
+    "control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_lean_02_1_system_first_portfolio_public_surface_packaging-at2026-04-13.md",
+    "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+    "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_v2_review_index-at2026-04-13.md",
+    "control/project_domain/resources/references/REFERENCE_ppt_page_link_matrix_v0_1_step_by_step-at2026-04-13.md",
+    "control/project_domain/resources/references/REFERENCE_ppt_regeneration_handoff_bundle_v0_1-at2026-04-13.md"
+  ],
+  "depends_on": [
+    "TASK-PUBLIC-SURFACE-LEAN-02_1-ENTRY"
+  ],
+  "parallel_group": null,
+  "priority": "high",
+  "constraints": {
+    "must_not_modify": [
+      "2026-04-09.md",
+      "control/user_decisions"
+    ],
+    "must_run_tests": true,
+    "must_not_use_network": true,
+    "notes": "Treat the local slides-grab clone as reference only. Do not stage any sibling-workspace files. Do not create an empty commit. If only unrelated pending files remain, report clean/no-op status."
+  },
+  "non_goals": [
+    {
+      "case": "state",
+      "description": "Do not reinterpret or edit portfolio content, deck layout, or control-plane meaning."
+    },
+    {
+      "case": "state",
+      "description": "Do not push, open a PR, or change branch strategy."
+    },
+    {
+      "case": "state",
+      "description": "Do not stage files from outside this repository, including symbolic_links and sibling-workspace clones."
+    }
+  ],
+  "done_definition": [
+    "The current lean 02_1 public-surface candidate set is inspected against git status and existing related commits before any staging decision is made.",
+    "If relevant uncommitted artifacts exist, only safe repo-local lean 02_1 public-surface files are staged and committed once.",
+    "If no relevant uncommitted artifacts exist, no empty follow-up commit is created and a clean or no-op result is reported.",
+    "Unrelated pending files, especially repo-root 2026-04-09.md, are excluded from staging.",
+    "Local slides-grab linkage is treated as reference provenance only and is not staged from the sibling workspace."
+  ],
+  "required_checks": [
+    {
+      "type": "command",
+      "value": "git status --short",
+      "required": true,
+      "done_index": 0
+    },
+    {
+      "type": "command",
+      "value": "python3 -m json.tool control/project_domain/resources/manifests/ppt_page_link_matrix_v0_1.json",
+      "required": true,
+      "done_index": 1
+    },
+    {
+      "type": "command",
+      "value": "python3 -m json.tool control/project_domain/resources/manifests/ppt_regeneration_handoff_bundle_v0_1_at2026_04_13.json",
+      "required": true,
+      "done_index": 1
+    },
+    {
+      "type": "file_exists",
+      "value": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v2/lean_02_1_system_first_v2.pptx",
+      "required": true,
+      "done_index": 1
+    },
+    {
+      "type": "file_exists",
+      "value": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v2/renders/slide-06.jpg",
+      "required": true,
+      "done_index": 1
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "control/project_agent_ops/resources/task_packets/issued/TASK-LEAN-02_1-GIT-HANDOFF-V2.json",
+      "type": "doc",
+      "required": true,
+      "done_index": 0
+    }
+  ],
+  "handoff_notes": "Related lean 02_1 commits already known: 7874c72, 2a7beb6, 999e72b. Start by determining whether any additional repo-local public-surface artifacts remain uncommitted. Local slides-grab reference path: /Users/jaehyuntak/Desktop/Project_____현재_진행중인/vscode-markdown-review-surface/control/team/resources/external_repos/slides-grab. Upstream provenance only: https://github.com/vkehfdl1/slides-grab. This packet should be invoked only after TASK-PUBLIC-SURFACE-LEAN-02_1-ENTRY completes and only when that packet leaves relevant repo-local changes to package.",
+  "branch_hint": "feat/codex-task-lean-02_1-git-handoff-v2",
+  "worktree_hint": ".worktrees/task-lean-02_1-git-handoff-v2",
+  "launch_hint": null,
+  "trace_id": null,
+  "parent_task_id": null,
+  "timeout_minutes": 25,
+  "stop_conditions": [
+    "Stop if the only pending path is unrelated to the lean 02_1 public-surface scope.",
+    "Stop if any candidate file appears semantically risky to include without new user review.",
+    "Stop if staging would require sibling-workspace or outside-repo files."
+  ],
+  "revision": 1,
+  "created_at": "2026-04-13T16:03:42+09:00",
+  "created_by": "Codex",
+  "updated_at": "2026-04-13T16:03:42+09:00",
+  "repo_root": ".",
+  "source_of_truth": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_v2_review_index-at2026-04-13.md",
+  "env_requirements": {
+    "required_tools": [
+      "git",
+      "python3"
+    ],
+    "network": "forbidden",
+    "repo_local_only": true
+  },
+  "failure_guide": "If all relevant lean 02_1 public-surface artifacts are already committed, report no-op status instead of manufacturing a new commit. If only 2026-04-09.md remains pending, explicitly exclude it and stop.",
+  "report_format": "Return staged file list, validation results, final commit sha if created, and reasons for any excluded files."
+}
