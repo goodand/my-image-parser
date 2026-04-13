@@ -3,7 +3,8 @@ import os
 import sys
 from logging.handlers import RotatingFileHandler
 
-LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs", "imagesorcery.log")
+DEFAULT_LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs", "imagesorcery.log")
+LOG_FILE = os.environ.get("IMAGESORCERY_LOG_FILE", DEFAULT_LOG_FILE)
 LOG_LEVEL = logging.INFO
 
 def setup_logging():

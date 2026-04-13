@@ -6,6 +6,7 @@ from TOML files and allows runtime updates through the MCP config tool.
 """
 
 from pathlib import Path
+import os
 from typing import Any, Dict, List, Optional
 
 import toml
@@ -89,7 +90,7 @@ class ConfigManager:
     
     def __init__(self):
         """Initialize the configuration manager."""
-        self.config_file = Path("config.toml")
+        self.config_file = Path(os.environ.get("IMAGESORCERY_CONFIG_FILE", "config.toml"))
         logger.debug(f"Looking for user config file at: {self.config_file.absolute()}")
         self._config: Optional[ImageSorceryConfig] = None
         self._runtime_overrides: Dict[str, Any] = {}

@@ -2,41 +2,37 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-SERVER_DIR="${IMAGESORCERY_SERVER_DIR:-$ROOT_DIR/vendor/mcp/imagesorcery-mcp}"
-if [ -n "${IMAGESORCERY_MCP_BIN:-}" ]; then
+STATE_ROOT="${MCP_STATE_DIR:-${XDG_STATE_HOME:-$HOME/.local/state}/my-image-parser/mcp}"
+CACHE_ROOT="${MCP_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/my-image-parser/mcp}"
+SERVER_DIR="${IMAGESORCERY_SERVER_DIR:-${IMAGESORCERY_MCP_SERVER_DIR:-$ROOT_DIR/vendor/mcp/imagesorcery-mcp}}"
+if [ -n "${IMAGESORCERY_MCP_ENTRYPOINT:-}" ]; then
+  MCP_BIN="$IMAGESORCERY_MCP_ENTRYPOINT"
+elif [ -n "${IMAGESORCERY_MCP_BIN:-}" ]; then
   MCP_BIN="$IMAGESORCERY_MCP_BIN"
 elif [ -x "$SERVER_DIR/.venv/bin/imagesorcery-mcp" ]; then
   MCP_BIN="$SERVER_DIR/.venv/bin/imagesorcery-mcp"
 else
   MCP_BIN="$SERVER_DIR/venv/bin/imagesorcery-mcp"
 fi
-LOG_DIR="$ROOT_DIR/logs/imagesorcery"
-YOLO_CACHE_DIR="$LOG_DIR/ultralytics"
-SOURCE_LOG_DIR="$SERVER_DIR/src/imagesorcery_mcp/logs"
-SOURCE_LOG_FILE="$SOURCE_LOG_DIR/imagesorcery.log"
+LOG_DIR="${IMAGESORCERY_LOG_DIR:-$STATE_ROOT/logs/imagesorcery}"
+LOG_FILE="${IMAGESORCERY_LOG_FILE:-$LOG_DIR/imagesorcery.log}"
+YOLO_CACHE_DIR="${IMAGESORCERY_YOLO_CACHE_DIR:-$CACHE_ROOT/imagesorcery/ultralytics}"
+CONFIG_FILE="${IMAGESORCERY_CONFIG_FILE:-$SERVER_DIR/config.toml}"
 
 if [ ! -x "$MCP_BIN" ]; then
   echo "Missing ImageSorcery executable at $MCP_BIN. Set IMAGESORCERY_MCP_BIN or install the vendored MCP runtime." >&2
   exit 1
 fi
 
-if [ ! -f "$SERVER_DIR/config.toml" ]; then
-  echo "Missing ImageSorcery config at $SERVER_DIR/config.toml." >&2
+if [ ! -f "$CONFIG_FILE" ]; then
+  echo "Missing ImageSorcery config at $CONFIG_FILE." >&2
   exit 1
 fi
 
-if [ ! -d "$LOG_DIR" ]; then
-  echo "Missing workspace log directory at $LOG_DIR." >&2
-  exit 1
-fi
-
-mkdir -p "$YOLO_CACHE_DIR"
-
-if [ ! -L "$SOURCE_LOG_FILE" ] && [ ! -f "$SOURCE_LOG_FILE" ]; then
-  echo "Missing ImageSorcery log file bridge at $SOURCE_LOG_FILE. Run the setup step first." >&2
-  exit 1
-fi
+mkdir -p "$LOG_DIR" "$YOLO_CACHE_DIR"
 
 cd "$SERVER_DIR"
+export IMAGESORCERY_CONFIG_FILE="$CONFIG_FILE"
+export IMAGESORCERY_LOG_FILE="$LOG_FILE"
 export YOLO_CONFIG_DIR="$YOLO_CACHE_DIR"
-exec "$MCP_BIN" --transport stdio
+exec "$MCP_BIN" --transport stdio "$@"

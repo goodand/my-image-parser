@@ -2,9 +2,13 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-SERVER_DIR="$ROOT_DIR/vendor/mcp/tigaweb-image-edit-sample-mcp"
-IMAGE_DIR="$ROOT_DIR/control/project_domain/resources/assets/image_edit_sample_mcp/images"
-CACHE_DIR="$ROOT_DIR/.cache/npm"
+STATE_ROOT="${MCP_STATE_DIR:-${XDG_STATE_HOME:-$HOME/.local/state}/my-image-parser/mcp}"
+CACHE_ROOT="${MCP_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/my-image-parser/mcp}"
+SERVER_DIR="${TIGAWEB_IMAGE_EDIT_SAMPLE_MCP_SERVER_DIR:-$ROOT_DIR/vendor/mcp/tigaweb-image-edit-sample-mcp}"
+IMAGE_DIR="${TIGAWEB_IMAGE_EDIT_SAMPLE_IMAGE_DIR:-$STATE_ROOT/tigaweb-image-edit-sample/images}"
+CACHE_DIR="${TIGAWEB_IMAGE_EDIT_SAMPLE_NPM_CACHE:-$CACHE_ROOT/npm}"
+NODE_BIN="${TIGAWEB_IMAGE_EDIT_SAMPLE_NODE_BIN:-node}"
+ENTRYPOINT="${TIGAWEB_IMAGE_EDIT_SAMPLE_ENTRYPOINT:-$SERVER_DIR/dist/server.js}"
 
 mkdir -p "$CACHE_DIR"
 mkdir -p "$IMAGE_DIR"
@@ -17,10 +21,10 @@ if [ ! -f "$SERVER_DIR/src/server.ts" ]; then
   exit 1
 fi
 
-if [ ! -f "$SERVER_DIR/dist/server.js" ]; then
-  echo "Missing compiled server at $SERVER_DIR/dist/server.js. Run the local TypeScript build first." >&2
+if [ ! -f "$ENTRYPOINT" ]; then
+  echo "Missing compiled server at $ENTRYPOINT. Set TIGAWEB_IMAGE_EDIT_SAMPLE_ENTRYPOINT or run the local TypeScript build first." >&2
   exit 1
 fi
 
 cd "$SERVER_DIR"
-exec node "$SERVER_DIR/dist/server.js" "$IMAGE_DIR"
+exec "$NODE_BIN" "$ENTRYPOINT" "$IMAGE_DIR"
