@@ -1,0 +1,59 @@
+{
+  "name": "multimodal_to_ppt_tool",
+  "status": "planned_contract_only",
+  "mode": "multimodal_consumer_to_ppt",
+  "source_of_truth": "control/project_domain/resources/specs/prose/SPEC_multimodal_to_ppt_tool.md",
+  "depends_on_tool": "multimodal_context_refinement_tool",
+  "ppt_authoring_surface_ref": "<CODEX_HOME>/skills/pptx/SKILL.md",
+  "copy_support_ref": "<CLAUDE_SKILLS_ROOT>/semantic-clarity-enhanced/SKILL.md",
+  "external_donor_refs": {
+    "slides_grab_local_clone_ref": "<SLIDES_GRAB_LOCAL_CLONE>",
+    "slides_grab_upstream_repo": "https://github.com/vkehfdl1/slides-grab",
+    "usage_boundary": "reference_only_not_source_of_truth"
+  },
+  "inputs": {
+    "required": [
+      "multimodal_context_bundle",
+      "presentation_intent",
+      "slide_plan",
+      "ppt_authoring_policy"
+    ],
+    "optional": [
+      "page_link_matrix",
+      "existing_role_matrix",
+      "existing_deck",
+      "visual_style_policy",
+      "publication_surface_policy"
+    ]
+  },
+  "required_intermediate_artifacts": [
+    "story_plan",
+    "slide_role_matrix",
+    "ppt_regeneration_handoff_bundle"
+  ],
+  "optional_final_artifacts": [
+    "draft_deck",
+    "render_set",
+    "review_index",
+    "visual_qa_report"
+  ],
+  "quality_gates": [
+    "one_dominant_visual_block_per_slide",
+    "form_bearing_evidence_must_not_be_flattened",
+    "table_heavy_slides_must_preserve_value_level_readability",
+    "supporting_text_must_remain_image_led",
+    "pptx_remains_authoring_owner_surface"
+  ],
+  "non_goals": [
+    "do_not_rerun_generic_multimodal_loop_by_default",
+    "do_not_replace_pptx_owner_surface",
+    "do_not_change_provider_onboarding",
+    "do_not_mutate_source_image_metadata"
+  ],
+  "planned_outputs": [
+    "ppt_story_plan_atYYYY_MM_DD.json",
+    "ppt_slide_role_matrix_atYYYY_MM_DD.json",
+    "ppt_regeneration_handoff_bundle_atYYYY_MM_DD.json",
+    "deck_name_vN.pptx"
+  ]
+}

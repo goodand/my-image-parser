@@ -1,0 +1,75 @@
+{
+  "name": "multimodal_context_refinement_tool",
+  "status": "planned_contract_only",
+  "mode": "iterative_multimodal_understanding",
+  "source_of_truth": "control/project_domain/resources/specs/prose/SPEC_multimodal_context_refinement_tool.md",
+  "owner_family_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/multimodal-evidence-refinement-loop/SKILL.md",
+  "specialist_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/image-text-cot-review/SKILL.md",
+  "mcp_owner_ref": "skills/vendored-mcp-onboarding/SKILL.md",
+  "inputs": {
+    "required": [
+      "source_image_path",
+      "task_intent",
+      "provider_policy",
+      "loop_budget"
+    ],
+    "optional": [
+      "baseline_caption",
+      "baseline_alt_text",
+      "source_slide_context",
+      "whole_image_ocr_seed",
+      "prior_human_review",
+      "page_role_hint",
+      "downstream_consumer_hint"
+    ]
+  },
+  "loop_stages": [
+    "full_image_read",
+    "image_type_judgment",
+    "whole_image_ocr",
+    "component_split_if_needed",
+    "component_ocr_if_present",
+    "structure_aware_extraction_if_needed",
+    "context_reinjection",
+    "refinement_pass_compare",
+    "closure_or_pending"
+  ],
+  "output_bundle": {
+    "required_sections": [
+      "source_record",
+      "evidence_bundle",
+      "normalized_interpretation",
+      "form_preservation_assessment",
+      "loop_state"
+    ],
+    "loop_state_fields": [
+      "pass_count",
+      "closure_state",
+      "pending_reasons",
+      "unresolved_fields",
+      "next_focus"
+    ],
+    "normalized_interpretation_fields": [
+      "image_type",
+      "form_bearing_summary",
+      "candidate_caption",
+      "candidate_alt_text"
+    ]
+  },
+  "quality_gates": [
+    "table_heavy_images_must_report_value_coverage_state",
+    "ui_images_must_preserve_interaction_region_meaning",
+    "code_or_problem_pair_images_must_preserve_problem_solution_relationship",
+    "downstream_form_preservation_risk_must_be_explicit_when_present"
+  ],
+  "non_goals": [
+    "do_not_author_ppt",
+    "do_not_finalize_human_approval",
+    "do_not_mutate_metadata",
+    "do_not_replace_provider_lifecycle_management"
+  ],
+  "planned_outputs": [
+    "multimodal_context_bundle_atYYYY_MM_DD.json",
+    "multimodal_context_bundle_report-atYYYY-MM-DD-HH-MM.md"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-04-13",
+  "tool_name": "multimodal_context_refinement_tool",
+  "bundle_kind": "example_output_bundle",
+  "status": "workspace_bridge_examples_from_existing_evidence",
+  "scope": "02_1_representative_examples",
+  "usage_note": "These examples demonstrate the output shape using current workspace evidence. OCR, component split, and structure extraction fields explicitly mark non-executed states where current evidence does not contain them.",
+  "routing": {
+    "owner_family_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/multimodal-evidence-refinement-loop/SKILL.md",
+    "specialist_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/image-text-cot-review/SKILL.md",
+    "mcp_owner_ref": "skills/vendored-mcp-onboarding/SKILL.md"
+  },
+  "examples": [
+    {
+      "example_id": "image27_system_diagram",
+      "source_image_path": "control/project_domain/resources/pptx_jobs/02_1/media/image27.png",
+      "task_intent": "ppt_support",
+      "baseline_context": {
+        "source_slide_numbers": [
+          11
+        ],
+        "caption_review_ref": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image27.png",
+        "portfolio_role_matrix_ref": "control/project_domain/resources/manifests/lean_02_1_system_first_v2_image_role_matrix_at2026_04_13.json#slide_no=1"
+      },
+      "provider_policy": {
+        "whole_image_ocr": "allowed_but_not_executed_in_this_example",
+        "component_split": "allowed_but_not_executed_in_this_example",
+        "component_ocr": "allowed_but_not_executed_in_this_example",
+        "structure_extraction": "not_required_for_this_example"
+      },
+      "loop_budget": {
+        "max_passes": 3,
+        "stop_condition": "close_or_leave_explicit_pending_reason"
+      },
+      "evidence_bundle": {
+        "source_image_ref": "control/project_domain/resources/pptx_jobs/02_1/media/image27.png",
+        "whole_image_ocr": {
+          "status": "not_executed_in_this_example",
+          "ref": null
+        },
+        "component_crops": {
+          "status": "not_executed_in_this_example",
+          "refs": []
+        },
+        "component_ocr": {
+          "status": "not_executed_in_this_example",
+          "refs": []
+        },
+        "structure_extraction": {
+          "status": "not_required_for_this_example",
+          "ref": null
+        }
+      },
+      "normalized_interpretation": {
+        "image_type": "system_diagram",
+        "form_bearing_summary": "A wide architecture diagram shows the relationship between a user, Streamlit, a LangGraph-based retrieval layer, supporting retrieval stores, and ChatGPT as the answer surface.",
+        "candidate_caption": "A system diagram showing the interaction between a user, Streamlit, and a LangGraph-based retrieval system using ensemble retrieval, vector-DB (FAISS), and the bm25 keyword algorithm to generate answers via ChatGPT.",
+        "candidate_alt_text": "System diagram with user, Streamlit, LangGraph, databases, and ChatGPT connected for retrieval."
+      },
+      "form_preservation_assessment": {
+        "status": "enough_for_downstream",
+        "value_level_coverage_status": "not_applicable",
+        "why": "The downstream PPT use depends on preserving actor and flow relationships rather than value-level table extraction."
+      },
+      "loop_state": {
+        "pass_count": 1,
+        "closure_state": "closed_from_existing_workspace_evidence",
+        "pending_reasons": [],
+        "unresolved_fields": [
+          "whole_image_ocr_not_promoted",
+          "component_grounding_not_captured"
+        ]
+      }
+    },
+    {
+      "example_id": "image23_portfolio_table",
+      "source_image_path": "control/project_domain/resources/pptx_jobs/02_1/media/image23.png",
+      "task_intent": "form_preservation",
+      "baseline_context": {
+        "source_slide_numbers": [
+          7,
+          8
+        ],
+        "caption_review_ref": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image23.png",
+        "portfolio_role_matrix_ref": "control/project_domain/resources/manifests/lean_02_1_system_first_v2_image_role_matrix_at2026_04_13.json#slide_no=5"
+      },
+      "provider_policy": {
+        "whole_image_ocr": "allowed_but_not_executed_in_this_example",
+        "component_split": "recommended_but_not_executed_in_this_example",
+        "component_ocr": "recommended_but_not_executed_in_this_example",
+        "structure_extraction": "recommended_but_not_executed_in_this_example"
+      },
+      "loop_budget": {
+        "max_passes": 4,
+        "stop_condition": "close_or_leave_explicit_pending_reason"
+      },
+      "evidence_bundle": {
+        "source_image_ref": "control/project_domain/resources/pptx_jobs/02_1/media/image23.png",
+        "whole_image_ocr": {
+          "status": "not_executed_in_this_example",
+          "ref": null
+        },
+        "component_crops": {
+          "status": "not_executed_in_this_example",
+          "refs": []
+        },
+        "component_ocr": {
+          "status": "not_executed_in_this_example",
+          "refs": []
+        },
+        "structure_extraction": {
+          "status": "not_executed_in_this_example",
+          "ref": null
+        }
+      },
+      "normalized_interpretation": {
+        "image_type": "table_evidence",
+        "form_bearing_summary": "A Korean project portfolio table summarizes multiple projects with role, date, type, main point, and status fields, plus high-level completion statistics.",
+        "candidate_caption": "A project portfolio summary in Korean listing five projects with roles, dates, types, main points, and statuses. Key statistics of total and completed projects are also shown.",
+        "candidate_alt_text": "Project portfolio table in Korean with project names, roles, dates, types, main focus, and status."
+      },
+      "form_preservation_assessment": {
+        "status": "underspecified",
+        "value_level_coverage_status": "not_demonstrated_in_existing_workspace_evidence",
+        "why": "The current workspace evidence supports table presence and field categories, but not row-level value coverage strong enough to claim value-safe regeneration."
+      },
+      "loop_state": {
+        "pass_count": 1,
+        "closure_state": "pending_manual_value_readability_gate",
+        "pending_reasons": [
+          "table_internal_values_not_grounded",
+          "component_level_table_extraction_not_captured"
+        ],
+        "unresolved_fields": [
+          "table_row_values",
+          "table_column_headers_as_explicit_ocr",
+          "value_level_readability_judgment"
+        ]
+      }
+    }
+  ]
+}

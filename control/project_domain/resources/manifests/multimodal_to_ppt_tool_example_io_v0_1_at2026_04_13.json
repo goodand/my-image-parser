@@ -1,0 +1,67 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-04-13",
+  "tool_name": "multimodal_to_ppt_tool",
+  "example_kind": "input_output_pair",
+  "status": "workspace_bridge_example_using_existing_portfolio_outputs",
+  "depends_on_tool": "multimodal_context_refinement_tool",
+  "input_example": {
+    "multimodal_context_bundle_ref": "control/project_domain/resources/manifests/multimodal_context_refinement_examples_v0_1_at2026_04_13.json",
+    "selected_example_ids": [
+      "image27_system_diagram",
+      "image23_portfolio_table"
+    ],
+    "presentation_intent": "portfolio",
+    "story_intent": "system_first_with_execution_evidence",
+    "slide_plan": {
+      "target_slide_count": 2,
+      "ordering_rule": [
+        "lead_with_system_structure",
+        "close_with_execution_evidence"
+      ],
+      "one_dominant_visual_block_per_slide": true,
+      "top_bottom_layout_allowed": true
+    },
+    "page_link_matrix_ref": "control/project_domain/resources/manifests/ppt_page_link_matrix_v0_1.json",
+    "ppt_authoring_policy": {
+      "owner_surface_ref": "<CODEX_HOME>/skills/pptx/SKILL.md",
+      "copy_support_ref": "<CLAUDE_SKILLS_ROOT>/semantic-clarity-enhanced/SKILL.md",
+      "preserve_form_when_source_image_is_evidence": true
+    }
+  },
+  "output_example": {
+    "story_plan": [
+      {
+        "slide_no": 1,
+        "title": "시스템을 구조로 설계하고 증명합니다",
+        "source_example_id": "image27_system_diagram",
+        "reason": "Architecture flow becomes the first impression and supports a system-first narrative."
+      },
+      {
+        "slide_no": 5,
+        "title": "프로젝트 표가 실행 이력을 증명합니다",
+        "source_example_id": "image23_portfolio_table",
+        "reason": "Table evidence anchors the portfolio in execution history rather than generic self-description."
+      }
+    ],
+    "role_matrix_refs": [
+      "control/project_domain/resources/manifests/lean_02_1_system_first_v2_image_role_matrix_at2026_04_13.json#slide_no=1",
+      "control/project_domain/resources/manifests/lean_02_1_system_first_v2_image_role_matrix_at2026_04_13.json#slide_no=5"
+    ],
+    "ppt_regeneration_handoff_ref": {
+      "path": "control/project_domain/resources/manifests/ppt_regeneration_handoff_bundle_v0_1_at2026_04_13.json",
+      "selected_target_slide_nos": [
+        1,
+        5
+      ]
+    },
+    "optional_regenerated_deck_ref": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v2/lean_02_1_system_first_v2.pptx",
+    "review_index_ref": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_v2_review_index-at2026-04-13.md",
+    "visual_qa_report_ref": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_v2_visual_qa-at2026-04-13-15-37.md",
+    "manual_gates": [
+      "slide 1 may proceed with current evidence because structure-preservation is the main requirement",
+      "slide 5 still requires value-level readability judgment even after deck regeneration",
+      "PPT remains a consumer surface and does not absorb the upstream multimodal owner-family"
+    ]
+  }
+}
