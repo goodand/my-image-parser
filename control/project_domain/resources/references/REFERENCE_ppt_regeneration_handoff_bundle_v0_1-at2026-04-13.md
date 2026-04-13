@@ -29,6 +29,23 @@ PPT remains a consumer surface.
 
 The bundle does not promote PPT into a new owner family.
 
+## External Tool Linkage
+
+Current external tool linkage is intentionally expressed in two layers:
+
+- local clone used as the practical reference surface:
+  - [`slides-grab` local clone](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab)
+  - [`slides-grab` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab/SKILL.md)
+  - [`slides-grab-export` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab-export/SKILL.md)
+- upstream provenance only:
+  - [vkehfdl1/slides-grab](https://github.com/vkehfdl1/slides-grab)
+
+Boundary:
+
+- `slides-grab` is a reference/export donor surface for slide capture and HTML/PPT export ideas.
+- It is not the source of truth for the current `my-image-parser` deck artifacts.
+- Current source of truth remains the local deck, role matrix, handoff bundle, and QA reports in this workspace.
+
 ## Step By Step
 
 ### Step 1. Read the page-link matrix first

@@ -18,6 +18,13 @@
     "ppt_authoring_surface_ref": "<CODEX_HOME>/skills/pptx/SKILL.md",
     "claude_copy_support_ref": "<CLAUDE_SKILLS_ROOT>/semantic-clarity-enhanced/SKILL.md"
   },
+  "external_tool_refs": {
+    "slides_grab_local_clone_ref": "<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab",
+    "slides_grab_skill_ref": "<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab/SKILL.md",
+    "slides_grab_export_skill_ref": "<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab-export/SKILL.md",
+    "slides_grab_upstream_repo": "https://github.com/vkehfdl1/slides-grab",
+    "usage_boundary": "reference_only_not_source_of_truth_for_current_my_image_parser_deck"
+  },
   "non_goals": [
     "do not create a new owner skill in this bundle",
     "do not reopen MCP onboarding, launcher, inventory, or activation work",

@@ -14,6 +14,23 @@ Copy and label clarity support explicitly requested by the user:
 
 - `<CLAUDE_SKILLS_ROOT>/semantic-clarity-enhanced/SKILL.md`
 
+## Linked External Tool Surfaces
+
+Local clone used for practical cross-reference:
+
+- [`slides-grab` local clone](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab)
+- [`slides-grab` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab/SKILL.md)
+- [`slides-grab-export` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab-export/SKILL.md)
+
+Upstream provenance:
+
+- [vkehfdl1/slides-grab](https://github.com/vkehfdl1/slides-grab)
+
+Interpretation boundary:
+
+- these links are donor/reference surfaces for slide export and review ideas
+- they do not replace the local deck, local matrices, or local QA artifacts as current review truth
+
 ## Frozen Source
 
 - source job: [02_1 manifest](../pptx_jobs/02_1/manifest.json)

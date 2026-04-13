@@ -14,6 +14,23 @@ Copy and label clarity support:
 
 - `<CLAUDE_SKILLS_ROOT>/semantic-clarity-enhanced/SKILL.md`
 
+## Linked External Tool Surfaces
+
+Local clone used for practical cross-reference:
+
+- [`slides-grab` local clone](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab)
+- [`slides-grab` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab/SKILL.md)
+- [`slides-grab-export` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab-export/SKILL.md)
+
+Upstream provenance:
+
+- [vkehfdl1/slides-grab](https://github.com/vkehfdl1/slides-grab)
+
+Interpretation boundary:
+
+- these links document adjacent external-tool compatibility and donor reference only
+- they do not replace the local deck, local render set, or local QA artifacts as review truth
+
 ## Regeneration Basis
 
 - source handoff bundle: [ppt_regeneration_handoff_bundle_v0_1_at2026_04_13.json](../manifests/ppt_regeneration_handoff_bundle_v0_1_at2026_04_13.json)

@@ -10,6 +10,13 @@
     "mcp_owner_ref": "skills/vendored-mcp-onboarding/SKILL.md",
     "ppt_authoring_surface_ref": "<CODEX_HOME>/skills/pptx/SKILL.md"
   },
+  "external_tool_surfaces": {
+    "slides_grab_local_clone_ref": "<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab",
+    "slides_grab_skill_ref": "<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab/SKILL.md",
+    "slides_grab_export_skill_ref": "<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab-export/SKILL.md",
+    "slides_grab_upstream_repo": "https://github.com/vkehfdl1/slides-grab",
+    "usage_boundary": "donor_reference_only_not_owner_of_current_page_link_matrix"
+  },
   "page_classes": [
     "source",
     "evidence",

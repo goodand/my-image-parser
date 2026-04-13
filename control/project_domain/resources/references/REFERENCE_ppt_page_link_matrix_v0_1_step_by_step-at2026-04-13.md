@@ -26,6 +26,24 @@ without redefining owner-family responsibilities.
 - PPT authoring surface:
   - [`pptx`](<CODEX_HOME>/skills/pptx/SKILL.md)
 
+## External Tool Donor Linkage
+
+Local clone used for practical reference:
+
+- [`slides-grab` local clone](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab)
+- [`slides-grab` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab/SKILL.md)
+- [`slides-grab-export` skill](<EXTERNAL_REVIEW_SURFACE_ROOT>/control/team/resources/external_repos/slides-grab/skills/slides-grab-export/SKILL.md)
+
+Upstream provenance:
+
+- [vkehfdl1/slides-grab](https://github.com/vkehfdl1/slides-grab)
+
+Boundary:
+
+- `slides-grab` is a donor/reference surface for export and review patterns
+- it is not the owner of the current `my-image-parser` page-link matrix
+- current truth remains the local matrix, local review pages, and local deck artifacts
+
 ## Step By Step
 
 ### Step 1. Freeze routing first
@@ -42,6 +60,11 @@ Start from:
 This is already frozen in:
 
 - [REFERENCE_image_skill_family_to_ppt_page_link_mapping_design-at2026-04-13.md](../../../../project_agent_ops/resources/references/REFERENCE_image_skill_family_to_ppt_page_link_mapping_design-at2026-04-13.md)
+
+The external donor surface is secondary:
+
+- use the local `slides-grab` clone only as a compatible adjacent reference
+- do not let it replace local owner-family routing or local artifact truth
 
 ### Step 2. Attach source pages
 
