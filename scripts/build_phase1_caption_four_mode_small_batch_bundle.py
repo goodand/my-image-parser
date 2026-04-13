@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -18,79 +20,106 @@ from four_mode_small_batch_bundle_lib import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PHASE0_SINGLE_IMAGE_BUNDLE = (
-    ROOT
-    / "control"
-    / "project_domain"
-    / "resources"
-    / "manifests"
-    / "phase0_caption_four_mode_eval_bundle_at2026_03_28.json"
-)
-PHASE1_W01_BASELINE_LEDGER = (
-    ROOT
-    / "control"
-    / "project_agent_ops"
-    / "registry"
-    / "jobs"
-    / "image_caption_jobs"
-    / "phase1_caption_10w_01_full_presentation_2026-03-17_w01.json"
-)
-PHASE1_W02_BASELINE_LEDGER = (
-    ROOT
-    / "control"
-    / "project_agent_ops"
-    / "registry"
-    / "jobs"
-    / "image_caption_jobs"
-    / "phase1_caption_10w_01_full_presentation_2026-03-17_w02.json"
-)
-PHASE1_BASELINE_LEDGERS = (
-    PHASE1_W01_BASELINE_LEDGER,
-    PHASE1_W02_BASELINE_LEDGER,
-)
-ALPHA_SPLIT_ROOT = (
-    ROOT
-    / "control"
-    / "project_domain"
-    / "archive"
-    / "object_isolation"
-    / "alpha_split_batch"
-    / "2026-03-27-15-05"
-    / "01_full_presentation_2026-03-17"
-)
-MEDIA_ROOT = (
-    ROOT
-    / "control"
-    / "project_domain"
-    / "resources"
-    / "pptx_jobs"
-    / "01_full_presentation_2026-03-17"
-    / "media"
-)
-CAPTION_JOB_ROOT = (
-    ROOT
-    / "control"
-    / "project_agent_ops"
-    / "registry"
-    / "jobs"
-    / "image_caption_jobs"
-)
-PHASE1_IMAGE_BUNDLE_ROOT = ROOT / "control" / "project_domain" / "resources" / "manifests"
 
 
 def resolve_workspace_path(path_value: str | Path) -> Path:
     path = Path(path_value)
     if path.is_absolute():
-        return path.resolve()
-    return (ROOT / path).resolve()
+        return path.absolute()
+    return (ROOT / path).absolute()
 
 
 def serialize_workspace_path(path_value: str | Path) -> str:
     resolved = resolve_workspace_path(path_value)
     try:
-        return str(resolved.relative_to(ROOT))
+        return unicodedata.normalize("NFC", str(resolved.relative_to(ROOT)))
     except ValueError:
-        return str(resolved)
+        return unicodedata.normalize("NFC", str(resolved))
+
+
+def resolve_existing_workspace_path(*candidates: str | Path) -> Path:
+    resolved_candidates = [resolve_workspace_path(candidate) for candidate in candidates]
+    for candidate in resolved_candidates:
+        if candidate.exists():
+            return candidate
+    return resolved_candidates[0]
+
+
+def env_or_default_path(env_name: str, default_path: str | Path) -> Path:
+    override = os.environ.get(env_name)
+    if override:
+        return resolve_workspace_path(override)
+    return resolve_workspace_path(default_path)
+
+
+def caption_job_root() -> Path:
+    override = os.environ.get("CAPTION_JOB_ROOT")
+    if override:
+        return resolve_workspace_path(override)
+    return resolve_existing_workspace_path(
+        "control/project_agent_ops/registry/jobs/image_caption_jobs",
+        "control/project_agent_ops/registry/runs/image_caption_jobs",
+    )
+
+
+def phase1_image_bundle_root() -> Path:
+    override = os.environ.get("PHASE1_IMAGE_BUNDLE_ROOT")
+    if override:
+        return resolve_workspace_path(override)
+    return resolve_existing_workspace_path(
+        "control/project_domain/resources/manifests",
+        "control/project_domain/runs/manifests",
+    )
+
+
+PHASE0_SINGLE_IMAGE_BUNDLE = env_or_default_path(
+    "PHASE0_SINGLE_IMAGE_BUNDLE_PATH",
+    "control/project_domain/resources/manifests/phase0_caption_four_mode_eval_bundle_at2026_03_28.json",
+)
+PHASE1_BASELINE_LEDGERS = (
+    caption_job_root() / "phase1_caption_10w_01_full_presentation_2026-03-17_w01.json",
+    caption_job_root() / "phase1_caption_10w_01_full_presentation_2026-03-17_w02.json",
+)
+ALPHA_SPLIT_ROOT = env_or_default_path(
+    "ALPHA_SPLIT_ROOT",
+    "control/project_domain/archive/object_isolation/alpha_split_batch/2026-03-27-15-05/01_full_presentation_2026-03-17",
+)
+MEDIA_ROOT = env_or_default_path(
+    "PHASE1_MEDIA_ROOT",
+    "control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media",
+)
+CAPTION_JOB_ROOT = caption_job_root()
+PHASE1_IMAGE_BUNDLE_ROOT = phase1_image_bundle_root()
+
+
+def is_path_like_key(key: str) -> bool:
+    lowered = key.lower()
+    return lowered == "path" or lowered.endswith("_path") or lowered.endswith("_paths") or lowered in {
+        "bundle_paths_used",
+        "ledger_path",
+    }
+
+
+def sanitize_path_value(value: Any) -> Any:
+    if isinstance(value, (str, Path)):
+        return serialize_workspace_path(value)
+    if isinstance(value, list):
+        return [sanitize_path_value(item) for item in value]
+    return value
+
+
+def sanitize_serialized_paths(payload: Any) -> Any:
+    if isinstance(payload, dict):
+        sanitized: dict[str, Any] = {}
+        for key, value in payload.items():
+            if isinstance(key, str) and is_path_like_key(key):
+                sanitized[key] = sanitize_path_value(value)
+                continue
+            sanitized[key] = sanitize_serialized_paths(value)
+        return sanitized
+    if isinstance(payload, list):
+        return [sanitize_serialized_paths(item) for item in payload]
+    return payload
 
 
 def parse_args() -> argparse.Namespace:
@@ -316,13 +345,15 @@ def build_table_candidate(
     gpt_visual_confirmation: dict[str, Any],
 ) -> dict[str, Any]:
     bundle_path = single_image_bundle_path_for(image_stem)
-    if bundle_path and load_json(bundle_path).get("comparison_ready"):
-        return build_included_candidate_from_bundle(
-            image_stem=image_stem,
-            single_bundle_path=bundle_path,
-            decision_reason="frozen_four_mode_bundle_present",
-            gpt_visual_confirmation=gpt_visual_confirmation,
-        )
+    if bundle_path:
+        bundle = load_json(bundle_path)
+        if bundle.get("comparison_ready") and bundle_has_stable_workspace_provenance(bundle):
+            return build_included_candidate_from_bundle(
+                image_stem=image_stem,
+                single_bundle_path=bundle_path,
+                decision_reason="frozen_four_mode_bundle_present",
+                gpt_visual_confirmation=gpt_visual_confirmation,
+            )
     return build_excluded_table_candidate(
         image_stem=image_stem,
         gpt_visual_confirmation=gpt_visual_confirmation,
@@ -491,15 +522,20 @@ def main() -> int:
         if item.get("single_image_bundle_path")
     ]
     aggregate_bundle = build_small_batch_bundle(included_bundle_paths)
+    candidate_selection = sanitize_serialized_paths(candidate_selection)
+    aggregate_bundle = sanitize_serialized_paths(aggregate_bundle)
     report_text = render_phase1_small_batch_report(
         candidate_selection=candidate_selection,
         aggregate_bundle=aggregate_bundle,
         title="Phase 1 Caption Four-Mode Small-Batch Readiness",
     )
 
-    output_candidates_json = Path(args.output_candidates_json).resolve()
-    output_bundle_json = Path(args.output_bundle_json).resolve()
-    output_report_md = Path(args.output_report_md).resolve()
+    output_candidates_json = resolve_workspace_path(args.output_candidates_json)
+    output_bundle_json = resolve_workspace_path(args.output_bundle_json)
+    output_report_md = resolve_workspace_path(args.output_report_md)
+    output_candidates_json.parent.mkdir(parents=True, exist_ok=True)
+    output_bundle_json.parent.mkdir(parents=True, exist_ok=True)
+    output_report_md.parent.mkdir(parents=True, exist_ok=True)
     output_candidates_json.write_text(
         json.dumps(candidate_selection, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -511,9 +547,10 @@ def main() -> int:
     output_report_md.write_text(report_text, encoding="utf-8")
 
     if args.output_excluded_json:
-        excluded_json = Path(args.output_excluded_json).resolve()
+        excluded_json = resolve_workspace_path(args.output_excluded_json)
+        excluded_json.parent.mkdir(parents=True, exist_ok=True)
         excluded_json.write_text(
-            json.dumps(excluded_candidates, ensure_ascii=False, indent=2) + "\n",
+            json.dumps(sanitize_serialized_paths(excluded_candidates), ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
 
@@ -526,10 +563,14 @@ def main() -> int:
                 "minimum_target_met": candidate_selection["summary"]["minimum_target_met"],
                 "aggregate_bundle_image_count": aggregate_bundle["image_count"],
                 "aggregate_bundle_paths_used": aggregate_bundle["bundle_paths_used"],
-                "output_candidates_json": str(output_candidates_json),
-                "output_bundle_json": str(output_bundle_json),
-                "output_report_md": str(output_report_md),
-                "output_excluded_json": str(Path(args.output_excluded_json).resolve()) if args.output_excluded_json else None,
+                "output_candidates_json": serialize_workspace_path(output_candidates_json),
+                "output_bundle_json": serialize_workspace_path(output_bundle_json),
+                "output_report_md": serialize_workspace_path(output_report_md),
+                "output_excluded_json": (
+                    serialize_workspace_path(args.output_excluded_json)
+                    if args.output_excluded_json
+                    else None
+                ),
             },
             ensure_ascii=False,
             indent=2,
