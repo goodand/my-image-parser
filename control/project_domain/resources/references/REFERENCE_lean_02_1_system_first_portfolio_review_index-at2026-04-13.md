@@ -29,6 +29,7 @@ Copy and label clarity support explicitly requested by the user:
 - page-link matrix: [ppt_page_link_matrix_v0_1.json](../manifests/ppt_page_link_matrix_v0_1.json)
 - regeneration handoff bundle: [ppt_regeneration_handoff_bundle_v0_1_at2026_04_13.json](../manifests/ppt_regeneration_handoff_bundle_v0_1_at2026_04_13.json)
 - regeneration handoff reference: [REFERENCE_ppt_regeneration_handoff_bundle_v0_1-at2026-04-13.md](../references/REFERENCE_ppt_regeneration_handoff_bundle_v0_1-at2026-04-13.md)
+- regeneration execution checklist: [CHECKLIST_ppt_regeneration_handoff_bundle_execution_v0_1.md](../checklists/CHECKLIST_ppt_regeneration_handoff_bundle_execution_v0_1.md)
 - QA report: [REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md](../reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md)
 
 ## Frozen Slide Mapping

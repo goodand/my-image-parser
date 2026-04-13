@@ -1,0 +1,150 @@
+[
+  {
+    "slide_no": 1,
+    "slide_title": "시스템을 구조로 설계하고 증명합니다",
+    "visual_type": "system_diagram",
+    "image_filename": "image27.png",
+    "support_images": [],
+    "portfolio_role": "architecture_hero",
+    "source_slide_numbers": [
+      {
+        "slide": 11,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "시스템 사고가 첫 인상으로 보이도록 만든다.",
+    "layout_role": "top_header_large_diagram_bottom_notes",
+    "top_bottom_split": true,
+    "bundle_status": "ready_for_manual_regeneration_with_text_promotion_pending",
+    "bundle_manual_remaining": [
+      "do not overcompress labels until the system diagram loses legibility",
+      "if copy changes, keep the slide system-first rather than product-first"
+    ]
+  },
+  {
+    "slide_no": 2,
+    "slide_title": "입력과 결과가 한 흐름으로 이어집니다",
+    "visual_type": "ui_screenshot_pair",
+    "image_filename": "image4.png",
+    "support_images": [
+      "image37.png"
+    ],
+    "portfolio_role": "product_configuration_ui",
+    "source_slide_numbers": [
+      {
+        "slide": 1,
+        "occurrence": 1
+      },
+      {
+        "slide": 1,
+        "occurrence": 2
+      }
+    ],
+    "supporting_text_goal": "설정 화면과 결과 화면이 하나의 경험으로 이어진다는 점을 보여준다.",
+    "layout_role": "top_header_pair_ui_bottom_notes",
+    "top_bottom_split": true,
+    "bundle_status": "ready_for_manual_regeneration_with_text_promotion_pending",
+    "bundle_manual_remaining": [
+      "if one UI must be reduced, keep the pair readable rather than enlarging one side only",
+      "avoid rewriting this slide into generic product marketing copy"
+    ]
+  },
+  {
+    "slide_no": 3,
+    "slide_title": "개인 맥락이 신뢰를 만듭니다",
+    "visual_type": "profile_summary_plus_portrait",
+    "image_filename": "image5.png",
+    "support_images": [
+      "image6.jpeg"
+    ],
+    "portfolio_role": "profile_summary",
+    "source_slide_numbers": [
+      {
+        "slide": 2,
+        "occurrence": 1
+      },
+      {
+        "slide": 2,
+        "occurrence": 2
+      }
+    ],
+    "supporting_text_goal": "정리된 이력과 실제 인물 이미지가 함께 신뢰도를 만든다는 점을 강조한다.",
+    "layout_role": "top_header_profile_band_bottom_notes",
+    "top_bottom_split": true,
+    "bundle_status": "ready_for_manual_regeneration_with_text_promotion_pending",
+    "bundle_manual_remaining": [
+      "do not turn the portrait into the hero at the expense of the profile summary",
+      "keep the slide image-led and credibility-oriented"
+    ]
+  },
+  {
+    "slide_no": 4,
+    "slide_title": "문제와 구현을 한 화면에 둡니다",
+    "visual_type": "code_and_problem_screen",
+    "image_filename": "image22.png",
+    "support_images": [],
+    "portfolio_role": "problem_and_code_proof",
+    "source_slide_numbers": [
+      {
+        "slide": 6,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "문제 해결형 개발자라는 점을 시각 증거로 보여준다.",
+    "layout_role": "top_header_full_problem_code_bottom_notes",
+    "top_bottom_split": true,
+    "bundle_status": "ready_for_manual_regeneration_with_text_promotion_pending",
+    "bundle_manual_remaining": [
+      "if the slide is tightened, protect the problem/solution pairing first",
+      "do not reduce the code block until it loses proof value"
+    ]
+  },
+  {
+    "slide_no": 5,
+    "slide_title": "프로젝트 표가 실행 이력을 증명합니다",
+    "visual_type": "table_evidence",
+    "image_filename": "image23.png",
+    "support_images": [],
+    "portfolio_role": "portfolio_evidence_table",
+    "source_slide_numbers": [
+      {
+        "slide": 7,
+        "occurrence": 1
+      },
+      {
+        "slide": 8,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "실행 범위와 지속성을 포트폴리오 증거 표로 보여준다.",
+    "layout_role": "top_header_full_table_bottom_notes",
+    "top_bottom_split": true,
+    "bundle_status": "ready_for_manual_regeneration_with_text_promotion_pending",
+    "bundle_manual_remaining": [
+      "table-internal values must remain legible after any regeneration step",
+      "do not collapse this slide into a generic summary if the table stops being readable"
+    ]
+  },
+  {
+    "slide_no": 6,
+    "slide_title": "적용형 AI 흐름을 끝까지 닫습니다",
+    "visual_type": "workflow_ui",
+    "image_filename": "image29.png",
+    "support_images": [],
+    "portfolio_role": "applied_ai_workflow_ui",
+    "source_slide_numbers": [
+      {
+        "slide": 13,
+        "occurrence": 1
+      }
+    ],
+    "supporting_text_goal": "실험 결과를 실제 사용 흐름으로 이어 붙일 수 있다는 점을 강조한다.",
+    "layout_role": "top_header_tall_ui_bottom_notes",
+    "top_bottom_split": true,
+    "bundle_status": "ready_for_manual_regeneration_with_text_promotion_pending",
+    "bundle_manual_remaining": [
+      "if copy changes, keep the slide about applied workflow closure rather than tool listing",
+      "do not crop out the main interaction region"
+    ]
+  }
+]
