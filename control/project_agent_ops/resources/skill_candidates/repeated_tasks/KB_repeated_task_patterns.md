@@ -640,3 +640,635 @@ For each candidate, record:
 - repeated invariant: broad builder fanout waits until module boundaries and owned paths are explicitly cut
 - promotion target: reusable builder start-gate and integration-owner dispatch packet
 - promotion trigger: another host-heavy surface needs many builders but still has a centralized integration seam that cannot safely be edited by everyone at once
+
+### Code-State-First Recovery After Agent Disconnect
+
+- recurrence signal: repeated whenever network instability or agent/session loss makes worker status unreliable, but the codebase may already contain partial or completed work from one or more lanes
+- current manual handling: ignore session-level assumptions, inspect the actual target files, rerun the key validation commands directly, and classify each lane as `missing`, `partially materialized`, or `verified` before any relaunch
+- repeated invariant: recovery starts from repository state, not from agent summaries or orchestration status
+- repeated invariant: relaunch only the lanes with missing or unverified artifacts; do not restart already-verified lanes just because their sessions disappeared
+- promotion target: reusable recovery protocol for interrupted multi-agent waves in unstable network conditions
+- promotion trigger: another multi-agent slice loses worker sessions or orchestration visibility before all lanes have reported clean completion
+- current proven evidence: during the 2026-04-05/06 `vscode-markdown-review-surface` caption-surface buildout, subagent disconnects were handled by checking actual seam files (`mode-router`, `webview-protocol`, `webview-html`, `webview-client`, later `webview-render-sync` split files), rerunning `npm run check` and `npm test`, then only relaunching the host/render lanes that had not yet materialized
+
+### Sequential Architect Seam Waves Before Reduced Fanout
+
+- recurrence signal: repeated whenever a centralized host and client monolith is too coarse for safe parallelization, but can be made parallel-safe through several behavior-preserving extraction waves
+- current manual handling: run repeated architect-only seam waves, validate after each wave, and promote only the verified seams into the next staffing decision; stop the sequence as soon as reduced fanout becomes safe
+- repeated invariant: each architect wave must shrink a real hotspot and produce repo-owned extraction points, not just rename existing code
+- repeated invariant: staffing conclusions are recomputed after every validated wave; they are not predetermined from the original architecture sketch
+- promotion target: reusable pre-fanout architect-wave protocol for host-heavy extensions or custom-editor surfaces
+- promotion trigger: another codebase has one or two monolithic files that block safe path ownership, but the hotspot can be reduced through staged extraction
+- current proven evidence: the `vscode-markdown-review-surface` caption-surface effort required three verified architect waves: first message/mode seams, then webview HTML/client extraction, then client concern splitting (`webview-render-sync`, `webview-wikilinks`, `webview-sidecar`) before reduced fanout was judged safe
+
+### Reduced-Fanout Packet Launch After Verified Seams
+
+- recurrence signal: repeated whenever full staffing is still unsafe, but a smaller number of disjoint work packets becomes viable after a few validated extraction waves
+- current manual handling: define only the currently safe lanes, validate packet schema and owned-path disjointness, issue the packets, and launch a reduced subset of builders rather than waiting for the full target staffing model
+- repeated invariant: reduced fanout is an intermediate operating mode, not a failure to reach the final staffing target
+- repeated invariant: packet issuance happens only after seam validation has been written down and the owned paths are narrow enough to explain concretely
+- promotion target: reusable reduced-fanout dispatch pattern for slices that are no longer single-owner but are not yet full-parallel-safe
+- promotion trigger: another slice reaches a state where 3-6 lanes are safe but full 10+ lane dispatch is still too collision-prone
+- current proven evidence: after three architect waves on 2026-04-06, `vscode-markdown-review-surface` moved from architect-only work to a four-lane reduced fanout (`host`, `render`, `contract/session-config`, `feedback-ledger`) rather than jumping directly to a 12-agent restart
+
+### Partial-Lane Validation Before Selective Relaunch
+
+- recurrence signal: repeated whenever some builder lanes appear to have completed materially while sibling lanes failed or disconnected, creating a mixed success surface that is easy to over-restart
+- current manual handling: validate successful-looking lanes first by reading their files and rerunning the shared checks, then close those lanes conceptually and relaunch only the empty or unverified lanes
+- repeated invariant: a lane that already produced valid code and passed shared checks should be treated as completed work even if the originating agent did not deliver a clean final summary
+- repeated invariant: selective relaunch lowers repeated merge churn and avoids redoing working code under unstable network conditions
+- promotion target: reusable mixed-lane recovery rule for multi-agent implementation bursts
+- promotion trigger: another reduced-fanout or broad fanout wave finishes with some concrete artifacts present and other lanes entirely missing
+- current proven evidence: in the 2026-04-06 reduced-fanout wave for `vscode-markdown-review-surface`, the `contract/session-config` and `feedback-ledger` files materialized while `host` and `render` files did not; the safe recovery path was to verify the materialized lanes first and only then relaunch the missing ones
+
+### Conservative Multi-Stage Recovery Closure Before Feature Resume
+
+- recurrence signal: repeated whenever a feature slice is interrupted by repo-state incidents such as restored documentation trees or session loss, and the team needs to resume work without accidentally layering new feature changes on top of stale structural drift
+- current manual handling: recover in ordered stages: inspect current code state, audit restored control artifacts, patch narrow structural drift, rerun layout lint, rerun type/check commands, rerun smoke/tests, and only then reopen the next feature wave
+- repeated invariant: recovery closure is not a single patch; it is a staged gate with multiple validation passes
+- repeated invariant: feature continuation is deferred until structural drift and command-path instability are both re-validated
+- promotion target: reusable recovery-first continuation protocol for interrupted bounded feature slices
+- promotion trigger: another implementation slice is paused by accidental directory restoration, session interruption, or mixed repo/document drift before the next feature wave starts
+- current proven evidence: on 2026-04-06, `vscode-markdown-review-surface` resumed the user-evaluation-surface effort only after auditing restored `control/` state, patching layout drift, rerunning `lint_repo_layout.py`, `npm run check`, and `npm test`, and then freezing the result in a validation reference
+
+### Behavior-Preserving Seam Completion Under Recovery Gate
+
+- recurrence signal: repeated whenever pending architect-owned seam work still needs to land during a recovery window, but the team must avoid widening semantics while the repo is being normalized
+- current manual handling: finish only behavior-preserving extractions that reduce known hotspots, keep product semantics unchanged, and validate the extracted seams before any new user-facing surface behavior is attempted
+- repeated invariant: seam completion during recovery is allowed only if it narrows hotspots without changing the active product contract
+- repeated invariant: recovery-time refactors must end in smaller, repo-owned modules with passing checks, not just moved code
+- promotion target: reusable rule for letting architecture cleanup continue safely inside a recovery-first phase
+- promotion trigger: another recovery window still contains unfinished seam packets that are required for later feature work but can be closed without expanding feature scope
+- current proven evidence: during the 2026-04-06 recovery closure in `vscode-markdown-review-surface`, `host-document-state`, `host-sidecar-store`, `webview-markdown-render`, and `webview-selection-sync` were added to close `HOST` and `RENDER` seams without yet starting the actual caption-evaluation slide feature
+
+### Smoke-First Harness Stabilization Before Declaring Recovery Closed
+
+- recurrence signal: repeated whenever structural recovery looks complete in source code, but command-path smoke remains flaky enough that the team cannot tell whether the next blocker is real product work or leftover harness instability
+- current manual handling: treat smoke repair as part of recovery, fix teardown and command-path assumptions first, and do not declare recovery closed until smoke reflects the current stable host behavior
+- repeated invariant: source refactors alone do not close recovery if the main smoke path still times out or asserts on stale assumptions
+- repeated invariant: bounded no-op or narrower smoke coverage is acceptable during recovery when it removes false negatives without hiding product-relevant regressions
+- promotion target: reusable smoke-stabilization step for recovery checklists in editor/extension projects
+- promotion trigger: another repo incident leaves smoke suites failing on harness behavior rather than on the intended product contract
+- current proven evidence: on 2026-04-06, `vscode-markdown-review-surface` only closed recovery after updating `smoke.test.js` to use explicit text-editor opening for `reviewSurface.openDefault`, save-before-close cleanup for dirty teardown, and bounded handling for slower built-in preview paths
+
+### Recovery Evidence Freeze After Triple Validation
+
+- recurrence signal: repeated whenever teams want to document recovery completion quickly, but the real closure should only be frozen after structural, static, and runtime checks all agree
+- current manual handling: freeze the recovery outcome only after layout lint, code checks, and test/smoke all pass in the same post-patch state, then write a narrow validation reference rather than a broad new planning document
+- repeated invariant: recovery closure requires at least three aligned validations: structure, code, and runtime
+- repeated invariant: the first canonical document after recovery is a validation reference, not an expanded future-state plan
+- promotion target: reusable evidence-freeze rule for incident recovery milestones
+- promotion trigger: another slice reaches a tempting “probably recovered” state before all verification bands have converged
+- current proven evidence: the 2026-04-06 `vscode-markdown-review-surface` recovery was frozen only after `python3 scripts/lint_repo_layout.py` returned `warnings=0`, `npm run check` passed, and `npm test` reported `54 passing`, after which `REFERENCE_caption_surface_recovery_and_wave4_validation-at2026-04-06-10-08.md` was written
+
+### Feature-Wave Packet Ladder With Verified Freeze Between Waves
+
+- recurrence signal: repeated whenever a bounded feature should advance through architect-first skeleton work, then session/model extraction, then later UI lanes without reopening broad fanout too early
+- current manual handling: issue one concrete feature packet at a time, close it with checks and tests, freeze a narrow validation reference, and only then open the next packet in the ladder
+- repeated invariant: packet progression is not `plan -> many builders`; it is `packet -> implementation -> validation -> freeze -> next packet`
+- repeated invariant: reduced-fanout expansion should follow proven seams and fresh validation, not optimistic staffing intent
+- promotion target: reusable feature-wave ladder protocol for bounded UI surface delivery
+- promotion trigger: another editor or surface feature is developed through architect-first scaffolding and later bounded fanout
+- current proven evidence: on 2026-04-06, `vscode-markdown-review-surface` advanced from `TASK-FEATURE-0001` command-opened evaluation skeleton to `TASK-FEATURE-0002` slide-session extraction only after green checks and a wave-specific validation reference, then opened `TASK-FEATURE-0003` as the next bounded seam
+
+### Validation Reference Resync After Post-Packet Green-State Drift
+
+- recurrence signal: repeated whenever code and tests continue to evolve after a packet is nominally complete, leaving the most recent green state ahead of the last frozen validation reference
+- current manual handling: patch the existing reference to match the newest verified command path, test count, or packet closure semantics before opening the next packet
+- repeated invariant: the latest green code state must not drift ahead of the latest wave validation reference for long
+- repeated invariant: reference resync is part of packet closure, not optional documentation cleanup
+- promotion target: reusable post-packet reference-resync checklist
+- promotion trigger: another bounded packet lands a final command-path or test delta after the first validation note was already written
+- current proven evidence: on 2026-04-06, `REFERENCE_caption_surface_feature_wave1_validation-at2026-04-06-10-53.md` had to be updated after `reviewSurface.openEvaluationSession` became a real registered host command and the verified suite moved to `56 passing`
+
+### Sequential Seam Packet Progression With Intentional Path Reuse
+
+- recurrence signal: repeated whenever a bounded feature is advanced through multiple narrow seam packets that intentionally reuse one shared orchestrator file while keeping the rest of the lane disjoint
+- current manual handling: issue the next packet anyway, validate it, treat `check-paths` overlap warnings as expected for the shared seam file, and execute the packets strictly in sequence instead of in parallel
+- repeated invariant: a shared seam file can be reused across adjacent packets if and only if those packets are explicitly serial, not concurrent
+- repeated invariant: `check-paths` output is a triage signal, not an automatic blocker; intentional overlap must still be classified and bounded
+- promotion target: reusable guidance for serial seam ladders that narrow one file over several packets
+- promotion trigger: another architect-led feature ladder advances through repeated extraction packets that all touch one shared orchestration file
+- current proven evidence: on 2026-04-06, `TASK-FEATURE-0003` through `TASK-FEATURE-0006` repeatedly overlapped on `decision-slides.js`, `slide-shell.js`, or adjacent seam files, but the work remained safe because each packet was executed and validated in strict sequence
+
+### Freeze Deferral Until Flaky Validation Is Reproduced Or Explained
+
+- recurrence signal: repeated whenever a bounded packet appears complete in code, but a runtime or extension-host test fails once in a way that may be environmental or flaky
+- current manual handling: stop before writing the next validation reference, rerun the same checks, and only freeze the result after the green state is reproduced or the failure is concretely explained
+- repeated invariant: packet closure in code is not enough; freeze is deferred until the validation surface itself is trustworthy again
+- repeated invariant: a single flaky red is treated as a triage event, not immediately as either a real regression or harmless noise
+- promotion target: reusable flake-triage rule for extension-host or UI-heavy packet validation
+- promotion trigger: another feature packet hits a transient validation failure after apparently safe local code changes
+- current proven evidence: on 2026-04-06, after the `slide-feedback` scaffold landed in `vscode-markdown-review-surface`, the first `npm test` run failed generically and the next step was to rerun and inspect the extension-host output before freezing any new wave reference
+
+### Source-Level Generator Retirement After Bundler Adoption
+
+- recurrence signal: repeated whenever a runtime path has already moved onto a bundle, but the source tree still carries helper-generated script assembly that keeps an older architectural debt alive in reviews and future maintenance
+- current manual handling: switch the bundle entry to the real runtime module, remove the leftover `get...Script()` helper chain from source files, and verify that webview orchestration now imports direct runtime factories rather than stringified functions
+- repeated invariant: a runtime bundle alone does not close webview-injection debt if the source modules still express their behavior as script generators
+- repeated invariant: debt retirement is only complete when both the bundle path and the source-level module structure converge on the same direct-runtime model
+- promotion target: reusable cleanup wave for finishing architectural migrations after the first green bundle exists
+- promotion trigger: another refactor adopts a bundler or runtime container but leaves helper-generated execution paths in place across source modules
+- current proven evidence: on 2026-04-07, `vscode-markdown-review-surface` moved `webpack` directly onto `src/decision/webview-client.js`, removed the remaining `getReviewSurface...Script` exports from webview and slide modules, and kept `build:webview`, `check`, and `test` green afterward
+
+### Residual Debt Scan Before Declaring Expert Feedback Closed
+
+- recurrence signal: repeated whenever a focused expert-review remediation seems complete in code, but the team still needs a fast, explicit scan for the exact debt patterns that were originally called out before claiming closure
+- current manual handling: run a narrow pattern scan for the named debt signatures, classify legitimate false positives, rerun the full validation stack, and only then say the feedback has been addressed
+- repeated invariant: remediation closure requires evidence against the original review vocabulary, not just a fresh green test run
+- repeated invariant: search hits must be triaged because legitimate runtime calls can look superficially similar to the retired debt pattern
+- promotion target: reusable expert-feedback closure check for codebases that are fixing named technical-debt patterns
+- promotion trigger: another expert review identifies a concrete signature family such as debug logging, generator helpers, or stale API usage that needs explicit post-fix confirmation
+- current proven evidence: on 2026-04-07, after removing the `function.toString()`-style helper chain in `vscode-markdown-review-surface`, the final closure step was an explicit `rg` scan for `getReviewSurface.*Script` and `.toString(`, followed by triage of the remaining `asWebviewUri(...).toString()` as a legitimate URI serialization call and a full green validation pass
+
+### Cross-Repo Product Review And Codex Handoff
+
+- promotion status: promoted on 2026-04-07 to shared family skill `Skills-Create-Project/cross-repo-product-review`
+- recurrence signal: repeated whenever a downstream surface repo reaches a milestone and needs quality validation before integration, followed by developer handoff for fixes and re-verification
+- current manual handling: classify files by role (Host/Entry, Data Contract, Slide Seams, Webview/Render, Host State, Tests), perform line-by-line expert review, classify findings as Critical/Major/Minor, hand off to Codex for fixes, re-verify fixes with ultrathink analysis, record remaining concerns as checklist
+- repeated invariant: product intent must be confirmed with the user before review begins — mischaracterizing the product purpose invalidates all downstream analysis
+- repeated invariant: findings must be re-verified after Codex fix, not assumed closed; Codex fixes can introduce new concerns (innerHTML escape, sync I/O, spread merge collision)
+- promotion target: `CHECKLIST_cross_repo_product_review.md` — review preparation + review perspectives + handoff format; `cross-repo-product-review` skill — file classification automation + review perspective prompt generation
+- promotion trigger: same pattern repeats on `vscode-markdown-review-surface` or another surface repo for a second time
+- current proven evidence: on 2026-04-07, `vscode-markdown-review-surface` product review followed this exact flow: 6-category file classification → line-by-line review → 3 Critical + 5 Major + 7 Minor findings → Codex handoff → 12 fixes verified → 3 remaining concerns documented → repeated issues/tasks extracted
+- multi-round convergence (2026-04-07): 1차 15건 → 2차 3건 잔여 → 3차 2건 잔여(1건 실질 버그 + 1건 코드 스멜) → Expert 직접 수정으로 수렴. 잔여 1-2건 수준에서는 Codex 핸드오프보다 Expert 직접 수정이 효율적
+- repeated invariant (추가): Codex 패치는 지적된 항목만 수정하는 경향 — 같은 구조적 클래스의 형제 필드를 놓칠 수 있음 (`ISSUE_partial_structural_fix_same_class_different_fields.md`)
+- detail file: `TASK_cross_repo_product_review_and_codex_handoff.md`
+
+### Decision Contract Cross-Field Test Expansion
+
+- promotion status: absorbed on 2026-04-07 into `Skills-Create-Project/async-migration-verify/checklist-forimplementation/async-migration-implementation-checklist.md`
+- recurrence signal: repeated whenever `decision-contract.js` gains new validation rules or cross-field constraints and the test suite needs proportional expansion
+- current manual handling: identify new/changed rules, write at least 3 tests per rule (valid path, invalid path, boundary value), test cross-field constraints bidirectionally, verify `buildDecisionRowTemplate()` self-consistency, confirm patch validation covers same rules
+- repeated invariant: 150+ validation rules with only 4-7 tests is a structural imbalance; any rule change must be accompanied by proportional test coverage
+- repeated invariant: cross-field constraints must be tested bidirectionally (A requires B, B requires A)
+- promotion target: checklist for decision-contract rule changes; script for generating test skeletons from rule definitions
+- promotion trigger: next cross-field rule addition to decision-contract triggers the same test expansion pattern
+- current proven evidence: on 2026-04-07, Codex expanded decision-contract tests from 4 to 7, adding `keeps neutral pending template valid`, `rejects machine-prefilled and contradictory decision patches`, `applies a human-only patch and preserves row validity` — but the ratio of 7 tests to 150+ rules remains low
+- detail file: `TASK_decision_contract_cross_field_test_expansion.md`
+
+### Async Migration Verification
+
+- promotion status: promoted on 2026-04-07 to shared family skill `Skills-Create-Project/async-migration-verify`
+- recurrence signal: repeated whenever Codex or a developer converts sync I/O to async and the patch needs expert verification beyond "tests pass"
+- current manual handling: 6-checkpoint verification — (1) dead import scan, (2) duplicated parse/validate logic identification, (3) concurrent access protection + UX feedback, (4) error path test addition, (5) TOCTOU improvement confirmation, (6) error message quality (file path inclusion)
+- repeated invariant: "tests pass" after async migration proves functional equivalence, not migration completeness; structural residue (dead imports, duplicated logic, missing guards) survives green tests
+- repeated invariant: sync→async creates new failure modes (concurrent calls, event-loop yield between writes) that sync code never had — these need explicit verification
+- promotion target: `CHECKLIST_async_migration_verification.md` — 6개 체크포인트; grep 기반 dead import / duplication 자동 탐지 script
+- promotion trigger: another sync→async migration across this or another repo triggers the same 6-point verification
+- current proven evidence: on 2026-04-07, `decision-session-artifacts.js` async migration triggered all 6 checkpoints — dead `fs` import removed, `parsePersistedFeedbackLedger` extracted, `feedbackSaveInFlight` + UX feedback added, malformed JSON/JSONL rejection tests added (81→83 passing), TOCTOU resolved, error messages enriched with file paths
+- detail file: `TASK_async_migration_verification.md`
+
+### Post-Promotion Family Validator Hardening Before Declaring Skill Ready
+
+- recurrence signal: repeated whenever a new skill looks complete at the content level (`SKILL.md`, KB, checklist, evals exist), but family-level validators still reject it on structural conventions, naming discipline, or portability assumptions
+- current manual handling: treat the first "skill exists" state as provisional, run the full family validator stack (`quick_validate --strict`, artifact-order verification, portability audit), and harden the skill until every validator closes before declaring it reusable
+- repeated invariant: skill promotion is not complete when the content is written; it is complete only after family validators agree that the skill is structurally portable and convention-safe
+- repeated invariant: validator closure often reveals second-order fixes such as overly long `SKILL.md`, missing timestamped canonical artifacts, weak eval structure, or script/TDD gaps that are invisible in a casual smoke pass
+- promotion target: reusable post-promotion hardening step for any shared-family skill creation or migration workflow
+- promotion trigger: another promoted skill passes semantic review first but still fails strict family validators on structure or artifact policy
+- current proven evidence: on 2026-04-08, both `cross-repo-product-review` and `async-migration-verify` initially looked promotion-ready, but only became family-ready after `quick_validate.py --strict`, `verify_artifact_order.py`, and `skill_portability_audit.py` drove additional fixes to SKILL compression, canonical timestamped artifacts, scoreable eval structure, and helper/test coverage
+
+### Timestamped Canonical Chain Additive Repair Without Deleting Legacy Skill Artifacts
+
+- recurrence signal: repeated whenever older untimestamped KB/checklist artifacts are still semantically useful, but stricter family validators now require minute-level timestamped canonical files and ordered artifact chains
+- current manual handling: preserve the older files in place, add a new timestamped canonical chain that satisfies validator expectations, and let the validator point at the new chain rather than deleting or mutating historical artifacts
+- repeated invariant: when implementation is cheap but recovery is expensive, canonical repair should prefer additive layering over destructive cleanup
+- repeated invariant: artifact-order compliance can be restored by adding a newer canonical chain without erasing prior evidence, as long as the new chain is unambiguous and validator-visible
+- promotion target: reusable artifact-lifecycle rule for skill migrations that must satisfy stricter timestamp/order requirements without losing older context
+- promotion trigger: another skill family introduces timestamp or artifact-order rules after legacy files already exist and remain useful for recovery or provenance
+- current proven evidence: on 2026-04-08, `cross-repo-product-review` and `async-migration-verify` kept earlier untimestamped KB/checklist files, then added minute-stamped canonical KB and checklist files so `verify_artifact_order.py --skill-dir ...` passed without deleting the old artifacts
+
+### Static Validation Capture Before Smoke Capture Before First Measured Run
+
+- recurrence signal: repeated whenever a new skill or workflow artifact should become benchmarkable, but the team needs a reproducible progression from structural validity to runnable smoke to scoreable measurement instead of jumping straight to a score sheet
+- current manual handling: first capture strict validator output as a frozen eval artifact, then capture one real smoke command, then fill the first measured benchmark score sheet using those artifacts as evidence
+- repeated invariant: the first measured run is only credible when structural validation evidence and runnable smoke evidence already exist as separate artifacts
+- repeated invariant: `evals.json` being valid is not enough for benchmark-grounded review; scoreability requires concrete prompt/assertion structure plus captured validation and smoke traces
+- promotion target: reusable eval bootstrap ladder for new shared skills and benchmark-aligned workflow artifacts
+- promotion trigger: another skill or reusable workflow wants `agent-tool-benchmark`-style scoring before it has frozen validation/smoke evidence
+- current proven evidence: on 2026-04-08, both promoted skills added `quick-validate-capture-*.json/.md`, `smoke-command-capture-*.json/.md`, and only then filled `benchmark-score-sheet-*.md` with first measured values (`pass_rate`, `resolve_rate`, `action_score`)
+
+### Typed Decision Form Lift Before Declaring Multi-Image Surface Usable
+
+- recurrence signal: repeated whenever slide-based evaluation storage and writeback already exist, but the user-facing surface is still driven by raw JSON patch input that only developers can comfortably use
+- current manual handling: replace the raw patch textarea with a typed decision form that maps directly onto the editable decision-contract fields, then translate changed form values back into a bounded `decision_patch`
+- repeated invariant: persistence being live is not the same as the surface being usable; a human evaluation surface is still incomplete if the primary edit path is raw JSON
+- repeated invariant: the cheapest safe migration path is to keep the existing host/writeback contract and only change the UI layer that gathers human-supplied fields
+- promotion target: reusable UI-hardening pattern for moving from debug-oriented patch entry to typed evaluation controls without rewriting persistence
+- promotion trigger: another bounded review surface has working writeback but still exposes its main decision path as raw JSON or developer-only inputs
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` added `slide-decision-form.js`, replaced the default `Decision Patch (JSON)` textarea in `slide-feedback.js`, and routed the form through `buildDecisionSlidesDecisionPatch(...)` in `decision-slides.js`, after which the suite moved to `87 passing`
+
+### Session-Level Completion Summary Before Multi-Image Surface Closure
+
+- recurrence signal: repeated whenever a slide-by-slide review surface can navigate and save per-item edits, but still lacks any single place that tells the operator whether the whole image set is actually complete
+- current manual handling: add a dedicated session-summary module that computes completion, pending, deferred, retrieval-blocked, and row-update counts from the current slide set, then render that summary in the shell before calling the surface "closed"
+- repeated invariant: a multi-image review surface is not operationally complete if it can show only the current item and cannot summarize whole-session readiness
+- repeated invariant: whole-session completion is a distinct layer above slide context, slide feedback, and persistence, and needs its own module instead of being spread ad hoc across shell markup
+- promotion target: reusable summary-layer step for any bounded multi-item evaluation surface
+- promotion trigger: another review cockpit reaches "single-item edit works" status but still cannot answer "how many items are done?" or "is the session ready?"
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` added `slide-session-summary.js`, lifted `sessionSummary` into `slide-view-model.js`, rendered a `Session Summary` panel in `slide-shell.js`, and grew the validated suite from `87 passing` to `91 passing`
+
+### Cross-Skill Dependency YAML Registration After Skill Creation
+
+- recurrence signal: repeated whenever a new skill is created or promoted that references or is referenced by other skills, but `cross_skill_dependencies.yaml` is not created
+- current manual handling: identify provider/consumer relationships, create bidirectional YAML entries in both skills' `references/` directories, verify consistency
+- repeated invariant: cross-skill dependencies that exist only in prose (KB, checklist, guardrails) are invisible to automated validators and drift silently
+- repeated invariant: bidirectional consistency is required — every `provider` entry in skill A must have a matching awareness in skill B
+- promotion target: checklist for post-creation dependency audit + YAML validator script for bidirectional consistency
+- promotion trigger: another skill is created without `cross_skill_dependencies.yaml` and the missing link is discovered during review
+- current proven evidence: on 2026-04-08, both `cross-repo-product-review` and `async-migration-verify` were created without `cross_skill_dependencies.yaml` despite having an explicit cross-skill trigger (API-surface change escalation) and both being Band 1 specialists under `verification-decision-gate`; fixed by creating bidirectional YAML in both
+- detail file: `TASK_cross_skill_dependency_yaml_registration.md`
+
+### Band Owner Family Registration After Specialist Skill Promotion
+
+- recurrence signal: repeated whenever a new specialist is promoted to a Band but the Band owner's SKILL.md YAML description, Family Roles, and the canonical owner-task-bands document are not all updated simultaneously
+- current manual handling: update 3 locations — (1) owner SKILL.md `description` frontmatter routing clause, (2) owner SKILL.md `Family Roles` specialists list, (3) `owner-task-bands-at*.md` Band specialists list with adjacency notes
+- repeated invariant: the YAML `description` is the primary routing surface for agent skill selection; a specialist missing from the description will not be routed to even if it exists in the Family Roles body
+- repeated invariant: Band adjacency (e.g., "primary Band 1, secondary adjacency Band 3/Band 2") must be documented in specialist notes, not left implicit
+- promotion target: checklist for 6-step Band registration + linter scanning owner YAML descriptions for missing specialist names
+- promotion trigger: another specialist is promoted to a Band but routing fails because the owner description was not updated
+- current proven evidence: on 2026-04-08, `cross-repo-product-review` and `async-migration-verify` were promoted as Band 1 specialists but initially missing from `verification-decision-gate/SKILL.md` description/Family Roles and `owner-task-bands-at2026-04-02.md`; fixed by updating all 3 locations with routing clauses and specialist notes
+- detail file: `TASK_band_owner_family_registration_after_specialist_promotion.md`
+
+### Partial DOM Save-State Update Before Declaring Form UX Stable
+
+- recurrence signal: repeated whenever a review surface already has typed inputs and save actions, but transient UI states such as `dirty`, `saving`, `saved`, or `error` are still being considered through whole-shell re-rendering
+- current manual handling: keep full shell rendering for init/navigation only, and move save-state changes onto narrowly targeted DOM updates for the button label, disabled state, dirty chip, and status/error notes
+- repeated invariant: transient save-state updates must not destroy in-progress form input, textarea contents, or cursor position
+- repeated invariant: once a shell owns typed form inputs, save-state UX should be applied as an upsert/update layer rather than a rerender layer
+- promotion target: reusable save-UX hardening step for any bounded review surface with live form input
+- promotion trigger: another review surface introduces typed inputs and then discovers that status updates reset those inputs through blanket rerendering
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` kept `renderDecisionSlidesShell()` for init/navigation but moved save-state UI updates in `decision-slides.js` to targeted DOM mutation, preserving typed decision form input while adding `dirty/saving/saved` UX and growing the suite to `92 passing`
+
+### Validation Preview Layer Before Save UX Closure
+
+- recurrence signal: repeated whenever a typed decision form exists and save UX exists, but the operator still learns about contract violations only after pressing Save
+- current manual handling: compute a changed-only draft patch from current form values, merge it with the current persisted row, run contract validation on the merged draft row, and surface `idle | ready | blocked` preview state before save
+- repeated invariant: `dirty` is not enough; an evaluation surface is still incomplete if it cannot distinguish "changed and ready" from "changed but blocked"
+- repeated invariant: preview validation should reuse the same contract layer as persistence, rather than inventing a second UI-only rule system
+- promotion target: reusable draft-validation step for typed review/evaluation surfaces that already have bounded editable-field contracts
+- promotion trigger: another review cockpit adds typed form controls but still relies on save-time failure as the first point where contract errors become visible
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` added `evaluateDecisionSlidesDecisionDraft(...)` in `slide-decision-form.js`, lifted preview state through `slide-view-model.js`, rendered preview feedback in `slide-feedback.js`, blocked save on `blocked` drafts in `decision-slides.js`, and increased the validated suite from `92 passing` to `96 passing`
+
+### Post-Implementation Save-UX Consistency Review
+
+- recurrence signal: repeated whenever a Codex or subagent delivers a save-UX implementation that passes all tests but contains subtle consistency issues discoverable only through manual code review
+- current manual handling: 5-point post-delivery review — (1) indentation consistency, (2) guard-without-feedback, (3) cascaded DOM double-update, (4) transient state affordances, (5) dead code after consolidation
+- repeated invariant: save-UX implementations consistently pass automated tests but fail on these 5 patterns because tests verify state transitions and output, not code quality or UX edge cases
+- repeated invariant: the 5 patterns are orthogonal — fixing one does not prevent the others
+- promotion target: reusable 5-point post-implementation review checklist for any save-UX delivery on bounded review surfaces
+- promotion trigger: another save-UX implementation is delivered and the same 5-point review reveals 2+ of these patterns again
+- current proven evidence: on 2026-04-08, Codex delivered save-UX + validation-preview for `vscode-markdown-review-surface` with 96 tests passing; post-review found all 5 patterns — indent error in `decision-slides.js:108`, silent saving guard at `:250`, double DOM update at `:291`, transient `saved` button gap in `slide-view-model.js:66`, dead `clearDecisionSlidesFeedbackNotes` function at `:170`; all fixed, tests still 96 passing
+- detail file: `TASK_post_implementation_save_ux_consistency_review.md`
+
+### Donor Stack Boundary Fix Before Cross-Repo Integration Planning
+
+- recurrence signal: repeated whenever two external repos look composable at first glance, but the real value lies in harvesting a narrow parser/donor layer rather than adopting either runtime whole
+- current manual handling: inspect both codebases, classify each candidate module into `host`, `truth`, `donor`, or `downstream export`, then write the integration plan only after those ownership boundaries are locked
+- repeated invariant: cross-repo integration planning drifts immediately if "which repo owns runtime" and "which repo owns truth" are not decided before module selection
+- repeated invariant: the right integration shape is usually `host keeps ownership, external repos donate narrow modules`; full-runtime adoption is the exceptional case, not the default
+- promotion target: reusable pre-implementation integration-design step for donor-based architecture work
+- promotion trigger: another plan tries to combine a proven host repo with one or more external repos and the first question is "which modules should we use?"
+- current proven evidence: on 2026-04-08, `slidev` + `slides-grab` integration planning for `vscode-markdown-review-surface` only stabilized after the modules were split into `slidev parser only`, `slides-grab selection/annotation/validation donor only`, and `current extension remains host/truth owner`, after which a canonical integration master plan could be written without widening into a generic PPT product
+
+### Canonical Workspace Relocation After Cross-Workspace Drafting
+
+- recurrence signal: repeated whenever a design artifact is drafted from the analyst's current workspace, but the artifact actually belongs to a different product workspace that owns the implementation
+- current manual handling: save the draft if needed to avoid loss, copy it into the owning workspace's canonical control tree, then remove the misplaced duplicate so future readers have one obvious source
+- repeated invariant: temporary drafting in the wrong workspace is recoverable, but leaving two authoritative-looking copies creates silent drift
+- repeated invariant: canonical ownership belongs with the repo that owns the implementation and control plane, not the repo that happened to host the planning session
+- promotion target: reusable artifact-placement correction step for cross-workspace planning sessions
+- promotion trigger: another master plan, KB, or checklist is produced while the agent is operating from repo A but the document is actually for repo B
+- current proven evidence: on 2026-04-08, the `slidev + slides-grab integration` master plan was first written under `my-image-parser/control/.../master_plans`, then relocated to `vscode-markdown-review-surface/control/project_domain/resources/master_plans/` as the canonical copy and deleted from the original workspace to avoid split authority
+
+### Intent And Non-Intent Front-Loading Before Integration Execution
+
+- recurrence signal: repeated whenever an integration plan risks being misread as a broader product rewrite because the tool names imply a larger scope than the actual intended slice
+- current manual handling: add `Intent` and `Non-Intent` near the top of the canonical plan before implementation packets are derived
+- repeated invariant: when external tools have strong product identities of their own, integration plans must front-load what the combined product is and explicitly what it is not
+- repeated invariant: boundary text near the top prevents downstream implementers from mistaking a bounded donor integration for a full product transplant
+- promotion target: reusable front-matter hardening step for plans that combine strong external donors or alternate hosts
+- promotion trigger: another integration plan is likely to be misread as "tool X inside tool Y" rather than a bounded adaptation
+- current proven evidence: on 2026-04-08, the canonical `slidev + slides-grab` integration master plan only became unambiguous after adding top-level `Intent` and `Non-Intent` sections clarifying that the target is a VS Code slide-edit-intent surface, not native PowerPoint inside VS Code
+
+### Critique-As-Execution-Redesign Gate After Intent Lock
+
+- recurrence signal: repeated whenever a critique document appears to attack a newly written plan, but the real question is whether it rejects the product direction or only invalidates the current execution strategy
+- current manual handling: compare the critique against canonical intent/boundary KBs first, classify each finding as either `intent contradiction` or `execution redesign`, and only then decide whether the plan should be abandoned, narrowed, or reworked
+- repeated invariant: critiques that say "intent correct, execution requires redesign" are not direction reversals; they are implementation-gate documents
+- repeated invariant: product intent should be checked against canonical intent/boundary docs before treating execution-level criticism as a strategic rejection
+- promotion target: reusable verification step for reading expert critiques without over-correcting product scope
+- promotion trigger: another design or integration critique includes strong critical findings but still agrees with intent and high-level boundary
+- current proven evidence: on 2026-04-08, `REFERENCE_slidev_slides_grab_master_plan_critique-at2026-04-08.md` was evaluated against the canonical `slides-grab` adaptation KB, region-grounding KB, and integration master plan, and was found to align with product intent while demanding redesign of donor extraction granularity, host/webview split, and source-mapping contracts rather than rejecting the direction itself
+
+### Function-Level Donor Harvest Narrowing After Coupling Audit
+
+- recurrence signal: repeated whenever an early integration plan names donor modules at file level, but a later coupling audit shows that only a few pure functions or algorithms are actually reusable
+- current manual handling: downgrade the harvest unit from `module` to `function/algorithm`, separate reusable pure helpers from DOM/runtime-bound code, and rewrite the extraction plan around wrappers or reimplementation
+- repeated invariant: donor files often mix pure helpers with runtime-coupled code; module-level reuse claims are usually too coarse for bounded host integrations
+- repeated invariant: the right narrowing move is not "abandon donor strategy" but "shrink donor scope to pure logic and stable contract ideas"
+- promotion target: reusable donor-audit step for cross-repo adaptation work after first-pass module selection
+- promotion trigger: another donor integration starts with file-level reuse claims and later discovers DOM, native-binary, or runtime-environment coupling inside the same file
+- current proven evidence: on 2026-04-08, `slidev + slides-grab` planning initially named `editor-bbox.js`, `editor-select.js`, `codex-edit.js`, `image-contract.js`, and `validation/core.js` as donor inputs; critique review then narrowed practical reuse to items like `normalizeSelection()`, `buildCodexEditPrompt()`, `classifyImageSource()`, and small algorithm helpers while marking whole DOM- and Playwright-bound modules as reference-only
+
+### Post-Delivery New Module Test File Verification
+
+- recurrence signal: repeated whenever a new source module (e.g., `slide-renderer.js`) is delivered without a corresponding test file, and the gap is only noticed during a later review rather than at delivery time
+- current manual handling: reviewer discovers the missing test file during critique, flags it, and a follow-up task is created to add the test file after the fact
+- repeated invariant: every new `.js` source module under `src/` should have a corresponding `.test.js` file under `src/test/suite/` at delivery time, not as a later follow-up
+- repeated invariant: the cost of writing a basic test file at delivery is low; the cost of discovering missing coverage later (during an unrelated review or after a regression) is much higher
+- promotion target: reusable post-delivery verification step that checks for 1:1 source-to-test file correspondence
+- promotion trigger: another new module is delivered without a test file and the gap is discovered only during review
+- current proven evidence: on 2026-04-08, `slide-renderer.js` (121 lines, 3 exported functions) was found to have zero test coverage — `slide-parser.test.js` existed but `slide-renderer.test.js` did not; `extractTitleAndImages` in `slide-parser.js` also had no direct test despite being a public export
+- detail file: `repeated_tasks/TASK_post_delivery_new_module_test_file_verification.md`
+
+### Pure Writeback Contract Before Host Apply Wiring
+
+- recurrence signal: repeated whenever a UI slice reaches `selection -> intent` readiness and the next temptation is to wire source mutation directly into the host before the patch shape is frozen as a pure contract
+- current manual handling: add a pure `writeback-contract` module first, then a pure `writeback-state` module, then a pure `writeback-apply` helper, and only after those tests pass allow runtime/protocol/host wiring
+- repeated invariant: host apply logic is much easier to validate and refactor when `patch_id`, `operation`, `target`, and `replacement_markdown` are already fixed as a reusable contract
+- repeated invariant: `edit intent -> patch` and `patch -> source replace` should be separately testable before any webview or VS Code command path is involved
+- promotion target: reusable execution order for any source-backed editing surface that grows from preview-only into bounded writeback
+- promotion trigger: another surface can already express selection + intent and is about to add writeback
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` added `slide-writeback-contract.js`, `slide-writeback-state.js`, and `slide-writeback-apply.js` with dedicated tests before wiring `slide-preview-runtime.js`, `webview-protocol.js`, and `extension.js` to actual apply; the suite grew from `157 passing` to `171 passing` before runtime/host apply was enabled
+
+### Bounded Transaction Helper Extraction After Host Apply Success
+
+- recurrence signal: repeated whenever a first implementation proves that a host-side apply path works, but the success branch still manually orchestrates `next text`, `next preview state`, and transient-state reset inline inside a large command/provider file
+- current manual handling: extract a transaction helper that returns `nextText`, refreshed preview state, cleared selection state, cleared intent state, and post-apply writeback state as one reusable bundle, then wrap host-side document replacement behind a narrow host helper
+- repeated invariant: once writeback succeeds, the hard part is not only document replacement but also restoring a consistent post-apply state graph; that reset logic should not remain ad hoc inside the provider
+- repeated invariant: extension/provider files should consume a reusable transaction result rather than own the semantics of state reassembly
+- promotion target: reusable host-transaction extraction step for bounded writeback slices in editor extensions
+- promotion trigger: another editor surface lands inline success-path orchestration for document mutation plus UI reset and that logic starts growing inside the host/provider
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` first wired writeback apply directly in `extension.js`, then extracted `slide-writeback-transaction.js` and `slide-writeback-host.js` so the provider consumed a bounded transaction result instead of assembling `nextText` and transient resets inline; validated by `slide-writeback-transaction.test.js`, `slide-writeback-host.test.js`, and `178 passing`
+
+### Expert Evaluation Packet After Vertical Slice Closure
+
+- recurrence signal: repeated whenever a vertical slice becomes broad enough that an external reviewer or expert can no longer reconstruct the product intent, execution path, and validated boundary just from commit diffs or scattered chat notes
+- current manual handling: write a single evaluation packet in the owning workspace's `references/` tree with `Intent`, `Non-Intent`, entry path, core module path, closed slice summary, review focus, and evidence links
+- repeated invariant: once a slice spans parser, renderer, runtime, protocol, host state, and writeback, expert review quality drops unless the execution path is explicitly narrated
+- repeated invariant: expert-facing review docs should describe both the intended product boundary and the exact code path that currently embodies it
+- promotion target: reusable close-out artifact step for any multi-module vertical slice that is ready for expert review
+- promotion trigger: another product slice requires external evaluation and the implementation path now spans 5+ cooperating modules
+- current proven evidence: on 2026-04-08, after closing `selection -> intent -> patch -> bounded apply` in `vscode-markdown-review-surface`, a dedicated packet `REFERENCE_slide_preview_writeback_evaluation_packet-at2026-04-08.md` was written with intent, non-intent, entry path, core execution path, evidence files, and open scope so an expert could review without reconstructing the slice from chat history
+- reinforcement (2026-04-08, same session): the initial packet required 2 precision calibration rounds — claims exceeded test boundaries ("stable", "closed", "sufficient" without scope qualification), hardcoded metrics staled immediately, and disclosures were structurally misplaced. This confirms that writing the packet is necessary but not sufficient; a post-creation precision calibration pass is also needed (see `TASK_post_critique_evaluation_document_precision_calibration.md`)
+
+### Giant Runtime To Pure-Seam Extraction Before Visual Proof
+
+- recurrence signal: repeated whenever a bounded UI slice has already closed its core contract chain, but the main runtime still concentrates DOM updates, pointer session logic, host sync, and downstream state coordination inside one orchestration closure
+- current manual handling: reread the giant runtime file, identify pure or reusable seams first, then extract markup, DOM helpers, host-sync payload builders, pointer/selection runtime, and linked-state normalization before attempting broader verification or integration
+- repeated invariant: actual runtime proof is much cheaper after orchestration responsibilities are pulled into small helpers with their own tests
+- repeated invariant: cross-mode expansion should not proceed while the runtime entry file remains the dominant owner of both behavior and state normalization
+- promotion target: reusable runtime-decomposition checklist for webview/editor slices that have outgrown a single orchestration file
+- promotion trigger: another custom-editor or webview slice reaches `contract complete` status but runtime-level verification is still blocked by one large closure
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` extracted `slide-preview-markup.js`, `slide-preview-dom.js`, `slide-preview-host-sync.js`, `slide-preview-selection-runtime.js`, and later `slide-preview-linked-state.js` out of `slide-preview-runtime.js` before extending verification into actual webview hit proof and cross-mode bridge work
+
+### Actual Webview Hit Proof After Fake-Geometry Contract Closure
+
+- recurrence signal: repeated whenever contract tests using fake geometry pass, but the product still depends on real rendered hit accuracy inside the live webview
+- current manual handling: keep the contract tests, then add a bounded webview probe path that measures actual rendered block rectangles and verifies `bbox -> source_range` mapping against the live preview instead of only fake `getBoundingClientRect` fixtures
+- repeated invariant: algorithmic intersection proof is not the same thing as visual hit accuracy proof; both are required before claiming the selection surface is trustworthy
+- repeated invariant: real layout verification should be added only after the parser, renderer, mapping, and selection contracts are already reusable and independently tested
+- promotion target: reusable actual-webview probe harness for source-backed selection surfaces
+- promotion trigger: another render-backed selection surface reaches contract-level green status but still relies on fake geometry for its last proof step
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` added `slide-preview-visual-probe.js` plus `slide-preview-visual-probe.test.js` and `slide-preview-visual-hit-accuracy.test.js`, which exposed and then corrected a live hit bug in `slide-selection-contract.js` where the oversized slide wrapper was incorrectly treated as a valid selection candidate
+
+### Sidecar Bridge Before Cross-Mode Workflow Coupling
+
+- recurrence signal: repeated whenever one bounded surface starts producing useful results that a second mode should see, but full workflow coupling would spread unstable assumptions too early
+- current manual handling: define a small bridge artifact first, persist it in a lightweight sidecar store, and let the second mode read only the summary that it needs instead of importing the first mode's full internal state
+- repeated invariant: the cheapest safe integration step is usually a bounded summary bridge, not direct state sharing or immediate truth-source unification
+- repeated invariant: a bridge artifact lets reuse and review happen before mode-level coupling decisions are frozen
+- promotion target: reusable cross-mode sidecar bridge template for bounded editor surfaces
+- promotion trigger: another pair of modes needs to share patch or review outcomes before their truth models are ready to merge
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` added `slide-preview-bridge.js` and `host-sidecar-store.js`, then patched `decision-slides-view-model.js`, `slide-shell.js`, and `extension.js` so `decision-slides` could read a bounded summary of `slide-preview` writeback results without directly coupling to the preview runtime state
+
+### Linked-State Normalization Extraction Across Host And Webview
+
+- recurrence signal: repeated whenever host and webview both normalize the same dependent state chain, such as `selection -> edit intent -> writeback`, and drift risk grows as the chain expands
+- current manual handling: reread both normalization paths, extract the linked-state transitions into one shared helper, then patch both host and runtime to consume the same contract before further product expansion
+- repeated invariant: once the same dependent state chain is normalized in two places, reuse should be forced before additional features are layered on top
+- repeated invariant: state drift is much cheaper to prevent with a shared normalizer than to debug after mode bridge or writeback logic multiplies the affected surfaces
+- promotion target: reusable linked-state coordinator pattern for host/webview pairs
+- promotion trigger: another feature duplicates chained state normalization across runtime and host or across two cooperating modes
+- current proven evidence: on 2026-04-08, `vscode-markdown-review-surface` introduced `slide-preview-linked-state.js` and refactored both `slide-preview-runtime.js` and `extension.js` to consume it, aligning selection, edit-intent, and writeback normalization before additional runtime splitting and bridge expansion
+
+### Post-Critique Evaluation Document Precision Calibration
+
+- recurrence signal: repeated whenever an agent critiques and patches an evaluation/reference document, but the first patch is directionally correct yet imprecise in scope qualification, structural placement, or evidence granularity
+- current manual handling: user provides detailed feedback per section, agent re-patches; typically requires 1-2 calibration rounds to reach expert-ready precision
+- repeated invariant: the first critique patch tends to use the document's own overclaiming language, blend proven/unproven in single sentences, place disclosures where structurally convenient rather than where readers need them, and leave hardcoded metrics that stale immediately
+- repeated invariant: calibration corrections fall into 6 recurring categories — (1) hardcoded metrics → structural descriptions, (2) blended claims → proven/unproven separation, (3) scope overstatement → conservative qualification, (4) misplaced disclosure → structural position, (5) flat mixed lists → typed/prioritized buckets, (6) direct vs adjacent evidence → label separation
+- promotion target: reusable post-critique precision checklist applied after the first patch round, before presenting to the user
+- promotion trigger: another evaluation document is patched and requires 2+ correction rounds on the same structural issues
+- current proven evidence: on 2026-04-08, `REFERENCE_slide_preview_writeback_evaluation_packet-at2026-04-08.md` required 2 calibration rounds (6 items × 2 rounds = 12 corrections) covering all 6 categories before reaching precision accepted by the user
+- recent recurrence extension: on 2026-04-09, the same 6 calibration categories repeated on `REFERENCE_review_surface_progress_and_expert_evaluation_packet-at2026-04-08.md`, and a further cross-document consistency pass was required to reconcile the detailed writeback packet with later implementation and test progress
+- detail file: `repeated_tasks/TASK_post_critique_evaluation_document_precision_calibration.md`
+
+### Submission Packet To Steward Response Freeze
+
+- recurrence signal: repeated whenever an implementation lane submits a status/requirements refresh packet and the central steward must convert it into canonical next-step decisions instead of leaving the packet as advisory context
+- current manual handling: reread the submission packet, compare it against current contracts and operator policy, answer the unresolved questions explicitly, then persist the result as a user-decision note plus registry entry
+- repeated invariant: cross-repo progress packets are not source-of-truth by themselves; they must be reinterpreted through current workspace policy before implementation can continue
+- repeated invariant: the steward response must freeze at least `evaluation body`, `required UX`, `completion criterion`, `lane boundary`, and `source of truth`
+- promotion target: reusable `submission packet -> steward decision note` response protocol for control-plane management work
+- promotion trigger: another repo or sub-lane submits a requirement refresh or readiness packet that asks for completion criteria or UX direction clarification
+- current proven evidence: on 2026-04-09, `SUBMISSION_review_surface_requirement_refresh_and_status_packet-for-control-plane-program-steward-at2026-04-09.md` was converted into `NOTE_review_surface_requirement_response_by_control-plane-program-steward-at2026-04-09-14-17.md`, and the response was registered in `control/user_decisions/registry/decision_index.json`
+
+### Artifact-Contract-First Gate Before Human Evaluation Execution
+
+- recurrence signal: repeated whenever a review surface can already bootstrap and open a session, but the actual human decision depends on candidate payloads that are not yet carried in the session artifact contract
+- current manual handling: classify bootstrap/open as intermediate readiness only, freeze a contract-extension requirement first, and postpone the human evaluation run until the surface can render the needed comparison payloads in-bounds
+- repeated invariant: `session opens` is not the same claim as `evaluation surface is acceptable`
+- repeated invariant: if a reviewer must choose among arm outputs, those outputs must exist as explicit contract fields before evaluation execution starts
+- promotion target: reusable readiness gate for evaluation surfaces that look operational before their decision body is actually encoded in artifacts
+- promotion trigger: another review workflow shows working navigation/form UX but still lacks explicit candidate payloads needed for the judgment itself
+- current proven evidence: on 2026-04-09, the review-surface bootstrap path was treated as valid but incomplete, and the Steward response froze `artifact contract extension` ahead of `actual 10-image evaluation run`
+- recent recurrence extension: later on 2026-04-09, the same gate had to be applied a second time after candidate comparison landed — the team still had to audit session-local bundle availability against the canonical comparison truth set, suppress non-ready slide controls, and decide whether the current first-10 session was actually runnable before starting human evaluation
+- later recurrence extension II: later on 2026-04-09, the gate had to expand once more beyond machine-readable truth — the team still needed an evaluator-first UX pass, advanced-metadata collapse, Korean operator copy, and an explicit save-target explanation before the live surface could be trusted for human use
+- detail file: `repeated_tasks/TASK_artifact_contract_first_gate_before_human_evaluation_execution.md`
+
+### Lane-Split Preservation While Acceptance Bar Tightens
+
+- recurrence signal: repeated whenever one lane is product-ready enough to attract feature pressure from an adjacent lane, but the correct move is to preserve the split and tighten the acceptance requirements of the target lane instead of collapsing both modes together
+- current manual handling: keep the two-lane model explicit, decide which lane owns the missing UX, and raise that lane's completion bar without reopening the other lane's bounded proof scope
+- repeated invariant: lane merging is not the default response to missing UX in one lane; often the right move is to preserve the split and improve the lane that owns the user task
+- repeated invariant: when one lane is a proof lane and the other is a decision lane, acceptance criteria should tighten on the decision lane first
+- promotion target: reusable lane-boundary preservation rule for multi-surface products with one proof lane and one execution/evaluation lane
+- promotion trigger: another product slice proposes collapsing two neighboring modes because one surface lacks user-facing clarity or comparison features
+- current proven evidence: on 2026-04-09, `decision-slides` was kept as the human evaluation lane and `slide-preview` was kept as the source-grounded writeback proof lane, while the completion bar for `decision-slides` was raised to require candidate comparison UX
+
+## 2026-04-09 Codex Workspace Retrospective Addendum
+
+1. A missing backup and deleted directory incident changed the priority from `public-prep` to `local safety first`.
+2. A minimal Git safety net was created before broader cleanup so later edits would be recoverable.
+3. Ignore boundaries and one sanitized config surface were landed first, before broader snapshots.
+4. A broad agent-facing workspace surface was committed next so `scripts/`, `skills/`, and `control/resources` were no longer living only in the working tree.
+5. Path cleanup then proceeded by surface class rather than blanket replacement: stable docs were sanitized, active experiment evidence and user-edited files were left alone.
+6. The cleanup target shifted again after the user clarified that ongoing experiments should later run on stronger remote compute; runtime portability started to outrank cosmetic public-prep cleanup.
+7. Vendored OCR and ML-adjacent runtime surfaces were then hardened with env overrides and `.venv`/`venv` fallback so the same repo can move more easily toward Docker or hosted-agent execution later.
+
+### Git-Safety Snapshot Before Boundary Cleanup
+
+- recurrence signal: repeated whenever a workspace needs aggressive cleanup or restructuring before a reliable Git recovery point exists, especially after an accidental deletion or missing-backup incident
+- current manual handling: initialize Git first, land a narrow boundary commit (`.gitignore` and one sanitized config surface), then take a broad agent-facing snapshot commit before any larger cleanup wave
+- repeated invariant: cleanup should not start from an unversioned workspace once the cost of lost local state is visible
+- repeated invariant: the first safe commit can be narrower than the intended public surface as long as it establishes a recoverable baseline
+- promotion target: reusable `local safety bootstrap before cleanup` checklist for volatile workspaces
+- promotion trigger: another repo or workspace needs path cleanup, scope reduction, or public-prep work while still lacking a recoverable Git baseline
+- current proven evidence: on 2026-04-09, `my-image-parser` first landed `1825804` (`chore(init): add ignore boundaries and sanitized mcp snippet`) and then `495f295` (`chore(snapshot): add broad agent-facing workspace surface`) before broader cleanup continued
+- detail file: `repeated_tasks/TASK_git_safety_snapshot_before_boundary_cleanup.md`
+
+### Surface-Classified Path Sanitization Across Mixed Workspace Surfaces
+
+- recurrence signal: repeated whenever the same workspace contains stable docs, runtime examples, external truth references, local-private paths, and scratch outputs, all with machine-local absolute paths that cannot be treated the same way
+- current manual handling: classify each path first (`repo-local doc`, `local-private`, `external workspace`, `scratch/tmp`, `runtime/config surface`), then replace it with the correct form (`repo-relative`, local placeholder, external placeholder, `<TMP_DIR>`, or env/template placeholder), validate, and commit in small topical batches
+- repeated invariant: path cleanup is a classification task before it is a search-and-replace task
+- repeated invariant: forcing every path into repo-relative form creates new drift when the original reference was intentionally local-private, external, or runtime-bound
+- promotion target: reusable path-class decision table, lint rule set, or cleanup checklist for GitHub-prep and portability waves
+- promotion trigger: another mixed control-plane/execution-plane repo needs machine-local path cleanup without flattening all path semantics into one rule
+- current proven evidence: on 2026-04-09, `my-image-parser` used this pattern across tracked docs and config surfaces, landing batch commits such as `b13bab7`, `432db92`, `cfbeb21`, `cc309e2`, and `abab530`
+- detail file: `repeated_tasks/TASK_surface_classified_path_sanitization_across_mixed_workspace_surfaces.md`
+
+### Runtime Portability Hardening Across Code And Skill Docs
+
+- recurrence signal: repeated whenever vendored runtimes or local ML-adjacent tools assume one exact interpreter path, venv layout, or launcher root and therefore become sticky to the original workstation
+- current manual handling: patch runtime code first to honor env overrides and dual `.venv`/`venv` fallback, then patch `runtime.md` and troubleshooting pages so documented launch paths match the new code behavior, and finally rerun lightweight validation such as `py_compile`
+- repeated invariant: runtime portability is not closed until code and skill docs agree on the same interpreter and launcher resolution strategy
+- repeated invariant: portability cleanup should preserve the bounded runtime contract instead of deleting local tool support outright
+- promotion target: reusable `vendored runtime portability hardening` checklist for scripts plus skill-side runtime/troubleshooting pages
+- promotion trigger: another local OCR, parser, or model-backed tool should stay in the repo while becoming less tied to one machine layout
+- current proven evidence: on 2026-04-09, `my-image-parser` landed `92f444c` and `09cfec6`, hardening vendored launcher/runtime assumptions in `scripts/` and the related OCR-oriented `skills/*/references/runtime.md` and `troubleshooting.md` pages
+- detail file: `repeated_tasks/TASK_runtime_portability_hardening_across_code_and_skill_docs.md`
+
+### Scope-Freeze Reclassification Before Forcing More UX Work
+
+- recurrence signal: repeated whenever an implementation lane looks blocked under one interpretation, but a user clarification changes the ownership boundary and reveals that the lane is only cross-validation or support work for a different main test
+- current manual handling: restate the user clarification as a scope-freeze note, rewrite the closure boundary in closed-question form, then patch reports and master-plan docs so the old blocker interpretation becomes historical rather than active
+- repeated invariant: blocker status is not absolute; it depends on what the lane is actually supposed to prove
+- repeated invariant: once the user clarifies `main test` versus `cross-validation lane`, the steward must freeze that distinction in a decision artifact before continuing implementation pressure
+- promotion target: reusable `scope freeze -> closure reclassification` protocol for control-plane stewardship
+- promotion trigger: another slice is about to attract extra feature work only because a support lane was being mistaken for the main product-under-test
+- current proven evidence: on 2026-04-09, `my-image-parser` converted the user clarification "image captioning is the main test; this is cross-validation" into `NOTE_review_surface_cross_validation_scope_freeze-at2026-04-09-19-03.md`, then reclassified the review-surface lane as closed in `REPORT_phase2_review_surface_cross_validation_slice_closure-at2026-04-09-19-03.md`
+
+### Mixed-Readiness Cohort Closure By Terminal Defer-Or-Complete Policy
+
+- recurrence signal: repeated whenever an evaluation cohort contains both comparison-ready items and structurally non-ready items, but the lane still needs a bounded terminal outcome instead of another round of widening work
+- current manual handling: freeze the cohort, mark ready rows as `completed`, mark non-ready rows as explicit `deferred / manual_lane`, ensure no row remains `pending`, then validate that the session artifact now expresses a full terminal state
+- repeated invariant: a mixed-readiness cohort can still close if non-ready rows are truthfully deferred rather than silently excluded or left pending
+- repeated invariant: terminal-state completeness is often more important than uniform readiness when the lane is only producing bounded evaluation evidence
+- promotion target: reusable `terminal defer-or-complete` closure pattern for bootstrap review sessions and mixed evidence cohorts
+- promotion trigger: another review or audit cohort mixes ready, excluded, and missing-source rows but still needs one canonical session outcome
+- current proven evidence: on 2026-04-09, the first-10 bootstrap session in `my-image-parser` was closed by writing `image1`-`image6` as `deferred / manual_lane` and `image7`-`image10` as `completed`, yielding `pending = 0` in the session-local `decision-seed.jsonl`
+
+### Historical Blocker Report Supersession After Boundary Change
+
+- recurrence signal: repeated whenever an earlier report is still factually correct about past conditions, but its conclusion is no longer the active gate because scope, ownership, or success criteria changed
+- current manual handling: keep the old report, add an explicit supersession section, create a new closure report under the new boundary, and patch the active runbook/master plan to point at the new canonical interpretation
+- repeated invariant: historical evidence should be preserved, but its conclusion must be demoted once a newer boundary decision supersedes it
+- repeated invariant: rewriting history is worse than superseding it; the steward should preserve the old diagnosis and only retire its gating force
+- promotion target: reusable `historical blocker -> superseded historical report` documentation pattern
+- promotion trigger: another workspace slice changes closure boundary after a blocker report has already been published and cited
+- current proven evidence: on 2026-04-09, `REPORT_phase2_review_surface_current_evaluation_gate_verdict-at2026-04-09-18-37.md` gained a `Supersession` section and the active closure moved to `REPORT_phase2_review_surface_cross_validation_slice_closure-at2026-04-09-19-03.md`
+
+## 2026-04-13 Codex Lean Portfolio Retrospective Addendum
+
+1. The slice was first narrowed from platform-scale ambition to one lean `02_1` portfolio draft with a frozen 6-slide system-first story.
+2. Before deck authoring, the execution contract had to be frozen explicitly: exact slide mapping, output paths, review artifacts, and skill ownership all needed concrete paths instead of plan-level intent.
+3. The implementation then split into two parallel artifacts: one real 6-slide deck for review and six single-slide render-source decks for slide-by-slide QA.
+4. Visual QA did not close in one pass. The first render exposed wrap and density problems, so the deck had to be rebuilt with compressed copy rather than redesigned from scratch.
+5. Review publication had to stay two-layered: repo-local canonical artifacts first, then external symbolic-link exposure for easier human inspection.
+6. The last step was not deck content but packaging accuracy: render directories had to be normalized, preview caveats documented, and later Git handoff prompts narrowed so partially committed work would not be over-staged.
+
+### Lean Execution-Contract Freeze Before Portfolio Authoring
+
+- recurrence signal: repeated whenever a plan is directionally accepted but still contains `or`, `optional`, or unfrozen output paths, so implementation would otherwise drift at the first authoring step
+- current manual handling: freeze the exact slide mapping, deck path, render path, role-matrix path, review index path, and authoring owner before repo-tracked deck work starts
+- repeated invariant: portfolio authoring becomes expensive the moment visual and path choices are left as live decisions during implementation
+- repeated invariant: a lean slice only stays lean if output artifacts and slide ownership are frozen before design work begins
+- promotion target: reusable `execution contract freeze` checklist for bounded portfolio or presentation slices
+- promotion trigger: another image-led deck or review surface moves from planning to implementation while still carrying unresolved `or/optional` branches
+- current proven evidence: on 2026-04-13, `my-image-parser` had to freeze the 6-slide mapping and concrete output surfaces in `PLAN_lean_ppt_image_character_portfolio_slice-at2026-04-11.md` before the lean `02_1` portfolio deck could be built consistently
+
+### Provider-Backed Skill Declaration In Review Index
+
+- recurrence signal: repeated whenever a user explicitly cares which skill owns authoring and which auxiliary skill shapes copy or labeling, and that decision must survive beyond chat
+- current manual handling: persist the skill ownership declaration into the review-facing index instead of leaving it implicit in the conversation
+- repeated invariant: if a slice depends on both an authoring owner and a wording-support skill, the review packet should name both explicitly
+- repeated invariant: skill provenance belongs in the review index once the user has made it part of the acceptance criteria
+- promotion target: reusable `skill usage declaration` section for public/review-facing artifact indexes
+- promotion trigger: another slice uses one owner skill plus one or more auxiliary skills and the user expects that dependency to be visible in the final packet
+- current proven evidence: on 2026-04-13, `REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md` explicitly recorded `<CODEX_HOME>/skills/pptx/SKILL.md` as the PPT authoring owner and `<CLAUDE_SKILLS_ROOT>/semantic-clarity-enhanced/SKILL.md` as requested copy support
+
+### Scratch Deck Plus Single-Slide Render-Source Generation
+
+- recurrence signal: repeated whenever a new portfolio deck needs whole-deck delivery and per-slide visual QA, but the render tool is more reliable on single-slide sources than on full multi-slide navigation output
+- current manual handling: build the review deck from scratch and emit one single-slide render-source deck per slide in the same build step
+- repeated invariant: per-slide QA becomes simpler when render sources are generated as first-class outputs rather than improvised later
+- repeated invariant: a render-source directory is often the cheapest bridge between a canonical deck artifact and visual QA tooling
+- promotion target: reusable `deck + render_sources` generation pattern for image-led PPT slices
+- promotion trigger: another bounded deck needs deterministic slide-by-slide preview generation and review evidence
+- current proven evidence: on 2026-04-13, `scripts/build_lean_02_1_system_first_portfolio.py` generated both `lean_02_1_system_first_v1.pptx` and six `render_sources/slide-*-source.pptx` artifacts for the lean `02_1` portfolio slice
+
+### Preview-First QA Followed By Copy Compression Rebuild
+
+- recurrence signal: repeated whenever the first visual pass reveals wrap pressure, footer collisions, or copy density problems, but the correct fix is copy compression and hierarchy tightening rather than layout redesign
+- current manual handling: run a first render pass, record slide-specific findings, patch the source build script to reduce or tighten copy, then rebuild and reverify
+- repeated invariant: image-led slides usually fail first on text density, not on missing structure
+- repeated invariant: one fix-and-reverify cycle should be treated as the minimum close condition for bounded deck slices
+- promotion target: reusable `preview -> compress copy -> rebuild -> reverify` QA loop for lean presentation work
+- promotion trigger: another deck slice passes structural build checks but fails visual readability on its first rendered pass
+- current proven evidence: on 2026-04-13, `REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md` recorded first-pass wrap/overflow findings on slides 2-5, then closed only after a copy-compression rebuild and one reverify cycle
+
+### External Review Surface Symlink Publication After Internal Artifact Freeze
+
+- recurrence signal: repeated whenever canonical review artifacts live inside the repo, but the user wants a second, cleaner review surface in an external `Symbolic_links` directory
+- current manual handling: freeze repo-local artifacts first, then expose only the review index, QA report, and deliverable deck through external symlinks
+- repeated invariant: external review surfaces should mirror already-frozen artifacts, not become a second authoring surface
+- repeated invariant: symbolic links are a publication step, not part of the canonical artifact set
+- promotion target: reusable `internal freeze -> external symbolic review surface` publication pattern
+- promotion trigger: another slice must be inspected from a cleaner shared folder without moving canonical artifacts out of the repo
+- current proven evidence: on 2026-04-13, `my-image-parser` published the lean portfolio deck, review index, and QA report into `Date_Project/sesac_seocho_dataanalysis/Symbolic_links` only after the repo-local artifacts and QA report were frozen
+
+## 2026-04-13 Codex Public Surface Packaging Addendum
+
+1. The packaging wave did not start from zero; several lean portfolio artifacts had already landed in earlier commits, so the first step was reconstructing what was already committed versus what still remained.
+2. Safe packaging then proceeded in bounded batches: text-only notes and reports first, binary review artifacts next, and JSON-heavy evidence bundles only after path sanitization.
+3. The review-surface session bundle looked small enough to keep, but its whole JSON tree was still machine-local, so it had to be normalized before it could become a public review artifact.
+4. Binary review evidence was packaged only after size and scope checks showed the set was bounded and review-facing rather than tool/runtime residue.
+5. The final lean follow-up was not a new artifact but a stale pointer correction: one plan still referenced an older timestamped QA report filename that no longer existed.
+6. The wave closed with a stricter handoff rule: inspect remaining candidate files, but if the lean slice is already committed, stop and report clean status instead of manufacturing another commit.
+
+### Bounded Public Surface Packaging After Partial Prior Commits
+
+- recurrence signal: repeated whenever a bounded slice already landed across multiple earlier commits, but a later packaging pass still needs to determine what remains safely committable
+- current manual handling: reconstruct the slice's landed commits first, treat the file list as `candidate files to inspect`, then commit only the still-uncommitted safe remainder in small batches
+- repeated invariant: a follow-up packager should not infer a mandatory stage set from a bounded candidate list
+- repeated invariant: once the bounded slice is effectively committed, the correct next action is a clean-status report, not an empty follow-up commit
+- promotion target: reusable packaging checklist for `already committed / still pending / risky / out-of-scope`
+- promotion trigger: another artifact slice is resumed after partial prior commits and the next agent must avoid over-staging old or unrelated changes
+- current proven evidence: on 2026-04-13, `my-image-parser` had to package lean `02_1` artifacts after earlier commits such as `7874c72`, `2a7beb6`, and `999e72b`, and later closed the remaining safe pointer fix in `2b09aae`
+- detail file: `repeated_tasks/TASK_bounded_public_surface_packaging_after_partial_prior_commits.md`
+
+### Evidence Bundle Path Placeholder Sanitization Before Commit
+
+- recurrence signal: repeated whenever an evidence bundle is structurally valid and worth preserving, but embeds machine-local absolute paths across JSON and JSONL payloads
+- current manual handling: enumerate the bundle, replace the machine-local prefix with `<REPO_ROOT>/`, revalidate every JSON/JSONL payload, then commit the sanitized bundle as evidence
+- repeated invariant: evidence bundles can often be preserved without regeneration if path normalization stays purely structural
+- repeated invariant: JSON/JSONL evidence trees need format-aware sanitization, not markdown-style relative-link rewriting
+- promotion target: reusable session-bundle sanitizer and validation checklist
+- promotion trigger: another small review or audit bundle contains host-local path residue but should remain in repo history
+- current proven evidence: on 2026-04-13, `my-image-parser` normalized the review-surface session bundle and committed it in `3d1e4a1`
+- detail file: `repeated_tasks/TASK_evidence_bundle_path_placeholder_sanitization_before_commit.md`
+
+### Binary Evidence Batch Packaging With Scope Guard
+
+- recurrence signal: repeated whenever a review-facing slice includes PPTX, JPG renders, or screenshots that are small enough to keep in Git but only if their scope is explicitly bounded
+- current manual handling: measure size first, enumerate the exact binary set, confirm it is review evidence rather than runtime residue, then commit it separately from text docs and vendor decisions
+- repeated invariant: binary evidence should be staged as one bounded proof batch, not by recursively trusting adjacent directories
+- repeated invariant: size and scope both matter before a binary commit becomes acceptable
+- promotion target: reusable bounded-binary packaging preflight
+- promotion trigger: another presentation or review slice needs to keep visual proof artifacts without accidentally absorbing caches or bulky tool payloads
+- current proven evidence: on 2026-04-13, `my-image-parser` committed the lean `02_1` PPTX, six render-source decks, six JPG previews, three screenshots, and one `.surface.json` as a bounded evidence batch in `999e72b`
+- detail file: `repeated_tasks/TASK_binary_evidence_batch_packaging_with_scope_guard.md`
