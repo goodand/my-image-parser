@@ -12,7 +12,12 @@ from typing import Any
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 PPTX_JOBS_DIR = ROOT_DIR / "control" / "project_domain" / "resources" / "pptx_jobs"
-CAPTION_JOBS_DIR = ROOT_DIR / "control" / "project_agent_ops" / "registry" / "jobs" / "image_caption_jobs"
+CAPTION_JOBS_DIR = Path(
+    os.environ.get(
+        "CAPTION_JOB_ROOT",
+        str(ROOT_DIR / "control" / "project_agent_ops" / "registry" / "jobs" / "image_caption_jobs"),
+    )
+)
 MACOS_OCR_DIR = Path(
     os.environ.get("MACOS_OCR_MCP_SERVER_DIR", str(ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp"))
 )

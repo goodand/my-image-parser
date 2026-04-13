@@ -15,6 +15,20 @@ def utc_timestamp() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
+def resolve_output_root(root_dir: Path, value: Path) -> Path:
+    if value.is_absolute():
+        return value.resolve()
+    return (root_dir / value).resolve()
+
+
+def serialize_workspace_path(root_dir: Path, path: Path) -> str:
+    resolved = path.resolve()
+    try:
+        return str(resolved.relative_to(root_dir))
+    except ValueError:
+        return str(resolved)
+
+
 @dataclass
 class DatasetSpec:
     dataset_id: str
@@ -122,6 +136,9 @@ class ExperimentMaterializer:
     def make_worker_id(self, index: int) -> str:
         return f"w{index:02d}"
 
+    def serialize_path(self, path: Path) -> str:
+        return serialize_workspace_path(self.root_dir, path)
+
     def write_shard_jsonl(
         self,
         *,
@@ -165,14 +182,14 @@ class ExperimentMaterializer:
                 "control/project_domain/resources/experiment_plans/PLAN_phase1_caption_experiment_parallel_execution-at2026-03-27-18-31.md",
             ],
             "allowed_paths": [
-                str(shard_jsonl.relative_to(self.root_dir)),
-                str(output_ledger.relative_to(self.root_dir)),
-                str(output_ledger.parent.relative_to(self.root_dir)),
+                self.serialize_path(shard_jsonl),
+                self.serialize_path(output_ledger),
+                self.serialize_path(output_ledger.parent),
             ],
             "locked_paths": [
-                str(shard_jsonl.relative_to(self.root_dir)),
-                str(output_ledger.relative_to(self.root_dir)),
-                str((output_ledger.parent / f"{output_ledger.stem}_responses").relative_to(self.root_dir)),
+                self.serialize_path(shard_jsonl),
+                self.serialize_path(output_ledger),
+                self.serialize_path(output_ledger.parent / f"{output_ledger.stem}_responses"),
             ],
             "constraints": {
                 "do_not_touch_other_worker_ledgers": True,
@@ -183,9 +200,9 @@ class ExperimentMaterializer:
                 "python3",
                 "scripts/caption_images_openai.py",
                 "--dataset-jsonl",
-                str(shard_jsonl.relative_to(self.root_dir)),
+                self.serialize_path(shard_jsonl),
                 "--output",
-                str(output_ledger.relative_to(self.root_dir)),
+                self.serialize_path(output_ledger),
                 "--model",
                 self.model,
                 "--detail",
@@ -243,15 +260,15 @@ class ExperimentMaterializer:
                     WorkerShard(
                         worker_id=worker_id,
                         dataset_id=dataset.dataset_id,
-                        dataset_jsonl=str(dataset.dataset_jsonl),
-                        shard_jsonl=str(shard_jsonl),
-                        output_ledger=str(output_ledger),
-                        output_responses_dir=str(output_ledger.parent / f"{output_ledger.stem}_responses"),
+                        dataset_jsonl=self.serialize_path(dataset.dataset_jsonl),
+                        shard_jsonl=self.serialize_path(shard_jsonl),
+                        output_ledger=self.serialize_path(output_ledger),
+                        output_responses_dir=self.serialize_path(output_ledger.parent / f"{output_ledger.stem}_responses"),
                         row_count=len(indexed_rows),
                         first_image_id=image_ids[0] if image_ids else None,
                         last_image_id=image_ids[-1] if image_ids else None,
                         row_indexes=row_indexes,
-                        packet_path=str(packet_path),
+                        packet_path=self.serialize_path(packet_path),
                     )
                 )
 
@@ -263,7 +280,7 @@ class ExperimentMaterializer:
             "datasets": [
                 {
                     "dataset_id": dataset.dataset_id,
-                    "dataset_jsonl": str(dataset.dataset_jsonl),
+                    "dataset_jsonl": self.serialize_path(dataset.dataset_jsonl),
                     "row_count": len(dataset.rows),
                     "allocated_workers": allocations[dataset.dataset_id],
                 }
@@ -278,7 +295,7 @@ class ExperimentMaterializer:
         }
         manifest_path = self.shard_dir / f"{self.phase_name}_manifest.json"
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        manifest["manifest_path"] = str(manifest_path)
+        manifest["manifest_path"] = self.serialize_path(manifest_path)
         return manifest
 
 
@@ -309,6 +326,24 @@ def parse_args() -> argparse.Namespace:
         default="gpt-4.1",
         help="Caption model recorded into worker packets.",
     )
+    parser.add_argument(
+        "--shard-root",
+        type=Path,
+        default=Path("control/project_domain/runs/manifests"),
+        help="Base directory where shard manifests are written.",
+    )
+    parser.add_argument(
+        "--packet-root",
+        type=Path,
+        default=Path("control/project_agent_ops/resources/task_packets/issued"),
+        help="Base directory where issued worker packets are written.",
+    )
+    parser.add_argument(
+        "--ledger-root",
+        type=Path,
+        default=Path("control/project_agent_ops/registry/runs/image_caption_jobs"),
+        help="Base directory where worker ledgers are written.",
+    )
     return parser.parse_args()
 
 
@@ -331,9 +366,9 @@ def main() -> int:
     allocations = planner.allocate_workers(datasets)
     materializer = ExperimentMaterializer(
         root_dir=root_dir,
-        shard_dir=root_dir / "control" / "project_domain" / "runs" / "manifests" / f"{args.phase_name}_shards",
-        packet_dir=root_dir / "control" / "project_agent_ops" / "resources" / "task_packets" / "issued",
-        output_ledger_dir=root_dir / "control" / "project_agent_ops" / "registry" / "runs" / "image_caption_jobs",
+        shard_dir=resolve_output_root(root_dir, args.shard_root) / f"{args.phase_name}_shards",
+        packet_dir=resolve_output_root(root_dir, args.packet_root),
+        output_ledger_dir=resolve_output_root(root_dir, args.ledger_root),
         phase_name=args.phase_name,
         model=args.model,
     )

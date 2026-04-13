@@ -78,6 +78,21 @@ CAPTION_JOB_ROOT = (
 PHASE1_IMAGE_BUNDLE_ROOT = ROOT / "control" / "project_domain" / "resources" / "manifests"
 
 
+def resolve_workspace_path(path_value: str | Path) -> Path:
+    path = Path(path_value)
+    if path.is_absolute():
+        return path.resolve()
+    return (ROOT / path).resolve()
+
+
+def serialize_workspace_path(path_value: str | Path) -> str:
+    resolved = resolve_workspace_path(path_value)
+    try:
+        return str(resolved.relative_to(ROOT))
+    except ValueError:
+        return str(resolved)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
@@ -129,7 +144,7 @@ def baseline_record_for_image(image_stem: str) -> dict[str, Any]:
     return {
         "execution_arm": record.execution_arm,
         "image_id": record.image_id,
-        "ledger_path": record.ledger_path,
+        "ledger_path": serialize_workspace_path(record.ledger_path),
         "status": record.status,
         "caption": record.caption,
         "alt_text": record.alt_text,
@@ -186,7 +201,7 @@ def _path_is_workspace_stable(path_value: str | None) -> bool:
     if not path_value:
         return False
     try:
-        resolved = Path(path_value).resolve()
+        resolved = resolve_workspace_path(path_value)
     except FileNotFoundError:
         resolved = Path(path_value)
     return str(resolved).startswith(str(ROOT))
@@ -207,18 +222,18 @@ def build_included_candidate_from_bundle(
     gpt_visual_confirmation: dict[str, Any],
 ) -> dict[str, Any]:
     bundle = load_json(single_bundle_path)
-    source_image_path = str(bundle["source_image_path"])
+    source_image_path = serialize_workspace_path(bundle["source_image_path"])
     status_summary = bundle.get("status_summary") or {}
     return {
         "candidate_label": image_stem,
         "source_image_path": source_image_path,
         "decision": "include",
         "decision_reason": decision_reason,
-        "single_image_bundle_path": str(single_bundle_path.resolve()),
+        "single_image_bundle_path": serialize_workspace_path(single_bundle_path),
         "gpt_visual_confirmation": gpt_visual_confirmation,
         "evidence": {
             "single_image_bundle_present": True,
-            "single_image_bundle_path": str(single_bundle_path.resolve()),
+            "single_image_bundle_path": serialize_workspace_path(single_bundle_path),
             "comparison_ready": bool(bundle.get("comparison_ready")),
             "ready_arm_count": int(status_summary.get("ready_arm_count") or 0),
             "blocked_arm_count": int(status_summary.get("blocked_arm_count") or 0),
@@ -260,7 +275,7 @@ def build_excluded_table_candidate(
     reviewed_ledger = derived_ledger_path(image_stem, "reviewed_isolated_component_rerun")
     return {
         "candidate_label": image_stem,
-        "source_image_path": str(source_image_path.resolve()),
+        "source_image_path": serialize_workspace_path(source_image_path),
         "decision": "exclude",
         "decision_reason": "missing_frozen_context_and_rerun_artifacts_for_derived_arms",
         "single_image_bundle_path": None,
@@ -269,13 +284,17 @@ def build_excluded_table_candidate(
             "baseline_ledger_path": baseline["ledger_path"],
             "baseline_status": baseline["status"],
             "full_image_ocr_context_rerun_ledger_path": (
-                str(full_image_ocr_ledger.resolve()) if full_image_ocr_ledger and full_image_ocr_ledger.is_file() else None
+                serialize_workspace_path(full_image_ocr_ledger)
+                if full_image_ocr_ledger and full_image_ocr_ledger.is_file()
+                else None
             ),
             "parser_table_enriched_rerun_ledger_path": (
-                str(parser_ledger.resolve()) if parser_ledger and parser_ledger.is_file() else None
+                serialize_workspace_path(parser_ledger) if parser_ledger and parser_ledger.is_file() else None
             ),
             "reviewed_isolated_component_rerun_ledger_path": (
-                str(reviewed_ledger.resolve()) if reviewed_ledger and reviewed_ledger.is_file() else None
+                serialize_workspace_path(reviewed_ledger)
+                if reviewed_ledger and reviewed_ledger.is_file()
+                else None
             ),
             "alpha_component_count": alpha["alpha_split"]["component_count"],
             "alpha_split_sufficient": alpha["alpha_split"]["sufficient"],
@@ -331,7 +350,7 @@ def build_excluded_edge_candidate() -> dict[str, Any]:
     )
     return {
         "candidate_label": image_stem,
-        "source_image_path": str(source_image_path.resolve()),
+        "source_image_path": serialize_workspace_path(source_image_path),
         "decision": "exclude",
         "decision_reason": "mixed_chart_table_edge_case_confirmed_by_gpt_and_no_frozen_derived_arms",
         "single_image_bundle_path": None,
@@ -467,7 +486,7 @@ def main() -> int:
         excluded_candidates=excluded_candidates,
     )
     included_bundle_paths = [
-        str(Path(item["single_image_bundle_path"]).resolve())
+        str(resolve_workspace_path(item["single_image_bundle_path"]))
         for item in included_candidates
         if item.get("single_image_bundle_path")
     ]

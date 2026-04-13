@@ -29,6 +29,7 @@ DEFAULT_MODEL = "gpt-4.1"
 DEFAULT_DETAIL = "high"
 DEFAULT_MAX_OUTPUT_TOKENS = 700
 API_URL = "https://api.openai.com/v1/responses"
+ROOT_DIR = Path(__file__).resolve().parents[1]
 
 PROMPT_VERSION = "openai-gpt-4.1-caption-v1"
 PROMPT_VERSION_WITH_CONTEXT = "openai-gpt-4.1-caption-context-v1"
@@ -204,8 +205,23 @@ def utc_timestamp() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
+def resolve_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> Path:
+    path = Path(path_value)
+    if path.is_absolute():
+        return path.resolve()
+    return (root_dir / path).resolve()
+
+
+def serialize_workspace_path(path_value: str | Path, *, root_dir: Path = ROOT_DIR) -> str:
+    resolved = resolve_workspace_path(path_value, root_dir=root_dir)
+    try:
+        return unicodedata.normalize("NFC", str(resolved.relative_to(root_dir)))
+    except ValueError:
+        return unicodedata.normalize("NFC", str(resolved))
+
+
 def normalize_path_key(path_value: str | Path) -> str:
-    return unicodedata.normalize("NFC", str(Path(path_value).resolve()))
+    return unicodedata.normalize("NFC", str(resolve_workspace_path(path_value)))
 
 
 def natural_sort_key(path: Path) -> list[Any]:
@@ -675,7 +691,7 @@ class LedgerStore:
                 / "image_caption_jobs"
                 / f"{job_id}.json"
             )
-        return output_path.resolve()
+        return resolve_workspace_path(output_path, root_dir=root_dir)
 
     def raw_response_path_for(self, image_id: str) -> Path:
         return self.output_path.parent / f"{self.output_path.stem}_responses" / f"{image_id}.json"
@@ -696,23 +712,23 @@ class LedgerStore:
             "model": self.config.model,
             "api_key_env": self.config.api_key_name,
             "input": {
-                "image": str(self.input_args.image.resolve()) if self.input_args.image else None,
+                "image": serialize_workspace_path(self.input_args.image) if self.input_args.image else None,
                 "dataset_jsonl": (
-                    str(self.input_args.dataset_jsonl.resolve())
+                    serialize_workspace_path(self.input_args.dataset_jsonl)
                     if self.input_args.dataset_jsonl
                     else None
                 ),
                 "input_dir": (
-                    str(self.input_args.input_dir.resolve()) if self.input_args.input_dir else None
+                    serialize_workspace_path(self.input_args.input_dir) if self.input_args.input_dir else None
                 ),
-                "manifest": str(self.manifest_path) if self.manifest_path else None,
+                "manifest": serialize_workspace_path(self.manifest_path) if self.manifest_path else None,
                 "context_package_json": (
-                    str(self.input_args.context_package_json.resolve())
+                    serialize_workspace_path(self.input_args.context_package_json)
                     if getattr(self.input_args, "context_package_json", None)
                     else None
                 ),
                 "context_package_manifest_jsonl": (
-                    str(self.input_args.context_package_manifest_jsonl.resolve())
+                    serialize_workspace_path(self.input_args.context_package_manifest_jsonl)
                     if getattr(self.input_args, "context_package_manifest_jsonl", None)
                     else None
                 ),
@@ -742,7 +758,7 @@ class LedgerStore:
         return {
             "job_id": self.job_id,
             "image_id": image_id,
-            "path": str(image_path.resolve()),
+            "path": serialize_workspace_path(image_path),
             "filename": image_path.name,
             "status": "queued",
             "attempt_count": 0,
@@ -1074,7 +1090,7 @@ class CaptionJobRunner:
 
         processed_count = 0
         for record in records:
-            image_path = Path(record["path"])
+            image_path = resolve_workspace_path(record["path"])
             if not store.should_process_record(
                 record,
                 overwrite=self.args.overwrite,
@@ -1118,7 +1134,7 @@ class CaptionJobRunner:
                 record["new_filename_candidate"] = candidate_name
                 record["api_response_id"] = generation.response_json.get("id")
                 record["usage"] = generation.response_json.get("usage")
-                record["raw_response_path"] = str(raw_path)
+                record["raw_response_path"] = serialize_workspace_path(raw_path)
                 record["last_error"] = None
                 record["finished_at"] = utc_timestamp()
                 record["updated_at"] = utc_timestamp()

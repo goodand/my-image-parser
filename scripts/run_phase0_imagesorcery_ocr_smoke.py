@@ -20,6 +20,12 @@ MACOS_OCR_DIR = Path(
     os.environ.get("MACOS_OCR_MCP_SERVER_DIR", str(ROOT_DIR / "vendor" / "mcp" / "macos-ocr-mcp"))
 )
 MACOS_OCR_MAIN = MACOS_OCR_DIR / "main.py"
+CAPTION_JOBS_DIR = Path(
+    os.environ.get(
+        "CAPTION_JOB_ROOT",
+        str(ROOT_DIR / "control" / "project_agent_ops" / "registry" / "runs" / "image_caption_jobs"),
+    )
+)
 YOLO_CONFIG_DIR = ROOT_DIR / "logs" / "imagesorcery" / "ultralytics"
 
 
@@ -118,11 +124,10 @@ def _pushd(path: Path):
 
 
 def _load_existing_caption(image_path: Path) -> dict[str, Any] | None:
-    jobs_dir = ROOT_DIR / "control" / "project_agent_ops" / "registry" / "runs" / "image_caption_jobs"
     preferred_prefixes = ("phase1_ppt", "phase1_smoke", "phase1_caption_10w")
     target_path = image_path.resolve()
     for prefix in preferred_prefixes:
-        for candidate in sorted(jobs_dir.glob(f"{prefix}*.json")):
+        for candidate in sorted(CAPTION_JOBS_DIR.glob(f"{prefix}*.json")):
             payload = json.loads(candidate.read_text())
             for record in payload.get("records", []):
                 record_path_text = record.get("path")
