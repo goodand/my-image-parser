@@ -1,0 +1,10 @@
+[project]
+name = "ocrmac-mcp"
+version = "0.1.0"
+requires-python = ">=3.13"
+
+dependencies = [
+    "ocrmac",
+    "pillow",
+    "mcp[cli]>=1.7.1",
+]
