@@ -28,5 +28,5 @@ Add a decomposition stage that does not require a table seed to begin:
 
 - `image4`
 - canonical evidence:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_four_mode_reentry_waiver-at2026-03-30-21-27.md`
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md`
+  - `../../../../project_domain/resources/reports/REPORT_phase1_image4_four_mode_reentry_waiver-at2026-03-30-21-27.md`
+  - `../../../../project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_probe-at2026-03-30-21-55.md`

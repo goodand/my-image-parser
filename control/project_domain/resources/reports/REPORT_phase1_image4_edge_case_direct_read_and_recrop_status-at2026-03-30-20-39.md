@@ -7,13 +7,13 @@ Record a direct visual read of `image4.png` after the new multi-component review
 ## Input
 
 - source image:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png`
+  - `<LOCAL_PPTX_JOBS_ROOT>/01_full_presentation_2026-03-17/media/image4.png`
 - current small-batch readiness:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_caption_four_mode_small_batch_readiness-at2026-03-28-14-10.md`
+  - `./REPORT_phase1_caption_four_mode_small_batch_readiness-at2026-03-28-14-10.md`
 - current candidate manifest:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_caption_four_mode_small_batch_candidates_at2026_03_28.json`
+  - `../manifests/phase1_caption_four_mode_small_batch_candidates_at2026_03_28.json`
 - reviewed recrop implementation:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/scripts/reviewed_component_context_package_lib.py`
+  - `../../../../scripts/reviewed_component_context_package_lib.py`
 
 ## Direct Read
 
@@ -64,7 +64,7 @@ What is still unresolved for `image4`:
 - current safe interpretation: keep `image4` excluded until the bounded re-entry slice runs
 - current operational rule: treat `image4` decomposition as a research-lane slice, not as a blocker for the current stable phase1 mainline
 - recommended next step: use the issued packet
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_image4_multi_component_recrop_reentry_slice-at2026-03-30.md`
+  - `../../../project_agent_ops/resources/task_packets/issued/TASK_PACKET_phase1_image4_multi_component_recrop_reentry_slice-at2026-03-30.md`
 
 ## Recording Status
 

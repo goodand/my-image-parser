@@ -1,8 +1,8 @@
 {
   "experiment": "component_decomposition_candidate_scoring",
   "status": "completed",
-  "source_image_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
-  "input_probe_manifest_path": "/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image4_component_decomposition_probe_at2026_03_30.json",
+  "source_image_path": "<LOCAL_PPTX_JOBS_ROOT>/01_full_presentation_2026-03-17/media/image4.png",
+  "input_probe_manifest_path": "control/project_domain/resources/manifests/phase1_image4_component_decomposition_probe_at2026_03_30.json",
   "image_kind_guess": "compound_dashboard_like",
   "current_experiment_objective": "dashboard_overview_caption_input",
   "profiles": {

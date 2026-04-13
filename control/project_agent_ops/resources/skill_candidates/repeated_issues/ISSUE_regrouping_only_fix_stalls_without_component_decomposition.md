@@ -26,7 +26,7 @@ A dedicated decomposition stage before regrouping:
 - bounded tie-break
 
 Current strategy reference:
-- `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/references/REFERENCE_component_decomposition_strategy-at2026-03-30.md`
+- `../../../../project_domain/resources/references/REFERENCE_component_decomposition_strategy-at2026-03-30.md`
 
 ## Escalation trigger
 

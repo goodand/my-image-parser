@@ -2,7 +2,7 @@
 
 ## Input
 
-- source_image_path: `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png`
+- source_image_path: `<LOCAL_PPTX_JOBS_ROOT>/01_full_presentation_2026-03-17/media/image4.png`
 - image_size: `1280x820`
 
 ## Summary

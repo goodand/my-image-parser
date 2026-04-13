@@ -15,8 +15,8 @@ Use this task when:
 
 - `image4`
 - canonical evidence:
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase1_image4_component_decomposition_candidate_scoring_at2026_03_30.json`
-  - `/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md`
+  - `../../../../project_domain/resources/manifests/phase1_image4_component_decomposition_candidate_scoring_at2026_03_30.json`
+  - `../../../../project_domain/resources/reports/REPORT_phase1_image4_component_decomposition_candidate_scoring-at2026-03-30-22-05.md`
 
 ## Standard bounded flow
 
