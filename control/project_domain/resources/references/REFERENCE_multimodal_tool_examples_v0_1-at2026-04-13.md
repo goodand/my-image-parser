@@ -24,6 +24,10 @@ What was missing was an example that another agent could read without guessing:
 - how that bundle is consumed by the PPT-facing tool
 - where manual gates remain honest and explicit
 
+The thin runner that materializes the generic bundle shape is here:
+
+- [REFERENCE_multimodal_context_refinement_tool_runner-at2026-04-13.md](./REFERENCE_multimodal_context_refinement_tool_runner-at2026-04-13.md)
+
 ## Example 1. Generic Multimodal Tool
 
 The first example bundle is intentionally mixed:

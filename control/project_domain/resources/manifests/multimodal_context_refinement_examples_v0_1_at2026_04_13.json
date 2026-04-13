@@ -70,7 +70,8 @@
         "unresolved_fields": [
           "whole_image_ocr_not_promoted",
           "component_grounding_not_captured"
-        ]
+        ],
+        "next_focus": null
       }
     },
     {
@@ -136,7 +137,8 @@
           "table_row_values",
           "table_column_headers_as_explicit_ocr",
           "value_level_readability_judgment"
-        ]
+        ],
+        "next_focus": "run_component_or_structure_level_extraction_before_claiming_value_safe_regeneration"
       }
     }
   ]

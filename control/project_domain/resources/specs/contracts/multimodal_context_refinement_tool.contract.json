@@ -1,11 +1,13 @@
 {
   "name": "multimodal_context_refinement_tool",
-  "status": "planned_contract_only",
+  "status": "thin_runner_available",
   "mode": "iterative_multimodal_understanding",
   "source_of_truth": "control/project_domain/resources/specs/prose/SPEC_multimodal_context_refinement_tool.md",
   "owner_family_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/multimodal-evidence-refinement-loop/SKILL.md",
   "specialist_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/image-text-cot-review/SKILL.md",
   "mcp_owner_ref": "skills/vendored-mcp-onboarding/SKILL.md",
+  "thin_runner_ref": "scripts/run_multimodal_context_refinement_tool.py",
+  "thin_runner_lib_ref": "scripts/multimodal_context_refinement_tool_lib.py",
   "inputs": {
     "required": [
       "source_image_path",
@@ -71,5 +73,9 @@
   "planned_outputs": [
     "multimodal_context_bundle_atYYYY_MM_DD.json",
     "multimodal_context_bundle_report-atYYYY-MM-DD-HH-MM.md"
+  ],
+  "example_outputs": [
+    "control/project_domain/resources/manifests/multimodal_context_refinement_examples_v0_1_at2026_04_13.json",
+    "control/project_domain/resources/references/REFERENCE_multimodal_tool_examples_v0_1-at2026-04-13.md"
   ]
 }
