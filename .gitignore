@@ -8,6 +8,7 @@
 .build/
 data/
 logs/
+tmp/
 context_portal/
 .codex/
 .codex-tasks/
@@ -15,9 +16,14 @@ context_portal/
 .history/
 .vscode/
 
+# Accidental root placeholders
+action
+project
+
 # OS / Python noise
 .DS_Store
 **/.DS_Store
+~$*.pptx
 **/__pycache__/
 **/*.py[cod]
 **/.pytest_cache/
