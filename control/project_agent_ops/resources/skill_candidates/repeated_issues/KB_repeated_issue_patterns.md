@@ -1355,3 +1355,39 @@ For each candidate, record:
 - escalation trigger: another bounded artifact slice looks complete except for broken pointers to older timestamped report files
 - current proven evidence: on 2026-04-13, `my-image-parser` had to patch `PLAN_lean_ppt_image_character_portfolio_slice-at2026-04-11.md` from a missing `...10-18.md` QA report to the committed `...13-30.md` report before landing `2b09aae`
 - detail file: `repeated_issues/ISSUE_timestamped_artifact_pointer_drift_after_later_qa_regeneration.md`
+
+## 2026-04-13 Codex Public Entry And Dispatch Issue Addendum
+
+1. The first blocker in this wave was semantic, not mechanical: a public-surface request was close enough to toolization that the lane needed an explicit role-boundary reset before any entry doc could land.
+2. The next blocker was portability tension: the same external donor surface needed placeholder-safe tracked references and also a user-requested local-entry path with clickable local clone links.
+3. The final blocker was orchestration scope: once the `Start Here` packet and the git handoff packet existed together, they were easy to collapse into one mental scope without an explicit chained rule.
+
+### Public Surface Request Reopens Toolization Without Role Boundary Reset
+
+- recurrence signal: repeated whenever a request for readable packaging sits on top of existing routing, manifest, or handoff artifacts and could easily drift into control-plane reinterpretation
+- current workaround: write and cite one boundary note that assigns toolization to the control-plane owner and readable entry packaging to the public-surface packager
+- failure signature: the packaging lane starts editing contracts, manifests, scripts, or owner-family semantics even though the request was only for readability
+- structural fix candidate: mandatory role-boundary freeze before public-entry work starts
+- escalation trigger: another public-entry or review-facing request depends on tool-facing artifacts that are already nontrivial
+- current proven evidence: on 2026-04-13, `my-image-parser` had to freeze the `Control-Plane Program Steward` vs `Public Surface Architect` split in `NOTE_role_boundary_reset_between_control_plane_program_steward_and_public_surface_architect-at2026-04-13-16-07.md`
+- detail file: `repeated_issues/ISSUE_public_surface_request_reopens_toolization_without_role_boundary_reset.md`
+
+### Operator-Local Donor Linkage Conflicts With Portable Public Surface Sanitization
+
+- recurrence signal: repeated whenever an external donor surface should remain portable in tracked references but the user also wants one fast local-entry doc with literal local clone links
+- current workaround: keep reusable tracked manifests and references on placeholders such as `<EXTERNAL_REVIEW_SURFACE_ROOT>`, and isolate literal local donor links to an explicitly operator-facing entry surface
+- failure signature: the same donor surface oscillates between placeholder-safe linkage and machine-local absolute paths without a clear rule for which artifact type gets which treatment
+- structural fix candidate: explicit split between `portable tracked surface` and `operator-local entry surface`
+- escalation trigger: another repo needs both portability and fast local donor-tool entry against the same sibling-workspace clone
+- current proven evidence: on 2026-04-13, `my-image-parser` first sanitized `slides-grab` linkage in tracked manifests and references in `fbec43f`, then later wrote a `Start Here` doc that intentionally kept literal local donor links for operator entry
+- detail file: `repeated_issues/ISSUE_operator_local_donor_linkage_conflicts_with_portable_public_surface_sanitization.md`
+
+### Chained Entry And Git Handoff Scope Collapse
+
+- recurrence signal: repeated whenever a documentation packet and a git-packaging packet are meant to run in order, but the receiver can easily merge them into one scope and commit too early
+- current workaround: write one chained prompt that forces `ENTRY first`, `inspect remaining repo-local changes`, and `GIT HANDOFF only if needed`
+- failure signature: commits happen during the first packet, or unrelated scratch/packet artifacts get staged because the chain rule stayed implicit
+- structural fix candidate: reusable chained-dispatch prompt plus packet pair with explicit no-op termination
+- escalation trigger: another public-entry or doc-packaging flow only sometimes needs a later commit and must not assume that follow-up unconditionally
+- current proven evidence: on 2026-04-13, `my-image-parser` had to add `REFERENCE_public_surface_architect_chained_dispatch_prompt-at2026-04-13.md` so the `Start Here` packet and the git handoff packet would not collapse into one scope
+- detail file: `repeated_issues/ISSUE_chained_entry_and_git_handoff_scope_collapse.md`

@@ -1272,3 +1272,56 @@ For each candidate, record:
 - promotion trigger: another presentation or review slice needs to keep visual proof artifacts without accidentally absorbing caches or bulky tool payloads
 - current proven evidence: on 2026-04-13, `my-image-parser` committed the lean `02_1` PPTX, six render-source decks, six JPG previews, three screenshots, and one `.surface.json` as a bounded evidence batch in `999e72b`
 - detail file: `repeated_tasks/TASK_binary_evidence_batch_packaging_with_scope_guard.md`
+
+## 2026-04-13 Codex Public Entry, Dispatch, And Raw Vendor Addendum
+
+1. The next wave did not start with deck work. It started by freezing the role boundary so public-entry packaging would not reopen toolization.
+2. Only after that boundary reset did the readable `Start Here` surface get built from already-existing local truth: `v1` and `v2` review indexes first, then the page-link guide and regeneration handoff guide.
+3. Git packaging was then kept as a second packet, not part of the entry packet. The chain only continued because the new `Start Here` doc left one relevant repo-local change.
+4. The chain then committed exactly that one entry artifact after re-running bounded JSON and file-existence checks.
+5. A separate meta wave later packaged the dispatch prompt, the two packets, and the boundary note as reusable dispatch infrastructure.
+6. In parallel, the raw vendor request needed a completely different path: nested vendor repos had to be ingested through tracked-file-only staging rather than normal recursive `git add`.
+
+### Role Boundary Freeze Before Public Entry Packaging
+
+- recurrence signal: repeated whenever a readable public-entry request sits on top of already-existing routing contracts and execution artifacts, so a navigation pass can easily drift into toolization
+- current manual handling: freeze the role split first, record it in one boundary note, then use that note as the source of truth for entry packets and public-entry docs
+- repeated invariant: public-entry packaging is safer once toolization ownership is frozen before any doc writing starts
+- repeated invariant: if the boundary is implicit, the packaging lane starts mutating contracts or semantics by accident
+- promotion target: reusable `toolization owner vs public-surface packager` boundary-freeze preflight
+- promotion trigger: another stack needs a readable public entry surface while already carrying nontrivial machine-readable routing and handoff artifacts
+- current proven evidence: on 2026-04-13, `my-image-parser` first wrote `NOTE_role_boundary_reset_between_control_plane_program_steward_and_public_surface_architect-at2026-04-13-16-07.md`, then used it to constrain the lean `02_1` public-entry wave
+- detail file: `repeated_tasks/TASK_role_boundary_freeze_before_public_entry_packaging.md`
+
+### Start Here Public Entry Packaging From Existing Truth Surfaces
+
+- recurrence signal: repeated whenever the real local truth for a slice already exists across review indexes, role matrices, handoff guides, and QA reports, but another agent still cannot find the right entry path in one pass
+- current manual handling: gather the current review truth first, then package one `Start Here` doc that orders local review truth, bridge artifacts, regeneration handoff, and routing design without rewriting the underlying contracts
+- repeated invariant: the fastest public entry surface is usually a readable ordering of existing truths, not a new concept document
+- repeated invariant: if the entry surface starts replacing manifests or review indexes, it has crossed back into control-plane work
+- promotion target: reusable multimodal-PPT `Start Here` template
+- promotion trigger: another review stack becomes hard to enter because its truth surfaces are all present but scattered
+- current proven evidence: on 2026-04-13, `my-image-parser` created `REFERENCE_lean_02_1_multimodal_ppt_start_here-at2026-04-13.md` and committed it in `c496b83`
+- detail file: `repeated_tasks/TASK_start_here_public_entry_packaging_from_existing_truth_surfaces.md`
+
+### Chained Public Entry Then Conditional Git Handoff
+
+- recurrence signal: repeated whenever a readable-entry packet must sometimes be followed by a commit packet, but only if the first packet leaves a bounded repo-local change
+- current manual handling: execute the entry packet first, inspect the worktree again, run the git-handoff validations, and commit only the remaining bounded delta
+- repeated invariant: `make it readable` and `package it in git` should stay as separate scopes even when they happen back to back
+- repeated invariant: a chained follow-up should create one bounded commit or no commit, never an automatic second wave by assumption
+- promotion target: reusable chained-dispatch rule for `ENTRY -> conditional GIT HANDOFF`
+- promotion trigger: another doc/public-surface pass may or may not leave a repo-local delta and needs bounded follow-up packaging
+- current proven evidence: on 2026-04-13, `my-image-parser` formalized the chain in `REFERENCE_public_surface_architect_chained_dispatch_prompt-at2026-04-13.md` and then committed only the generated `Start Here` doc in `c496b83`
+- detail file: `repeated_tasks/TASK_chained_public_entry_then_conditional_git_handoff.md`
+
+### Tracked-File-Only Raw Vendor Source Import From Nested Repos
+
+- recurrence signal: repeated whenever the user explicitly wants raw vendor inclusion, but vendored tool trees still contain nested `.git`, local installs, model payloads, or generated residue
+- current manual handling: measure and classify the vendor trees first, preserve nested git metadata outside the tree, and stage only the vendor repo's originally tracked files into the host repo
+- repeated invariant: raw vendor inclusion does not justify absorbing local runtime residue
+- repeated invariant: `recursive add of vendor tree` and `tracked-file-only vendor source import` are different tasks and should not be treated as the same thing
+- promotion target: reusable raw-vendor-ingestion workflow
+- promotion trigger: another host repo must absorb vendor source directly while still excluding local installs, model caches, and nested repo metadata
+- current proven evidence: on 2026-04-13, `my-image-parser` imported four vendor trees in `2562031` after confirming host-side vendor ignore boundaries and using tracked-file-only staging
+- detail file: `repeated_tasks/TASK_tracked_file_only_raw_vendor_source_import_from_nested_repos.md`
