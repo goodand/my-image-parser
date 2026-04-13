@@ -30,7 +30,8 @@ The split is intentional:
 
 ## Canonical Inputs
 
-- `multimodal_context_bundle`
+- one or more `multimodal_context_bundle` inputs
+  - thin runner surface: `multimodal_context_bundles` or `multimodal_context_bundle_refs`
 - `presentation_intent`
   - examples: `portfolio`, `review_deck`, `evidence_deck`, `client_summary`
 - `slide_plan`
@@ -65,6 +66,19 @@ This tool must not:
 - optional regenerated deck
 - review index
 - visual QA evidence
+
+## Thin Runner Surface
+
+The current thin runner emits fixed filenames inside a caller-provided output directory:
+
+- `ppt_prep_package_manifest.json`
+- `ppt_story_plan.json`
+- `ppt_slide_role_matrix.json`
+- `ppt_regeneration_handoff_bundle.json`
+
+These are the runnable surface names.
+
+The dated artifact names in higher-level planning language still describe the canonical artifact classes, not a required on-disk filename contract for the thin runner.
 
 ## PPT Boundary
 

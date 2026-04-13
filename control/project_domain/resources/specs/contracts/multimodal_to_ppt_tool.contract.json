@@ -1,6 +1,6 @@
 {
   "name": "multimodal_to_ppt_tool",
-  "status": "planned_contract_only",
+  "status": "thin_runner_available",
   "mode": "multimodal_consumer_to_ppt",
   "source_of_truth": "control/project_domain/resources/specs/prose/SPEC_multimodal_to_ppt_tool.md",
   "depends_on_tool": "multimodal_context_refinement_tool",
@@ -13,10 +13,13 @@
   },
   "inputs": {
     "required": [
-      "multimodal_context_bundle",
       "presentation_intent",
       "slide_plan",
       "ppt_authoring_policy"
+    ],
+    "required_one_of": [
+      "multimodal_context_bundles",
+      "multimodal_context_bundle_refs"
     ],
     "optional": [
       "page_link_matrix",
@@ -55,5 +58,17 @@
     "ppt_slide_role_matrix_atYYYY_MM_DD.json",
     "ppt_regeneration_handoff_bundle_atYYYY_MM_DD.json",
     "deck_name_vN.pptx"
+  ],
+  "thin_runner_outputs": [
+    "ppt_prep_package_manifest.json",
+    "ppt_story_plan.json",
+    "ppt_slide_role_matrix.json",
+    "ppt_regeneration_handoff_bundle.json"
+  ],
+  "thin_runner_ref": "scripts/run_multimodal_to_ppt_tool.py",
+  "thin_runner_lib_ref": "scripts/multimodal_to_ppt_tool_lib.py",
+  "example_outputs": [
+    "control/project_domain/resources/manifests/multimodal_to_ppt_tool_example_io_v0_1_at2026_04_13.json",
+    "control/project_domain/resources/references/REFERENCE_multimodal_to_ppt_tool_runner-at2026-04-13.md"
   ]
 }

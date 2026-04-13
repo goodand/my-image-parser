@@ -28,6 +28,10 @@ The thin runner that materializes the generic bundle shape is here:
 
 - [REFERENCE_multimodal_context_refinement_tool_runner-at2026-04-13.md](./REFERENCE_multimodal_context_refinement_tool_runner-at2026-04-13.md)
 
+The thin runner that turns bundle outputs into PPT-prep artifacts is here:
+
+- [REFERENCE_multimodal_to_ppt_tool_runner-at2026-04-13.md](./REFERENCE_multimodal_to_ppt_tool_runner-at2026-04-13.md)
+
 ## Example 1. Generic Multimodal Tool
 
 The first example bundle is intentionally mixed:

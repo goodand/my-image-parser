@@ -66,6 +66,7 @@ python3 scripts/run_multimodal_to_ppt_tool.py \
 ## Step By Step
 
 1. Build or load `multimodal_context_bundle` inputs first.
+   The thin runner accepts either `multimodal_context_bundles` or `multimodal_context_bundle_refs`.
 2. Decide slide-worthy scope before calling the runner.
 3. Use this runner to emit a PPT-prep package.
 4. Hand the emitted package to a later agent that uses [`pptx`](<CODEX_HOME>/skills/pptx/SKILL.md).
