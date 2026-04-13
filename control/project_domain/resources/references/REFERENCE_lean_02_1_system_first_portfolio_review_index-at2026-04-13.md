@@ -26,6 +26,7 @@ Copy and label clarity support explicitly requested by the user:
 - render source directory: `control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/render_sources`
 - rendered slide directory: `control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders`
 - role matrix: [lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json](../manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json)
+- page-link matrix: [ppt_page_link_matrix_v0_1.json](../manifests/ppt_page_link_matrix_v0_1.json)
 - QA report: [REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md](../reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md)
 
 ## Frozen Slide Mapping

@@ -1,0 +1,619 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-04-13",
+  "scope": "lean_02_1_system_first_v1",
+  "source_job": "02_1",
+  "status": "usable_for_page_linking_with_partial_loop_promotion",
+  "routing": {
+    "owner_family_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/multimodal-evidence-refinement-loop/SKILL.md",
+    "specialist_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/image-text-cot-review/SKILL.md",
+    "mcp_owner_ref": "skills/vendored-mcp-onboarding/SKILL.md",
+    "ppt_authoring_surface_ref": "<CODEX_HOME>/skills/pptx/SKILL.md"
+  },
+  "page_classes": [
+    "source",
+    "evidence",
+    "loop_review",
+    "ppt_target",
+    "publication"
+  ],
+  "steps": [
+    {
+      "step_no": 1,
+      "name": "freeze_routing_vocabulary",
+      "output": "owner/specialist/mcp-owner/ppt-surface references",
+      "source_of_truth": "control/project_agent_ops/resources/references/REFERENCE_image_skill_family_to_ppt_page_link_mapping_design-at2026-04-13.md"
+    },
+    {
+      "step_no": 2,
+      "name": "attach_source_pages",
+      "output": "source manifest + source media path + source slide numbers per target slide",
+      "source_of_truth": "control/project_domain/resources/pptx_jobs/02_1/manifest.json"
+    },
+    {
+      "step_no": 3,
+      "name": "attach_supporting_evidence_pages",
+      "output": "caption-review and source-job evidence surfaces",
+      "source_of_truth": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md"
+    },
+    {
+      "step_no": 4,
+      "name": "record_loop_review_bridge_state",
+      "output": "role matrix and current bridge state, including unpromoted approved-caption status",
+      "source_of_truth": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json"
+    },
+    {
+      "step_no": 5,
+      "name": "bind_ppt_target_pages",
+      "output": "deck slide numbers, render files, and authoring surface references",
+      "source_of_truth": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx"
+    },
+    {
+      "step_no": 6,
+      "name": "bind_publication_pages",
+      "output": "review index and visual QA report linked to each target slide row",
+      "source_of_truth": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+    }
+  ],
+  "slides": [
+    {
+      "target_slide_no": 1,
+      "target_slide_title": "시스템을 구조로 설명하는 개발자",
+      "presentation_role": "architecture_hero",
+      "visual_type": "system_diagram",
+      "source_pages": [
+        {
+          "page_class": "source",
+          "kind": "job_manifest",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/manifest.json"
+        },
+        {
+          "page_class": "source",
+          "kind": "source_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image27.png",
+          "source_slide_numbers": [
+            11
+          ]
+        }
+      ],
+      "evidence_pages": [
+        {
+          "page_class": "evidence",
+          "kind": "caption_review_markdown",
+          "path": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+          "image_selector": "image27.png"
+        }
+      ],
+      "loop_review_pages": [
+        {
+          "page_class": "loop_review",
+          "kind": "portfolio_role_matrix",
+          "path": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+          "status": "current_bridge"
+        },
+        {
+          "page_class": "loop_review",
+          "kind": "approved_text_state",
+          "status": "not_separately_promoted",
+          "approved_caption_ref": null,
+          "approved_alt_text_ref": null
+        }
+      ],
+      "ppt_target_pages": [
+        {
+          "page_class": "ppt_target",
+          "kind": "deck_slide",
+          "path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+          "render_path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-01.jpg"
+        }
+      ],
+      "publication_pages": [
+        {
+          "page_class": "publication",
+          "kind": "review_index",
+          "path": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+        },
+        {
+          "page_class": "publication",
+          "kind": "visual_qa_report",
+          "path": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        }
+      ],
+      "linked_skills": [
+        {
+          "skill": "pptx-slide-screenshot-capture",
+          "linked_page_class": "source",
+          "link_status": "optional_cross_validation"
+        },
+        {
+          "skill": "openai-image-caption-validation",
+          "linked_page_class": "evidence",
+          "link_status": "current_supporting_evidence"
+        },
+        {
+          "skill": "macos-ocr-evidence",
+          "linked_page_class": "evidence",
+          "link_status": "future_ocr_grounding"
+        },
+        {
+          "skill": "image-result-auditor",
+          "linked_page_class": "loop_review",
+          "link_status": "future_bundle_bridge"
+        },
+        {
+          "skill": "pptx",
+          "linked_page_class": "ppt_target",
+          "link_status": "current_authoring_surface"
+        }
+      ],
+      "form_preservation_notes": "System diagram layout and labeled flow boundaries should remain visible as one structured visual."
+    },
+    {
+      "target_slide_no": 2,
+      "target_slide_title": "입력과 결과로 증명하는 제품 경험",
+      "presentation_role": "product_configuration_ui",
+      "visual_type": "ui_screenshot_pair",
+      "source_pages": [
+        {
+          "page_class": "source",
+          "kind": "job_manifest",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/manifest.json"
+        },
+        {
+          "page_class": "source",
+          "kind": "source_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image4.png",
+          "source_slide_numbers": [
+            1
+          ]
+        },
+        {
+          "page_class": "source",
+          "kind": "support_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image37.png",
+          "source_slide_numbers": [
+            15
+          ]
+        }
+      ],
+      "evidence_pages": [
+        {
+          "page_class": "evidence",
+          "kind": "caption_review_markdown",
+          "path": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+          "image_selector": "image4.png,image37.png"
+        }
+      ],
+      "loop_review_pages": [
+        {
+          "page_class": "loop_review",
+          "kind": "portfolio_role_matrix",
+          "path": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+          "status": "current_bridge"
+        },
+        {
+          "page_class": "loop_review",
+          "kind": "approved_text_state",
+          "status": "not_separately_promoted",
+          "approved_caption_ref": null,
+          "approved_alt_text_ref": null
+        }
+      ],
+      "ppt_target_pages": [
+        {
+          "page_class": "ppt_target",
+          "kind": "deck_slide",
+          "path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+          "render_path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-02.jpg"
+        }
+      ],
+      "publication_pages": [
+        {
+          "page_class": "publication",
+          "kind": "review_index",
+          "path": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+        },
+        {
+          "page_class": "publication",
+          "kind": "visual_qa_report",
+          "path": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        }
+      ],
+      "linked_skills": [
+        {
+          "skill": "openai-image-caption-validation",
+          "linked_page_class": "evidence",
+          "link_status": "current_supporting_evidence"
+        },
+        {
+          "skill": "macos-ocr-evidence",
+          "linked_page_class": "evidence",
+          "link_status": "future_ui_text_grounding"
+        },
+        {
+          "skill": "obsidian-caption-review-builder",
+          "linked_page_class": "publication",
+          "link_status": "current_supporting_evidence"
+        },
+        {
+          "skill": "image-text-cot-review",
+          "linked_page_class": "loop_review",
+          "link_status": "future_normalization_bridge"
+        },
+        {
+          "skill": "pptx",
+          "linked_page_class": "ppt_target",
+          "link_status": "current_authoring_surface"
+        }
+      ],
+      "form_preservation_notes": "The input UI and generated output UI should remain paired as one flow."
+    },
+    {
+      "target_slide_no": 3,
+      "target_slide_title": "개인 맥락이 곧 포트폴리오의 신뢰도다",
+      "presentation_role": "profile_summary",
+      "visual_type": "profile_summary_plus_portrait",
+      "source_pages": [
+        {
+          "page_class": "source",
+          "kind": "job_manifest",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/manifest.json"
+        },
+        {
+          "page_class": "source",
+          "kind": "source_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image5.png",
+          "source_slide_numbers": [
+            2
+          ]
+        },
+        {
+          "page_class": "source",
+          "kind": "support_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image6.jpeg",
+          "source_slide_numbers": [
+            2
+          ]
+        }
+      ],
+      "evidence_pages": [
+        {
+          "page_class": "evidence",
+          "kind": "caption_review_markdown",
+          "path": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+          "image_selector": "image5.png,image6.jpeg"
+        }
+      ],
+      "loop_review_pages": [
+        {
+          "page_class": "loop_review",
+          "kind": "portfolio_role_matrix",
+          "path": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+          "status": "current_bridge"
+        },
+        {
+          "page_class": "loop_review",
+          "kind": "approved_text_state",
+          "status": "not_separately_promoted",
+          "approved_caption_ref": null,
+          "approved_alt_text_ref": null
+        }
+      ],
+      "ppt_target_pages": [
+        {
+          "page_class": "ppt_target",
+          "kind": "deck_slide",
+          "path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+          "render_path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-03.jpg"
+        }
+      ],
+      "publication_pages": [
+        {
+          "page_class": "publication",
+          "kind": "review_index",
+          "path": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+        },
+        {
+          "page_class": "publication",
+          "kind": "visual_qa_report",
+          "path": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        }
+      ],
+      "linked_skills": [
+        {
+          "skill": "openai-image-caption-validation",
+          "linked_page_class": "evidence",
+          "link_status": "current_supporting_evidence"
+        },
+        {
+          "skill": "image-result-auditor",
+          "linked_page_class": "loop_review",
+          "link_status": "future_bundle_bridge"
+        },
+        {
+          "skill": "image-text-cot-review",
+          "linked_page_class": "loop_review",
+          "link_status": "future_normalization_bridge"
+        },
+        {
+          "skill": "pptx",
+          "linked_page_class": "ppt_target",
+          "link_status": "current_authoring_surface"
+        }
+      ],
+      "form_preservation_notes": "The profile summary and portrait should remain linked as one credibility unit."
+    },
+    {
+      "target_slide_no": 4,
+      "target_slide_title": "구현 깊이는 문제와 해법을 한 화면에 둔다",
+      "presentation_role": "problem_and_code_proof",
+      "visual_type": "code_and_problem_screen",
+      "source_pages": [
+        {
+          "page_class": "source",
+          "kind": "job_manifest",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/manifest.json"
+        },
+        {
+          "page_class": "source",
+          "kind": "source_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image22.png",
+          "source_slide_numbers": [
+            6
+          ]
+        }
+      ],
+      "evidence_pages": [
+        {
+          "page_class": "evidence",
+          "kind": "caption_review_markdown",
+          "path": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+          "image_selector": "image22.png"
+        }
+      ],
+      "loop_review_pages": [
+        {
+          "page_class": "loop_review",
+          "kind": "portfolio_role_matrix",
+          "path": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+          "status": "current_bridge"
+        },
+        {
+          "page_class": "loop_review",
+          "kind": "approved_text_state",
+          "status": "not_separately_promoted",
+          "approved_caption_ref": null,
+          "approved_alt_text_ref": null
+        }
+      ],
+      "ppt_target_pages": [
+        {
+          "page_class": "ppt_target",
+          "kind": "deck_slide",
+          "path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+          "render_path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-04.jpg"
+        }
+      ],
+      "publication_pages": [
+        {
+          "page_class": "publication",
+          "kind": "review_index",
+          "path": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+        },
+        {
+          "page_class": "publication",
+          "kind": "visual_qa_report",
+          "path": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        }
+      ],
+      "linked_skills": [
+        {
+          "skill": "macos-ocr-evidence",
+          "linked_page_class": "evidence",
+          "link_status": "future_problem_text_grounding"
+        },
+        {
+          "skill": "openai-image-caption-validation",
+          "linked_page_class": "evidence",
+          "link_status": "current_supporting_evidence"
+        },
+        {
+          "skill": "image-result-auditor",
+          "linked_page_class": "loop_review",
+          "link_status": "future_bundle_bridge"
+        },
+        {
+          "skill": "pptx",
+          "linked_page_class": "ppt_target",
+          "link_status": "current_authoring_surface"
+        }
+      ],
+      "form_preservation_notes": "Both the problem statement and the implementation block should remain visible."
+    },
+    {
+      "target_slide_no": 5,
+      "target_slide_title": "실행 이력은 완료된 프로젝트 표로 확인한다",
+      "presentation_role": "portfolio_evidence_table",
+      "visual_type": "table_evidence",
+      "source_pages": [
+        {
+          "page_class": "source",
+          "kind": "job_manifest",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/manifest.json"
+        },
+        {
+          "page_class": "source",
+          "kind": "source_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image23.png",
+          "source_slide_numbers": [
+            7,
+            8
+          ]
+        }
+      ],
+      "evidence_pages": [
+        {
+          "page_class": "evidence",
+          "kind": "caption_review_markdown",
+          "path": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+          "image_selector": "image23.png"
+        }
+      ],
+      "loop_review_pages": [
+        {
+          "page_class": "loop_review",
+          "kind": "portfolio_role_matrix",
+          "path": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+          "status": "current_bridge"
+        },
+        {
+          "page_class": "loop_review",
+          "kind": "approved_text_state",
+          "status": "not_separately_promoted",
+          "approved_caption_ref": null,
+          "approved_alt_text_ref": null
+        }
+      ],
+      "ppt_target_pages": [
+        {
+          "page_class": "ppt_target",
+          "kind": "deck_slide",
+          "path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+          "render_path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-05.jpg"
+        }
+      ],
+      "publication_pages": [
+        {
+          "page_class": "publication",
+          "kind": "review_index",
+          "path": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+        },
+        {
+          "page_class": "publication",
+          "kind": "visual_qa_report",
+          "path": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        }
+      ],
+      "linked_skills": [
+        {
+          "skill": "macos-ocr-evidence",
+          "linked_page_class": "evidence",
+          "link_status": "future_table_text_grounding"
+        },
+        {
+          "skill": "component-split-ocr-review",
+          "linked_page_class": "evidence",
+          "link_status": "future_table_component_grounding"
+        },
+        {
+          "skill": "parser-sidecar-to-canonical-schema-promotion",
+          "linked_page_class": "loop_review",
+          "link_status": "future_table_schema_bridge"
+        },
+        {
+          "skill": "image-result-auditor",
+          "linked_page_class": "loop_review",
+          "link_status": "future_bundle_bridge"
+        },
+        {
+          "skill": "pptx",
+          "linked_page_class": "ppt_target",
+          "link_status": "current_authoring_surface"
+        }
+      ],
+      "form_preservation_notes": "The table is the evidence itself; later loops should preserve row and column structure."
+    },
+    {
+      "target_slide_no": 6,
+      "target_slide_title": "적용형 AI 워크플로는 화면 안에서 끝까지 닫힌다",
+      "presentation_role": "applied_ai_workflow_ui",
+      "visual_type": "workflow_ui",
+      "source_pages": [
+        {
+          "page_class": "source",
+          "kind": "job_manifest",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/manifest.json"
+        },
+        {
+          "page_class": "source",
+          "kind": "source_image",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image29.png",
+          "source_slide_numbers": [
+            13
+          ]
+        }
+      ],
+      "evidence_pages": [
+        {
+          "page_class": "evidence",
+          "kind": "caption_review_markdown",
+          "path": "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+          "image_selector": "image29.png"
+        }
+      ],
+      "loop_review_pages": [
+        {
+          "page_class": "loop_review",
+          "kind": "portfolio_role_matrix",
+          "path": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+          "status": "current_bridge"
+        },
+        {
+          "page_class": "loop_review",
+          "kind": "approved_text_state",
+          "status": "not_separately_promoted",
+          "approved_caption_ref": null,
+          "approved_alt_text_ref": null
+        }
+      ],
+      "ppt_target_pages": [
+        {
+          "page_class": "ppt_target",
+          "kind": "deck_slide",
+          "path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+          "render_path": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-06.jpg"
+        }
+      ],
+      "publication_pages": [
+        {
+          "page_class": "publication",
+          "kind": "review_index",
+          "path": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+        },
+        {
+          "page_class": "publication",
+          "kind": "visual_qa_report",
+          "path": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        }
+      ],
+      "linked_skills": [
+        {
+          "skill": "macos-ocr-evidence",
+          "linked_page_class": "evidence",
+          "link_status": "future_ui_text_grounding"
+        },
+        {
+          "skill": "openai-image-caption-validation",
+          "linked_page_class": "evidence",
+          "link_status": "current_supporting_evidence"
+        },
+        {
+          "skill": "obsidian-caption-review-builder",
+          "linked_page_class": "publication",
+          "link_status": "current_supporting_evidence"
+        },
+        {
+          "skill": "image-text-cot-review",
+          "linked_page_class": "loop_review",
+          "link_status": "future_normalization_bridge"
+        },
+        {
+          "skill": "pptx",
+          "linked_page_class": "ppt_target",
+          "link_status": "current_authoring_surface"
+        }
+      ],
+      "form_preservation_notes": "The upload controls, settings, and generated output context should remain visible as one workflow surface."
+    }
+  ]
+}
