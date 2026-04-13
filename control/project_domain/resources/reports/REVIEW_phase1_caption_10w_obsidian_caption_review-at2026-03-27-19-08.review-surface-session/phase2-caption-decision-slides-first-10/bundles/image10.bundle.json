@@ -1,0 +1,92 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "decision_slide_candidate_bundle",
+  "image_id": "image10",
+  "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+  "source_manifest_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_candidates_at2026_03_29.json",
+  "source_bundle_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_image10_caption_four_mode_eval_bundle_at2026_03_28.json",
+  "availability": "ready",
+  "decision": "include",
+  "decision_reason": "stable_frozen_four_mode_bundle_present",
+  "comparison_scope": "ready_arm_anchor",
+  "comparison_ready": true,
+  "recommended_current_default": "full_image_baseline",
+  "next_gate": "review_context_package",
+  "ready_arms": [
+    "full_image_baseline",
+    "full_image_ocr_context_rerun",
+    "parser_table_enriched_rerun",
+    "reviewed_isolated_component_rerun"
+  ],
+  "blocked_arms": [],
+  "four_arm_readiness": {
+    "full_image_baseline": "ready",
+    "full_image_ocr_context_rerun": "ready",
+    "parser_table_enriched_rerun": "ready",
+    "reviewed_isolated_component_rerun": "ready"
+  },
+  "candidate_arms": [
+    {
+      "execution_arm": "full_image_baseline",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-v1",
+      "input_surface": "extracted_full_image",
+      "context_variant": null,
+      "context_review_status": null,
+      "ocr_status": null,
+      "caption": "A table in Korean showing three scenarios with calculations and corresponding DH@10 values. Each row lists a scenario, a calculation, and a bolded decimal value.",
+      "alt_text": "Korean table showing three scenarios with calculations and DH@10 values.",
+      "promotion_state": null,
+      "promotion_notes": []
+    },
+    {
+      "execution_arm": "full_image_ocr_context_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": null,
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table compares three scenarios using calculation values and DH@10 metrics. It includes scenarios '현재', '오류 5건 제거', and '+ P0 재매핑 hit 전환 시'.",
+      "alt_text": "Table comparing scenarios with calculation values and DH@10 metric.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "parser_table_enriched_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": "parser_table_enriched",
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table presents three scenarios comparing calculation values and DH@10 scores. The scenarios include current state, after removing 5 errors, and after P0 remapping hit conversion.",
+      "alt_text": "Table with scenarios, calculation values, and DH@10 scores in three rows.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "reviewed_isolated_component_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "reviewed_table_component_crop",
+      "context_variant": "reviewed_isolated_component",
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table in Korean presents three scenarios with corresponding calculations and DH@10 values, showing incremental improvements.",
+      "alt_text": "Korean table comparing scenarios and DH@10 values, including calculations like 53/70 and 0.757.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    }
+  ],
+  "notes": []
+}

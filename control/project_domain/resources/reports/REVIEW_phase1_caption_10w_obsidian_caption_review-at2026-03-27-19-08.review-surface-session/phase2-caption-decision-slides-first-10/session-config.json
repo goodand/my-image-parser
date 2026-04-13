@@ -1,0 +1,20 @@
+{
+  "session_kind": "phase2_caption_decision_slides",
+  "workspace_owner": "my-image-parser",
+  "review_markdown_path": "<REPO_ROOT>/control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+  "review_surface_manifest_path": "<REPO_ROOT>/control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.review-surface-session/phase2-caption-decision-slides-first-10/review-surface-manifest.json",
+  "decision_seed_jsonl": "<REPO_ROOT>/control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.review-surface-session/phase2-caption-decision-slides-first-10/decision-seed.jsonl",
+  "feedback_json_path": "<REPO_ROOT>/control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.review-surface-session/phase2-caption-decision-slides-first-10/feedback-ledger.json",
+  "image_order": [
+    "image1",
+    "image2",
+    "image3",
+    "image4",
+    "image5",
+    "image6",
+    "image7",
+    "image8",
+    "image9",
+    "image10"
+  ]
+}

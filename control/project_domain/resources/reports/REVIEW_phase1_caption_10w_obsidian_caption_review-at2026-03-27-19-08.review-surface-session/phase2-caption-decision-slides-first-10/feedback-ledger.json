@@ -1,0 +1,223 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "caption_feedback_ledger",
+  "session_kind": "phase2_caption_decision_slides",
+  "deck_id": "REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08",
+  "image_order": [
+    "image1",
+    "image2",
+    "image3",
+    "image4",
+    "image5",
+    "image6",
+    "image7",
+    "image8",
+    "image9",
+    "image10"
+  ],
+  "slides": {
+    "image1": {
+      "image_id": "image1",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image1.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T08:07:42.622Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "caption_decision": null,
+            "reviewer_notes": "\"OCR은 잘 되었나?\" \n\"부연 설명 없이 이미지의 그래프가 어떤 의미인지 파악하기 어려움\"\n\"Model명은 검색을 통해서 추론 가능\""
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image1.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image2": {
+      "image_id": "image2",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image2.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T08:09:50.202Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "caption_decision": null,
+            "decision_rationale": "4개의 표, 추가 설명 없이 해석하기 어려움"
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image2.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image3": {
+      "image_id": "image3",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image3.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T08:11:23.463Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "caption_decision": null,
+            "decision_rationale": "4개의 표, 추가 설명 없이 해석하기 어려움"
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image3.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image4": {
+      "image_id": "image4",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image4.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T08:13:37.392Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "caption_decision": null,
+            "decision_rationale": "4개의 표, 추가 설명 없이 이해하기 어려움"
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image4.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image5": {
+      "image_id": "image5",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image5.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T08:19:29.028Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "caption_decision": null,
+            "decision_rationale": "아키텍처가 분리하기 어렵다. 작은 단위로는 25개, \n\n왼쪽에 있는 컴포넌트들 부터 오른쪽에 있는 컴포넌트 부터 분석하는게 좋다"
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image5.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image6": {
+      "image_id": "image6",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image6.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T08:58:34.528Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "caption_decision": null,
+            "decision_rationale": "이미지를 볼 수 없음"
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image6.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image7": {
+      "image_id": "image7",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image7.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T09:06:18.305Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "selected_caption_arm": "parser_table_enriched_rerun",
+            "caption_decision": "select_other_arm",
+            "decision_rationale": "4가지 대부분 괜찮음\n\n\"검토된 분리 컴포넌트 재실행\"은 \"Recall at 10\"으로 표현되어서 벌점을 주고자 함"
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image7.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image8": {
+      "image_id": "image8",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image8.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T09:10:14.063Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "selected_caption_arm": "parser_table_enriched_rerun",
+            "caption_decision": "select_other_arm",
+            "decision_rationale": "Column에 대하여 가장 충실히 표현됨"
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image8.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image9": {
+      "image_id": "image9",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image9.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T09:16:58.206Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "selected_caption_arm": "parser_table_enriched_rerun",
+            "caption_decision": "select_other_arm",
+            "decision_rationale": "\"가장 구체적임\""
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image9.fb.001",
+        "needs_row_update": false
+      }
+    },
+    "image10": {
+      "image_id": "image10",
+      "feedback_status": "recorded",
+      "feedback_entries": [
+        {
+          "feedback_id": "image10.fb.001",
+          "author": "human",
+          "created_at": "2026-04-09T09:19:49.227Z",
+          "kind": "decision_feedback",
+          "decision_patch": {
+            "caption_decision": null,
+            "decision_rationale": "후보 A부터 C까지 유사하며, 후보 D는 추상적이지만 패턴을 표현한 것이 좋았습니다."
+          }
+        }
+      ],
+      "latest_feedback_summary": {
+        "latest_feedback_id": "image10.fb.001",
+        "needs_row_update": false
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "decision_slide_candidate_bundle",
+  "image_id": "image8",
+  "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+  "source_manifest_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_candidates_at2026_03_29.json",
+  "source_bundle_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_image8_caption_four_mode_eval_bundle_at2026_03_28.json",
+  "availability": "ready",
+  "decision": "include",
+  "decision_reason": "stable_frozen_four_mode_bundle_present",
+  "comparison_scope": "ready_arm_anchor",
+  "comparison_ready": true,
+  "recommended_current_default": "full_image_baseline",
+  "next_gate": "review_context_package",
+  "ready_arms": [
+    "full_image_baseline",
+    "full_image_ocr_context_rerun",
+    "parser_table_enriched_rerun",
+    "reviewed_isolated_component_rerun"
+  ],
+  "blocked_arms": [],
+  "four_arm_readiness": {
+    "full_image_baseline": "ready",
+    "full_image_ocr_context_rerun": "ready",
+    "parser_table_enriched_rerun": "ready",
+    "reviewed_isolated_component_rerun": "ready"
+  },
+  "candidate_arms": [
+    {
+      "execution_arm": "full_image_baseline",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-v1",
+      "input_surface": "extracted_full_image",
+      "context_variant": null,
+      "context_review_status": null,
+      "ocr_status": null,
+      "caption": "This image shows two tables summarizing experimental scale information in Korean, including query and mode evaluation counts, total files, and breakdown by query set.",
+      "alt_text": "Two tables in Korean summarize experimental scale and file count by query set.",
+      "promotion_state": null,
+      "promotion_notes": []
+    },
+    {
+      "execution_arm": "full_image_ocr_context_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": null,
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "Two tables provide summary data for experiment scale and query set distribution, with figures on evaluations, files, and search modes. The information is presented in Korean with clear numeric data.",
+      "alt_text": "Two tables showing experiment summary, including total evaluations, files, search modes, and query set file counts, in Korean.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "parser_table_enriched_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": "parser_table_enriched",
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "The image shows two structured tables summarizing experimental scale for a study involving queries and modes. It provides counts for total evaluation instances, file totals, search modes, and query sets in Korean.",
+      "alt_text": "Tables in Korean presenting experiment scale, with counts for evaluation, files, search modes, and query sets.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "reviewed_isolated_component_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "reviewed_table_component_crop",
+      "context_variant": "reviewed_isolated_component",
+      "context_review_status": "reviewed_candidate",
+      "ocr_status": "usable",
+      "caption": "A table displays three rows of metrics in Korean, listing counts of evaluations, experiment files, and search modes used in an analysis.",
+      "alt_text": "Table with Korean labels and numeric metrics for evaluation counts, experiment files, and search modes.",
+      "promotion_state": "comparison_ready_reviewed_branch",
+      "promotion_notes": [
+        "The rerun passed a reviewed-branch gate and may participate in bounded comparison as a non-default arm.",
+        "Keep the baseline active until this reviewed branch is explicitly promoted beyond comparison scope."
+      ]
+    }
+  ],
+  "notes": []
+}

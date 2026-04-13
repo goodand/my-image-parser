@@ -1,0 +1,27 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "decision_slide_candidate_bundle",
+  "image_id": "image1",
+  "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image1.png",
+  "source_manifest_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_candidates_at2026_03_29.json",
+  "source_bundle_path": null,
+  "availability": "excluded",
+  "decision": "exclude",
+  "decision_reason": "chart_dominant_non_table_image_confirmed_by_gpt",
+  "comparison_scope": null,
+  "comparison_ready": false,
+  "recommended_current_default": null,
+  "next_gate": null,
+  "ready_arms": [],
+  "blocked_arms": [],
+  "four_arm_readiness": {
+    "full_image_baseline": "ready",
+    "full_image_ocr_context_rerun": "blocked_by_confirmed_non_table_surface",
+    "parser_table_enriched_rerun": "blocked_by_confirmed_non_table_surface",
+    "reviewed_isolated_component_rerun": "blocked_by_confirmed_non_table_surface"
+  },
+  "candidate_arms": [],
+  "notes": [
+    "This image was explicitly excluded from the four-arm comparison candidate set."
+  ]
+}

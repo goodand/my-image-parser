@@ -1,0 +1,22 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "decision_slide_candidate_bundle",
+  "image_id": "image6",
+  "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image6.emf",
+  "source_manifest_path": null,
+  "source_bundle_path": null,
+  "availability": "missing_source_record",
+  "decision": null,
+  "decision_reason": null,
+  "comparison_scope": null,
+  "comparison_ready": false,
+  "recommended_current_default": null,
+  "next_gate": null,
+  "ready_arms": [],
+  "blocked_arms": [],
+  "four_arm_readiness": null,
+  "candidate_arms": [],
+  "notes": [
+    "No comparison-source record could be resolved for this image."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "decision_slide_candidate_bundle",
+  "image_id": "image7",
+  "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+  "source_manifest_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_candidates_at2026_03_29.json",
+  "source_bundle_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_image7_caption_four_mode_eval_bundle_at2026_03_28.json",
+  "availability": "ready",
+  "decision": "include",
+  "decision_reason": "stable_frozen_four_mode_bundle_present",
+  "comparison_scope": "ready_arm_anchor",
+  "comparison_ready": true,
+  "recommended_current_default": "full_image_baseline",
+  "next_gate": "review_context_package",
+  "ready_arms": [
+    "full_image_baseline",
+    "full_image_ocr_context_rerun",
+    "parser_table_enriched_rerun",
+    "reviewed_isolated_component_rerun"
+  ],
+  "blocked_arms": [],
+  "four_arm_readiness": {
+    "full_image_baseline": "ready",
+    "full_image_ocr_context_rerun": "ready",
+    "parser_table_enriched_rerun": "ready",
+    "reviewed_isolated_component_rerun": "ready"
+  },
+  "candidate_arms": [
+    {
+      "execution_arm": "full_image_baseline",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-v1",
+      "input_surface": "extracted_full_image",
+      "context_variant": null,
+      "context_review_status": null,
+      "ocr_status": null,
+      "caption": "A table displays four performance metrics, their improvements from worst to best values, and the percentage improvement rates. The metrics include Context Coherence, Information Concentration, Chunk Recall, and Mean Reciprocal Rank.",
+      "alt_text": "Table showing four metrics with values for worst to best and percentage improvement.",
+      "promotion_state": null,
+      "promotion_notes": []
+    },
+    {
+      "execution_arm": "full_image_ocr_context_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": null,
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table compares four evaluation metrics with their lowest and highest values and percentage improvements. The metrics are CC, IC, CR@10, and MRR.",
+      "alt_text": "A table shows metrics CC, IC, CR@10, and MRR with WORST to BEST values and percent improvements.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "parser_table_enriched_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": "parser_table_enriched",
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table shows the improvement rates of four evaluation metrics: Context Coherence, Information Concentration, Chunk Recall, and Mean Reciprocal Rank, with percentage improvements from worst to best cases.",
+      "alt_text": "Table comparing four metrics, displaying values from worst to best and their improvement rates.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "reviewed_isolated_component_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "reviewed_table_component_crop",
+      "context_variant": "reviewed_isolated_component",
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table compares four metrics across WORST and BEST values and percentage improvements: Context Coherence, Information Concentration, Chunk Recall at 10, and Mean Reciprocal Rank.",
+      "alt_text": "Table showing four metrics with worst-to-best values and percentage improvements.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    }
+  ],
+  "notes": []
+}

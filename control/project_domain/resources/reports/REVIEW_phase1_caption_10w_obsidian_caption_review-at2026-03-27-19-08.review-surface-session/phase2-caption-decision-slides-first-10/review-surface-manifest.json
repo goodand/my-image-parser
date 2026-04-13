@@ -1,0 +1,112 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "review_surface_manifest",
+  "session_kind": "phase2_caption_decision_slides",
+  "workspace_owner": "my-image-parser",
+  "review_markdown_path": "<REPO_ROOT>/control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md",
+  "generated_at": "2026-04-08T15:55:23.459Z",
+  "image_order": [
+    "image1",
+    "image2",
+    "image3",
+    "image4",
+    "image5",
+    "image6",
+    "image7",
+    "image8",
+    "image9",
+    "image10"
+  ],
+  "slides": [
+    {
+      "image_id": "image1",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image1.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image1.png",
+      "source_range": {
+        "startLine": 20,
+        "endLine": 40
+      }
+    },
+    {
+      "image_id": "image2",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image2.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image2.png",
+      "source_range": {
+        "startLine": 41,
+        "endLine": 61
+      }
+    },
+    {
+      "image_id": "image3",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image3.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image3.png",
+      "source_range": {
+        "startLine": 62,
+        "endLine": 82
+      }
+    },
+    {
+      "image_id": "image4",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image4.png",
+      "source_range": {
+        "startLine": 83,
+        "endLine": 103
+      }
+    },
+    {
+      "image_id": "image5",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image5.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image5.png",
+      "source_range": {
+        "startLine": 104,
+        "endLine": 124
+      }
+    },
+    {
+      "image_id": "image6",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image6.emf",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image6.emf",
+      "source_range": {
+        "startLine": 125,
+        "endLine": 137
+      }
+    },
+    {
+      "image_id": "image7",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image7.png",
+      "source_range": {
+        "startLine": 138,
+        "endLine": 158
+      }
+    },
+    {
+      "image_id": "image8",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image8.png",
+      "source_range": {
+        "startLine": 159,
+        "endLine": 179
+      }
+    },
+    {
+      "image_id": "image9",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+      "source_range": {
+        "startLine": 180,
+        "endLine": 200
+      }
+    },
+    {
+      "image_id": "image10",
+      "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+      "raw_image_path": "../../../../../../Project_____현재_진행중인/my-image-parser/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image10.png",
+      "source_range": {
+        "startLine": 201,
+        "endLine": 221
+      }
+    }
+  ]
+}

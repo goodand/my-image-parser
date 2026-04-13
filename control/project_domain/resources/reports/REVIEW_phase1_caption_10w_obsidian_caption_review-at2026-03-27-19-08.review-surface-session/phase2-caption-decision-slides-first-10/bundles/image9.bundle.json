@@ -1,0 +1,92 @@
+{
+  "schema_version": "v1",
+  "artifact_kind": "decision_slide_candidate_bundle",
+  "image_id": "image9",
+  "source_image_path": "<REPO_ROOT>/control/project_domain/resources/pptx_jobs/01_full_presentation_2026-03-17/media/image9.png",
+  "source_manifest_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_caption_four_mode_corpus_candidates_at2026_03_29.json",
+  "source_bundle_path": "<REPO_ROOT>/control/project_domain/resources/manifests/phase1_image9_caption_four_mode_eval_bundle_at2026_03_28.json",
+  "availability": "ready",
+  "decision": "include",
+  "decision_reason": "stable_frozen_four_mode_bundle_present",
+  "comparison_scope": "ready_arm_anchor",
+  "comparison_ready": true,
+  "recommended_current_default": "full_image_baseline",
+  "next_gate": "review_context_package",
+  "ready_arms": [
+    "full_image_baseline",
+    "full_image_ocr_context_rerun",
+    "parser_table_enriched_rerun",
+    "reviewed_isolated_component_rerun"
+  ],
+  "blocked_arms": [],
+  "four_arm_readiness": {
+    "full_image_baseline": "ready",
+    "full_image_ocr_context_rerun": "ready",
+    "parser_table_enriched_rerun": "ready",
+    "reviewed_isolated_component_rerun": "ready"
+  },
+  "candidate_arms": [
+    {
+      "execution_arm": "full_image_baseline",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-v1",
+      "input_surface": "extracted_full_image",
+      "context_variant": null,
+      "context_review_status": null,
+      "ocr_status": null,
+      "caption": "A table in Korean compares four metrics (CC, IC, CR@10, MRR) for quality and accuracy improvements, showing percentage increases for each. Key improvements are highlighted below the table.",
+      "alt_text": "A Korean table comparing search metrics (CC, IC, CR@10, MRR) and their improvement percentages.",
+      "promotion_state": null,
+      "promotion_notes": []
+    },
+    {
+      "execution_arm": "full_image_ocr_context_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": null,
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table compares four search quality and accuracy metrics, showing percentage increases for each. Additional notes indicate the largest increases in two perspectives.",
+      "alt_text": "Table with four metrics (CC, IC, CR@10, MRR) and their increases; summary notes below.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "parser_table_enriched_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "full_image_original",
+      "context_variant": "parser_table_enriched",
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table in Korean compares four metrics (CC, IC, CR@10, MRR) related to search quality and accuracy, showing their percentage increases. Notes under the table summarize the largest increases by category.",
+      "alt_text": "Table shows percentage increases for search metrics: CC +683%, IC +284%, CR@10 +259%, MRR +195%.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    },
+    {
+      "execution_arm": "reviewed_isolated_component_rerun",
+      "status": "completed",
+      "prompt_version": "openai-gpt-4.1-caption-context-v1",
+      "input_surface": "reviewed_table_component_crop",
+      "context_variant": "reviewed_isolated_component",
+      "context_review_status": "pending_review",
+      "ocr_status": "usable",
+      "caption": "A table in Korean compares four performance indicators (CC, IC, CR@10, MRR) with their descriptions and respective percentage improvements. The table is structured into three columns: indicator, description, and relative increase.",
+      "alt_text": "Table showing Korean performance metrics CC, IC, CR@10, MRR each with description and percentage increase.",
+      "promotion_state": "comparison_only_pending_context_review",
+      "promotion_notes": [
+        "Compare the rerun only as bounded evidence until the context package moves beyond pending_review.",
+        "Keep the full-image baseline as the default until the rerun path is explicitly accepted."
+      ]
+    }
+  ],
+  "notes": []
+}
