@@ -218,6 +218,7 @@ Already completed in the current broader workflow:
   - assign stable image IDs
   - record slide number, element order, and hash
   - optionally mark decorative or duplicate assets
+
   - mark `table_candidate` when lightweight heuristics or layout signals indicate table-like structure
 - Output:
   - extracted image set
@@ -1585,3 +1586,85 @@ Current operational interpretation:
   - the current repo now supports a stable `9-image` `4-mode` cohort from the available `14-image` corpus
   - `image4` is no longer just a pending edge candidate; it is an explicitly waived manual/special-case lane until a new deterministic parser path exists
   - `reviewed_isolated_component_rerun` is the dominant comparison winner in the expanded cohort, but the active default remains `full_image_baseline`
+
+## Appended Patch: Review Surface Gate Clarification At 2026-04-09
+
+- current `vscode-markdown-review-surface` bootstrap path is now proven as a session-local evaluation artifact generator, not yet as a fully accepted human-evaluation lane
+- source review markdown remains a read-only source:
+  - `control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md`
+- actual evaluation writes for the current bootstrap path accumulate under the generated session directory:
+  - `decision-seed.jsonl`
+  - `feedback-ledger.json`
+  - `session-config.json`
+  - `review-surface-manifest.json`
+- current first-10 bootstrap set is mixed-readiness:
+  - `image1` - `image5`: excluded from the four-arm comparison candidate set
+  - `image6`: missing source record for comparison
+  - `image7` - `image10`: ready with four candidate arms
+- therefore the current first-10 bootstrap set must not be interpreted as a uniformly comparison-ready acceptance cohort
+- Steward response freezes the next gate as:
+  - artifact contract extension
+  - candidate-text comparison section
+  - label readability / operator clarity
+  - actual evaluation run on the accepted comparison-ready set
+- evaluation quality bar also needs one explicit qualitative check:
+  - table-heavy images must be reviewed for whether the selected caption actually describes important internal table values, not just the existence of a table or high-level metric names
+- operational interpretation:
+  - bootstrap/open path is valid
+  - session-local writeback path is valid
+  - comparison UX is only partially ready for the current bootstrap first-10 set
+  - master plan progress should now treat `table-internal value coverage` as an explicit review dimension in the human evaluation lane
+
+## Appended Patch: Review-Surface Cross-Validation Slice Closure At 2026-04-09-19-03
+
+- this appended patch closes the current `my-image-parser` review-surface cross-validation gate under the presentation image pipeline master plan
+- closure basis:
+  - `../../../user_decisions/resources/notes/NOTE_review_surface_cross_validation_scope_freeze-at2026-04-09-19-03.md`
+  - `../reports/REPORT_phase2_review_surface_10_image_human_evaluation-at2026-04-09-18-56.md`
+  - `../reports/REPORT_phase2_review_surface_cross_validation_slice_closure-at2026-04-09-19-03.md`
+- frozen interpretation:
+  - the main test is image caption quality on extracted presentation images
+  - the review surface is a bounded cross-validation lane for that main test
+  - mixed readiness inside the current first-10 bootstrap cohort is acceptable for this slice as long as ready images are fully judged and non-ready images are explicitly deferred
+- closed in this patch:
+  - bootstrap/open proof
+  - session-local writeback proof
+  - accepted cohort freeze
+  - terminal reviewer decisions for the bootstrap first-10 cohort
+  - table-value coverage cross-check on the comparison-ready table-heavy subset
+- not claimed closed in this patch:
+  - full UX completion of the external `vscode-markdown-review-surface` application
+  - downstream retrieval, mapping, and regeneration phases of the broader end-to-end presentation image pipeline
+
+## Appended Patch: Current Active Scope Freeze And Master Plan Closure At 2026-04-09-19-11
+
+- active scope freeze note:
+  - `../../../user_decisions/resources/notes/NOTE_presentation_image_pipeline_active_scope_freeze-at2026-04-09-19-11.md`
+- closure report:
+  - `../reports/REPORT_presentation_image_pipeline_master_plan_closure-at2026-04-09-19-11.md`
+- frozen active scope for the current cycle:
+  - image extraction and organization as experiment input
+  - stable caption-comparison corpus truth freeze
+  - corpus-level consumer truth freeze
+  - bounded review-surface cross-validation
+  - explicit exclude/manual-lane handling for edge cases
+- closure evidence stack:
+  - `REPORT_phase1_caption_four_mode_corpus_closure-at2026-03-30-22-19.md`
+  - `REPORT_phase1_caption_four_mode_corpus_experiment_summary-at2026-03-30-22-39.md`
+  - `phase1_caption_four_mode_corpus_auto_eval_true_batch_at2026_03_30.json`
+  - `REPORT_phase2_review_surface_cross_validation_slice_closure-at2026-04-09-19-03.md`
+- closure interpretation:
+  - the broader end-to-end pipeline description remains architectural intent
+  - the current `my-image-parser` cycle is now complete because its active executable scope was narrower and is fully closed
+- effective current master-plan status:
+  - `closed for current active my-image-parser scope`
+- still backlog / future extension:
+  - retrieval execution
+  - mapping confirmation
+  - metadata commit wave
+  - presentation regeneration
+  - external review-surface UX completion
+- immediate next downstream opening after this closure:
+  - retrieval dry-run / readiness measurement
+  - include multimodal form-preservation measurement when downstream consumers depend on form rather than treating it as generic noise
+  - not mandatory: live retrieval execution

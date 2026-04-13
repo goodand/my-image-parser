@@ -6,6 +6,8 @@ Define the dry-run-only handoff between review-decision ingestion and later retr
 
 This surface exists so the workspace can freeze the next runtime contract even when all current review rows remain pending.
 
+This dry-run must also protect downstream multimodal-form use cases. If a downstream workspace depends on document form as part of meaning, the dry-run should surface readiness or blocked reasons without assuming that multimodal structure can be discarded as noise.
+
 ## Canonical Inputs
 
 - decision ingestion manifest:
@@ -21,6 +23,8 @@ This surface exists so the workspace can freeze the next runtime contract even w
 
 The dry-run layer must not execute retrieval, reranking, or mapping. It only freezes whether those lanes are ready and what artifacts they would expect next.
 
+When blocked reasons are recorded, they should explicitly include form-preservation risk whenever an approved caption would underspecify meaningful table structure, layout semantics, or other multimodal document cues that a downstream workspace still needs.
+
 ## Retrieval Dry Run
 
 Retrieval becomes ready only when:
@@ -35,6 +39,7 @@ The dry-run manifest must report:
 - ready image ids
 - blocked reason when ready count is zero
 - planned output files for the later real runtime
+- blocked reasons that distinguish generic readiness failure from multimodal form-preservation risk when relevant
 
 ## Mapping Dry Run
 

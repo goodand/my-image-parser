@@ -4,7 +4,7 @@
 
 Define the machine-readable bridge between the existing human-facing corpus review surface and the downstream retrieval or mapping preflight lanes.
 
-This capture surface exists so that a human reviewer can read the review markdown, make a bounded caption decision, and write the result once in a structured row that later consumers can re-read without reopening the comparison bundles.
+This capture surface exists so that a human reviewer can compare explicit arm-by-arm candidate text inside the evaluation surface, make a bounded caption decision, and write the result once in a structured row that later consumers can re-read without reopening external comparison bundles.
 
 ## Scope
 
@@ -25,13 +25,15 @@ This spec does not change:
 ## Canonical Inputs
 
 - review surface manifest:
-  - [phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
+  - [phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json](../../manifests/phase2_caption_four_mode_corpus_review_surface_at2026_03_30.json)
 - review markdown:
-  - [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
+  - [REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md](../../reports/REVIEW_phase2_caption_four_mode_corpus_review-at2026-03-30-22-45.md)
+- frozen candidate bundle artifacts:
+  - per-image bundle JSON carried through the review-surface session artifact contract
 - promotion policy:
-  - [SPEC_caption_arm_promotion_policy.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/specs/prose/SPEC_caption_arm_promotion_policy.md)
+  - [SPEC_caption_arm_promotion_policy.md](./SPEC_caption_arm_promotion_policy.md)
 - master plan vocabulary:
-  - [MASTER_PLAN_presentation_image_pipeline.md](/Users/jaehyuntak/Desktop/Project_____현재_진행중인/my-image-parser/control/project_domain/resources/master_plans/MASTER_PLAN_presentation_image_pipeline.md)
+  - [MASTER_PLAN_presentation_image_pipeline.md](../../master_plans/MASTER_PLAN_presentation_image_pipeline.md)
 
 ## Design Rule
 
@@ -40,7 +42,7 @@ The contract captures exactly one `human caption decision row` per image.
 The row must be self-contained enough that:
 
 - Session A outputs can map into it directly from the review surface
-- a human can fill it after reading the review markdown
+- a human can fill it after reading the in-surface candidate comparison, with review markdown treated as supporting context
 - Session B can read it for retrieval or mapping preflight without reopening the full comparison workflow
 
 ## Row Lifecycle
@@ -69,6 +71,8 @@ These fields are copied from the review surface and should not be edited during 
 - `baseline_retained`
 - `review_priority_label`
 - `pending_context_review_arms`
+
+The `bundle_path` must resolve to an explicit session-local candidate bundle artifact that carries per-arm caption and alt-text payloads for the current image.
 
 ## Human Decision Fields
 
@@ -228,7 +232,9 @@ The bridge contract does not finalize mapping decisions.
 
 ## Operational Result
 
-The review markdown remains the human reading surface.
+The in-surface candidate comparison becomes the primary human evaluation body for this phase.
+
+The review markdown remains supporting context, not the canonical comparison payload.
 
 This decision-capture contract becomes the machine-readable handoff surface between:
 
