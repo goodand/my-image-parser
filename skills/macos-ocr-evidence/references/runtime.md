@@ -10,7 +10,13 @@
   - `ocr_image(file_path)`
 
 This path is macOS-only.
-In this workspace it is also **unsandboxed-preferred**.
+Prefer launching it through env-driven surfaces such as:
+
+- `MACOS_OCR_PYTHON`
+- `MACOS_OCR_ENTRYPOINT`
+- `MACOS_OCR_MCP_SERVER_DIR`
+
+If the host sandbox blocks Vision or Accessibility-backed OCR, treat unsandboxed execution as a host capability requirement rather than a property of this workspace.
 
 Observed behavior:
 
@@ -25,6 +31,7 @@ Observed behavior:
   - `scripts/ocr/macos_vision_ocr.swift`
 
 The vendored MCP wrapper can call this script when `ocrmac` throws a `NoneType`-style failure.
+Prefer env-driven launch variables such as `$SWIFT_EXEC`, `$MACOS_OCR_LAUNCHER`, or `$ALLOW_UNSANDBOXED_OCR` when documenting a host contract.
 
 ## Complementary CLI Path
 

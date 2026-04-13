@@ -11,19 +11,17 @@ Capture the practical command surface for building an object-isolation correctio
 
 ## Canonical Interpreter For The Worker
 
-Use the vendored ImageSorcery runtime because it already contains `fastmcp`, `Pillow`, and `numpy`.
-Set `IMAGESORCERY_PYTHON` to whichever vendored runtime exists in your environment, usually:
-
-- `vendor/mcp/imagesorcery-mcp/.venv/bin/python`
-- `vendor/mcp/imagesorcery-mcp/venv/bin/python`
+Use a Python runtime that already contains the ImageSorcery-side dependencies such as `fastmcp`, `Pillow`, and `numpy`.
+Set `IMAGESORCERY_PYTHON` to a compatible interpreter in your environment.
+If you rely on the repo-local vendored runtime, resolve that path in your shell or launcher instead of hardcoding it into the packet contract.
 
 Then run:
 
 ```bash
 "$IMAGESORCERY_PYTHON" \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
-  --packet-json "/abs/path/to/CORRECTION_packet.json" \
-  --output-dir "/abs/path/to/object_isolation_worker_run"
+  --packet-json "$PACKET_JSON" \
+  --output-dir "$RUN_DIR"
 ```
 
 ## Common Modes
@@ -34,8 +32,8 @@ Use this when the image bundles multiple objects, the wrong target was selected,
 
 ```bash
 python3 skills/object-isolation-correction/scripts/prepare_object_isolation_correction_packet.py \
-  --source-image "/abs/path/to/source.png" \
-  --current-result "/abs/path/to/current_cutout.png" \
+  --source-image "$SOURCE_IMAGE" \
+  --current-result "$CURRENT_RESULT" \
   --issue merged_objects \
   --issue split_decision_needed \
   --target-description "the table only" \
@@ -52,8 +50,8 @@ Use this when the current cutout is visually broken and deterministic re-croppin
 
 ```bash
 python3 skills/object-isolation-correction/scripts/prepare_object_isolation_correction_packet.py \
-  --source-image "/abs/path/to/source.png" \
-  --current-result "/abs/path/to/current_cutout.png" \
+  --source-image "$SOURCE_IMAGE" \
+  --current-result "$CURRENT_RESULT" \
   --issue missing_object_part \
   --issue edge_artifact \
   --target-description "the product only" \
@@ -70,8 +68,8 @@ Use this when the main problem is still boundary cleanup, but a model-assisted p
 
 ```bash
 python3 skills/object-isolation-correction/scripts/prepare_object_isolation_correction_packet.py \
-  --source-image "/abs/path/to/source.png" \
-  --current-result "/abs/path/to/current_cutout.png" \
+  --source-image "$SOURCE_IMAGE" \
+  --current-result "$CURRENT_RESULT" \
   --issue background_residue \
   --issue transparent_cutout_needed \
   --target-description "the main icon only" \
@@ -111,8 +109,8 @@ Use this when the image already has transparency and the main question is whethe
 ```bash
 "$IMAGESORCERY_PYTHON" \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
-  --packet-json "/abs/path/to/CORRECTION_packet.json" \
-  --output-dir "/abs/path/to/object_isolation_worker_run"
+  --packet-json "$PACKET_JSON" \
+  --output-dir "$RUN_DIR"
 ```
 
 Expected behavior:
@@ -128,8 +126,8 @@ Use this when alpha split is not expected to help, or the current image has no u
 ```bash
 "$IMAGESORCERY_PYTHON" \
   skills/object-isolation-correction/scripts/run_object_isolation_correction_worker.py \
-  --packet-json "/abs/path/to/CORRECTION_packet.json" \
-  --output-dir "/abs/path/to/object_isolation_worker_run" \
+  --packet-json "$PACKET_JSON" \
+  --output-dir "$RUN_DIR" \
   --skip-alpha-split
 ```
 

@@ -9,10 +9,8 @@ python3 skills/component-split-ocr-review/scripts/build_component_split_ocr_repo
 
 ## Recommended Runtime
 
-If the default interpreter is missing image-processing dependencies, set `IMAGESORCERY_PYTHON` to the vendored runtime that exists:
-
-- `vendor/mcp/imagesorcery-mcp/.venv/bin/python`
-- `vendor/mcp/imagesorcery-mcp/venv/bin/python`
+If the default interpreter is missing image-processing dependencies, set `IMAGESORCERY_PYTHON` to any compatible runtime that already has the ImageSorcery-side packages available.
+Keep the concrete interpreter resolution in the shell or launcher layer rather than this document.
 
 Then run:
 

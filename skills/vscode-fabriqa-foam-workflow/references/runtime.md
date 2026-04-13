@@ -69,8 +69,13 @@ The bundled shell wrapper:
 2. opens the workspace in VS Code
 3. optionally opens a target markdown file
 
-It uses the `code` CLI only.
+It uses a VS Code CLI surface such as `${VSCODE_BIN:-code}`.
 It does not simulate `Reopen Editor With...`.
+
+Required editor surface should be treated as host preflight, not as a repo guarantee:
+
+- `fabriqa.markdownEditor`
+- Foam extension commands
 
 ## Operational Caution
 

@@ -8,10 +8,8 @@ python3 skills/transparent-component-triage/scripts/classify_alpha_split_batch.p
 
 ## Recommended Runtime
 
-If the underlying worker needs the vendored ImageSorcery runtime, set `IMAGESORCERY_PYTHON` to the vendored runtime that exists:
-
-- `vendor/mcp/imagesorcery-mcp/.venv/bin/python`
-- `vendor/mcp/imagesorcery-mcp/venv/bin/python`
+If the underlying worker needs the ImageSorcery dependency set, point `IMAGESORCERY_PYTHON` at any compatible interpreter.
+Resolve the actual interpreter path outside this runtime note so the skill stays portable across local, Docker, and hosted runners.
 
 Then run:
 

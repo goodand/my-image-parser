@@ -15,12 +15,12 @@ The Apple Vision document-structure helper is owned by this skill and lives here
 skills/parser-sidecar-to-canonical-schema-promotion/scripts/macos_table_structure_helper.swift
 ```
 
-Current bounded command:
+Current bounded command shape:
 
 ```bash
-xcrun swift skills/parser-sidecar-to-canonical-schema-promotion/scripts/macos_table_structure_helper.swift \
-  --input /abs/path/image.png \
-  --output /abs/path/helper-sidecar.json
+"${SWIFT_EXEC:-xcrun swift}" "${APPLE_VISION_HELPER:-skills/parser-sidecar-to-canonical-schema-promotion/scripts/macos_table_structure_helper.swift}" \
+  --input "$SOURCE_IMAGE" \
+  --output "$HELPER_SIDECAR_JSON"
 ```
 
 Current status:
@@ -30,7 +30,7 @@ Current status:
 - helper ownership fixed under the table-structure promotion skill
 - explicit local SDK compile probe wired
 - explicit local OS availability probe wired
-- live `RecognizeDocumentsRequest` extraction verified in this workspace on macOS 26.3.1 with Xcode 26.3
+- live `RecognizeDocumentsRequest` extraction has been locally validated on a recent macOS/Xcode stack
 - helper can emit real `documents[*].tables[*].cells[*]` sidecar JSON when the local Vision stack recognizes a table
 - helper can also complete with `status=completed` and `table_count=0` when the image is readable but Vision does not detect a table
 - current promotion wrapper now ingests helper-sidecar output through the same `--raw-sidecar-json` entry point used for bounded Paddle sidecars
@@ -49,12 +49,12 @@ The Apple helper always emits JSON to stdout and also writes the same payload to
 Example helper-to-canonical flow:
 
 ```bash
-xcrun swift skills/parser-sidecar-to-canonical-schema-promotion/scripts/macos_table_structure_helper.swift \
-  --input /abs/path/image.png \
-  --output /tmp/apple_helper_sidecar.json
+"${SWIFT_EXEC:-xcrun swift}" "${APPLE_VISION_HELPER:-skills/parser-sidecar-to-canonical-schema-promotion/scripts/macos_table_structure_helper.swift}" \
+  --input "$SOURCE_IMAGE" \
+  --output "${TMPDIR:-/tmp}/apple_helper_sidecar.json"
 
 python3 skills/parser-sidecar-to-canonical-schema-promotion/scripts/promote_parser_sidecar_to_canonical_schema.py \
-  --raw-sidecar-json /tmp/apple_helper_sidecar.json
+  --raw-sidecar-json "${TMPDIR:-/tmp}/apple_helper_sidecar.json"
 ```
 
 Example dual-parser comparison flow:
@@ -123,3 +123,4 @@ Expected Apple helper JSON fields:
 - Apple helper `status=not_available_in_current_os` means the SDK probe compiled but the current host OS is below the minimum runtime required for `RecognizeDocumentsRequest`.
 - dual-parser comparison should happen on canonical normalized outputs only, not on raw Paddle sidecars or raw Apple helper payloads
 - merged candidate building should happen on the comparison manifest plus the two canonical normalized tables, not on raw sidecars
+- hosted or Linux runners should treat the Apple helper as optional and provide an explicit non-mac fallback instead of assuming `xcrun swift` exists
