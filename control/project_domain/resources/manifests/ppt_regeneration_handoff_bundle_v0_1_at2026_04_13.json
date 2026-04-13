@@ -1,0 +1,392 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-04-13",
+  "scope": "lean_02_1_system_first_v1",
+  "bundle_kind": "ppt_regeneration_handoff",
+  "bundle_status": "ready_for_manual_regeneration_with_text_promotion_pending",
+  "source_truth": {
+    "page_link_matrix": "control/project_domain/resources/manifests/ppt_page_link_matrix_v0_1.json",
+    "role_matrix": "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json",
+    "deck": "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx",
+    "qa_report": "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md",
+    "review_index": "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md"
+  },
+  "routing": {
+    "band8_owner_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/multimodal-evidence-refinement-loop/SKILL.md",
+    "band8_specialist_ref": "<CLAUDE_SKILLS_ROOT>/Skills-Create-Project/image-text-cot-review/SKILL.md",
+    "mcp_lifecycle_owner_ref": "skills/vendored-mcp-onboarding/SKILL.md",
+    "ppt_authoring_surface_ref": "<CODEX_HOME>/skills/pptx/SKILL.md",
+    "claude_copy_support_ref": "<CLAUDE_SKILLS_ROOT>/semantic-clarity-enhanced/SKILL.md"
+  },
+  "non_goals": [
+    "do not create a new owner skill in this bundle",
+    "do not reopen MCP onboarding, launcher, inventory, or activation work",
+    "do not claim standalone approved-caption promotion that does not yet exist",
+    "do not delete current portfolio artifacts during handoff preparation"
+  ],
+  "manual_gates": [
+    "promote standalone approved caption and alt text only if a later lane needs them",
+    "treat the current .pptx deck as source of truth when preview cache disagrees",
+    "keep table-heavy slides readable at value level, not only at table-presence level",
+    "use the global pptx skill as the only PPT authoring owner surface"
+  ],
+  "verification_state": {
+    "deck_exists": true,
+    "render_count": 6,
+    "role_matrix_rows": 6,
+    "qa_verdict": "pass_with_preview_cache_caveat",
+    "markitdown_reverify_state_in_current_shell": "unavailable_here_no_markitdown_module"
+  },
+  "slides": [
+    {
+      "target_slide_no": 1,
+      "target_slide_title": "시스템을 구조로 설명하는 개발자",
+      "presentation_role": "architecture_hero",
+      "visual_type": "system_diagram",
+      "source_images": [
+        {
+          "role": "primary",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image27.png",
+          "source_slide_numbers": [
+            11
+          ]
+        }
+      ],
+      "current_pages": {
+        "source": [
+          "control/project_domain/resources/pptx_jobs/02_1/manifest.json",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image27.png"
+        ],
+        "evidence": [
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image27.png"
+        ],
+        "loop_review": [
+          "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json#slide-1",
+          "approved_text_state:not_separately_promoted"
+        ],
+        "ppt_target": [
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx#slide-01",
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-01.jpg"
+        ],
+        "publication": [
+          "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+          "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        ]
+      },
+      "text_promotion_state": {
+        "approved_caption": "not_separately_promoted",
+        "approved_alt_text": "not_separately_promoted",
+        "current_basis": "caption_review_markdown_plus_role_matrix"
+      },
+      "regeneration_handoff": {
+        "authoring_mode": "edit_current_deck_or_rebuild_equivalent_slide",
+        "supporting_text_goal": "시스템 사고가 첫 인상으로 보이도록 만든다.",
+        "layout_role": "right_hero_diagram_with_left_title_stack",
+        "crop_required": false,
+        "preserve": [
+          "keep the architecture diagram as the dominant visual block",
+          "preserve node labels and flow boundaries as one structured whole"
+        ],
+        "manual_remaining": [
+          "do not overcompress labels until the system diagram loses legibility",
+          "if copy changes, keep the slide system-first rather than product-first"
+        ]
+      }
+    },
+    {
+      "target_slide_no": 2,
+      "target_slide_title": "입력과 결과로 증명하는 제품 경험",
+      "presentation_role": "product_configuration_ui",
+      "visual_type": "ui_screenshot_pair",
+      "source_images": [
+        {
+          "role": "primary",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image4.png",
+          "source_slide_numbers": [
+            1
+          ]
+        },
+        {
+          "role": "support",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image37.png",
+          "source_slide_numbers": [
+            15
+          ]
+        }
+      ],
+      "current_pages": {
+        "source": [
+          "control/project_domain/resources/pptx_jobs/02_1/manifest.json",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image4.png",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image37.png"
+        ],
+        "evidence": [
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image4.png",
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image37.png"
+        ],
+        "loop_review": [
+          "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json#slide-2",
+          "approved_text_state:not_separately_promoted"
+        ],
+        "ppt_target": [
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx#slide-02",
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-02.jpg"
+        ],
+        "publication": [
+          "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+          "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        ]
+      },
+      "text_promotion_state": {
+        "approved_caption": "not_separately_promoted",
+        "approved_alt_text": "not_separately_promoted",
+        "current_basis": "caption_review_markdown_plus_role_matrix"
+      },
+      "regeneration_handoff": {
+        "authoring_mode": "edit_current_deck_or_rebuild_equivalent_slide",
+        "supporting_text_goal": "설정 화면과 결과 화면이 하나의 경험으로 이어진다는 점을 보여준다.",
+        "layout_role": "paired_ui_block_with_right_explanation",
+        "crop_required": false,
+        "preserve": [
+          "keep the input UI and the generated-output UI as one paired flow",
+          "preserve visible UI labels and spacing cues that make the before/after relationship obvious"
+        ],
+        "manual_remaining": [
+          "if one UI must be reduced, keep the pair readable rather than enlarging one side only",
+          "avoid rewriting this slide into generic product marketing copy"
+        ]
+      }
+    },
+    {
+      "target_slide_no": 3,
+      "target_slide_title": "개인 맥락이 곧 포트폴리오의 신뢰도다",
+      "presentation_role": "profile_summary",
+      "visual_type": "profile_summary_plus_portrait",
+      "source_images": [
+        {
+          "role": "primary",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image5.png",
+          "source_slide_numbers": [
+            2
+          ]
+        },
+        {
+          "role": "support",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image6.jpeg",
+          "source_slide_numbers": [
+            2
+          ]
+        }
+      ],
+      "current_pages": {
+        "source": [
+          "control/project_domain/resources/pptx_jobs/02_1/manifest.json",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image5.png",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image6.jpeg"
+        ],
+        "evidence": [
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image5.png",
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image6.jpeg"
+        ],
+        "loop_review": [
+          "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json#slide-3",
+          "approved_text_state:not_separately_promoted"
+        ],
+        "ppt_target": [
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx#slide-03",
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-03.jpg"
+        ],
+        "publication": [
+          "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+          "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        ]
+      },
+      "text_promotion_state": {
+        "approved_caption": "not_separately_promoted",
+        "approved_alt_text": "not_separately_promoted",
+        "current_basis": "caption_review_markdown_plus_role_matrix"
+      },
+      "regeneration_handoff": {
+        "authoring_mode": "edit_current_deck_or_rebuild_equivalent_slide",
+        "supporting_text_goal": "정리된 이력과 실제 인물 이미지가 함께 신뢰도를 만든다는 점을 강조한다.",
+        "layout_role": "wide_profile_with_portrait_sidebar",
+        "crop_required": false,
+        "preserve": [
+          "keep the summary page dominant and the portrait supportive",
+          "preserve the sense that profile data and real identity belong to one portfolio story"
+        ],
+        "manual_remaining": [
+          "do not turn the portrait into the hero at the expense of the profile summary",
+          "keep the slide image-led and credibility-oriented"
+        ]
+      }
+    },
+    {
+      "target_slide_no": 4,
+      "target_slide_title": "구현 깊이는 문제와 해법을 한 화면에 둔다",
+      "presentation_role": "problem_and_code_proof",
+      "visual_type": "code_and_problem_screen",
+      "source_images": [
+        {
+          "role": "primary",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image22.png",
+          "source_slide_numbers": [
+            6
+          ]
+        }
+      ],
+      "current_pages": {
+        "source": [
+          "control/project_domain/resources/pptx_jobs/02_1/manifest.json",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image22.png"
+        ],
+        "evidence": [
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image22.png"
+        ],
+        "loop_review": [
+          "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json#slide-4",
+          "approved_text_state:not_separately_promoted"
+        ],
+        "ppt_target": [
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx#slide-04",
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-04.jpg"
+        ],
+        "publication": [
+          "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+          "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        ]
+      },
+      "text_promotion_state": {
+        "approved_caption": "not_separately_promoted",
+        "approved_alt_text": "not_separately_promoted",
+        "current_basis": "caption_review_markdown_plus_role_matrix"
+      },
+      "regeneration_handoff": {
+        "authoring_mode": "edit_current_deck_or_rebuild_equivalent_slide",
+        "supporting_text_goal": "문제 해결형 개발자라는 점을 시각 증거로 보여준다.",
+        "layout_role": "wide_problem_code_canvas",
+        "crop_required": false,
+        "preserve": [
+          "keep the problem statement and implementation visible together",
+          "preserve enough code and prompt area to read this as solution evidence, not generic code wallpaper"
+        ],
+        "manual_remaining": [
+          "if the slide is tightened, protect the problem/solution pairing first",
+          "do not reduce the code block until it loses proof value"
+        ]
+      }
+    },
+    {
+      "target_slide_no": 5,
+      "target_slide_title": "실행 이력은 완료된 프로젝트 표로 확인한다",
+      "presentation_role": "portfolio_evidence_table",
+      "visual_type": "table_evidence",
+      "source_images": [
+        {
+          "role": "primary",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image23.png",
+          "source_slide_numbers": [
+            7,
+            8
+          ]
+        }
+      ],
+      "current_pages": {
+        "source": [
+          "control/project_domain/resources/pptx_jobs/02_1/manifest.json",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image23.png"
+        ],
+        "evidence": [
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image23.png"
+        ],
+        "loop_review": [
+          "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json#slide-5",
+          "approved_text_state:not_separately_promoted"
+        ],
+        "ppt_target": [
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx#slide-05",
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-05.jpg"
+        ],
+        "publication": [
+          "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+          "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        ]
+      },
+      "text_promotion_state": {
+        "approved_caption": "not_separately_promoted",
+        "approved_alt_text": "not_separately_promoted",
+        "current_basis": "caption_review_markdown_plus_role_matrix"
+      },
+      "regeneration_handoff": {
+        "authoring_mode": "edit_current_deck_or_rebuild_equivalent_slide",
+        "supporting_text_goal": "실행 범위와 지속성을 포트폴리오 증거 표로 보여준다.",
+        "layout_role": "left_table_with_right_evidence_notes",
+        "crop_required": false,
+        "preserve": [
+          "keep the table as the dominant visual block",
+          "preserve row and column readability enough to support value-level reading"
+        ],
+        "manual_remaining": [
+          "table-internal values must remain legible after any regeneration step",
+          "do not collapse this slide into a generic summary if the table stops being readable"
+        ]
+      }
+    },
+    {
+      "target_slide_no": 6,
+      "target_slide_title": "적용형 AI 워크플로는 화면 안에서 끝까지 닫힌다",
+      "presentation_role": "applied_ai_workflow_ui",
+      "visual_type": "workflow_ui",
+      "source_images": [
+        {
+          "role": "primary",
+          "path": "control/project_domain/resources/pptx_jobs/02_1/media/image29.png",
+          "source_slide_numbers": [
+            13
+          ]
+        }
+      ],
+      "current_pages": {
+        "source": [
+          "control/project_domain/resources/pptx_jobs/02_1/manifest.json",
+          "control/project_domain/resources/pptx_jobs/02_1/media/image29.png"
+        ],
+        "evidence": [
+          "control/project_domain/resources/reports/REVIEW_phase1_caption_10w_obsidian_caption_review-at2026-03-27-19-08.md#image29.png"
+        ],
+        "loop_review": [
+          "control/project_domain/resources/manifests/lean_02_1_system_first_v1_image_role_matrix_at2026_04_11.json#slide-6",
+          "approved_text_state:not_separately_promoted"
+        ],
+        "ppt_target": [
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/lean_02_1_system_first_v1.pptx#slide-06",
+          "control/project_domain/resources/assets/portfolio_drafts/lean_02_1_system_first_v1/renders/slide-06.jpg"
+        ],
+        "publication": [
+          "control/project_domain/resources/references/REFERENCE_lean_02_1_system_first_portfolio_review_index-at2026-04-13.md",
+          "control/project_domain/resources/reports/REPORT_lean_02_1_system_first_portfolio_visual_qa-at2026-04-13-13-30.md"
+        ]
+      },
+      "text_promotion_state": {
+        "approved_caption": "not_separately_promoted",
+        "approved_alt_text": "not_separately_promoted",
+        "current_basis": "caption_review_markdown_plus_role_matrix"
+      },
+      "regeneration_handoff": {
+        "authoring_mode": "edit_current_deck_or_rebuild_equivalent_slide",
+        "supporting_text_goal": "실험 결과를 실제 사용 흐름으로 이어 붙일 수 있다는 점을 강조한다.",
+        "layout_role": "right_tall_ui_with_left_process_story",
+        "crop_required": false,
+        "preserve": [
+          "keep the workflow UI intact enough to read it as a complete applied flow",
+          "preserve visible platform controls and action emphasis"
+        ],
+        "manual_remaining": [
+          "if copy changes, keep the slide about applied workflow closure rather than tool listing",
+          "do not crop out the main interaction region"
+        ]
+      }
+    }
+  ],
+  "deletion_candidates": []
+}
