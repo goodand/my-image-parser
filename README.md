@@ -7,6 +7,19 @@ This repository is organized around two surfaces:
 - `control/`: control plane, canonical plans, contracts, reports, and operational truth
 - `scripts/`, `skills/`, `vendor/`: execution plane, runnable code, agent-facing skill surfaces, and selected vendored tool source
 
+## Lineage
+
+This workspace was **derived from [`goodand/my-second-identity`](https://github.com/goodand/my-second-identity)** (a personal-blog Korean RAG system). The presentation-image workstream started inside that repo and was split out here; the two repos remain a pipeline pair:
+
+```
+my-second-identity ──(spawned: image-pipeline drafts, 2026-03)──▶ my-image-parser
+        ▲                                                              │
+        └──(consumes: reviewed captions / OCR context packages)────────┘
+```
+
+- **Upstream origin** — the initial drafts originated in `my-second-identity` and were migrated out of its planning surface (see `control/project_domain/resources/reports/REPORT_draft_classification_and_migration-at2026-03-27-15-29.md`; the old workspace keeps the export record under `plans/.../exported_to_my_image_parser/`).
+- **Downstream consumer** — `my-second-identity` ingests this parser's reviewed captions and context packages into its RAG corpus. The caption-review gate here explicitly preserves multimodal form for that consumer (see `control/user_decisions/resources/notes/NOTE_presentation_image_pipeline_active_scope_freeze-at2026-04-09-19-11.md`).
+
 ## Current Scope
 
 The active codebase supports work such as:
